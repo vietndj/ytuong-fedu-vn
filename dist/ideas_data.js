@@ -267,14 +267,6 @@ var FEDU_IDEAS_DATABASE = {
       "desc": "Kiểu quay B-roll Montage & Split Screen."
     },
     {
-      "id": "goc-may-sang-tao",
-      "name": "goc-may-sang-tao",
-      "en_name": "Goc May Sang Tao",
-      "icon": "🎬",
-      "badge_color": "purple",
-      "desc": "Kiểu quay goc-may-sang-tao."
-    },
-    {
       "id": "Walk & Talk / Phỏng Vấn",
       "name": "Walk & Talk / Phỏng Vấn",
       "en_name": "Walk & Talk / Phỏng Vấn",
@@ -568,7 +560,7 @@ var FEDU_IDEAS_DATABASE = {
     "voice-over": 12,
     "talking-head": 40,
     "storytelling": 24,
-    "dien-anh": 98,
+    "dien-anh": 99,
     "chuyen-canh": 54,
     "theo-nhip-nhac": 3,
     "bts": 0,
@@ -596,7 +588,6 @@ var FEDU_IDEAS_DATABASE = {
     "Walking & Talking": 1,
     "Fast-cut Cinematic ASMR": 1,
     "B-roll Montage & Split Screen": 1,
-    "goc-may-sang-tao": 1,
     "Walk & Talk / Phỏng Vấn": 1,
     "Chỉn Chu / Bố Cục": 1,
     "A Day In The Life (Vlog Không Lời)": 1,
@@ -722,8 +713,8 @@ var FEDU_IDEAS_DATABASE = {
     "thoi-trang": 23,
     "am-thuc": 22,
     "du-lich": 18,
-    "cong-nghe": 42,
-    "kien-truc": 36,
+    "cong-nghe": 41,
+    "kien-truc": 37,
     "the-thao": 6,
     "ky-thuat-quay": 38,
     "ugc": 5
@@ -1496,7 +1487,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Kfconcept",
       "profile_url": "https://www.instagram.com/kfconcept/",
       "video_count": 1,
-      "top_industry": "cong-nghe",
+      "top_industry": "Kiến Trúc & Không Gian Sống",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_%F0%9F%91%80/shot_01_mid.webp",
       "video_ids": [
         "IG_@kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_👀"
@@ -6597,21 +6588,21 @@ var FEDU_IDEAS_DATABASE = {
     {
       "id": "IG_@kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_👀",
       "shortcode": "Dd08G0PBtKk",
-      "title_vi": "5 CÚ MÁY SPLIT-SCREEN ĐỘT PHÁ VỚI TAY ĐÒN MAGIC ARM",
-      "quick_takeaway": "5 Cú máy Split-Screen (The Setup vs The Shot) đột phá với tay đòn Magic Arm kẹp ly rượu, đầu giường, chân cửa, khe sách và điều khiển TV",
+      "title_vi": "5 Creative Ways to Use a Magic Arm 👀",
+      "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
       "key_tech": "Establishing Hook Shot • Close-Up / Macro Detail Shot • Low-key Lighting • Medium Tracking Shot",
       "shooting_style": {
-        "id": "goc-may-sang-tao",
-        "name": "goc-may-sang-tao",
-        "en_name": "Goc May Sang Tao",
+        "id": "dien-anh",
+        "name": "Chỉn Chu",
+        "en_name": "Cinematic Mastery",
         "icon": "🎬",
-        "badge_color": "purple"
+        "badge_color": "sky"
       },
       "industries": [
         {
-          "id": "cong-nghe",
-          "name": "cong-nghe",
-          "icon": "🎯"
+          "id": "kien-truc",
+          "name": "Kiến Trúc & Không Gian Sống",
+          "icon": "🏛️"
         }
       ],
       "x_factors": [],
@@ -6625,17 +6616,15 @@ var FEDU_IDEAS_DATABASE = {
       },
       "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @kfconcept",
       "tech_tags": [
-        "Magic Arm",
-        "Split-Screen",
-        "The Setup vs The Shot",
-        "Góc Máy POV",
-        "Locked-on Shot",
-        "B-Roll Sáng Tạo"
+        "Establishing Hook Shot",
+        "Close-Up / Macro Detail Shot",
+        "Low-key Lighting",
+        "Medium Tracking Shot"
       ],
       "transition_level": null,
       "is_ad_bot": false,
       "fedu_optimization": {},
-      "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+      "logic_explanation": "Tự động phân loại cấu trúc Điện Ảnh (Cinematic) ngành Kiến Trúc & Không Gian Sống.",
       "creator": {
         "raw": "@kfconcept",
         "name": "Kfconcept",
@@ -6652,9 +6641,9 @@ var FEDU_IDEAS_DATABASE = {
         "report_url": "reports/IG_@kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_👀.html",
         "shots_count": 6,
         "duration": "12s",
-        "youtube_id": "Mwza4-NcIJ0",
-        "youtube_embed": "https://www.youtube.com/embed/Mwza4-NcIJ0",
-        "youtube_url": "https://youtu.be/Mwza4-NcIJ0"
+        "youtube_id": "XHDlVTpv7Io",
+        "youtube_embed": "https://www.youtube.com/embed/XHDlVTpv7Io",
+        "youtube_url": "https://youtu.be/XHDlVTpv7Io"
       },
       "complexity": {
         "id": "de",
@@ -12320,7 +12309,7 @@ var FEDU_IDEAS_DATABASE = {
       "gdrive_folder": "https://drive.google.com/open?id=1TrKEslz5f0-vToucfldVqxVIuHSb19Wp",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DY_0KNxvNJa_Unboxing_Cinematic_Flow/shot_01_mid.webp",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DcVzQCSP1MR_Healing_Homecoming_Daily_Vlog/shot_03_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DdlmZczPsCE_%ED%98%BC%EC%9E%90_%EB%A7%8C%EB%93%9C%EB%8A%94%EB%8D%B0_%EC%B4%AC%EC%98%81%EC%9D%80_%EB%88%84%EA%B0%80_%ED%95%98%EB%83%90%EA%B3%A0%EC%9A%94%F0%9F%A4%B7%F0%9F%8F%BB%E2%80%8D%E2%99%80%EF%B8%8F_%EC%A0%9C%ED%92%88%EC%A0%9C%EA%B3%B5/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdbCdHFKZsP.mp4",
         "video_url_original": "https://media.fedu.vn/videos/DdbCdHFKZsP.mp4",
         "report_url": "reports/IG_@hena_film_vlog_DdbCdHFKZsP_햇빛_없는_집,_음식_촬영_가능함🤔_제품제공.html",
@@ -13434,7 +13423,7 @@ var FEDU_IDEAS_DATABASE = {
       "gdrive_folder": "https://drive.google.com/open?id=1cnS_6mtlO52naIU-DIE-pRJoiEN8nys8",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg/shot_01_mid.webp",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg/shot_02_mid.webp",
         "video_url": "https://drive.google.com/uc?id=1QpXLSybzXgrShstQexi8sX3JS9oYgQR0&export=download",
         "video_url_original": "https://drive.google.com/uc?id=1QpXLSybzXgrShstQexi8sX3JS9oYgQR0&export=download",
         "report_url": "reports/IG_@Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg.html",

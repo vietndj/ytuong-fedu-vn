@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>5 CÚ MÁY SPLIT-SCREEN ĐỘT PHÁ VỚI TAY ĐÒN MAGIC ARM</title>
+    <title>@kfconcept - 5 Creative Ways to Use a Magic Arm 👀</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230B0F19'/%3E%3Crect x='1' y='1' width='62' height='62' rx='15' fill='none' stroke='%23FFFFFF' stroke-opacity='0.12' stroke-width='1.5'/%3E%3Ctext x='32' y='38' text-anchor='middle' font-family='system-ui, sans-serif' font-weight='900' font-size='23' fill='%23FFFFFF'%3EYT%3C/text%3E%3Ccircle cx='48' cy='18' r='4' fill='%23eab308'/%3E%3C/svg%3E">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1008,6 +1008,212 @@
                 margin-top: 8px;
             }
         }
+
+/* === EDIT INLINE FEATURE === */
+.edit-fab {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 50;
+    width: 44px;
+    height: 44px;
+    border-radius: var(--cl-radius-full);
+    background: var(--cl-card);
+    border: 1px solid var(--cl-line-strong);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.2s var(--apple-ease);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.edit-fab:hover {
+    border-color: var(--cl-accent);
+    box-shadow: 0 4px 16px rgba(26, 115, 232, 0.15);
+    transform: scale(1.05);
+}
+
+.edit-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(6px);
+    z-index: 300;
+    display: none;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 16px;
+    overflow-y: auto;
+}
+.edit-modal-backdrop.open {
+    display: flex;
+}
+
+.edit-modal {
+    background: var(--cl-card);
+    border-radius: var(--cl-radius-lg);
+    width: 100%;
+    max-width: 520px;
+    box-shadow: 0 24px 48px rgba(0,0,0,0.15);
+    overflow: hidden;
+    animation: editSlideIn 0.3s var(--apple-spring);
+}
+
+@keyframes editSlideIn {
+    from { opacity: 0; transform: translateY(-20px) scale(0.97); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.edit-modal-head {
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--cl-line);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.edit-modal-head h3 {
+    font-family: var(--font-display);
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--cl-text-base);
+    margin: 0;
+}
+.edit-modal-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--cl-text-muted);
+    line-height: 1;
+}
+
+.edit-modal-body {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.edit-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.edit-field label {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--cl-text-muted);
+}
+.edit-field select,
+.edit-field input,
+.edit-field textarea {
+    font-family: var(--font-ui);
+    font-size: 14px;
+    padding: 10px 14px;
+    border: 1px solid var(--cl-line-strong);
+    border-radius: var(--cl-radius-sm);
+    background: var(--cl-card);
+    color: var(--cl-text-body);
+    transition: border-color 0.2s;
+    width: 100%;
+}
+.edit-field select:focus,
+.edit-field input:focus,
+.edit-field textarea:focus {
+    outline: none;
+    border-color: var(--cl-accent);
+    box-shadow: 0 0 0 3px var(--cl-accent-tint);
+}
+.edit-field textarea {
+    min-height: 72px;
+    resize: vertical;
+}
+
+.edit-modal-footer {
+    padding: 16px 24px;
+    border-top: 1px solid var(--cl-line);
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.edit-save-btn {
+    font-family: var(--font-ui);
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 24px;
+    background: var(--cl-accent);
+    color: white;
+    border: none;
+    border-radius: var(--cl-radius-full);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.edit-save-btn:hover { opacity: 0.9; }
+.edit-save-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.edit-cancel-btn {
+    font-family: var(--font-ui);
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 20px;
+    background: transparent;
+    color: var(--cl-text-muted);
+    border: 1px solid var(--cl-line-strong);
+    border-radius: var(--cl-radius-full);
+    cursor: pointer;
+}
+
+.edit-status {
+    font-family: var(--font-ui);
+    font-size: 13px;
+    padding: 8px 14px;
+    border-radius: var(--cl-radius-sm);
+    display: none;
+}
+.edit-status.success {
+    display: block;
+    background: #f0fdf4;
+    color: #166534;
+    border: 1px solid #bbf7d0;
+}
+.edit-status.error {
+    display: block;
+    background: #fef2f2;
+    color: #dc2626;
+    border: 1px solid #fecaca;
+}
+
+.edit-pw-field {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.edit-pw-field label { min-width: fit-content; }
+.edit-pw-field input {
+    max-width: 120px;
+    text-align: center;
+    letter-spacing: 0.15em;
+    font-family: var(--font-mono);
+}
+
+@media (max-width: 1024px) {
+    .edit-fab {
+        top: auto;
+        bottom: 20px;
+        right: 16px;
+    }
+}
     </style>
 </head>
 <body>
@@ -1015,7 +1221,7 @@
 <div class="app-container">
     <div class="video-sidebar">
         <div class="video-wrap">
-            <iframe id="mainPlayer" src="https://www.youtube.com/embed/Mwza4-NcIJ0?enablejsapi=1&rel=0&modestbranding=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width:100%;aspect-ratio:9/16;border-radius:12px;"></iframe>
+            <iframe id="mainPlayer" src="https://www.youtube.com/embed/XHDlVTpv7Io?enablejsapi=1&rel=0&modestbranding=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width:100%;aspect-ratio:9/16;border-radius:12px;"></iframe>
         </div>
         <div class="video-controls">
             <div class="speed-row">
@@ -1036,9 +1242,9 @@
 
     <div class="content-column">
         <header class="report-header">
-            <div class="header-badges"><span class="badge">cong-nghe</span> <span class="badge badge-alt">goc-may-sang-tao</span></div>
+            <div class="header-badges"><span class="badge">STORYBOARD BREAKDOWN</span></div>
             <h1 class="report-title">
-                <a href="https://www.instagram.com/p/Dd08G0PBtKk/?stkn=M3pra2VubmZxbDd3" target="_blank" rel="noopener">5 CÚ MÁY SPLIT-SCREEN ĐỘT PHÁ VỚI TAY ĐÒN MAGIC ARM</a>
+                <a href="https://www.instagram.com/reel/Dd08G0PBtKk/" target="_blank" rel="noopener">@kfconcept - 5 Creative Ways to Use a Magic Arm 👀</a>
             </h1>
             <div class="header-meta">
                 <span>Nguồn: <a href="https://www.instagram.com/kfconcept/" target="_blank" class="creator-link">@kfconcept ↗</a></span>
@@ -1051,13 +1257,9 @@
         </header>
 
         
-        <section class="script-axis-card">
-            <h3 class="script-axis-title">TRỤC KỊCH BẢN 3 NHỊP</h3>
-            <div class="script-axis-content">Hook giơ phụ kiện Magic Arm ➔ 5 Kỹ thuật Split-Screen (Ly rượu, Thành giường, Chân cửa, Kệ sách, Remote TV) ➔ Chốt hạ ứng dụng thực chiến</div>
-        </section>
 
         <div class="overview-card">
-            5 Cú máy Split-Screen (The Setup vs The Shot) đột phá với tay đòn Magic Arm kẹp ly rượu, đầu giường, chân cửa, khe sách và điều khiển TV
+            ⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.
         </div>
 
         
@@ -1074,7 +1276,7 @@
             
         <div class="shot-card" id="shot-card-1">
             <div class="shot-thumb" onclick="playShot(0.0, 3.0, 'SHOT 01')">
-                <img src="https://media.fedu.vn/images/IG_@kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_👀/shot_01_mid.jpg" alt="SHOT 01" loading="lazy" />
+                <img src="https://media.fedu.vn/images/IG_@kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_👀/shot_01_mid.webp" alt="SHOT 01" loading="lazy" />
                 <div class="shot-play-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
                 <span class="shot-time-badge">0.0s – 3.0s</span>
             </div>
@@ -1083,26 +1285,26 @@
                     <span class="shot-num">SHOT 01</span>
                     <span class="shot-dur">3.03s</span>
                 </div>
-                <h4 class="shot-headline">Giơ Phụ Kiện Magic Arm &amp; Hook Số Lẻ &#x27;5 Cách Dùng Sáng Tạo&#x27;</h4>
-                <p class="shot-insight">Với video review đồ công nghệ/phụ kiện, đưa ngay đồ vật vào tay kết hợp chữ hook to bản trong 1-2s đầu để định hình bài toán thực tế thay vì nói dài dòng.</p>
+                <h4 class="shot-headline">Visual Hook Mở Màn: Giữ chân người xem ngay 2 giây đầu bằng nhịp chuyển động mạnh</h4>
+                <p class="shot-insight">Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết.</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
-                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Phòng làm việc / Studio cá nhân</span></div>
-                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Trung cảnh ngang tầm mắt (Eye-Level Medium Shot)</span></div>
-                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Ánh sáng tự nhiên khuếch tán dịu nhẹ (Diffused Soft Light)</span></div>
-                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Cut trực tiếp vào chuỗi phân cảnh Split-screen</span></div>
+                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Establishing Hook Shot (Góc toàn định vị bối cảnh)</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Balanced Diffused Lighting (Ánh sáng tự nhiên cân bằng, độ tương phản dịu)</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
                     </div>
-                    <div class="critique-good">Bắt nhịp ngay lập tức với tiêu đề số lẻ (&#x27;5 creative ways&#x27;), khuôn mặt tươi tắn cùng cử chỉ tay cầm phụ kiện thu hút ánh nhìn tò mò về công năng của món đồ cơ khí.</div>
-                    <div class="critique-warn">Chữ text hiển thị hơi che một phần phụ kiện Magic Arm trong 1 giây đầu.</div>
-                    <div class="shot-narrative">Nữ creator mỉm cười tự tin, hai tay cầm chiếc tay đòn ma thuật (Magic Arm) của K&amp;F Concept giơ trước ngực, giới thiệu trực diện chủ đề video với dòng chữ lớn &#x27;5 creative ways to use&#x27;.</div>
+                    <div class="critique-good">Tạo điểm nhấn thị giác ngay trung tâm; ánh sáng Balanced Diffused Lighting  dẫn hướng mắt người xem hoàn hảo. Chuyển sắc mượt mà giữa các dải tông màu, bảo toàn chi tiết cả vùng sáng lẫn vùng tối.</div>
+                    <div class="critique-warn">Thời lượng shot ngắn nên người xem dễ bị trôi qua nếu chi tiết chữ/đối tượng phân bổ quá sát góc viền. Độ kịch tính thị giác ở mức vừa phải, cần chuyển động máy hoặc chủ thể bù đắp nhịp điệu.</div>
+                    <div class="shot-narrative">Mở màn định vị không gian và nhịp thở của toàn bộ video, thu hút sự chú ý tức thì.</div>
                 </details>
             </div>
         </div>
 
         <div class="shot-card" id="shot-card-2">
             <div class="shot-thumb" onclick="playShot(3.03, 6.4, 'SHOT 02')">
-                <img src="https://media.fedu.vn/images/IG_@kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_👀/shot_02_mid.jpg" alt="SHOT 02" loading="lazy" />
+                <img src="https://media.fedu.vn/images/IG_@kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_👀/shot_02_mid.webp" alt="SHOT 02" loading="lazy" />
                 <div class="shot-play-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
                 <span class="shot-time-badge">3.0s – 6.4s</span>
             </div>
@@ -1111,26 +1313,26 @@
                     <span class="shot-num">SHOT 02</span>
                     <span class="shot-dur">3.40s</span>
                 </div>
-                <h4 class="shot-headline">Kẹp Ly Rượu Vang Độc Bản: Cú Máy Snorkel POV Uống Nước Giữ Trọng Tâm Môi</h4>
-                <p class="shot-insight">Thay vì quay người uống nước từ bên ngoài (nhàm chán), khóa camera vào chính vật thể (ly/cốc) để biến hành động đời thường thành cú máy điện ảnh giật gân.</p>
+                <h4 class="shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
+                <p class="shot-insight">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
-                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Phòng khách bên cạnh sofa</span></div>
-                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Split-Screen (Setup Trung Cảnh + Shot Siêu Cận Macro POV)</span></div>
-                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Ánh sáng tự nhiên kết hợp tương phản dịu trong phòng</span></div>
-                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Cut nhịp nhàng chuyển tiếp sang setup tiếp theo</span></div>
+                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Low-key Lighting (Ánh sáng tối, bóng đổ sâu, vệt sáng cục bộ từ đèn/neon)</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
                     </div>
-                    <div class="critique-good">Tạo hiệu ứng &#x27;Locked-on POV&#x27; cực kỳ độc lạ, camera chuyển động 100% đồng bộ theo từng cử động nâng ly của miệng người uống, tạo cảm giác nhập vai tuyệt đối.</div>
-                    <div class="critique-warn">Trọng lượng tay đòn + điện thoại khiến ly rượu hơi nặng tay, đòi hỏi phải siết khớp thật chặt để tránh tuột.</div>
-                    <div class="shot-narrative">Màn hình chia đôi (Split-screen): Nửa trên (The setup) quay cảnh creator kẹp tay đòn vào thân ly rượu vang, đầu kia kẹp điện thoại chĩa thẳng vào miệng; Nửa dưới (The shot) là thành phẩm góc quay POV ly rượu áp sát môi khi uống.</div>
+                    <div class="critique-good">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Tạo cảm giác bí ẩn, tăng độ tương phản kịch tính (Dramatic Contrast) giữa vùng sáng và bóng tối.</div>
+                    <div class="critique-warn">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Vùng shadow dễ bị bết hoặc nhiễu hạt (noise) nếu màn hình điện thoại người xem để độ sáng thấp.</div>
+                    <div class="shot-narrative">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</div>
                 </details>
             </div>
         </div>
 
         <div class="shot-card" id="shot-card-3">
             <div class="shot-thumb" onclick="playShot(6.43, 10.07, 'SHOT 03')">
-                <img src="https://media.fedu.vn/images/IG_@kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_👀/shot_03_mid.jpg" alt="SHOT 03" loading="lazy" />
+                <img src="https://media.fedu.vn/images/IG_@kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_👀/shot_03_mid.webp" alt="SHOT 03" loading="lazy" />
                 <div class="shot-play-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
                 <span class="shot-time-badge">6.4s – 10.1s</span>
             </div>
@@ -1139,26 +1341,26 @@
                     <span class="shot-num">SHOT 03</span>
                     <span class="shot-dur">3.67s</span>
                 </div>
-                <h4 class="shot-headline">Cú Máy Từ Đỉnh Đầu (Top-Down POV): Đọc Sách Thư Giãn Không Cần Chân Máy Cồng Kềnh</h4>
-                <p class="shot-insight">Tận dụng các điểm tựa có sẵn trong nhà (thành giường, tủ, bàn) làm điểm neo để tạo góc quay từ trên cao (Overhead / Top-Down) mượt mà cho vlog sinh hoạt.</p>
+                <h4 class="shot-headline">Nhịp Dẫn Theo Dõi (Medium Tracking): Duy trì sự liên tục và kết nối cảm xúc nhân vật</h4>
+                <p class="shot-insight">Góc trung là xương sống kể chuyện, hãy thêm chuyển động camera nhẹ để tạo cảm giác điện ảnh sống động.</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
-                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Phòng ngủ / Đầu giường ngủ</span></div>
-                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Split-Screen (Setup Toàn Cảnh + Shot Góc Cao Nhìn Xuống Top-Down)</span></div>
-                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Ánh sáng ban ngày hắt từ cửa sổ phòng ngủ dịu nhẹ</span></div>
-                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Cut chuyển cảnh theo nhịp hành động kết thúc đọc sách</span></div>
+                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Medium Tracking Shot (Góc trung linh hoạt)</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Balanced Diffused Lighting (Ánh sáng tự nhiên cân bằng, độ tương phản dịu)</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
                     </div>
-                    <div class="critique-good">Giải quyết triệt để nỗi đau quay góc Top-down trong phòng ngủ chật hẹp mà không cần dựng chân máy C-stand cồng kềnh, dễ vướng víu và tốn diện tích.</div>
-                    <div class="critique-warn">Cần kiểm tra lực siết khóa khớp tay đòn kỹ lưỡng để đảm bảo tuyệt đối an toàn cho thiết bị và người nằm dưới.</div>
-                    <div class="shot-narrative">Nửa trên (The setup) cho thấy tay đòn kẹp chắc chắn vào thành đầu giường, vươn dài điện thoại lơ lửng trên không; Nửa dưới (The shot) là góc máy từ trên cao nhìn thẳng xuống mặt cô gái đang nằm thư giãn đọc cuốn sách &#x27;Four Thousand Weeks&#x27;.</div>
+                    <div class="critique-good">Tỷ lệ cơ thể và môi trường đạt độ cân đối vàng, truyền tải cảm xúc tự nhiên và gần gũi. Chuyển sắc mượt mà giữa các dải tông màu, bảo toàn chi tiết cả vùng sáng lẫn vùng tối.</div>
+                    <div class="critique-warn">Góc quay quen thuộc, dễ bị đều đều nếu không kết hợp chuyển động máy tinh tế (Tilt/Pan/Dolly). Độ kịch tính thị giác ở mức vừa phải, cần chuyển động máy hoặc chủ thể bù đắp nhịp điệu.</div>
+                    <div class="shot-narrative">Nhân vật / đối tượng thực hiện hành động chính trong bối cảnh sinh hoạt chân thực.</div>
                 </details>
             </div>
         </div>
 
         <div class="shot-card" id="shot-card-4">
             <div class="shot-thumb" onclick="playShot(10.1, 13.3, 'SHOT 04')">
-                <img src="https://media.fedu.vn/images/IG_@kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_👀/shot_04_mid.jpg" alt="SHOT 04" loading="lazy" />
+                <img src="https://media.fedu.vn/images/IG_@kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_👀/shot_04_mid.webp" alt="SHOT 04" loading="lazy" />
                 <div class="shot-play-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
                 <span class="shot-time-badge">10.1s – 13.3s</span>
             </div>
@@ -1167,26 +1369,26 @@
                     <span class="shot-num">SHOT 04</span>
                     <span class="shot-dur">3.23s</span>
                 </div>
-                <h4 class="shot-headline">Cú Máy Lướt Cửa Sát Sàn (Low Angle Tracking): Giả Lập Ray Trượt Dolly Bằng Bản Lề Cửa</h4>
-                <p class="shot-insight">Biến mọi vật thể có khớp xoay trong nhà (cánh cửa, cánh tủ lạnh, ngăn kéo) thành bàn trượt camera tự nhiên để tạo chuyển động máy điện ảnh.</p>
+                <h4 class="shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
+                <p class="shot-insight">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
-                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Lối vào phòng ngủ / Cánh cửa gỗ sát sàn</span></div>
-                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Split-Screen (Setup Góc Thấp + Shot Cận Sát Sàn Worm&#x27;s Eye View)</span></div>
-                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Ánh sáng hành lang ấm áp tương phản với sàn gỗ</span></div>
-                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Cut chuyển tiếp sang vị trí kệ sách</span></div>
+                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Low-key Lighting (Ánh sáng tối, bóng đổ sâu, vệt sáng cục bộ từ đèn/neon)</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
                     </div>
-                    <div class="critique-good">Tận dụng chuyển động quay tròn của bản lề cửa để tạo ra cú lướt máy mượt mà như đặt trên ray trượt Dolly/Slider chuyên nghiệp với chi phí 0 đồng.</div>
-                    <div class="critique-warn">Tốc độ đẩy cánh cửa cần kiểm soát đều tay; nếu đẩy giật cục thì video thành phẩm sẽ bị rung lắc cơ học.</div>
-                    <div class="shot-narrative">Nửa trên (The setup) kẹp Magic Arm vào mép dưới cánh cửa phòng ngủ sát mặt sàn; Nửa dưới (The shot) quay lại khoảnh khắc cánh cửa mở ra, camera lướt sát mặt sàn gỗ theo dõi bước chân người bước vào phòng.</div>
+                    <div class="critique-good">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Tạo cảm giác bí ẩn, tăng độ tương phản kịch tính (Dramatic Contrast) giữa vùng sáng và bóng tối.</div>
+                    <div class="critique-warn">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Vùng shadow dễ bị bết hoặc nhiễu hạt (noise) nếu màn hình điện thoại người xem để độ sáng thấp.</div>
+                    <div class="shot-narrative">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</div>
                 </details>
             </div>
         </div>
 
         <div class="shot-card" id="shot-card-5">
             <div class="shot-thumb" onclick="playShot(13.33, 16.83, 'SHOT 05')">
-                <img src="https://media.fedu.vn/images/IG_@kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_👀/shot_05_mid.jpg" alt="SHOT 05" loading="lazy" />
+                <img src="https://media.fedu.vn/images/IG_@kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_👀/shot_05_mid.webp" alt="SHOT 05" loading="lazy" />
                 <div class="shot-play-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
                 <span class="shot-time-badge">13.3s – 16.8s</span>
             </div>
@@ -1195,26 +1397,26 @@
                     <span class="shot-num">SHOT 05</span>
                     <span class="shot-dur">3.53s</span>
                 </div>
-                <h4 class="shot-headline">Góc Máy Giấu Kín Khe Sách (Hidden Bookshelf POV): Hiệu Ứng Khung Nhìn Nhìn Lén Tự Nhiên</h4>
-                <p class="shot-insight">Kẹp máy vào những góc hẹp mà tripod không bao giờ chui lọt (ngăn tủ, hộc bàn, lò vi sóng) để tạo góc nhìn lén (Voyeuristic / Inside-out POV) kích thích thị giác.</p>
+                <h4 class="shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
+                <p class="shot-insight">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
-                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Kệ sách phòng khách / Giá sách gỗ trắng</span></div>
-                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Split-Screen (Setup Góc Trung + Shot Nhìn Lén Inside-Out POV)</span></div>
-                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Ánh sáng phòng hắt vào khe hẹp, tạo chiều sâu thị giác</span></div>
-                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Cut chuyển tiếp sang phân cảnh phòng khách</span></div>
+                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Balanced Diffused Lighting (Ánh sáng tự nhiên cân bằng, độ tương phản dịu)</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
                     </div>
-                    <div class="critique-good">Tạo khung hình lồng khung hình (Framing within a frame) tự nhiên bằng gáy sách, mang lại cảm giác điện ảnh chân thật như người xem đang nấp trong kệ sách nhìn ra.</div>
-                    <div class="critique-warn">Ánh sáng lọt vào khe sách thường yếu, nếu phòng thiếu sáng sẽ dễ bị tối hoặc noise vùng viền xung quanh.</div>
-                    <div class="shot-narrative">Nửa trên (The setup) kẹp Magic Arm vào đợt tủ sách, giấu thân điện thoại lọt thỏm vào khe hở giữa các cuốn sách; Nửa dưới (The shot) là góc máy nhìn từ trong kệ sách ra ngoài, bắt trọn bàn tay người xem đang lướt ngón tay chọn gáy sách.</div>
+                    <div class="critique-good">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Chuyển sắc mượt mà giữa các dải tông màu, bảo toàn chi tiết cả vùng sáng lẫn vùng tối.</div>
+                    <div class="critique-warn">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Độ kịch tính thị giác ở mức vừa phải, cần chuyển động máy hoặc chủ thể bù đắp nhịp điệu.</div>
+                    <div class="shot-narrative">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</div>
                 </details>
             </div>
         </div>
 
         <div class="shot-card" id="shot-card-6">
             <div class="shot-thumb" onclick="playShot(16.87, 20.77, 'SHOT 06')">
-                <img src="https://media.fedu.vn/images/IG_@kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_👀/shot_06_mid.jpg" alt="SHOT 06" loading="lazy" />
+                <img src="https://media.fedu.vn/images/IG_@kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_👀/shot_06_mid.webp" alt="SHOT 06" loading="lazy" />
                 <div class="shot-play-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
                 <span class="shot-time-badge">16.9s – 20.8s</span>
             </div>
@@ -1223,19 +1425,19 @@
                     <span class="shot-num">SHOT 06</span>
                     <span class="shot-dur">3.93s</span>
                 </div>
-                <h4 class="shot-headline">Cú Máy Khóa Vào Điều Khiển (Locked-on Remote POV): Giữ Chủ Thể Cố Định Trên Nền Mờ Mịn</h4>
-                <p class="shot-insight">Muốn làm nổi bật thao tác công nghệ hay review thiết bị thông minh, hãy khóa máy vào chính vật thể cầm tay thay vì quay người cầm từ bên ngoài.</p>
+                <h4 class="shot-headline">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế</h4>
+                <p class="shot-insight">Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.</p>
                 <details class="shot-details">
                     <summary>Chi tiết kỹ thuật ▸</summary>
                     <div class="shot-meta-grid">
-                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Phòng khách trước màn hình TV lớn</span></div>
-                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Split-Screen (Setup Ngồi Sofa + Shot Cố Định Vật Thể Locked-on POV)</span></div>
-                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Ánh sáng dịu trong phòng khách kết hợp ánh sáng hắt từ màn hình TV</span></div>
-                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Fade Out / Đóng nhịp video kết thúc bài hướng dẫn</span></div>
+                        <div class="meta-item"><span class="meta-label">Bối cảnh</span><span class="meta-val">Bối cảnh thực tế</span></div>
+                        <div class="meta-item"><span class="meta-label">Góc máy</span><span class="meta-val">Close-Up / Macro Detail Shot (Cận cảnh đặc tả)</span></div>
+                        <div class="meta-item"><span class="meta-label">Ánh sáng</span><span class="meta-val">Low-key Lighting (Ánh sáng tối, bóng đổ sâu, vệt sáng cục bộ từ đèn/neon)</span></div>
+                        <div class="meta-item"><span class="meta-label">Chuyển cảnh</span><span class="meta-val">Match Cut / Direct Cut theo nhịp chuyển động</span></div>
                     </div>
-                    <div class="critique-good">Ứng dụng kỹ thuật Snorricam mini (khóa camera vào vật thể cầm tay), tạo ảo giác thị giác cao cấp thường chỉ thấy trong các MV ca nhạc hoặc phim hành động Hollywood.</div>
-                    <div class="critique-warn">Trọng lượng của cụm tay đòn + kẹp làm chiếc remote khá cồng kềnh khi cầm bằng một tay, cần chọn loại Magic Arm nhôm siêu nhẹ.</div>
-                    <div class="shot-narrative">Nửa trên (The setup) kẹp Magic Arm vào đuôi chiếc remote điều khiển TV; Nửa dưới (The shot) là thành phẩm camera gắn chặt vào remote, khi tay creator bấm nút di chuyển thì chiếc remote đứng im ở tiền cảnh trong khi màn hình TV phía sau chuyển động mờ ảo.</div>
+                    <div class="critique-good">Xóa phông mượt mà (Bokeh), tách biệt chủ thể hoàn toàn khỏi hậu cảnh lộn xộn. Tạo cảm giác bí ẩn, tăng độ tương phản kịch tính (Dramatic Contrast) giữa vùng sáng và bóng tối.</div>
+                    <div class="critique-warn">Khung hình bị bó hẹp, nếu chủ thể cử động quá nhanh dễ bị trượt ra ngoài vùng nét (Depth of Field mỏng). Vùng shadow dễ bị bết hoặc nhiễu hạt (noise) nếu màn hình điện thoại người xem để độ sáng thấp.</div>
+                    <div class="shot-narrative">Chủ thể được phóng đại cận cảnh, đặc tả hành động hoặc bề mặt chất liệu sắc nét.</div>
                 </details>
             </div>
         </div>
@@ -1245,62 +1447,62 @@
             
         <div class="grid-item" onclick="playShot(0.0, 3.0, 'SHOT 01')">
             <div class="grid-thumb">
-                <img src="https://media.fedu.vn/images/IG_@kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_👀/shot_01_mid.jpg" alt="SHOT 01" loading="lazy" />
+                <img src="https://media.fedu.vn/images/IG_@kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_👀/shot_01_mid.webp" alt="SHOT 01" loading="lazy" />
                 <span class="grid-num">SHOT 01</span>
                 <span class="grid-time">0.0s – 3.0s</span>
-                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_👀/shot_01_mid.jpg', 'SHOT 01 • Giơ Phụ Kiện Magic Arm &amp; Hook Số Lẻ &#x27;5 Cách Dùng Sáng Tạo&#x27;')">⊕</button>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_👀/shot_01_mid.webp', 'SHOT 01 • Visual Hook Mở Màn: Giữ chân người xem ngay 2 giây đầu bằng nhịp chuyển động mạnh')">⊕</button>
             </div>
-            <div class="grid-title">Giơ Phụ Kiện Magic Arm &amp; Hook Số Lẻ &#x27;5 C</div>
+            <div class="grid-title">Visual Hook Mở Màn: Giữ chân người xem n</div>
         </div>
 
         <div class="grid-item" onclick="playShot(3.03, 6.4, 'SHOT 02')">
             <div class="grid-thumb">
-                <img src="https://media.fedu.vn/images/IG_@kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_👀/shot_02_mid.jpg" alt="SHOT 02" loading="lazy" />
+                <img src="https://media.fedu.vn/images/IG_@kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_👀/shot_02_mid.webp" alt="SHOT 02" loading="lazy" />
                 <span class="grid-num">SHOT 02</span>
                 <span class="grid-time">3.0s – 6.4s</span>
-                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_👀/shot_02_mid.jpg', 'SHOT 02 • Kẹp Ly Rượu Vang Độc Bản: Cú Máy Snorkel POV Uống Nước Giữ Trọng Tâm Môi')">⊕</button>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_👀/shot_02_mid.webp', 'SHOT 02 • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">⊕</button>
             </div>
-            <div class="grid-title">Kẹp Ly Rượu Vang Độc Bản: Cú Máy Snorkel</div>
+            <div class="grid-title">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Deta</div>
         </div>
 
         <div class="grid-item" onclick="playShot(6.43, 10.07, 'SHOT 03')">
             <div class="grid-thumb">
-                <img src="https://media.fedu.vn/images/IG_@kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_👀/shot_03_mid.jpg" alt="SHOT 03" loading="lazy" />
+                <img src="https://media.fedu.vn/images/IG_@kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_👀/shot_03_mid.webp" alt="SHOT 03" loading="lazy" />
                 <span class="grid-num">SHOT 03</span>
                 <span class="grid-time">6.4s – 10.1s</span>
-                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_👀/shot_03_mid.jpg', 'SHOT 03 • Cú Máy Từ Đỉnh Đầu (Top-Down POV): Đọc Sách Thư Giãn Không Cần Chân Máy Cồng Kềnh')">⊕</button>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_👀/shot_03_mid.webp', 'SHOT 03 • Nhịp Dẫn Theo Dõi (Medium Tracking): Duy trì sự liên tục và kết nối cảm xúc nhân vật')">⊕</button>
             </div>
-            <div class="grid-title">Cú Máy Từ Đỉnh Đầu (Top-Down POV): Đọc S</div>
+            <div class="grid-title">Nhịp Dẫn Theo Dõi (Medium Tracking): Duy</div>
         </div>
 
         <div class="grid-item" onclick="playShot(10.1, 13.3, 'SHOT 04')">
             <div class="grid-thumb">
-                <img src="https://media.fedu.vn/images/IG_@kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_👀/shot_04_mid.jpg" alt="SHOT 04" loading="lazy" />
+                <img src="https://media.fedu.vn/images/IG_@kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_👀/shot_04_mid.webp" alt="SHOT 04" loading="lazy" />
                 <span class="grid-num">SHOT 04</span>
                 <span class="grid-time">10.1s – 13.3s</span>
-                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_👀/shot_04_mid.jpg', 'SHOT 04 • Cú Máy Lướt Cửa Sát Sàn (Low Angle Tracking): Giả Lập Ray Trượt Dolly Bằng Bản Lề Cửa')">⊕</button>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_👀/shot_04_mid.webp', 'SHOT 04 • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">⊕</button>
             </div>
-            <div class="grid-title">Cú Máy Lướt Cửa Sát Sàn (Low Angle Track</div>
+            <div class="grid-title">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Deta</div>
         </div>
 
         <div class="grid-item" onclick="playShot(13.33, 16.83, 'SHOT 05')">
             <div class="grid-thumb">
-                <img src="https://media.fedu.vn/images/IG_@kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_👀/shot_05_mid.jpg" alt="SHOT 05" loading="lazy" />
+                <img src="https://media.fedu.vn/images/IG_@kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_👀/shot_05_mid.webp" alt="SHOT 05" loading="lazy" />
                 <span class="grid-num">SHOT 05</span>
                 <span class="grid-time">13.3s – 16.8s</span>
-                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_👀/shot_05_mid.jpg', 'SHOT 05 • Góc Máy Giấu Kín Khe Sách (Hidden Bookshelf POV): Hiệu Ứng Khung Nhìn Nhìn Lén Tự Nhiên')">⊕</button>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_👀/shot_05_mid.webp', 'SHOT 05 • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">⊕</button>
             </div>
-            <div class="grid-title">Góc Máy Giấu Kín Khe Sách (Hidden Booksh</div>
+            <div class="grid-title">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Deta</div>
         </div>
 
         <div class="grid-item" onclick="playShot(16.87, 20.77, 'SHOT 06')">
             <div class="grid-thumb">
-                <img src="https://media.fedu.vn/images/IG_@kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_👀/shot_06_mid.jpg" alt="SHOT 06" loading="lazy" />
+                <img src="https://media.fedu.vn/images/IG_@kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_👀/shot_06_mid.webp" alt="SHOT 06" loading="lazy" />
                 <span class="grid-num">SHOT 06</span>
                 <span class="grid-time">16.9s – 20.8s</span>
-                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_👀/shot_06_mid.jpg', 'SHOT 06 • Cú Máy Khóa Vào Điều Khiển (Locked-on Remote POV): Giữ Chủ Thể Cố Định Trên Nền Mờ Mịn')">⊕</button>
+                <button class="grid-zoom" onclick="event.stopPropagation(); openLightbox('https://media.fedu.vn/images/IG_@kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_👀/shot_06_mid.webp', 'SHOT 06 • Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail): Tập trung tối đa vào điểm chạm thị giác tinh tế')">⊕</button>
             </div>
-            <div class="grid-title">Cú Máy Khóa Vào Điều Khiển (Locked-on Re</div>
+            <div class="grid-title">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Deta</div>
         </div>
         </div>
     </div>
@@ -1314,60 +1516,60 @@
         </div>
         <div class="drawer-list">
         <div class="drawer-item" onclick="jumpToShot(1, 0.0, 3.0, 'SHOT 01')">
-            <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_👀/shot_01_mid.jpg" alt="SHOT 01" loading="lazy" /></div>
+            <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_👀/shot_01_mid.webp" alt="SHOT 01" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 01</div>
-                <div class="drawer-shot-hl">Giơ Phụ Kiện Magic Arm &amp; Hook Số Lẻ &#x27;5 Các</div>
+                <div class="drawer-shot-hl">Visual Hook Mở Màn: Giữ chân người xem nga</div>
                 <div class="drawer-shot-time">0.00s – 3.00s</div>
             </div>
             <div class="drawer-arrow">▶</div>
         </div>
 
         <div class="drawer-item" onclick="jumpToShot(2, 3.03, 6.4, 'SHOT 02')">
-            <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_👀/shot_02_mid.jpg" alt="SHOT 02" loading="lazy" /></div>
+            <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_👀/shot_02_mid.webp" alt="SHOT 02" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 02</div>
-                <div class="drawer-shot-hl">Kẹp Ly Rượu Vang Độc Bản: Cú Máy Snorkel P</div>
+                <div class="drawer-shot-hl">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail</div>
                 <div class="drawer-shot-time">3.03s – 6.40s</div>
             </div>
             <div class="drawer-arrow">▶</div>
         </div>
 
         <div class="drawer-item" onclick="jumpToShot(3, 6.43, 10.07, 'SHOT 03')">
-            <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_👀/shot_03_mid.jpg" alt="SHOT 03" loading="lazy" /></div>
+            <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_👀/shot_03_mid.webp" alt="SHOT 03" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 03</div>
-                <div class="drawer-shot-hl">Cú Máy Từ Đỉnh Đầu (Top-Down POV): Đọc Sác</div>
+                <div class="drawer-shot-hl">Nhịp Dẫn Theo Dõi (Medium Tracking): Duy t</div>
                 <div class="drawer-shot-time">6.43s – 10.07s</div>
             </div>
             <div class="drawer-arrow">▶</div>
         </div>
 
         <div class="drawer-item" onclick="jumpToShot(4, 10.1, 13.3, 'SHOT 04')">
-            <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_👀/shot_04_mid.jpg" alt="SHOT 04" loading="lazy" /></div>
+            <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_👀/shot_04_mid.webp" alt="SHOT 04" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 04</div>
-                <div class="drawer-shot-hl">Cú Máy Lướt Cửa Sát Sàn (Low Angle Trackin</div>
+                <div class="drawer-shot-hl">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail</div>
                 <div class="drawer-shot-time">10.10s – 13.30s</div>
             </div>
             <div class="drawer-arrow">▶</div>
         </div>
 
         <div class="drawer-item" onclick="jumpToShot(5, 13.33, 16.83, 'SHOT 05')">
-            <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_👀/shot_05_mid.jpg" alt="SHOT 05" loading="lazy" /></div>
+            <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_👀/shot_05_mid.webp" alt="SHOT 05" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 05</div>
-                <div class="drawer-shot-hl">Góc Máy Giấu Kín Khe Sách (Hidden Bookshel</div>
+                <div class="drawer-shot-hl">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail</div>
                 <div class="drawer-shot-time">13.33s – 16.83s</div>
             </div>
             <div class="drawer-arrow">▶</div>
         </div>
 
         <div class="drawer-item" onclick="jumpToShot(6, 16.87, 20.77, 'SHOT 06')">
-            <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_👀/shot_06_mid.jpg" alt="SHOT 06" loading="lazy" /></div>
+            <div class="drawer-thumb"><img src="https://media.fedu.vn/images/IG_@kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_👀/shot_06_mid.webp" alt="SHOT 06" loading="lazy" /></div>
             <div class="drawer-info">
                 <div class="drawer-shot-num">SHOT 06</div>
-                <div class="drawer-shot-hl">Cú Máy Khóa Vào Điều Khiển (Locked-on Remo</div>
+                <div class="drawer-shot-hl">Cận Cảnh Chi Tiết Cảm Xúc (Close-Up Detail</div>
                 <div class="drawer-shot-time">16.87s – 20.77s</div>
             </div>
             <div class="drawer-arrow">▶</div>
@@ -1379,6 +1581,83 @@
     <span class="lightbox-x" onclick="closeLightbox()">&times;</span>
     <img id="lightboxImg" onclick="event.stopPropagation()" />
     <div id="lightboxCaption"></div>
+</div>
+
+<!-- Edit Inline Feature -->
+<button class="edit-fab" onclick="openEditModal()" title="Sửa phân loại">✎</button>
+
+<div id="editModalBackdrop" class="edit-modal-backdrop" onclick="closeEditModal()">
+    <div class="edit-modal" onclick="event.stopPropagation()">
+        <div class="edit-modal-head">
+            <h3>✎ Sửa Phân Loại</h3>
+            <button class="edit-modal-close" onclick="closeEditModal()">&times;</button>
+        </div>
+        <div class="edit-modal-body">
+            <div id="editStatus" class="edit-status"></div>
+
+            <div class="edit-field">
+                <label>Ngành nghề</label>
+                <select id="editIndustry">
+                    <option value="">— Chọn hoặc gõ bên dưới —</option>
+                    <option value="Phong Cách Sống">Phong Cách Sống</option>
+                    <option value="Tâm Lý & Phát Triển Bản Thân">Tâm Lý & Phát Triển Bản Thân</option>
+                    <option value="Kiến Trúc & Không Gian Sống">Kiến Trúc & Không Gian Sống</option>
+                    <option value="Ẩm Thực & F&B">Ẩm Thực & F&B</option>
+                    <option value="Thời Trang & Làm Đẹp">Thời Trang & Làm Đẹp</option>
+                    <option value="Sức Khỏe & Fitness">Sức Khỏe & Fitness</option>
+                    <option value="Công Nghệ & Startup">Công Nghệ & Startup</option>
+                    <option value="Giáo Dục & Đào Tạo">Giáo Dục & Đào Tạo</option>
+                    <option value="Du Lịch & Trải Nghiệm">Du Lịch & Trải Nghiệm</option>
+                    <option value="E-Commerce & Bán Hàng">E-Commerce & Bán Hàng</option>
+                    <option value="Âm Nhạc & Giải Trí">Âm Nhạc & Giải Trí</option>
+                    <option value="Nghệ Thuật & Sáng Tạo">Nghệ Thuật & Sáng Tạo</option>
+                </select>
+                <input type="text" id="editIndustryCustom" placeholder="Hoặc gõ ngành tùy chỉnh...">
+            </div>
+
+            <div class="edit-field">
+                <label>Kiểu quay / Phong cách</label>
+                <select id="editStyle">
+                    <option value="">— Chọn hoặc gõ bên dưới —</option>
+                    <option value="Vlog Cinematic">Vlog Cinematic</option>
+                    <option value="Talking Head">Talking Head</option>
+                    <option value="Đời Thường & Chữa Lành">Đời Thường & Chữa Lành</option>
+                    <option value="Montage Nhanh">Montage Nhanh</option>
+                    <option value="B-Roll Thuần Hình">B-Roll Thuần Hình</option>
+                    <option value="POV / First Person">POV / First Person</option>
+                    <option value="Review Sản Phẩm">Review Sản Phẩm</option>
+                    <option value="Tutorial / How-to">Tutorial / How-to</option>
+                    <option value="Storytelling">Storytelling</option>
+                    <option value="Interview / Đối Thoại">Interview / Đối Thoại</option>
+                </select>
+                <input type="text" id="editStyleCustom" placeholder="Hoặc gõ kiểu quay tùy chỉnh...">
+            </div>
+
+            <div class="edit-field">
+                <label>Tags kỹ thuật (phân tách bằng dấu phẩy)</label>
+                <textarea id="editTags" placeholder="VD: Daily Routine, Motivation, Cinematic Loop"></textarea>
+            </div>
+
+            <div class="edit-field">
+                <label>Mục đích / Tóm tắt (Purpose)</label>
+                <textarea id="editPurpose"></textarea>
+            </div>
+
+            <div class="edit-field">
+                <label>Bài học rút gọn (Quick Takeaway)</label>
+                <textarea id="editTakeaway"></textarea>
+            </div>
+
+            <div class="edit-field edit-pw-field">
+                <label>Mật khẩu</label>
+                <input type="password" id="editPassword" placeholder="••••" autocomplete="off">
+            </div>
+        </div>
+        <div class="edit-modal-footer">
+            <button class="edit-cancel-btn" onclick="closeEditModal()">Hủy</button>
+            <button class="edit-save-btn" id="editSaveBtn" onclick="saveEdit()">Lưu thay đổi</button>
+        </div>
+    </div>
 </div>
 
 <script>
@@ -1629,6 +1908,151 @@ function copyMegaPrompt(e, btn) {
         alert('Lỗi sao chép, bạn bôi đen văn bản để copy nhé!');
     });
 }
+
+// === EDIT INLINE FEATURE ===
+var ENTRY_KEY = 'IG_@kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_👀';
+var CLASSIFICATION_DATA = {};
+
+function openEditModal() {
+    var d = CLASSIFICATION_DATA || {};
+    var indSel = document.getElementById('editIndustry');
+    var indCust = document.getElementById('editIndustryCustom');
+    var stySel = document.getElementById('editStyle');
+    var styCust = document.getElementById('editStyleCustom');
+    
+    // Pre-fill industry
+    var indName = (d.industry && d.industry.name) ? d.industry.name : '';
+    indSel.value = '';
+    indCust.value = '';
+    for (var i = 0; i < indSel.options.length; i++) {
+        if (indSel.options[i].value === indName) { indSel.value = indName; break; }
+    }
+    if (!indSel.value && indName) indCust.value = indName;
+
+    // Pre-fill style
+    var styName = (d.shooting_style && d.shooting_style.name) ? d.shooting_style.name : '';
+    stySel.value = '';
+    styCust.value = '';
+    for (var j = 0; j < stySel.options.length; j++) {
+        if (stySel.options[j].value === styName) { stySel.value = styName; break; }
+    }
+    if (!stySel.value && styName) styCust.value = styName;
+
+    // Pre-fill tags
+    document.getElementById('editTags').value = (d.tech_tags || []).join(', ');
+    document.getElementById('editPurpose').value = d.purpose || d.logic_explanation || '';
+    document.getElementById('editTakeaway').value = d.quick_takeaway || '';
+
+    // Reset status
+    var st = document.getElementById('editStatus');
+    st.className = 'edit-status';
+    st.style.display = 'none';
+    document.getElementById('editSaveBtn').disabled = false;
+    document.getElementById('editSaveBtn').textContent = 'Lưu thay đổi';
+
+    document.getElementById('editModalBackdrop').classList.add('open');
+}
+
+function closeEditModal() {
+    document.getElementById('editModalBackdrop').classList.remove('open');
+}
+
+function saveEdit() {
+    var btn = document.getElementById('editSaveBtn');
+    var st = document.getElementById('editStatus');
+    var pw = document.getElementById('editPassword').value;
+
+    if (!pw) {
+        st.className = 'edit-status error';
+        st.textContent = 'Vui lòng nhập mật khẩu.';
+        st.style.display = 'block';
+        return;
+    }
+
+    // Collect values
+    var indSel = document.getElementById('editIndustry').value;
+    var indCust = document.getElementById('editIndustryCustom').value.trim();
+    var industry = indCust || indSel || null;
+
+    var stySel = document.getElementById('editStyle').value;
+    var styCust = document.getElementById('editStyleCustom').value.trim();
+    var style = styCust || stySel || null;
+
+    var tags = document.getElementById('editTags').value;
+    var purpose = document.getElementById('editPurpose').value;
+    var takeaway = document.getElementById('editTakeaway').value;
+
+    var updates = {};
+    if (industry) updates.industry = industry;
+    if (style) updates.shooting_style = style;
+    if (tags) updates.tech_tags = tags;
+    if (purpose) updates.purpose = purpose;
+    if (takeaway) updates.quick_takeaway = takeaway;
+
+    if (Object.keys(updates).length === 0) {
+        st.className = 'edit-status error';
+        st.textContent = 'Chưa có thay đổi nào.';
+        st.style.display = 'block';
+        return;
+    }
+
+    btn.disabled = true;
+    btn.textContent = 'Đang lưu...';
+    st.style.display = 'none';
+
+    fetch('/api/edit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            password: pw,
+            entryKey: ENTRY_KEY,
+            updates: updates
+        })
+    })
+    .then(function(res) { return res.json().then(function(data) { return { ok: res.ok, data: data }; }); })
+    .then(function(result) {
+        if (result.ok && result.data.success) {
+            st.className = 'edit-status success';
+            st.textContent = '✅ Đã lưu! Commit: ' + (result.data.commit || '') + '. Trang sẽ tự cập nhật sau 1-2 phút.';
+            st.style.display = 'block';
+            btn.textContent = '✅ Đã lưu';
+
+            // Update DOM ngay lập tức (instant feedback)
+            var badges = document.querySelector('.header-badges');
+            if (badges && (updates.industry || updates.shooting_style)) {
+                var html = '';
+                var ind = updates.industry || (CLASSIFICATION_DATA.industry && CLASSIFICATION_DATA.industry.name) || '';
+                var sty = updates.shooting_style || (CLASSIFICATION_DATA.shooting_style && CLASSIFICATION_DATA.shooting_style.name) || '';
+                if (ind) html += '<span class="badge">' + ind + '</span> ';
+                if (sty) html += '<span class="badge badge-alt">' + sty + '</span>';
+                badges.innerHTML = html;
+            }
+
+            // Cập nhật CLASSIFICATION_DATA nội bộ
+            if (result.data.updatedEntry) {
+                CLASSIFICATION_DATA = result.data.updatedEntry;
+            }
+        } else {
+            st.className = 'edit-status error';
+            st.textContent = '❌ ' + (result.data.error || 'Lỗi không xác định');
+            st.style.display = 'block';
+            btn.disabled = false;
+            btn.textContent = 'Lưu thay đổi';
+        }
+    })
+    .catch(function(err) {
+        st.className = 'edit-status error';
+        st.textContent = '❌ Lỗi mạng: ' + err.message;
+        st.style.display = 'block';
+        btn.disabled = false;
+        btn.textContent = 'Lưu thay đổi';
+    });
+}
+
+// Đóng modal khi bấm Escape
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeEditModal();
+});
 </script>
 </body>
 </html>
