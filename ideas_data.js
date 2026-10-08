@@ -5,10 +5,10 @@
 var FEDU_IDEAS_DATABASE = {
   "generated_at": "2026-09-13T18:00:00+07:00",
   "total_scene_items": 364,
-  "total_unique_ideas": 338,
-  "total_active_ideas": 311,
-  "total_excluded_ideas": 27,
-  "total_creators": 208,
+  "total_unique_ideas": 343,
+  "total_active_ideas": 314,
+  "total_excluded_ideas": 29,
+  "total_creators": 221,
   "shooting_styles": [
     {
       "id": "walk-and-talk",
@@ -57,15 +57,33 @@ var FEDU_IDEAS_DATABASE = {
       "icon": "⚡",
       "badge_color": "rose",
       "desc": "Kỹ thuật cắt cảnh nhịp điệu, match cut, whip pan, zoom transition, kinetic visual loop."
+    },
+    {
+      "id": "theo-nhip-nhac",
+      "name": "Theo nhịp nhạc",
+      "en_name": "Music Beat & Rhythm",
+      "icon": "🎵",
+      "badge_color": "purple",
+      "desc": "Cắt cảnh đồng bộ nhịp điệu âm nhạc, vũ đạo, hành động khớp beat dồn dập."
+    },
+    {
+      "id": "bts",
+      "name": "BTS / Setup",
+      "en_name": "Behind The Scenes",
+      "icon": "🎥",
+      "badge_color": "zinc",
+      "desc": "Hậu trường quay dựng, góc máy setup thiết bị cho Solo Creator."
     }
   ],
   "shooting_style_stats": {
     "walk-and-talk": 2,
-    "voice-over": 9,
+    "voice-over": 8,
     "talking-head": 8,
-    "storytelling": 32,
-    "dien-anh": 199,
-    "chuyen-canh": 61
+    "storytelling": 33,
+    "dien-anh": 187,
+    "chuyen-canh": 55,
+    "theo-nhip-nhac": 21,
+    "bts": 0
   },
   "industries": [
     {
@@ -150,17 +168,19 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "industry_stats": {
-    "spa-lam-dep": 12,
-    "thuong-hieu": 8,
-    "thoi-trang": 23,
-    "am-thuc": 26,
-    "du-lich": 14,
-    "cong-nghe": 9,
-    "kien-truc": 11,
-    "the-thao": 6,
-    "ky-thuat-quay": 198,
-    "ugc": 4
+    "spa-lam-dep": 0,
+    "thuong-hieu": 0,
+    "thoi-trang": 0,
+    "am-thuc": 0,
+    "du-lich": 0,
+    "cong-nghe": 0,
+    "kien-truc": 0,
+    "the-thao": 0,
+    "ky-thuat-quay": 0,
+    "ugc": 0
   },
+  "x_factors": [],
+  "x_factor_stats": {},
   "countries": [
     {
       "id": "us_eu",
@@ -212,11 +232,11 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "country_stats": {
-    "us_eu": 208,
+    "us_eu": 210,
     "korea": 19,
     "india": 28,
     "japan": 14,
-    "vietnam": 12,
+    "vietnam": 13,
     "asia_other": 30
   },
   "transition_stats": {
@@ -233,9 +253,9 @@ var FEDU_IDEAS_DATABASE = {
       "handle": "@mridupawasharma",
       "name": "Mridupawasharma",
       "profile_url": "https://www.instagram.com/mridupawasharma/",
-      "video_count": 22,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mridupawasharma_DU7mCyVE4EJ_Comment_%E2%80%9CLUTS%E2%80%9D_to_get_these_luts_in_your_DMs/shot_01_mid.jpg",
+      "video_count": 25,
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40mridupawasharma_DU7mCyVE4EJ_Comment_%E2%80%9CLUTS%E2%80%9D_to_get_these_luts_in_your_DMs/shot_01_mid.webp",
       "video_ids": [
         "IG_@mridupawasharma_DU7mCyVE4EJ_Comment_“LUTS”_to_get_these_luts_in_your_DMs",
         "IG_@mridupawasharma_DaXdrAVzGcc_Some_days_you_don’t_need_more_motivation,_you",
@@ -258,7 +278,10 @@ var FEDU_IDEAS_DATABASE = {
         "IG_@mridupawasharma_C_ZzqHXS914_How_to_Master_cinematography_alone",
         "IG_@mridupawasharma_DJqXz8pxEh6_“No_words._Just_fear,_silence…_and_a_phone_ca",
         "IG_@mridupawasharma_DLW8fdfRG6w_Carousel_Analysis",
-        "IG_@mridupawasharma_Dd6G0lnI0zj_Shot_my_little_moments_differently_this_time,"
+        "IG_@mridupawasharma_Dd6G0lnI0zj_Shot_my_little_moments_differently_this_time,",
+        "IG_@mridupawasharma_Dc0tEcOIdwy_4_Cuts_Mastery",
+        "IG_@mridupawasharma_DF2sOsNyNlY_3_Hooks_Mastery",
+        "IG_@mridupawasharma_DWD7Lv4E8N8_SanDisk_Creator_SSD"
       ]
     },
     {
@@ -266,8 +289,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Framebygeorge",
       "profile_url": "https://www.instagram.com/framebygeorge/",
       "video_count": 9,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40framebygeorge_DdZb-x1OuDw_Day_20_learning_cinematography/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40framebygeorge_DdZb-x1OuDw_Day_20_learning_cinematography/shot_01_mid.webp",
       "video_ids": [
         "IG_@framebygeorge_DdZb-x1OuDw_Day_20_learning_cinematography",
         "IG_@framebygeorge_DdW1eYoO7Nb_Day_19_learning_cinematography",
@@ -285,8 +308,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Ulanzi",
       "profile_url": "https://www.instagram.com/ulanzi/",
       "video_count": 8,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40ulanzi_oSa57_Ch%C3%A2n_%C4%90%E1%BA%BF_M%C3%A1y_%E1%BA%A2nh_Nh%E1%BA%B9_v%C3%A0_%C4%90a_N%C4%83ng/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40ulanzi_oSa57_Ch%C3%A2n_%C4%90%E1%BA%BF_M%C3%A1y_%E1%BA%A2nh_Nh%E1%BA%B9_v%C3%A0_%C4%90a_N%C4%83ng/shot_01_mid.webp",
       "video_ids": [
         "IG_@ulanzi_oSa57_Chân_Đế_Máy_Ảnh_Nhẹ_và_Đa_Năng",
         "IG_@ulanzi_oSaTN_Tripod_&_Gậy_Selfie_Tự_Động_MT86,_Cao_1.52m_4",
@@ -303,8 +326,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Withyuee",
       "profile_url": "https://www.instagram.com/withyuee/",
       "video_count": 8,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://media.fedu.vn/images/Visual_Storytelling_Carousel_-_%2540withyuee/img_001_f678a262.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/Visual_Storytelling_Carousel_-_%40withyuee/img_001_f678a262.webp",
       "video_ids": [
         "Visual_Storytelling_Carousel_@withyuee",
         "Hong_Kong_Urban_Transitions_@withyuee",
@@ -321,8 +344,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Joshdiazfilms",
       "profile_url": "https://www.instagram.com/joshdiazfilms/",
       "video_count": 7,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40joshdiazfilms_Ddo-TSWMZpG_Video_by_joshdiazfilms/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40joshdiazfilms_Ddo-TSWMZpG_Video_by_joshdiazfilms/shot_01_mid.webp",
       "video_ids": [
         "IG_@joshdiazfilms_Ddo-TSWMZpG_Video_by_joshdiazfilms",
         "IG_@joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine",
@@ -338,8 +361,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Jazzie Sillona",
       "profile_url": "https://www.instagram.com/jazziesillona/",
       "video_count": 7,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://media.fedu.vn/images/IG_%40jazziesillona_Dc6Cxf-QRWh/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40jazziesillona_Dc6Cxf-QRWh/shot_01_mid.webp",
       "video_ids": [
         "IG_@jazziesillona_Dc6Cxf-QRWh",
         "IG_@jazziesillona_DXUG_1TjwJu_Carousel_Analysis",
@@ -355,8 +378,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Masterclass",
       "profile_url": "https://www.instagram.com/MasterClass/",
       "video_count": 5,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://media.fedu.vn/images/IG_%2540MasterClass_nNkE1fK9eQs_Coach_K_Teaches_Values-Driven_Leadership_Offi/shot_02_mid.webp",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40MasterClass_nNkE1fK9eQs_Coach_K_Teaches_Values-Driven_Leadership_Offi/shot_02_mid.webp",
       "video_ids": [
         "IG_@MasterClass_nNkE1fK9eQs_Coach_K_Teaches_Values-Driven_Leadership_Offi",
         "IG_@MasterClass_UOAgJxrGKzk_Make_the_Markets_Work_for_You_With_Ray_Dalio",
@@ -370,8 +393,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Shogentle",
       "profile_url": "https://www.instagram.com/shogentle/",
       "video_count": 5,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40shogentle_Dah5Tp8oji1_The_Sound_Transition_Thing_That_Makes_Cuts_Fe/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40shogentle_Dah5Tp8oji1_The_Sound_Transition_Thing_That_Makes_Cuts_Fe/shot_01_mid.webp",
       "video_ids": [
         "IG_@shogentle_Dah5Tp8oji1_The_Sound_Transition_Thing_That_Makes_Cuts_Fe",
         "IG_@AL,_The_Creator_Videography_Reels_DdTeHleIqkg_Video_by_shogentle",
@@ -385,8 +408,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Hena_Film_Vlog",
       "profile_url": "https://www.instagram.com/hena_film_vlog/",
       "video_count": 5,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40hena_film_vlog_DdlmZczPsCE_%ED%98%BC%EC%9E%90_%EB%A7%8C%EB%93%9C%EB%8A%94%EB%8D%B0_%EC%B4%AC%EC%98%81%EC%9D%80_%EB%88%84%EA%B0%80_%ED%95%98%EB%83%90%EA%B3%A0%EC%9A%94%F0%9F%A4%B7%F0%9F%8F%BB%E2%80%8D%E2%99%80%EF%B8%8F_%EC%A0%9C%ED%92%88%EC%A0%9C%EA%B3%B5/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DdlmZczPsCE_%ED%98%BC%EC%9E%90_%EB%A7%8C%EB%93%9C%EB%8A%94%EB%8D%B0_%EC%B4%AC%EC%98%81%EC%9D%80_%EB%88%84%EA%B0%80_%ED%95%98%EB%83%90%EA%B3%A0%EC%9A%94%F0%9F%A4%B7%F0%9F%8F%BB%E2%80%8D%E2%99%80%EF%B8%8F_%EC%A0%9C%ED%92%88%EC%A0%9C%EA%B3%B5/shot_01_mid.webp",
       "video_ids": [
         "IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공",
         "IG_@hena_film_vlog_DdbCdHFKZsP_햇빛_없는_집,_음식_촬영_가능함🤔_제품제공",
@@ -396,11 +419,25 @@ var FEDU_IDEAS_DATABASE = {
       ]
     },
     {
+      "handle": "@creator",
+      "name": "Creator",
+      "profile_url": "https://www.instagram.com/creator/",
+      "video_count": 4,
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40creator_DdVBqUzj3o5_Video_DdVBqUzj3o5/shot_01_mid.webp",
+      "video_ids": [
+        "IG_@creator_DdVBqUzj3o5_Video_DdVBqUzj3o5",
+        "IG_@creator_DdSs5rahILb_Video_DdSs5rahILb",
+        "Bao_Cao_Boi_Canh_Thuc_Chien_R2",
+        "IG_@by.bennnj_DbKauxkoJU_"
+      ]
+    },
+    {
       "handle": "@ulanzi.vietnam",
       "name": "Ulanzi.Vietnam",
       "profile_url": "https://www.instagram.com/ulanzi.vietnam/",
       "video_count": 4,
-      "top_industry": "UGC",
+      "top_industry": "Unknown",
       "sample_thumb": "https://img.youtube.com/vi/L4YUJh9ltF0/hqdefault.jpg",
       "video_ids": [
         "LAZADA_Ulanzi_Đèn_LED_Thanh_Bơm_Hơi_UA20,_",
@@ -414,8 +451,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Jerome Teo",
       "profile_url": "https://www.instagram.com/jeromememe/",
       "video_count": 4,
-      "top_industry": "Du lịch",
-      "sample_thumb": "https://media.fedu.vn/images/People_of_Bhutan_-_%2540jeromememe/img_002_c7376907.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/People_of_Bhutan_-_%40jeromememe/img_002_c7376907.webp",
       "video_ids": [
         "IG_@jeromememe_Db-zVchOXV7_People_of_Bhutan",
         "IG_@jeromememe_DQuEXMbj8fT_People_of_Porto",
@@ -428,8 +465,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "By.Bennnj",
       "profile_url": "https://www.instagram.com/by.bennnj/",
       "video_count": 3,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40by.bennnj_Ddfa3zCu3kj_Making_cinematic_videos_on_my_Sony_a6400_with/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40by.bennnj_Ddfa3zCu3kj_Making_cinematic_videos_on_my_Sony_a6400_with/shot_01_mid.webp",
       "video_ids": [
         "IG_@by.bennnj_Ddfa3zCu3kj_Making_cinematic_videos_on_my_Sony_a6400_with",
         "IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp",
@@ -441,8 +478,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Mcjacoub",
       "profile_url": "https://www.instagram.com/mcjacoub/",
       "video_count": 3,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mcjacoub_Ddlh5pagYie_Carousel_Analysis/slide_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40mcjacoub_Ddlh5pagYie_Carousel_Analysis/slide_01_mid.webp",
       "video_ids": [
         "IG_@mcjacoub_Ddlh5pagYie_Carousel_Analysis",
         "IG_@Jakarta_Videographer_Jacoub_Anwar_DbnwnkrAVQ9_Carousel_Analysis",
@@ -454,8 +491,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Mario.Prawira",
       "profile_url": "https://www.instagram.com/mario.prawira/",
       "video_count": 3,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mario.prawira_DcgEuvwx47P_How_to_do_a_before_after_with_a_prop_and_your/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40mario.prawira_DcgEuvwx47P_How_to_do_a_before_after_with_a_prop_and_your/shot_01_mid.webp",
       "video_ids": [
         "IG_@mario.prawira_DcgEuvwx47P_How_to_do_a_before_after_with_a_prop_and_your",
         "IG_@mario.prawira_Ddga_xPq9fE_Jutsu_Transition_Shisha_Version",
@@ -467,8 +504,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Megan_Tan",
       "profile_url": "https://www.instagram.com/megantanhweewen/",
       "video_count": 3,
-      "top_industry": "F&B",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Megan_Tan_DdgwV6dsxcS_Video_by_megantanhweewen/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40Megan_Tan_DdgwV6dsxcS_Video_by_megantanhweewen/shot_01_mid.jpg",
       "video_ids": [
         "IG_@Megan_Tan_DdgwV6dsxcS_Video_by_megantanhweewen",
         "IG_@Megan_Tan_DdT4EOzveQL_Video_by_megantanhweewen",
@@ -480,8 +517,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Yegor.Sky",
       "profile_url": "https://www.instagram.com/yegor.sky/",
       "video_count": 3,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_01_mid.webp",
       "video_ids": [
         "IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City",
         "IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence",
@@ -493,8 +530,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Ioana_Iftode",
       "profile_url": "https://www.instagram.com/ioana_iftode/",
       "video_count": 3,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://media.fedu.vn/images/IG_%40ioana_iftode_Db7zNC0jPwV_Tokyo_Slow_Life_Magic_Moments/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40ioana_iftode_Db7zNC0jPwV_Tokyo_Slow_Life_Magic_Moments/shot_01_mid.webp",
       "video_ids": [
         "IG_@ioana_iftode_Db7zNC0jPwV_Tokyo_Slow_Life_Magic_Moments",
         "IG_@ioana_iftode_DcYQVYJjHa-_Tokyo_Slow_Life_Visual_Diaries",
@@ -502,12 +539,25 @@ var FEDU_IDEAS_DATABASE = {
       ]
     },
     {
+      "handle": "@qfroost",
+      "name": "Quyen Van",
+      "profile_url": "https://www.instagram.com/qfroost/",
+      "video_count": 3,
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/Saigon%2C_Vietnam_-_%40qfroost/img_002_d655a123.webp",
+      "video_ids": [
+        "IG_@qfroost_DXWKIztktTN_Saigon_Vietnam",
+        "IG_@qfroost_Dah8zTnNgq5_Ray_Ban_Meta_System",
+        "IG_@qfroost_DbdG7v1tjrz_Adobe_Firefly_Workflow"
+      ]
+    },
+    {
       "handle": "@iamaayushswamy",
       "name": "Iamaayushswamy",
       "profile_url": "https://www.instagram.com/iamaayushswamy/",
       "video_count": 2,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40iamaayushswamy_DcwPu99sDKI_how_to_yap_on_camera/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40iamaayushswamy_DcwPu99sDKI_how_to_yap_on_camera/shot_01_mid.webp",
       "video_ids": [
         "IG_@iamaayushswamy_DcwPu99sDKI_how_to_yap_on_camera",
         "IG_@iamaayushswamy_DdpxcaOMaQS_caption_placement"
@@ -518,8 +568,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Jackwebstter",
       "profile_url": "https://www.instagram.com/jackwebstter/",
       "video_count": 2,
-      "top_industry": "Thể thao",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40jackwebstter_DdtKOH-TN_c_How_to_film_cinematic_running_shots_part_2/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40jackwebstter_DdtKOH-TN_c_How_to_film_cinematic_running_shots_part_2/shot_01_mid.webp",
       "video_ids": [
         "IG_@jackwebstter_DdtKOH-TN_c_How_to_film_cinematic_running_shots_part_2",
         "IG_@jackwebstter_DcJIT4DzPhj_Minimalist_Discipline_Chiaroscuro"
@@ -530,8 +580,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Jsnhow",
       "profile_url": "https://www.instagram.com/jsnhow/",
       "video_count": 2,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40jsnhow_DdncdgVRBIp_Soft_sounds%2C_quiet_minds%2C_and_a_moment_to_jus/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40jsnhow_DdncdgVRBIp_Soft_sounds%2C_quiet_minds%2C_and_a_moment_to_jus/shot_01_mid.webp",
       "video_ids": [
         "IG_@jsnhow_DdncdgVRBIp_Soft_sounds,_quiet_minds,_and_a_moment_to_jus",
         "IG_@jsnhow_Dcz7nniBEFe_Unwinding"
@@ -542,8 +592,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Celfstudies",
       "profile_url": "https://www.instagram.com/celfstudies/",
       "video_count": 2,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40celfstudies_DajU5I5AKIu_LA_VLOG_%21%21_%28horizontal_edition%F0%9F%A4%B3%29/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40celfstudies_DajU5I5AKIu_LA_VLOG_%21%21_%28horizontal_edition%F0%9F%A4%B3%29/shot_01_mid.webp",
       "video_ids": [
         "IG_@celfstudies_DajU5I5AKIu_LA_VLOG_!!_(horizontal_edition🤳)",
         "IG_@celfstudies_DdN_aljAIY0_Day_In_My_Life_SF_Speed_Transitions"
@@ -554,8 +604,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Nana_Icroom",
       "profile_url": "https://www.instagram.com/nana_icroom/",
       "video_count": 2,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40nana_icroom_DdoJCWrT0Do_vlog%E6%92%AE%E5%BD%B1%E3%80%81%E3%81%A9%E3%82%93%E3%81%AA%E7%94%BB%E8%A7%92%E3%81%A7%E4%BD%95%E3%82%92%E6%92%AE%E3%81%A3%E3%81%9F%E3%82%89%E3%81%84%E3%81%84%E3%81%8B%E3%82%8F%E3%81%8B%E3%82%93%E3%81%AA%E3%81%84%E2%80%A6/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40nana_icroom_DdoJCWrT0Do_vlog%E6%92%AE%E5%BD%B1%E3%80%81%E3%81%A9%E3%82%93%E3%81%AA%E7%94%BB%E8%A7%92%E3%81%A7%E4%BD%95%E3%82%92%E6%92%AE%E3%81%A3%E3%81%9F%E3%82%89%E3%81%84%E3%81%84%E3%81%8B%E3%82%8F%E3%81%8B%E3%82%93%E3%81%AA%E3%81%84%E2%80%A6/shot_01_mid.webp",
       "video_ids": [
         "IG_@nana_icroom_DdoJCWrT0Do_vlog撮影、どんな画角で何を撮ったらいいかわかんない…",
         "IG_@nana_icroom_Db-jmp6TXNT_5_Japanese_Vlog_Compositions"
@@ -566,8 +616,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Mylenesmind",
       "profile_url": "https://www.instagram.com/mylenesmind/",
       "video_count": 2,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mylenesmind_DdoWrpERdvD_can_you_guess_the_theme_%F0%9F%91%80/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40mylenesmind_DdoWrpERdvD_can_you_guess_the_theme_%F0%9F%91%80/shot_01_mid.webp",
       "video_ids": [
         "IG_@mylenesmind_DdoWrpERdvD_can_you_guess_the_theme_👀",
         "IG_@mylene_mae_DdeCKRRRGvd_Video_by_mylenesmind"
@@ -578,8 +628,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Etaemin",
       "profile_url": "https://www.instagram.com/etaemin/",
       "video_count": 2,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40etaemin_DdoooYmq-cd_Get_ready_for_the_shoot/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40etaemin_DdoooYmq-cd_Get_ready_for_the_shoot/shot_01_mid.webp",
       "video_ids": [
         "IG_@etaemin_DdoooYmq-cd_Get_ready_for_the_shoot",
         "IG_@etaemin_DcgN1bsKUmi_Transition_Into_Running_Mode"
@@ -590,11 +640,23 @@ var FEDU_IDEAS_DATABASE = {
       "name": "German991020",
       "profile_url": "https://www.instagram.com/german991020/",
       "video_count": 2,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40german991020_DdnXgxUyok1_South_Korea_stills_-_Final_Series/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40german991020_DdnXgxUyok1_South_Korea_stills_-_Final_Series/shot_01_mid.webp",
       "video_ids": [
         "IG_@german991020_DdnXgxUyok1_South_Korea_stills_-_Final_Series",
         "IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul"
+      ]
+    },
+    {
+      "handle": "@jade.got.curious",
+      "name": "Jade_Sheng",
+      "profile_url": "https://www.instagram.com/jade.got.curious/",
+      "video_count": 2,
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_01_mid.webp",
+      "video_ids": [
+        "IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious",
+        "IG_@jade.got.curious_DbgtGKjNcH9_10_Weeks_Challenge_Storytelling"
       ]
     },
     {
@@ -602,8 +664,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "尼莫Nemo_ིྀ_ᗦ↞◃",
       "profile_url": "https://www.instagram.com/nemo_ooo/",
       "video_count": 2,
-      "top_industry": "Du lịch",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40%E5%B0%BC%E8%8E%ABNemo_%E0%BD%B2%E0%BE%80_%E1%97%A6%E2%86%9E%E2%97%83_DclWb98PiK_Video_by_nemo_ooo/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40%E5%B0%BC%E8%8E%ABNemo_%E0%BD%B2%E0%BE%80_%E1%97%A6%E2%86%9E%E2%97%83_DclWb98PiK_Video_by_nemo_ooo/shot_01_mid.webp",
       "video_ids": [
         "IG_@尼莫Nemo_ིྀ_ᗦ↞◃_DclWb98PiK_Video_by_nemo_ooo",
         "IG_@尼莫Nemo_ིྀ_ᗦ↞◃_DbF_D2MB6BR_Video_by_nemo_ooo"
@@ -614,8 +676,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Pascal_Blaurock",
       "profile_url": "https://www.instagram.com/pascal_blaurock/",
       "video_count": 2,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Pascal_Blaurock_DdT9CF7tGzn_Video_by_pascal_blaurock/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40Pascal_Blaurock_DdT9CF7tGzn_Video_by_pascal_blaurock/shot_01_mid.webp",
       "video_ids": [
         "IG_@Pascal_Blaurock_DdT9CF7tGzn_Video_by_pascal_blaurock",
         "IG_@pascal_blaurock_Dcd2VeyNJQx_iPhone_Cinema_Settings_Mastery"
@@ -626,8 +688,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Beixin (Travel & Nature",
       "profile_url": "https://www.instagram.com/beixin/",
       "video_count": 2,
-      "top_industry": "Du lịch",
-      "sample_thumb": "https://media.fedu.vn/images/IG_%40beixin_DdRGd8evPK-/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40beixin_DdRGd8evPK-/shot_01_mid.webp",
       "video_ids": [
         "IG_@beixin_DdRGd8evPK-",
         "IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear"
@@ -638,8 +700,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Layton Video",
       "profile_url": "https://www.instagram.com/layton_video/",
       "video_count": 2,
-      "top_industry": "Làm đẹp",
-      "sample_thumb": "https://media.fedu.vn/images/IG_%40layton_video_DdKGq2TMhf4/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40layton_video_DdKGq2TMhf4/shot_01_mid.webp",
       "video_ids": [
         "IG_@layton_video_DdKGq2TMhf4",
         "IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds"
@@ -650,8 +712,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "CJ Visuals",
       "profile_url": "https://www.instagram.com/c.j.visuals/",
       "video_count": 2,
-      "top_industry": "Du lịch",
-      "sample_thumb": "https://media.fedu.vn/images/IG_%40c.j.visuals_DdMrb4ARxHv/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40c.j.visuals_DdMrb4ARxHv/shot_01_mid.webp",
       "video_ids": [
         "IG_@c.j.visuals_DdMrb4ARxHv",
         "IG_@c.j.visuals_DdR7dEIxzT9"
@@ -662,8 +724,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Genya",
       "profile_url": "https://www.instagram.com/genya_jp/",
       "video_count": 2,
-      "top_industry": "F&B",
-      "sample_thumb": "https://media.fedu.vn/images/IG_%40genya_jp_Dc3PgRbBp-m/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40genya_jp_Dc3PgRbBp-m/shot_01_mid.webp",
       "video_ids": [
         "IG_@genya_jp_Dc3PgRbBp-m",
         "IG_@genya_jp_DdD_QqPB7aW"
@@ -674,8 +736,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "ArturBr",
       "profile_url": "https://www.instagram.com/arturbr/",
       "video_count": 2,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://media.fedu.vn/images/IG_%40arturbr_DdO2XLIKiXo/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40arturbr_DdO2XLIKiXo/shot_01_mid.webp",
       "video_ids": [
         "IG_@arturbr_DdO2XLIKiXo",
         "IG_@arturbr_DcOQSCMqho0_Personal_Cinema_Viture"
@@ -686,8 +748,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Steven.Vuu",
       "profile_url": "https://www.instagram.com/steven.vuu/",
       "video_count": 2,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40steven.vuu_DaBLA-QJcrk_How_I_Wake_Up_Skit/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40steven.vuu_DaBLA-QJcrk_How_I_Wake_Up_Skit/shot_01_mid.webp",
       "video_ids": [
         "IG_@steven.vuu_DaBLA-QJcrk_How_I_Wake_Up_Skit",
         "IG_@steven.vuu_DdM7gO4yD-c_Meta_RayBan_Hero_Cosmetics_Skit"
@@ -698,23 +760,23 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Neolumo.Uralsk",
       "profile_url": "https://www.instagram.com/neolumo.uralsk/",
       "video_count": 2,
-      "top_industry": "Làm đẹp",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_01_mid.webp",
       "video_ids": [
         "IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa",
         "IG_@neolumo.uralsk_DcOUP2PsMsP_Medical_Commercial_Authority"
       ]
     },
     {
-      "handle": "@qfroost",
-      "name": "Quyen Van / Q",
-      "profile_url": "https://www.instagram.com/qfroost/",
+      "handle": "@byjxson",
+      "name": "Anh Việt x @byjxson Remake Engine",
+      "profile_url": "https://www.instagram.com/byjxson/",
       "video_count": 2,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://media.fedu.vn/images/Ray-Ban_Meta_System_-_%2540qfroost/img_002_7fa52771.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_01_start.webp",
       "video_ids": [
-        "IG_@qfroost_Dah8zTnNgq5_Ray_Ban_Meta_System",
-        "IG_@qfroost_DbdG7v1tjrz_Adobe_Firefly_Workflow"
+        "REMAKE_Byjxson_Quang_Cao_Dong_Ho_Bam_Gio",
+        "IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01"
       ]
     },
     {
@@ -722,8 +784,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "100033115395865",
       "profile_url": "https://www.instagram.com/100033115395865/",
       "video_count": 1,
-      "top_industry": "F&B",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40100033115395865_2304710183702297_Video/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40100033115395865_2304710183702297_Video/shot_01_mid.webp",
       "video_ids": [
         "IG_@100033115395865_2304710183702297_Video"
       ]
@@ -733,8 +795,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Sheratonsaigon",
       "profile_url": "https://www.instagram.com/sheratonsaigon/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40sheratonsaigon_Dd_sDyfMRjd_Saigon%E2%80%99s_best-kept_luxury_secret_%F0%9F%91%80/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40sheratonsaigon_Dd_sDyfMRjd_Saigon%E2%80%99s_best-kept_luxury_secret_%F0%9F%91%80/shot_01_mid.webp",
       "video_ids": [
         "IG_@sheratonsaigon_Dd_sDyfMRjd_Saigon’s_best-kept_luxury_secret_👀"
       ]
@@ -744,8 +806,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Pablogalafat",
       "profile_url": "https://www.instagram.com/pablogalafat/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40pablogalafat_DdxIiI-C4KI_Var%C3%ADa_los_planos/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40pablogalafat_DdxIiI-C4KI_Var%C3%ADa_los_planos/shot_01_mid.webp",
       "video_ids": [
         "IG_@pablogalafat_DdxIiI-C4KI_Varía_los_planos"
       ]
@@ -755,8 +817,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Turkishairlines",
       "profile_url": "https://www.instagram.com/turkishairlines/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40turkishairlines_Dd8gb9ss84q_A_timeless_destination_where_two_continents_c/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40turkishairlines_Dd8gb9ss84q_A_timeless_destination_where_two_continents_c/shot_01_mid.webp",
       "video_ids": [
         "IG_@turkishairlines_Dd8gb9ss84q_A_timeless_destination_where_two_continents_c"
       ]
@@ -766,8 +828,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Theconflictplaybook",
       "profile_url": "https://www.instagram.com/TheConflictPlaybook/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://media.fedu.vn/images/IG_%2540local_creator_uU8uPchm7is_uU8uPchm7is/shot_02_mid.webp",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40local_creator_uU8uPchm7is_uU8uPchm7is/shot_02_mid.webp",
       "video_ids": [
         "IG_@TheConflictPlaybook_uU8uPchm7is_uU8uPchm7is"
       ]
@@ -777,8 +839,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Taimoorm",
       "profile_url": "https://www.instagram.com/taimoorm/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40taimoorm_Db1jadggnGA_Vibe_coding_is_the_future/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40taimoorm_Db1jadggnGA_Vibe_coding_is_the_future/shot_01_mid.webp",
       "video_ids": [
         "IG_@taimoorm_Db1jadggnGA_Vibe_coding_is_the_future"
       ]
@@ -788,8 +850,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Corentinhuard",
       "profile_url": "https://www.instagram.com/corentinhuard/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40corentinhuard_DbbVPaTsaun_The_Age_of_Distraction/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40corentinhuard_DbbVPaTsaun_The_Age_of_Distraction/shot_01_mid.webp",
       "video_ids": [
         "IG_@corentinhuard_DbbVPaTsaun_The_Age_of_Distraction"
       ]
@@ -799,8 +861,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Anatta.Ha",
       "profile_url": "https://www.instagram.com/anatta.ha/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40anatta.ha_Dd6kWLjxNQJ_solo_date_to_the_bookstore_%F0%9F%98%97/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40anatta.ha_Dd6kWLjxNQJ_solo_date_to_the_bookstore_%F0%9F%98%97/shot_01_mid.webp",
       "video_ids": [
         "IG_@anatta.ha_Dd6kWLjxNQJ_solo_date_to_the_bookstore_😗"
       ]
@@ -810,8 +872,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Aleexsea",
       "profile_url": "https://www.instagram.com/aleexsea/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40aleexsea_Ddac5QTtTFH_Making_memories_and_editing_videos._New_vlog/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40aleexsea_Ddac5QTtTFH_Making_memories_and_editing_videos._New_vlog/shot_01_mid.webp",
       "video_ids": [
         "IG_@aleexsea_Ddac5QTtTFH_Making_memories_and_editing_videos._New_vlog"
       ]
@@ -821,8 +883,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Therealmarcozavala",
       "profile_url": "https://www.instagram.com/therealmarcozavala/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40therealmarcozavala_DcSXWp_O1JQ_Comment_%E2%80%9Cshot%E2%80%9D_for_a_list_of_10/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40therealmarcozavala_DcSXWp_O1JQ_Comment_%E2%80%9Cshot%E2%80%9D_for_a_list_of_10/shot_01_mid.webp",
       "video_ids": [
         "IG_@therealmarcozavala_DcSXWp_O1JQ_Comment_“shot”_for_a_list_of_10"
       ]
@@ -832,8 +894,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Itsbybrandon",
       "profile_url": "https://www.instagram.com/itsbybrandon/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40itsbybrandon_DdGa4hxzlJi_Paradigme_le_parfum_by_%40pradabeauty/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40itsbybrandon_DdGa4hxzlJi_Paradigme_le_parfum_by_%40pradabeauty/shot_01_mid.webp",
       "video_ids": [
         "IG_@itsbybrandon_DdGa4hxzlJi_Paradigme_le_parfum_by_@pradabeauty"
       ]
@@ -843,8 +905,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Mendozallopis",
       "profile_url": "https://www.instagram.com/mendozallopis/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mendozallopis_Dd4L578RNhz_The_Assembling/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40mendozallopis_Dd4L578RNhz_The_Assembling/shot_01_mid.webp",
       "video_ids": [
         "IG_@mendozallopis_Dd4L578RNhz_The_Assembling"
       ]
@@ -854,8 +916,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Austinwhite711",
       "profile_url": "https://www.instagram.com/austinwhite711/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40austinwhite711_DdUK7JNtjGG_is_this_%E2%80%9Callowed%E2%80%9D_%F0%9F%A4%B7%F0%9F%8F%BB%E2%80%8D%E2%99%82%EF%B8%8F/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40austinwhite711_DdUK7JNtjGG_is_this_%E2%80%9Callowed%E2%80%9D_%F0%9F%A4%B7%F0%9F%8F%BB%E2%80%8D%E2%99%82%EF%B8%8F/shot_01_mid.webp",
       "video_ids": [
         "IG_@austinwhite711_DdUK7JNtjGG_is_this_“allowed”_🤷🏻‍♂️"
       ]
@@ -865,8 +927,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Hana.Konichiwa",
       "profile_url": "https://www.instagram.com/hana.konichiwa/",
       "video_count": 1,
-      "top_industry": "Góc nhà đẹp",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40hana.konichiwa_Dd1A6GRz1QN_A_slow_day_between_sunshine_and_rain_%F0%9F%8D%83%F0%9F%8C%A6%EF%B8%8F/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40hana.konichiwa_Dd1A6GRz1QN_A_slow_day_between_sunshine_and_rain_%F0%9F%8D%83%F0%9F%8C%A6%EF%B8%8F/shot_01_mid.webp",
       "video_ids": [
         "IG_@hana.konichiwa_Dd1A6GRz1QN_A_slow_day_between_sunshine_and_rain_🍃🌦️"
       ]
@@ -876,8 +938,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Kfconcept",
       "profile_url": "https://www.instagram.com/kfconcept/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_%F0%9F%91%80/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_%F0%9F%91%80/shot_01_mid.webp",
       "video_ids": [
         "IG_@kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_👀"
       ]
@@ -887,8 +949,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Sametxhunter",
       "profile_url": "https://www.instagram.com/sametxhunter/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40sametxhunter_DdwxosERt7n_It%E2%80%99s_Now_or_Never/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40sametxhunter_DdwxosERt7n_It%E2%80%99s_Now_or_Never/shot_01_mid.webp",
       "video_ids": [
         "IG_@sametxhunter_DdwxosERt7n_It’s_Now_or_Never"
       ]
@@ -898,8 +960,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Nouince",
       "profile_url": "https://www.instagram.com/nouince/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40nouince_DduU6THJQ8y_O_que_traz_mais_autoridade_%F0%9F%91%80/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40nouince_DduU6THJQ8y_O_que_traz_mais_autoridade_%F0%9F%91%80/shot_01_mid.webp",
       "video_ids": [
         "IG_@nouince_DduU6THJQ8y_O_que_traz_mais_autoridade_👀"
       ]
@@ -909,8 +971,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Ajit_Rathore886",
       "profile_url": "https://www.instagram.com/ajit_rathore886/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40ajit_rathore886_DdsodC0hSmZ_Static_Shots%F0%9F%94%A5%F0%9F%93%BD%EF%B8%8F/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40ajit_rathore886_DdsodC0hSmZ_Static_Shots%F0%9F%94%A5%F0%9F%93%BD%EF%B8%8F/shot_01_mid.webp",
       "video_ids": [
         "IG_@ajit_rathore886_DdsodC0hSmZ_Static_Shots🔥📽️"
       ]
@@ -920,8 +982,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Alexmegino",
       "profile_url": "https://www.instagram.com/alexmegino/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40alexmegino_DdzHC1ljMjk_Carousel_Analysis/slide_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40alexmegino_DdzHC1ljMjk_Carousel_Analysis/slide_01_mid.webp",
       "video_ids": [
         "IG_@alexmegino_DdzHC1ljMjk_Carousel_Analysis"
       ]
@@ -931,8 +993,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Page_Vrn",
       "profile_url": "https://www.instagram.com/page_vrn/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40page_vrn_DdT9nr_o_SP_%D0%9A%D0%B0%D0%BA%D0%B8%D0%BC_%D0%B1%D1%8B_%D0%BD%D0%B8_%D0%B1%D1%8B%D0%BB_%D0%B2%D0%B0%D1%88_%D0%B7%D0%B0%D0%B2%D1%82%D1%80%D0%B0%D0%BA%2C_%D0%B2_P%2BAGE_%D0%BE%D0%BD_%D0%B1%D1%83%D0%B4%D0%B5%D1%82/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40page_vrn_DdT9nr_o_SP_%D0%9A%D0%B0%D0%BA%D0%B8%D0%BC_%D0%B1%D1%8B_%D0%BD%D0%B8_%D0%B1%D1%8B%D0%BB_%D0%B2%D0%B0%D1%88_%D0%B7%D0%B0%D0%B2%D1%82%D1%80%D0%B0%D0%BA%2C_%D0%B2_P%2BAGE_%D0%BE%D0%BD_%D0%B1%D1%83%D0%B4%D0%B5%D1%82/shot_01_mid.webp",
       "video_ids": [
         "IG_@page_vrn_DdT9nr_o_SP_Каким_бы_ни_был_ваш_завтрак,_в_P+AGE_он_будет"
       ]
@@ -942,8 +1004,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Fiveseven.Idn",
       "profile_url": "https://www.instagram.com/fiveseven.idn/",
       "video_count": 1,
-      "top_industry": "F&B",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40fiveseven.idn_DbDAdZShiS9_Crispy_outside._Tender_inside/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40fiveseven.idn_DbDAdZShiS9_Crispy_outside._Tender_inside/shot_01_mid.webp",
       "video_ids": [
         "IG_@fiveseven.idn_DbDAdZShiS9_Crispy_outside._Tender_inside"
       ]
@@ -953,8 +1015,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Ecuator_Cafe",
       "profile_url": "https://www.instagram.com/ecuator_cafe/",
       "video_count": 1,
-      "top_industry": "F&B",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40ecuator_cafe_Dc0iEdiuYZ-_Exist%C4%83_pauze_de_cafea_%C8%99i_exist%C4%83_momente_%C3%AEn_ca/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40ecuator_cafe_Dc0iEdiuYZ-_Exist%C4%83_pauze_de_cafea_%C8%99i_exist%C4%83_momente_%C3%AEn_ca/shot_01_mid.webp",
       "video_ids": [
         "IG_@ecuator_cafe_Dc0iEdiuYZ-_Există_pauze_de_cafea_și_există_momente_în_ca"
       ]
@@ -964,8 +1026,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Dwslestari",
       "profile_url": "https://www.instagram.com/dwslestari/",
       "video_count": 1,
-      "top_industry": "F&B",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40dwslestari_Ddga9BDzenm_buat_yang_sering_nanyain_font_yang_aku_pakai%2C/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40dwslestari_Ddga9BDzenm_buat_yang_sering_nanyain_font_yang_aku_pakai%2C/shot_01_mid.webp",
       "video_ids": [
         "IG_@dwslestari_Ddga9BDzenm_buat_yang_sering_nanyain_font_yang_aku_pakai,"
       ]
@@ -975,8 +1037,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Chibuzor_Ossai",
       "profile_url": "https://www.instagram.com/Chibuzor_Ossai/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_01_mid.jpg",
       "video_ids": [
         "IG_@Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis"
       ]
@@ -986,8 +1048,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Iz_Hxn",
       "profile_url": "https://www.instagram.com/iz_hxn/",
       "video_count": 1,
-      "top_industry": "Thời trang",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40iz_hxn_DdgqYzZM67T_How_we_pull_up_in_Smart_Style_%F0%9F%95%B6%EF%B8%8F_#fitcheck_#l/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40iz_hxn_DdgqYzZM67T_How_we_pull_up_in_Smart_Style_%F0%9F%95%B6%EF%B8%8F_%23fitcheck_%23l/shot_01_mid.webp",
       "video_ids": [
         "IG_@iz_hxn_DdgqYzZM67T_How_we_pull_up_in_Smart_Style_🕶️_#fitcheck_#l"
       ]
@@ -997,8 +1059,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Mariapark",
       "profile_url": "https://www.instagram.com/mariapark/",
       "video_count": 1,
-      "top_industry": "Thời trang",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mariapark_DdeYvmLsms6_%D0%A7%D0%B0%D0%BA%D1%80%D0%B0_%D0%BD%D0%B0_%D0%BE%D1%81%D0%B5%D0%BD%D0%BD%D0%B8%D0%B5_%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D1%8B_%D0%BE%D1%82%D0%BA%D1%80%D1%8B%D1%82%D0%B0_%F0%9F%A4%A9_%D0%A1%D1%82%D0%B0%D0%B2%D1%8C_%D0%BE%D0%B3%D0%BE%D0%BD%D1%8C/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40mariapark_DdeYvmLsms6_%D0%A7%D0%B0%D0%BA%D1%80%D0%B0_%D0%BD%D0%B0_%D0%BE%D1%81%D0%B5%D0%BD%D0%BD%D0%B8%D0%B5_%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D1%8B_%D0%BE%D1%82%D0%BA%D1%80%D1%8B%D1%82%D0%B0_%F0%9F%A4%A9_%D0%A1%D1%82%D0%B0%D0%B2%D1%8C_%D0%BE%D0%B3%D0%BE%D0%BD%D1%8C/shot_01_mid.webp",
       "video_ids": [
         "IG_@mariapark_DdeYvmLsms6_Чакра_на_осенние_образы_открыта_🤩_Ставь_огонь"
       ]
@@ -1008,8 +1070,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Pausehereii",
       "profile_url": "https://www.instagram.com/pausehereii/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40pausehereii_DdGx-fkPeeU_A_DAY_IN_CHIANG_MAI/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40pausehereii_DdGx-fkPeeU_A_DAY_IN_CHIANG_MAI/shot_01_mid.webp",
       "video_ids": [
         "IG_@pausehereii_DdGx-fkPeeU_A_DAY_IN_CHIANG_MAI"
       ]
@@ -1019,8 +1081,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Kuzya_Монтаж_Reels",
       "profile_url": "https://www.instagram.com/kuzya.tm/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40KUZYA_%D0%BC%D0%BE%D0%BD%D1%82%D0%B0%D0%B6_Reels_DdYHuz_sXs0_Video_by_kuzya.tm/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40KUZYA_%D0%BC%D0%BE%D0%BD%D1%82%D0%B0%D0%B6_Reels_DdYHuz_sXs0_Video_by_kuzya.tm/shot_01_mid.jpg",
       "video_ids": [
         "IG_@KUZYA_монтаж_Reels_DdYHuz_sXs0_Video_by_kuzya.tm"
       ]
@@ -1030,8 +1092,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Ałec_Rijks",
       "profile_url": "https://www.instagram.com/alecrijks/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40A%C5%81EC_RIJKS_DdPESzcNS-W_Video_by_alecrijks/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40A%C5%81EC_RIJKS_DdPESzcNS-W_Video_by_alecrijks/shot_01_mid.jpg",
       "video_ids": [
         "IG_@AŁEC_RIJKS_DdPESzcNS-W_Video_by_alecrijks"
       ]
@@ -1041,8 +1103,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Harry",
       "profile_url": "https://www.instagram.com/hdnimedia/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Harry_DdlmRIcBw81_Video_by_hdnimedia/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40Harry_DdlmRIcBw81_Video_by_hdnimedia/shot_01_mid.jpg",
       "video_ids": [
         "IG_@Harry_DdlmRIcBw81_Video_by_hdnimedia"
       ]
@@ -1052,8 +1114,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Takashi.Film",
       "profile_url": "https://www.instagram.com/takashi.film/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40takashi.film_DddqrBQy8lQ_One_day%2C_Vietnam._%F0%9F%87%BB%F0%9F%87%B3/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40takashi.film_DddqrBQy8lQ_One_day%2C_Vietnam._%F0%9F%87%BB%F0%9F%87%B3/shot_01_mid.webp",
       "video_ids": [
         "IG_@takashi.film_DddqrBQy8lQ_One_day,_Vietnam._🇻🇳"
       ]
@@ -1063,8 +1125,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Qaqu_Uu",
       "profile_url": "https://www.instagram.com/qaqu_uu/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40qaqu_uu_Dblr-88PjlJ_yelena_belova_would_call_this_small_baby_pota/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40qaqu_uu_Dblr-88PjlJ_yelena_belova_would_call_this_small_baby_pota/shot_01_mid.webp",
       "video_ids": [
         "IG_@qaqu_uu_Dblr-88PjlJ_yelena_belova_would_call_this_small_baby_pota"
       ]
@@ -1074,8 +1136,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Cinematic_Lee",
       "profile_url": "https://www.instagram.com/cinematic_lee/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40cinematic_lee_Dbd8gmqRAc3_It%E2%80%99s_a_constant_struggle_%F0%9F%98%85/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40cinematic_lee_Dbd8gmqRAc3_It%E2%80%99s_a_constant_struggle_%F0%9F%98%85/shot_01_mid.webp",
       "video_ids": [
         "IG_@cinematic_lee_Dbd8gmqRAc3_It’s_a_constant_struggle_😅"
       ]
@@ -1085,8 +1147,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Dvdnguyen",
       "profile_url": "https://www.instagram.com/dvdnguyen/",
       "video_count": 1,
-      "top_industry": "F&B",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40dvdnguyen_DdXbbBiEq7P_Carousel_Analysis/slide_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40dvdnguyen_DdXbbBiEq7P_Carousel_Analysis/slide_01_mid.webp",
       "video_ids": [
         "IG_@dvdnguyen_DdXbbBiEq7P_Carousel_Analysis"
       ]
@@ -1096,8 +1158,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Shotsbyzaid",
       "profile_url": "https://www.instagram.com/shotsbyzaid/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40shotsbyzaid_DdkimD5DPNL_Carousel_Analysis/slide_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40shotsbyzaid_DdkimD5DPNL_Carousel_Analysis/slide_01_mid.webp",
       "video_ids": [
         "IG_@shotsbyzaid_DdkimD5DPNL_Carousel_Analysis"
       ]
@@ -1107,8 +1169,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Elena_𝗔𝗲𝘀𝘁𝗵𝗲𝘁𝗶𝗰_𝗜𝗻𝘀𝗽𝗶𝗿𝗮𝘁𝗶𝗼𝗻_𝗟𝗶𝗳𝗲𝘀𝘁𝘆𝗹𝗲",
       "profile_url": "https://www.instagram.com/elenabuntushak/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40ELENA_%F0%9D%97%94%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%97%B5%F0%9D%97%B2%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%B0_%F0%9D%97%9C%F0%9D%97%BB%F0%9D%98%80%F0%9D%97%BD%F0%9D%97%B6%F0%9D%97%BF%F0%9D%97%AE%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%BC%F0%9D%97%BB_%F0%9D%97%9F%F0%9D%97%B6%F0%9D%97%B3%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%98%86%F0%9D%97%B9%F0%9D%97%B2_Ddb6rA7NwQd_Video_by_elenabuntushak/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40ELENA_%F0%9D%97%94%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%97%B5%F0%9D%97%B2%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%B0_%F0%9D%97%9C%F0%9D%97%BB%F0%9D%98%80%F0%9D%97%BD%F0%9D%97%B6%F0%9D%97%BF%F0%9D%97%AE%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%BC%F0%9D%97%BB_%F0%9D%97%9F%F0%9D%97%B6%F0%9D%97%B3%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%98%86%F0%9D%97%B9%F0%9D%97%B2_Ddb6rA7NwQd_Video_by_elenabuntushak/shot_01_mid.jpg",
       "video_ids": [
         "IG_@ELENA_𝗔𝗲𝘀𝘁𝗵𝗲𝘁𝗶𝗰_𝗜𝗻𝘀𝗽𝗶𝗿𝗮𝘁𝗶𝗼𝗻_𝗟𝗶𝗳𝗲𝘀𝘁𝘆𝗹𝗲_Ddb6rA7NwQd_Video_by_elenabuntushak"
       ]
@@ -1118,8 +1180,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Minghan1004",
       "profile_url": "https://www.instagram.com/minghan1004/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40minghan1004_DdESxNlE2Ay_Carousel_Analysis/slide_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40minghan1004_DdESxNlE2Ay_Carousel_Analysis/slide_01_mid.webp",
       "video_ids": [
         "IG_@minghan1004_DdESxNlE2Ay_Carousel_Analysis"
       ]
@@ -1129,8 +1191,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Hu321938",
       "profile_url": "https://www.instagram.com/hu321938/",
       "video_count": 1,
-      "top_industry": "F&B",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40hu321938_DdrKmGFBMzc_%E6%8B%8D%E5%87%BA%E4%B8%AD%E7%A7%8B%E8%8A%82%E7%9A%84%E6%B0%9B%E5%9B%B4%E6%84%9F/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40hu321938_DdrKmGFBMzc_%E6%8B%8D%E5%87%BA%E4%B8%AD%E7%A7%8B%E8%8A%82%E7%9A%84%E6%B0%9B%E5%9B%B4%E6%84%9F/shot_01_mid.webp",
       "video_ids": [
         "IG_@hu321938_DdrKmGFBMzc_拍出中秋节的氛围感"
       ]
@@ -1140,8 +1202,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Alenkabalenka",
       "profile_url": "https://www.instagram.com/alenkabalenka/",
       "video_count": 1,
-      "top_industry": "Thời trang",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40alenkabalenka_DaJofHTvQw3_1010_would_hit_that_corner_again/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40alenkabalenka_DaJofHTvQw3_1010_would_hit_that_corner_again/shot_01_mid.webp",
       "video_ids": [
         "IG_@alenkabalenka_DaJofHTvQw3_1010_would_hit_that_corner_again"
       ]
@@ -1151,8 +1213,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Sodam_Kim",
       "profile_url": "https://www.instagram.com/31.ioa/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Sodam_Kim_DcYZMc7Sc49_Video_by_31.ioa/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40Sodam_Kim_DcYZMc7Sc49_Video_by_31.ioa/shot_01_mid.jpg",
       "video_ids": [
         "IG_@Sodam_Kim_DcYZMc7Sc49_Video_by_31.ioa"
       ]
@@ -1162,8 +1224,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Holberrydietitian",
       "profile_url": "https://www.instagram.com/holberrydietitian/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40holberrydietitian_DcODbRTu-E1_sunday_morn_%3D_%F0%9F%A5%96%F0%9F%8D%93%F0%9F%AB%90%F0%9F%8D%AF%E2%98%95%EF%B8%8F/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40holberrydietitian_DcODbRTu-E1_sunday_morn_%3D_%F0%9F%A5%96%F0%9F%8D%93%F0%9F%AB%90%F0%9F%8D%AF%E2%98%95%EF%B8%8F/shot_01_mid.webp",
       "video_ids": [
         "IG_@holberrydietitian_DcODbRTu-E1_sunday_morn_=_🥖🍓🫐🍯☕️"
       ]
@@ -1173,8 +1235,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Rubtsov.A",
       "profile_url": "https://www.instagram.com/rubtsov.a/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40rubtsov.a_DdkHw7gIXLj_%D0%92_%D0%B1%D0%B8%D0%B1%D0%BB%D0%B8%D0%BE%D1%82%D0%B5%D0%BA%D1%83/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40rubtsov.a_DdkHw7gIXLj_%D0%92_%D0%B1%D0%B8%D0%B1%D0%BB%D0%B8%D0%BE%D1%82%D0%B5%D0%BA%D1%83/shot_01_mid.webp",
       "video_ids": [
         "IG_@rubtsov.a_DdkHw7gIXLj_В_библиотеку"
       ]
@@ -1184,8 +1246,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Starsinmycam",
       "profile_url": "https://www.instagram.com/starsinmycam/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40starsinmycam_DddgEE5R2CW_i_blink_and_it%E2%80%99s_night_time/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40starsinmycam_DddgEE5R2CW_i_blink_and_it%E2%80%99s_night_time/shot_01_mid.webp",
       "video_ids": [
         "IG_@starsinmycam_DddgEE5R2CW_i_blink_and_it’s_night_time"
       ]
@@ -1195,8 +1257,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Flying",
       "profile_url": "https://www.instagram.com/loveqinghe/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Flying_DdplzLRytOA_Video_by_loveqinghe/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40Flying_DdplzLRytOA_Video_by_loveqinghe/shot_01_mid.jpg",
       "video_ids": [
         "IG_@Flying_DdplzLRytOA_Video_by_loveqinghe"
       ]
@@ -1206,8 +1268,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Lisha_Ho",
       "profile_url": "https://www.instagram.com/lisha_ho/",
       "video_count": 1,
-      "top_industry": "Thời trang",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40lisha_ho_Ddqo7-eTI2A_Wait%E2%80%A6_%40ralphlauren_%2B_coffee_at_KLCC_%F0%9F%91%80/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40lisha_ho_Ddqo7-eTI2A_Wait%E2%80%A6_%40ralphlauren_%2B_coffee_at_KLCC_%F0%9F%91%80/shot_01_mid.webp",
       "video_ids": [
         "IG_@lisha_ho_Ddqo7-eTI2A_Wait…_@ralphlauren_+_coffee_at_KLCC_👀"
       ]
@@ -1217,8 +1279,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Aangelazunigaa",
       "profile_url": "https://www.instagram.com/aangelazunigaa/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40aangelazunigaa_DdrBPIwIpg-_BTS_from_Day_56_of_Capturing_10_Clips_Until_I/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40aangelazunigaa_DdrBPIwIpg-_BTS_from_Day_56_of_Capturing_10_Clips_Until_I/shot_01_mid.webp",
       "video_ids": [
         "IG_@aangelazunigaa_DdrBPIwIpg-_BTS_from_Day_56_of_Capturing_10_Clips_Until_I"
       ]
@@ -1228,8 +1290,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Bysuncan",
       "profile_url": "https://www.instagram.com/bysuncan/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel/shot_01_mid.webp",
       "video_ids": [
         "IG_@bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel"
       ]
@@ -1239,8 +1301,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Adz.Mov",
       "profile_url": "https://www.instagram.com/adz.mov/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40adz.mov_DdGQQL-ih_O_the_land_of_smiles_%F0%9F%87%B9%F0%9F%87%AD_#thailand_#cinematograp/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40adz.mov_DdGQQL-ih_O_the_land_of_smiles_%F0%9F%87%B9%F0%9F%87%AD_%23thailand_%23cinematograp/shot_01_mid.webp",
       "video_ids": [
         "IG_@adz.mov_DdGQQL-ih_O_the_land_of_smiles_🇹🇭_#thailand_#cinematograp"
       ]
@@ -1250,8 +1312,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Jxnjuvv",
       "profile_url": "https://www.instagram.com/jxnjuvv/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40jxnjuvv_Dc-d8hKRMQm_A_city_full_of_joy_everywhere_I_go_%E2%99%A5%EF%B8%8F/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40jxnjuvv_Dc-d8hKRMQm_A_city_full_of_joy_everywhere_I_go_%E2%99%A5%EF%B8%8F/shot_01_mid.webp",
       "video_ids": [
         "IG_@jxnjuvv_Dc-d8hKRMQm_A_city_full_of_joy_everywhere_I_go_♥️"
       ]
@@ -1261,8 +1323,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Acupper",
       "profile_url": "https://www.instagram.com/acupper/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40acupper_DdoYrPsy9g-_hello_is_konnichiwa/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40acupper_DdoYrPsy9g-_hello_is_konnichiwa/shot_01_mid.webp",
       "video_ids": [
         "IG_@acupper_DdoYrPsy9g-_hello_is_konnichiwa"
       ]
@@ -1272,8 +1334,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Yongandmike",
       "profile_url": "https://www.instagram.com/yongandmike/",
       "video_count": 1,
-      "top_industry": "Du lịch",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40yongandmike_DdolqWHEsws_Carousel_Analysis/slide_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40yongandmike_DdolqWHEsws_Carousel_Analysis/slide_01_mid.webp",
       "video_ids": [
         "IG_@yongandmike_DdolqWHEsws_Carousel_Analysis"
       ]
@@ -1283,8 +1345,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Filmwithred",
       "profile_url": "https://www.instagram.com/filmwithred/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._%F0%9F%87%AF%F0%9F%87%B5/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._%F0%9F%87%AF%F0%9F%87%B5/shot_01_mid.webp",
       "video_ids": [
         "IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵"
       ]
@@ -1294,8 +1356,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Laylaa_398",
       "profile_url": "https://www.instagram.com/laylaa_398/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40laylaa_398_Ddj6wlTxAAJ_%E2%99%A5%EF%B8%8F/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40laylaa_398_Ddj6wlTxAAJ_%E2%99%A5%EF%B8%8F/shot_01_mid.webp",
       "video_ids": [
         "IG_@laylaa_398_Ddj6wlTxAAJ_♥️"
       ]
@@ -1305,8 +1367,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Jigummmmm",
       "profile_url": "https://www.instagram.com/jigummmmm/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40jigummmmm_DdnqexOTN8A_%EC%84%A4%EA%B1%B0%EC%A7%80%ED%95%98%EB%8A%94_%EB%AA%A8%EC%8A%B5%EB%8F%84_%EC%98%88%EC%81%98%EA%B2%8C_%EC%B0%8D%EC%9D%84_%EC%88%98_%EC%9E%88%EB%83%90%EA%B3%A0%EC%9A%94/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40jigummmmm_DdnqexOTN8A_%EC%84%A4%EA%B1%B0%EC%A7%80%ED%95%98%EB%8A%94_%EB%AA%A8%EC%8A%B5%EB%8F%84_%EC%98%88%EC%81%98%EA%B2%8C_%EC%B0%8D%EC%9D%84_%EC%88%98_%EC%9E%88%EB%83%90%EA%B3%A0%EC%9A%94/shot_01_mid.webp",
       "video_ids": [
         "IG_@jigummmmm_DdnqexOTN8A_설거지하는_모습도_예쁘게_찍을_수_있냐고요"
       ]
@@ -1316,8 +1378,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Dopeitsdamo",
       "profile_url": "https://www.instagram.com/dopeitsdamo/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40dopeitsdamo_DdpZ0RvhwXu_Art_of_Static_Shots_%F0%9F%8E%A5/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40dopeitsdamo_DdpZ0RvhwXu_Art_of_Static_Shots_%F0%9F%8E%A5/shot_01_mid.webp",
       "video_ids": [
         "IG_@dopeitsdamo_DdpZ0RvhwXu_Art_of_Static_Shots_🎥"
       ]
@@ -1327,8 +1389,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Davidmurphyfilm",
       "profile_url": "https://www.instagram.com/davidmurphyfilm/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40davidmurphyfilm_Ddo3aQxjMeq_Carousel_Analysis/slide_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40davidmurphyfilm_Ddo3aQxjMeq_Carousel_Analysis/slide_01_mid.webp",
       "video_ids": [
         "IG_@davidmurphyfilm_Ddo3aQxjMeq_Carousel_Analysis"
       ]
@@ -1338,8 +1400,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Yifan.Liii",
       "profile_url": "https://www.instagram.com/yifan.liii/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40yifan.liii_Dap0s2RhySa_summer_in_florence_%F0%9F%A4%8D/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40yifan.liii_Dap0s2RhySa_summer_in_florence_%F0%9F%A4%8D/shot_01_mid.webp",
       "video_ids": [
         "IG_@yifan.liii_Dap0s2RhySa_summer_in_florence_🤍"
       ]
@@ -1349,8 +1411,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "La6Vish",
       "profile_url": "https://www.instagram.com/la6vish/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40la6vish_DakwX2NBYs1_Fukuoka_%F0%9F%87%AF%F0%9F%87%B5/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40la6vish_DakwX2NBYs1_Fukuoka_%F0%9F%87%AF%F0%9F%87%B5/shot_01_mid.webp",
       "video_ids": [
         "IG_@la6vish_DakwX2NBYs1_Fukuoka_🇯🇵"
       ]
@@ -1360,8 +1422,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Maxryman",
       "profile_url": "https://www.instagram.com/maxryman/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40maxryman_DdlVIp9S9zv_day_in_the_life_%E2%98%95%EF%B8%8F/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40maxryman_DdlVIp9S9zv_day_in_the_life_%E2%98%95%EF%B8%8F/shot_01_mid.webp",
       "video_ids": [
         "IG_@maxryman_DdlVIp9S9zv_day_in_the_life_☕️"
       ]
@@ -1371,8 +1433,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Ecombrand",
       "profile_url": "https://www.instagram.com/EcomBrand/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40EcomBrand_ECOM_Ulanzi_Ulanzi/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40EcomBrand_ECOM_Ulanzi_Ulanzi/shot_01_mid.jpg",
       "video_ids": [
         "IG_@EcomBrand_ECOM_Ulanzi_Ulanzi"
       ]
@@ -1382,8 +1444,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Pauline_폴린_ᥫ᭡。༘⋆✿",
       "profile_url": "https://www.instagram.com/pau.liine/",
       "video_count": 1,
-      "top_industry": "Thời trang",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40pauline_%ED%8F%B4%EB%A6%B0_%E1%A5%AB%E1%AD%A1%E3%80%82%E0%BC%98%E2%8B%86%E2%9C%BF_DdlWfRSMioH_Video_by_pau.liine/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40pauline_%ED%8F%B4%EB%A6%B0_%E1%A5%AB%E1%AD%A1%E3%80%82%E0%BC%98%E2%8B%86%E2%9C%BF_DdlWfRSMioH_Video_by_pau.liine/shot_01_mid.webp",
       "video_ids": [
         "IG_@pauline_폴린_ᥫ᭡。༘⋆✿_DdlWfRSMioH_Video_by_pau.liine"
       ]
@@ -1393,8 +1455,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "หยก.ละกัน_ꔛ",
       "profile_url": "https://www.instagram.com/yok.lagun/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40%E0%B8%AB%E0%B8%A2%E0%B8%81.%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B8%99_%EA%94%9B_DcA80Aez6Aw_Video_by_yok.lagun/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40%E0%B8%AB%E0%B8%A2%E0%B8%81.%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B8%99_%EA%94%9B_DcA80Aez6Aw_Video_by_yok.lagun/shot_01_mid.jpg",
       "video_ids": [
         "IG_@หยก.ละกัน_ꔛ_DcA80Aez6Aw_Video_by_yok.lagun"
       ]
@@ -1404,8 +1466,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Жамьяна_Осознанный_Стилист_Ugc",
       "profile_url": "https://www.instagram.com/zhamyana/",
       "video_count": 1,
-      "top_industry": "Thời trang",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40%D0%96%D0%B0%D0%BC%D1%8C%D1%8F%D0%BD%D0%B0_%D0%9E%D1%81%D0%BE%D0%B7%D0%BD%D0%B0%D0%BD%D0%BD%D1%8B%D0%B9_%D1%81%D1%82%D0%B8%D0%BB%D0%B8%D1%81%D1%82_UGC_DdeWMWLsaHA_Video_by_zhamyana/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40%D0%96%D0%B0%D0%BC%D1%8C%D1%8F%D0%BD%D0%B0_%D0%9E%D1%81%D0%BE%D0%B7%D0%BD%D0%B0%D0%BD%D0%BD%D1%8B%D0%B9_%D1%81%D1%82%D0%B8%D0%BB%D0%B8%D1%81%D1%82_UGC_DdeWMWLsaHA_Video_by_zhamyana/shot_01_mid.jpg",
       "video_ids": [
         "IG_@Жамьяна_Осознанный_стилист_UGC_DdeWMWLsaHA_Video_by_zhamyana"
       ]
@@ -1415,8 +1477,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Saro_Deele",
       "profile_url": "https://www.instagram.com/sarodeele/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Saro_Deele_DXjRnwCISNU_Video_by_sarodeele/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40Saro_Deele_DXjRnwCISNU_Video_by_sarodeele/shot_01_mid.webp",
       "video_ids": [
         "IG_@Saro_Deele_DXjRnwCISNU_Video_by_sarodeele"
       ]
@@ -1426,8 +1488,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Leticia_Quadros",
       "profile_url": "https://www.instagram.com/leticiaqdrs/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Leticia_Quadros_DYXXgkbxPj7_Video_by_leticiaqdrs/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40Leticia_Quadros_DYXXgkbxPj7_Video_by_leticiaqdrs/shot_01_mid.webp",
       "video_ids": [
         "IG_@Leticia_Quadros_DYXXgkbxPj7_Video_by_leticiaqdrs"
       ]
@@ -1437,8 +1499,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Xíu_Đi_Ăn",
       "profile_url": "https://www.instagram.com/xiudian/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40X%C3%8DU_%C4%90I_%C4%82N_DazzVqPBfje_Video_by_xiudian/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40X%C3%8DU_%C4%90I_%C4%82N_DazzVqPBfje_Video_by_xiudian/shot_01_mid.webp",
       "video_ids": [
         "IG_@XÍU_ĐI_ĂN_DazzVqPBfje_Video_by_xiudian"
       ]
@@ -1448,8 +1510,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Misa｜築40年マンション暮らし",
       "profile_url": "https://www.instagram.com/mi_no_ie_39/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40misa%EF%BD%9C%E7%AF%8940%E5%B9%B4%E3%83%9E%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%B3%E6%9A%AE%E3%82%89%E3%81%97_Db-xDk4vWNQ_Video_by_mi_no_ie_39/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40misa%EF%BD%9C%E7%AF%8940%E5%B9%B4%E3%83%9E%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%B3%E6%9A%AE%E3%82%89%E3%81%97_Db-xDk4vWNQ_Video_by_mi_no_ie_39/shot_01_mid.webp",
       "video_ids": [
         "IG_@misa｜築40年マンション暮らし_Db-xDk4vWNQ_Video_by_mi_no_ie_39"
       ]
@@ -1459,8 +1521,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Studio_Berdua",
       "profile_url": "https://www.instagram.com/studioberdua/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Studio_Berdua_DdOu2yRsmDy_Video_by_studioberdua/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40Studio_Berdua_DdOu2yRsmDy_Video_by_studioberdua/shot_01_mid.webp",
       "video_ids": [
         "IG_@Studio_Berdua_DdOu2yRsmDy_Video_by_studioberdua"
       ]
@@ -1470,8 +1532,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Rika_ビオトープめだか植物のある暮らし",
       "profile_url": "https://www.instagram.com/r_6cafe/",
       "video_count": 1,
-      "top_industry": "F&B",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Rika_%E3%83%93%E3%82%AA%E3%83%88%E3%83%BC%E3%83%97%E3%82%81%E3%81%A0%E3%81%8B%E6%A4%8D%E7%89%A9%E3%81%AE%E3%81%82%E3%82%8B%E6%9A%AE%E3%82%89%E3%81%97_Da5KgjAxfOG_Video_by_r_6cafe/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40Rika_%E3%83%93%E3%82%AA%E3%83%88%E3%83%BC%E3%83%97%E3%82%81%E3%81%A0%E3%81%8B%E6%A4%8D%E7%89%A9%E3%81%AE%E3%81%82%E3%82%8B%E6%9A%AE%E3%82%89%E3%81%97_Da5KgjAxfOG_Video_by_r_6cafe/shot_01_mid.webp",
       "video_ids": [
         "IG_@Rika_ビオトープめだか植物のある暮らし_Da5KgjAxfOG_Video_by_r_6cafe"
       ]
@@ -1481,8 +1543,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Eugenia_Syd_Ugc_Creator",
       "profile_url": "https://www.instagram.com/eugcreates.ugc/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Eugenia_Syd_UGC_creator_DdA1ErpRMg2_Video_by_eugcreates.ugc/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40Eugenia_Syd_UGC_creator_DdA1ErpRMg2_Video_by_eugcreates.ugc/shot_01_mid.webp",
       "video_ids": [
         "IG_@Eugenia_Syd_UGC_creator_DdA1ErpRMg2_Video_by_eugcreates.ugc"
       ]
@@ -1492,8 +1554,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Hayden_Slow_Korean_&_Daily_Life",
       "profile_url": "https://www.instagram.com/haydenkorean/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Hayden_Slow_Korean_%26_Daily_Life_Daz3Po8zHIE_Video_by_haydenkorean/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40Hayden_Slow_Korean_%26_Daily_Life_Daz3Po8zHIE_Video_by_haydenkorean/shot_01_mid.webp",
       "video_ids": [
         "IG_@Hayden_Slow_Korean_&_Daily_Life_Daz3Po8zHIE_Video_by_haydenkorean"
       ]
@@ -1503,8 +1565,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Jaehyung",
       "profile_url": "https://www.instagram.com/_hyungs/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40JAEHYUNG_DdWa3o2zc0w_Video_by__hyungs/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40JAEHYUNG_DdWa3o2zc0w_Video_by__hyungs/shot_01_mid.webp",
       "video_ids": [
         "IG_@JAEHYUNG_DdWa3o2zc0w_Video_by__hyungs"
       ]
@@ -1514,8 +1576,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Indang_Ayu",
       "profile_url": "https://www.instagram.com/indanayuu/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Indang_Ayu_DccpHbETFSr_Video_by_indanayuu/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40Indang_Ayu_DccpHbETFSr_Video_by_indanayuu/shot_01_mid.webp",
       "video_ids": [
         "IG_@Indang_Ayu_DccpHbETFSr_Video_by_indanayuu"
       ]
@@ -1525,8 +1587,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Ume_📍Минск-Мир",
       "profile_url": "https://www.instagram.com/ume.izakaya/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40UME_%F0%9F%93%8D%D0%BC%D0%B8%D0%BD%D1%81%D0%BA-%D0%BC%D0%B8%D1%80_DcVnyJyNWGY_Video_by_ume.izakaya/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40UME_%F0%9F%93%8D%D0%BC%D0%B8%D0%BD%D1%81%D0%BA-%D0%BC%D0%B8%D1%80_DcVnyJyNWGY_Video_by_ume.izakaya/shot_01_mid.webp",
       "video_ids": [
         "IG_@UME_📍минск-мир_DcVnyJyNWGY_Video_by_ume.izakaya"
       ]
@@ -1536,8 +1598,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Five_Oars_Coffee_Roasters",
       "profile_url": "https://www.instagram.com/focr.sg/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg/shot_01_mid.webp",
       "video_ids": [
         "IG_@Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg"
       ]
@@ -1547,8 +1609,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "거북이_소영",
       "profile_url": "https://www.instagram.com/slowkoreanvlog/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40%EA%B1%B0%EB%B6%81%EC%9D%B4_%EC%86%8C%EC%98%81_Db0tHr8Bs7x_Video_by_slowkoreanvlog/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40%EA%B1%B0%EB%B6%81%EC%9D%B4_%EC%86%8C%EC%98%81_Db0tHr8Bs7x_Video_by_slowkoreanvlog/shot_01_mid.webp",
       "video_ids": [
         "IG_@거북이_소영_Db0tHr8Bs7x_Video_by_slowkoreanvlog"
       ]
@@ -1558,8 +1620,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "규리🍊ㅣCorporate_Girlie🇰🇷",
       "profile_url": "https://www.instagram.com/gyuree_k/",
       "video_count": 1,
-      "top_industry": "Du lịch",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40%EA%B7%9C%EB%A6%AC%F0%9F%8D%8A%E3%85%A3Corporate_Girlie%F0%9F%87%B0%F0%9F%87%B7_DdTZsoxTVFz_Video_by_gyuree_k/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40%EA%B7%9C%EB%A6%AC%F0%9F%8D%8A%E3%85%A3Corporate_Girlie%F0%9F%87%B0%F0%9F%87%B7_DdTZsoxTVFz_Video_by_gyuree_k/shot_01_mid.webp",
       "video_ids": [
         "IG_@규리🍊ㅣCorporate_Girlie🇰🇷_DdTZsoxTVFz_Video_by_gyuree_k"
       ]
@@ -1569,8 +1631,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Jenny_Yoo_🇰🇷",
       "profile_url": "https://www.instagram.com/yooinoz/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Jenny_Yoo_%F0%9F%87%B0%F0%9F%87%B7_DZ8w6MsSMAw_Video_by_yooinoz/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40Jenny_Yoo_%F0%9F%87%B0%F0%9F%87%B7_DZ8w6MsSMAw_Video_by_yooinoz/shot_01_mid.webp",
       "video_ids": [
         "IG_@Jenny_Yoo_🇰🇷_DZ8w6MsSMAw_Video_by_yooinoz"
       ]
@@ -1580,8 +1642,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "이현",
       "profile_url": "https://www.instagram.com/dreakwon/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40drea_%28%EC%9D%B4%ED%98%84%29_DaClEhzB5WC_Video_by_dreakwon/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40drea_%28%EC%9D%B4%ED%98%84%29_DaClEhzB5WC_Video_by_dreakwon/shot_01_mid.webp",
       "video_ids": [
         "IG_@drea_(이현)_DaClEhzB5WC_Video_by_dreakwon"
       ]
@@ -1591,8 +1653,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Korea_Street_Views",
       "profile_url": "https://www.instagram.com/korea_street_views/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Korea_Street_Views_DcBXsaezmjo_Video_by_korea_street_views/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40Korea_Street_Views_DcBXsaezmjo_Video_by_korea_street_views/shot_01_mid.webp",
       "video_ids": [
         "IG_@Korea_Street_Views_DcBXsaezmjo_Video_by_korea_street_views"
       ]
@@ -1602,21 +1664,10 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Banh_Shimano",
       "profile_url": "https://www.instagram.com/Banh_shimano/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Banh_shimano_Dc0-FXlE4kV_Carousel_Analysis/slide_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40Banh_shimano_Dc0-FXlE4kV_Carousel_Analysis/slide_01_mid.webp",
       "video_ids": [
         "IG_@Banh_shimano_Dc0-FXlE4kV_Carousel_Analysis"
-      ]
-    },
-    {
-      "handle": "@creator",
-      "name": "Creator",
-      "profile_url": "https://www.instagram.com/creator/",
-      "video_count": 1,
-      "top_industry": "F&B",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40creator_DdVBqUzj3o5_Video_DdVBqUzj3o5/shot_01_mid.jpg",
-      "video_ids": [
-        "IG_@creator_DdVBqUzj3o5_Video_DdVBqUzj3o5"
       ]
     },
     {
@@ -1624,8 +1675,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "𝐂𝐢𝐧𝐝𝐲🌼",
       "profile_url": "https://www.instagram.com/clarissaacindy/",
       "video_count": 1,
-      "top_industry": "Thời trang",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40%F0%9D%90%82%F0%9D%90%A2%F0%9D%90%A7%F0%9D%90%9D%F0%9D%90%B2%F0%9F%8C%BC_DcgQDZ_JNIr_Video_by_clarissaacindy/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40%F0%9D%90%82%F0%9D%90%A2%F0%9D%90%A7%F0%9D%90%9D%F0%9D%90%B2%F0%9F%8C%BC_DcgQDZ_JNIr_Video_by_clarissaacindy/shot_01_mid.webp",
       "video_ids": [
         "IG_@𝐂𝐢𝐧𝐝𝐲🌼_DcgQDZ_JNIr_Video_by_clarissaacindy"
       ]
@@ -1635,8 +1686,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Jackson_Sword",
       "profile_url": "https://www.instagram.com/byjacksonsword/",
       "video_count": 1,
-      "top_industry": "Xây kênh",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Jackson_Sword_DdU4rBeMXZt_Video_by_byjacksonsword/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40Jackson_Sword_DdU4rBeMXZt_Video_by_byjacksonsword/shot_01_mid.webp",
       "video_ids": [
         "IG_@Jackson_Sword_DdU4rBeMXZt_Video_by_byjacksonsword"
       ]
@@ -1646,8 +1697,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "신_유은_Yueun_Shin",
       "profile_url": "https://www.instagram.com/yuuxeun/",
       "video_count": 1,
-      "top_industry": "Thời trang",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40%EC%8B%A0_%E1%84%8B%E1%85%B2%E1%84%8B%E1%85%B3%E1%86%AB_yueun_shin_DdQwL3Ahci1_Video_by_yuuxeun/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40%EC%8B%A0_%E1%84%8B%E1%85%B2%E1%84%8B%E1%85%B3%E1%86%AB_yueun_shin_DdQwL3Ahci1_Video_by_yuuxeun/shot_01_mid.webp",
       "video_ids": [
         "IG_@신_유은_yueun_shin_DdQwL3Ahci1_Video_by_yuuxeun"
       ]
@@ -1657,10 +1708,21 @@ var FEDU_IDEAS_DATABASE = {
       "name": "3413882081",
       "profile_url": "https://www.instagram.com/syooaann/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%403413882081_Dcx7pQpS6zs_Video_by_syooaann/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%403413882081_Dcx7pQpS6zs_Video_by_syooaann/shot_01_mid.webp",
       "video_ids": [
         "IG_@3413882081_Dcx7pQpS6zs_Video_by_syooaann"
+      ]
+    },
+    {
+      "handle": "@calebnatale",
+      "name": "Caleb_Natale",
+      "profile_url": "https://www.instagram.com/calebnatale/",
+      "video_count": 1,
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40Caleb_Natale_Dcbn7Bix-X-_Video_by_calebnatale/shot_01_mid.webp",
+      "video_ids": [
+        "IG_@Caleb_Natale_Dcbn7Bix-X-_Video_by_calebnatale"
       ]
     },
     {
@@ -1668,8 +1730,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Iman Lizi",
       "profile_url": "https://www.instagram.com/iman.lizi/",
       "video_count": 1,
-      "top_industry": "Góc nhà đẹp",
-      "sample_thumb": "https://media.fedu.vn/images/IG_%40iman.lizi_Dc6qXoKoYKh/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40iman.lizi_Dc6qXoKoYKh/shot_01_mid.webp",
       "video_ids": [
         "IG_@iman.lizi_Dc6qXoKoYKh"
       ]
@@ -1679,8 +1741,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Hayan Cook (정하얀",
       "profile_url": "https://www.instagram.com/hayancook/",
       "video_count": 1,
-      "top_industry": "F&B",
-      "sample_thumb": "https://media.fedu.vn/images/IG_%40hayancook_DdSUI9BvhqR/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40hayancook_DdSUI9BvhqR/shot_01_mid.webp",
       "video_ids": [
         "IG_@hayancook_DdSUI9BvhqR"
       ]
@@ -1690,8 +1752,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Cushy Garden",
       "profile_url": "https://www.instagram.com/cushygarden/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://media.fedu.vn/images/IG_%40cushygarden_DdL6pHDSKRc/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40cushygarden_DdL6pHDSKRc/shot_01_mid.webp",
       "video_ids": [
         "IG_@cushygarden_DdL6pHDSKRc"
       ]
@@ -1701,8 +1763,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Zero (주니어 개발자",
       "profile_url": "https://www.instagram.com/dev_zero/",
       "video_count": 1,
-      "top_industry": "Xây kênh",
-      "sample_thumb": "https://media.fedu.vn/images/IG_%40dev_zero_Db-S8i1hXwF/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40dev_zero_Db-S8i1hXwF/shot_01_mid.webp",
       "video_ids": [
         "IG_@dev_zero_Db-S8i1hXwF"
       ]
@@ -1712,8 +1774,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Nagisa Decor",
       "profile_url": "https://www.instagram.com/nagisa.decor/",
       "video_count": 1,
-      "top_industry": "Góc nhà đẹp",
-      "sample_thumb": "https://media.fedu.vn/images/IG_%40nagisa.decor_Dco_DevvUla/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40nagisa.decor_Dco_DevvUla/shot_01_mid.webp",
       "video_ids": [
         "IG_@nagisa.decor_Dco_DevvUla"
       ]
@@ -1723,8 +1785,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Yuto (地方創生クリエイター",
       "profile_url": "https://www.instagram.com/yuto_creator/",
       "video_count": 1,
-      "top_industry": "Du lịch",
-      "sample_thumb": "https://media.fedu.vn/images/IG_%40yuto_creator_DdBlAWRO1Hl/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40yuto_creator_DdBlAWRO1Hl/shot_01_mid.webp",
       "video_ids": [
         "IG_@yuto_creator_DdBlAWRO1Hl"
       ]
@@ -1734,8 +1796,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Kien Nguyen",
       "profile_url": "https://www.instagram.com/kienobifilms/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://media.fedu.vn/images/IG_%40kienobifilms_DdPLvUpBwCl/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40kienobifilms_DdPLvUpBwCl/shot_01_mid.webp",
       "video_ids": [
         "IG_@kienobifilms_DdPLvUpBwCl"
       ]
@@ -1745,8 +1807,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Aki",
       "profile_url": "https://www.instagram.com/aki_japan/",
       "video_count": 1,
-      "top_industry": "Thời trang",
-      "sample_thumb": "https://media.fedu.vn/images/IG_%40aki_japan_DaDFH_TSii8/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40aki_japan_DaDFH_TSii8/shot_01_mid.webp",
       "video_ids": [
         "IG_@aki_japan_DaDFH_TSii8"
       ]
@@ -1756,8 +1818,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Nathanael Lucantoni",
       "profile_url": "https://www.instagram.com/nathanael.lct/",
       "video_count": 1,
-      "top_industry": "Thời trang",
-      "sample_thumb": "https://media.fedu.vn/images/IG_%40nathanael.lct_DdRg_ybtlKI/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40nathanael.lct_DdRg_ybtlKI/shot_01_mid.webp",
       "video_ids": [
         "IG_@nathanael.lct_DdRg_ybtlKI"
       ]
@@ -1767,8 +1829,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Charlotte Arsenault",
       "profile_url": "https://www.instagram.com/charlotte.arsenault/",
       "video_count": 1,
-      "top_industry": "Du lịch",
-      "sample_thumb": "https://media.fedu.vn/images/IG_%40charlotte.arsenault_DdHGBpZOzIm/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40charlotte.arsenault_DdHGBpZOzIm/shot_01_mid.webp",
       "video_ids": [
         "IG_@charlotte.arsenault_DdHGBpZOzIm"
       ]
@@ -1778,8 +1840,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Jusorok (주소록",
       "profile_url": "https://www.instagram.com/jusorok_korea/",
       "video_count": 1,
-      "top_industry": "F&B",
-      "sample_thumb": "https://media.fedu.vn/images/IG_%40jusorok_korea_DdBr6LZqkFd/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40jusorok_korea_DdBr6LZqkFd/shot_01_mid.webp",
       "video_ids": [
         "IG_@jusorok_korea_DdBr6LZqkFd"
       ]
@@ -1789,8 +1851,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Arian Ballate",
       "profile_url": "https://www.instagram.com/arianballate/",
       "video_count": 1,
-      "top_industry": "Thời trang",
-      "sample_thumb": "https://media.fedu.vn/images/IG_%40arianballate_DdRe4-xpHs2/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40arianballate_DdRe4-xpHs2/shot_01_mid.webp",
       "video_ids": [
         "IG_@arianballate_DdRe4-xpHs2"
       ]
@@ -1800,8 +1862,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Karen Lee",
       "profile_url": "https://www.instagram.com/kawoon.lee/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/shot_01_mid.webp",
       "video_ids": [
         "IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency"
       ]
@@ -1811,8 +1873,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Mercantegi",
       "profile_url": "https://www.instagram.com/mercantegi/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mercantegi_DbQtoVPRMWk_5_Cenas_Criativas_Trabalho/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40mercantegi_DbQtoVPRMWk_5_Cenas_Criativas_Trabalho/extracted_shots/shot_01_mid.webp",
       "video_ids": [
         "IG_@mercantegi_DbQtoVPRMWk_5_Cenas_Criativas_Trabalho"
       ]
@@ -1822,8 +1884,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Turapinaanastasiia",
       "profile_url": "https://www.instagram.com/turapinaanastasiia/",
       "video_count": 1,
-      "top_industry": "F&B",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_01_mid.webp",
       "video_ids": [
         "IG_@turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount"
       ]
@@ -1833,8 +1895,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Vicgaibar",
       "profile_url": "https://www.instagram.com/vicgaibar/",
       "video_count": 1,
-      "top_industry": "Thời trang",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40vicgaibar_DaGGMTdtawm_Cannes_Street_Fit_Check_Tripod_OOTD/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40vicgaibar_DaGGMTdtawm_Cannes_Street_Fit_Check_Tripod_OOTD/shot_01_mid.webp",
       "video_ids": [
         "IG_@vicgaibar_DaGGMTdtawm_Cannes_Street_Fit_Check_Tripod_OOTD"
       ]
@@ -1844,8 +1906,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Hannya.Tattoos",
       "profile_url": "https://www.instagram.com/hannya.tattoos/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_01_mid.webp",
       "video_ids": [
         "IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey"
       ]
@@ -1855,8 +1917,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Hanoi.Liebe",
       "profile_url": "https://www.instagram.com/hanoi.liebe/",
       "video_count": 1,
-      "top_industry": "Làm đẹp",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40hanoi.liebe_DdHf_1yA4WQ_Massage_and_Matcha/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40hanoi.liebe_DdHf_1yA4WQ_Massage_and_Matcha/shot_01_mid.webp",
       "video_ids": [
         "IG_@hanoi.liebe_DdHf_1yA4WQ_Massage_and_Matcha"
       ]
@@ -1866,8 +1928,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Vnexpress_Hanoi",
       "profile_url": "https://www.instagram.com/vnexpress_hanoi/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40vnexpress_hanoi_DdAyywnSxU8_Autumn_In_Hanoi/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40vnexpress_hanoi_DdAyywnSxU8_Autumn_In_Hanoi/shot_01_mid.webp",
       "video_ids": [
         "IG_@vnexpress_hanoi_DdAyywnSxU8_Autumn_In_Hanoi"
       ]
@@ -1877,8 +1939,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Utsint",
       "profile_url": "https://www.instagram.com/utsint/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40utsint_DdAYPcwgfv1_UTS_Vietnam_Open_Day_Campus_Tour/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40utsint_DdAYPcwgfv1_UTS_Vietnam_Open_Day_Campus_Tour/extracted_shots/shot_01_mid.webp",
       "video_ids": [
         "IG_@utsint_DdAYPcwgfv1_UTS_Vietnam_Open_Day_Campus_Tour"
       ]
@@ -1888,8 +1950,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "The.Isaacelguera",
       "profile_url": "https://www.instagram.com/the.isaacelguera/",
       "video_count": 1,
-      "top_industry": "Góc nhà đẹp",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40the.isaacelguera_DdNKlIqPagO_Kien_Truc_Chuoi_Canh_Sequence/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40the.isaacelguera_DdNKlIqPagO_Kien_Truc_Chuoi_Canh_Sequence/extracted_shots/shot_01_mid.webp",
       "video_ids": [
         "IG_@the.isaacelguera_DdNKlIqPagO_Kien_Truc_Chuoi_Canh_Sequence"
       ]
@@ -1899,8 +1961,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Hairpositiveofficial",
       "profile_url": "https://www.instagram.com/hairpositiveofficial/",
       "video_count": 1,
-      "top_industry": "Thời trang",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_01_mid.webp",
       "video_ids": [
         "IG_@hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway"
       ]
@@ -1910,8 +1972,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Moodme.Sg",
       "profile_url": "https://www.instagram.com/moodme.sg/",
       "video_count": 1,
-      "top_industry": "Làm đẹp",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40moodme.sg_DdL904CMnq3_Slow_Living_Scent_Giftspace/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40moodme.sg_DdL904CMnq3_Slow_Living_Scent_Giftspace/shot_01_mid.webp",
       "video_ids": [
         "IG_@moodme.sg_DdL904CMnq3_Slow_Living_Scent_Giftspace"
       ]
@@ -1921,8 +1983,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Jassminechi",
       "profile_url": "https://www.instagram.com/jassminechi/",
       "video_count": 1,
-      "top_industry": "F&B",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_01_mid.webp",
       "video_ids": [
         "IG_@jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide"
       ]
@@ -1932,8 +1994,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Lee.Rabo",
       "profile_url": "https://www.instagram.com/lee.rabo/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40lee.rabo_Dc3ifsHTIhL_Introverted_Homebody_Freelancer_Daily_Vlog/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40lee.rabo_Dc3ifsHTIhL_Introverted_Homebody_Freelancer_Daily_Vlog/shot_01_mid.webp",
       "video_ids": [
         "IG_@lee.rabo_Dc3ifsHTIhL_Introverted_Homebody_Freelancer_Daily_Vlog"
       ]
@@ -1943,8 +2005,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Naohasa",
       "profile_url": "https://www.instagram.com/naohasa/",
       "video_count": 1,
-      "top_industry": "Thời trang",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40naohasa_DdGp4XftvIn_5_Outfits_Match_Cut_Walk/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40naohasa_DdGp4XftvIn_5_Outfits_Match_Cut_Walk/extracted_shots/shot_01_mid.webp",
       "video_ids": [
         "IG_@naohasa_DdGp4XftvIn_5_Outfits_Match_Cut_Walk"
       ]
@@ -1954,8 +2016,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Sanjogchopra",
       "profile_url": "https://www.instagram.com/sanjogchopra/",
       "video_count": 1,
-      "top_industry": "Thể thao",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_01_mid.webp",
       "video_ids": [
         "IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation"
       ]
@@ -1965,8 +2027,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Lizzypalios",
       "profile_url": "https://www.instagram.com/lizzypalios/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40lizzypalios_DdHMOB0xfd1_Content_Creation_Process/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40lizzypalios_DdHMOB0xfd1_Content_Creation_Process/shot_01_mid.webp",
       "video_ids": [
         "IG_@lizzypalios_DdHMOB0xfd1_Content_Creation_Process"
       ]
@@ -1976,8 +2038,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Treechurchlogan",
       "profile_url": "https://www.instagram.com/treechurchlogan/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40treechurchlogan_DcoGfdghNwd_Bring_A_Friend_To_Church/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40treechurchlogan_DcoGfdghNwd_Bring_A_Friend_To_Church/shot_01_mid.webp",
       "video_ids": [
         "IG_@treechurchlogan_DcoGfdghNwd_Bring_A_Friend_To_Church"
       ]
@@ -1987,8 +2049,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Tattebakery",
       "profile_url": "https://www.instagram.com/tattebakery/",
       "video_count": 1,
-      "top_industry": "F&B",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40tattebakery_DcJM7AWOa___Soundtrack_Of_Newest_Cafe_NYC/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40tattebakery_DcJM7AWOa___Soundtrack_Of_Newest_Cafe_NYC/shot_01_mid.webp",
       "video_ids": [
         "IG_@tattebakery_DcJM7AWOa___Soundtrack_Of_Newest_Cafe_NYC"
       ]
@@ -1998,8 +2060,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Kristinagoose",
       "profile_url": "https://www.instagram.com/kristinagoose/",
       "video_count": 1,
-      "top_industry": "Thời trang",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images//shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "",
       "video_ids": [
         ""
       ]
@@ -2009,8 +2071,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "오새봄 / Oh Sae Bom",
       "profile_url": "https://www.instagram.com/saebomoh/",
       "video_count": 1,
-      "top_industry": "Thời trang",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog/shot_01_mid.webp",
       "video_ids": [
         "IG_@saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog"
       ]
@@ -2020,8 +2082,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Kisho_Men",
       "profile_url": "https://www.instagram.com/kisho_men/",
       "video_count": 1,
-      "top_industry": "Thời trang",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40kisho_men_DcxgmP1zZPk_Allblack_Is_My_Dominion/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40kisho_men_DcxgmP1zZPk_Allblack_Is_My_Dominion/shot_01_mid.webp",
       "video_ids": [
         "IG_@kisho_men_DcxgmP1zZPk_Allblack_Is_My_Dominion"
       ]
@@ -2031,8 +2093,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Korea_Bigmama",
       "profile_url": "https://www.instagram.com/korea_bigmama/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40korea_bigmama_DdBnto_O0He_Banana_Snickers_Twist/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40korea_bigmama_DdBnto_O0He_Banana_Snickers_Twist/shot_01_mid.webp",
       "video_ids": [
         "IG_@korea_bigmama_DdBnto_O0He_Banana_Snickers_Twist"
       ]
@@ -2042,8 +2104,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Quinn Welychka",
       "profile_url": "https://www.instagram.com/quinematic/",
       "video_count": 1,
-      "top_industry": "Thể thao",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40quinematic_DdH6HGNxEYT_Time_To_Go_For_A_Run/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40quinematic_DdH6HGNxEYT_Time_To_Go_For_A_Run/shot_01_mid.webp",
       "video_ids": [
         "IG_@quinematic_DdH6HGNxEYT_Time_To_Go_For_A_Run"
       ]
@@ -2053,8 +2115,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Dimas Yudhystira",
       "profile_url": "https://www.instagram.com/dimasyudhystira/",
       "video_count": 1,
-      "top_industry": "Làm đẹp",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/shot_01_mid.webp",
       "video_ids": [
         "IG_@dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut"
       ]
@@ -2064,8 +2126,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Kulniyasally",
       "profile_url": "https://www.instagram.com/kulniyasally/",
       "video_count": 1,
-      "top_industry": "F&B",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40kulniyasally_DdGRCKwsaaI_Kamera_05x_Behind_The_Scene_Food_POV/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40kulniyasally_DdGRCKwsaaI_Kamera_05x_Behind_The_Scene_Food_POV/extracted_shots/shot_01_mid.webp",
       "video_ids": [
         "IG_@kulniyasally_DdGRCKwsaaI_Kamera_05x_Behind_The_Scene_Food_POV"
       ]
@@ -2075,8 +2137,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Hsuan_Yunn",
       "profile_url": "https://www.instagram.com/hsuan_yunn/",
       "video_count": 1,
-      "top_industry": "Đồ công nghệ",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40hsuan_yunn_DdLsL-cSekL_Outdoor_Fashion_Match_Cut_Gear_Showcase/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40hsuan_yunn_DdLsL-cSekL_Outdoor_Fashion_Match_Cut_Gear_Showcase/shot_01_mid.webp",
       "video_ids": [
         "IG_@hsuan_yunn_DdLsL-cSekL_Outdoor_Fashion_Match_Cut_Gear_Showcase"
       ]
@@ -2086,8 +2148,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Tsangtastic",
       "profile_url": "https://www.instagram.com/tsangtastic/",
       "video_count": 1,
-      "top_industry": "Đồ công nghệ",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_01_mid.webp",
       "video_ids": [
         "IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing"
       ]
@@ -2097,8 +2159,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Aidana_Adilkassym",
       "profile_url": "https://www.instagram.com/aidana_adilkassym/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/shot_01_mid.webp",
       "video_ids": [
         "IG_@aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook"
       ]
@@ -2108,8 +2170,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Critos Pro",
       "profile_url": "https://www.instagram.com/critos_pro/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/shot_01_mid.webp",
       "video_ids": [
         "IG_@critos_pro_DcxwKHYoBFv_The_Art_of_Consistency"
       ]
@@ -2119,8 +2181,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Jamison.Lange",
       "profile_url": "https://www.instagram.com/jamison.lange/",
       "video_count": 1,
-      "top_industry": "Thời trang",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40jamison.lange_DawDiT2M1p8_Coffee_Outfit_Match_Cut_Fashion/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40jamison.lange_DawDiT2M1p8_Coffee_Outfit_Match_Cut_Fashion/shot_01_mid.webp",
       "video_ids": [
         "IG_@jamison.lange_DawDiT2M1p8_Coffee_Outfit_Match_Cut_Fashion"
       ]
@@ -2130,10 +2192,21 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Mako Gochashvili",
       "profile_url": "https://www.instagram.com/mako__go/",
       "video_count": 1,
-      "top_industry": "Góc nhà đẹp",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mako__go_DaH7X34NTNX_Palermo_Sicily/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40mako__go_DaH7X34NTNX_Palermo_Sicily/shot_01_mid.webp",
       "video_ids": [
         "IG_@mako__go_DaH7X34NTNX_Palermo_Sicily"
+      ]
+    },
+    {
+      "handle": "@allinbcoffee",
+      "name": "Allinbcoffee",
+      "profile_url": "https://www.instagram.com/allinbcoffee/",
+      "video_count": 1,
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_01_mid.webp",
+      "video_ids": [
+        "IG_@allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon"
       ]
     },
     {
@@ -2141,10 +2214,21 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Gabe Harris",
       "profile_url": "https://www.instagram.com/watch.gabe/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40watch.gabe_Dc3immEILSE_Build_B_Roll_Library_Year/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40watch.gabe_Dc3immEILSE_Build_B_Roll_Library_Year/shot_01_mid.webp",
       "video_ids": [
         "IG_@watch.gabe_Dc3immEILSE_Build_B_Roll_Library_Year"
+      ]
+    },
+    {
+      "handle": "@Gabe_Harris",
+      "name": "Gabe_Harris",
+      "profile_url": "https://www.instagram.com/Gabe_Harris/",
+      "video_count": 1,
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40Gabe_Harris_Dc3ih_5jlqz_Carousel_Analysis/slide_01_mid.webp",
+      "video_ids": [
+        "IG_@Gabe_Harris_Dc3ih_5jlqz_Carousel_Analysis"
       ]
     },
     {
@@ -2152,8 +2236,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Li! Video creator",
       "profile_url": "https://www.instagram.com/hey.lirules/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/shot_01_mid.webp",
       "video_ids": [
         "IG_@hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions"
       ]
@@ -2163,8 +2247,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Alena.Feda",
       "profile_url": "https://www.instagram.com/alena.feda/",
       "video_count": 1,
-      "top_industry": "F&B",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40alena.feda_Dc1w07upyNF_Food_Filming_Mastery_From_Scratch/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40alena.feda_Dc1w07upyNF_Food_Filming_Mastery_From_Scratch/shot_01_mid.webp",
       "video_ids": [
         "IG_@alena.feda_Dc1w07upyNF_Food_Filming_Mastery_From_Scratch"
       ]
@@ -2174,8 +2258,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Ulanzi Global",
       "profile_url": "https://www.instagram.com/ulanzi.global/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40ulanzi.global_DcyS2KEm7-v_Ulanzi_LA30_RGB_Air_Tube_Light/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40ulanzi.global_DcyS2KEm7-v_Ulanzi_LA30_RGB_Air_Tube_Light/shot_01_mid.webp",
       "video_ids": [
         "IG_@ulanzi.global_DcyS2KEm7-v_Ulanzi_LA30_RGB_Air_Tube_Light"
       ]
@@ -2185,8 +2269,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Inbex.Id",
       "profile_url": "https://www.instagram.com/inbex.id/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40inbex.id_DcoPBXdDPro_Lighting_Tripod_Setup_Guide/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40inbex.id_DcoPBXdDPro_Lighting_Tripod_Setup_Guide/shot_01_mid.webp",
       "video_ids": [
         "IG_@inbex.id_DcoPBXdDPro_Lighting_Tripod_Setup_Guide"
       ]
@@ -2196,8 +2280,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "_Mubeenart",
       "profile_url": "https://www.instagram.com/_mubeenart/",
       "video_count": 1,
-      "top_industry": "Đồ công nghệ",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_01_mid.webp",
       "video_ids": [
         "IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01"
       ]
@@ -2207,8 +2291,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Alexboissetgrowth",
       "profile_url": "https://www.instagram.com/alexboissetgrowth/",
       "video_count": 1,
-      "top_industry": "Xây kênh",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40alexboissetgrowth_DZXpNj_IveV_Masterclass_Crecer_En_Redes/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40alexboissetgrowth_DZXpNj_IveV_Masterclass_Crecer_En_Redes/shot_01_mid.webp",
       "video_ids": [
         "IG_@alexboissetgrowth_DZXpNj_IveV_Masterclass_Crecer_En_Redes"
       ]
@@ -2218,8 +2302,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Cafe.Pilgrim",
       "profile_url": "https://www.instagram.com/cafe.pilgrim/",
       "video_count": 1,
-      "top_industry": "F&B",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40cafe.pilgrim_DbVhTUiznEp_Cafe_Saan_Euljiro/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40cafe.pilgrim_DbVhTUiznEp_Cafe_Saan_Euljiro/shot_01_mid.webp",
       "video_ids": [
         "IG_@cafe.pilgrim_DbVhTUiznEp_Cafe_Saan_Euljiro"
       ]
@@ -2229,8 +2313,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Nicorauchenwald",
       "profile_url": "https://www.instagram.com/nicorauchenwald/",
       "video_count": 1,
-      "top_industry": "Thể thao",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_01_mid.webp",
       "video_ids": [
         "IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life"
       ]
@@ -2240,8 +2324,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Jesús Ropero",
       "profile_url": "https://www.instagram.com/jesussropero/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40jesussropero_Dc9LUXLAHkc_Getting_Ready_Faster_Than_Ever/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40jesussropero_Dc9LUXLAHkc_Getting_Ready_Faster_Than_Ever/shot_01_mid.webp",
       "video_ids": [
         "IG_@jesussropero_Dc9LUXLAHkc_Getting_Ready_Faster_Than_Ever"
       ]
@@ -2251,8 +2335,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Wowshoebwow",
       "profile_url": "https://www.instagram.com/wowshoebwow/",
       "video_count": 1,
-      "top_industry": "Góc nhà đẹp",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40wowshoebwow_Db_EEZtjJBI_Moving_Postcards_London_Trafalgar/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40wowshoebwow_Db_EEZtjJBI_Moving_Postcards_London_Trafalgar/shot_01_mid.webp",
       "video_ids": [
         "IG_@wowshoebwow_Db_EEZtjJBI_Moving_Postcards_London_Trafalgar"
       ]
@@ -2262,8 +2346,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Gogosapu",
       "profile_url": "https://www.instagram.com/gogosapu/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40gogosapu_Db5TrGYlKbD_Still_vs_Moving_Frame_Story/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40gogosapu_Db5TrGYlKbD_Still_vs_Moving_Frame_Story/shot_01_mid.webp",
       "video_ids": [
         "IG_@gogosapu_Db5TrGYlKbD_Still_vs_Moving_Frame_Story"
       ]
@@ -2273,8 +2357,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Srdtrv",
       "profile_url": "https://www.instagram.com/srdtrv/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40srdtrv_DcbJDDNi7h8_Behind_The_Scenes_Directing_Mastery/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40srdtrv_DcbJDDNi7h8_Behind_The_Scenes_Directing_Mastery/shot_01_mid.webp",
       "video_ids": [
         "IG_@srdtrv_DcbJDDNi7h8_Behind_The_Scenes_Directing_Mastery"
       ]
@@ -2284,8 +2368,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Withgeorgy",
       "profile_url": "https://www.instagram.com/withgeorgy/",
       "video_count": 1,
-      "top_industry": "Du lịch",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40withgeorgy_Db7_3rpgK5c_Cinematic_Travel_iPhone_Mastery/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40withgeorgy_Db7_3rpgK5c_Cinematic_Travel_iPhone_Mastery/shot_01_mid.webp",
       "video_ids": [
         "IG_@withgeorgy_Db7_3rpgK5c_Cinematic_Travel_iPhone_Mastery"
       ]
@@ -2295,8 +2379,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Bewoom_",
       "profile_url": "https://www.instagram.com/bewoom_/",
       "video_count": 1,
-      "top_industry": "Góc nhà đẹp",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40bewoom__DcYxC8wvt1z_Sasohan_Daejeon_Hanok_Serenity/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40bewoom__DcYxC8wvt1z_Sasohan_Daejeon_Hanok_Serenity/shot_01_mid.webp",
       "video_ids": [
         "IG_@bewoom__DcYxC8wvt1z_Sasohan_Daejeon_Hanok_Serenity"
       ]
@@ -2306,8 +2390,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Onethebaha",
       "profile_url": "https://www.instagram.com/onethebaha/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40onethebaha_DcWEp8-swbB_Seamless_Spin_Whip_Pan_Tutorial/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40onethebaha_DcWEp8-swbB_Seamless_Spin_Whip_Pan_Tutorial/shot_01_mid.webp",
       "video_ids": [
         "IG_@onethebaha_DcWEp8-swbB_Seamless_Spin_Whip_Pan_Tutorial"
       ]
@@ -2317,8 +2401,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Brandon.Dtd",
       "profile_url": "https://www.instagram.com/brandon.dtd/",
       "video_count": 1,
-      "top_industry": "Thể thao",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40brandon.dtd_DcTbD0MR-V__Discipline_Motivation_Obsession/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40brandon.dtd_DcTbD0MR-V__Discipline_Motivation_Obsession/shot_01_mid.webp",
       "video_ids": [
         "IG_@brandon.dtd_DcTbD0MR-V__Discipline_Motivation_Obsession"
       ]
@@ -2328,8 +2412,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Photoknack.In",
       "profile_url": "https://www.instagram.com/photoknack.in/",
       "video_count": 1,
-      "top_industry": "Làm đẹp",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40photoknack.in_DcD30ThT7Zm_Small_Balcony_Big_Frame_Perspective/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40photoknack.in_DcD30ThT7Zm_Small_Balcony_Big_Frame_Perspective/shot_01_mid.webp",
       "video_ids": [
         "IG_@photoknack.in_DcD30ThT7Zm_Small_Balcony_Big_Frame_Perspective"
       ]
@@ -2339,8 +2423,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Lacapturevisuals",
       "profile_url": "https://www.instagram.com/lacapturevisuals/",
       "video_count": 1,
-      "top_industry": "F&B",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40lacapturevisuals_DZWRDtqMNWq_Coffee_Shop_Broll_Mastery/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40lacapturevisuals_DZWRDtqMNWq_Coffee_Shop_Broll_Mastery/shot_01_mid.webp",
       "video_ids": [
         "IG_@lacapturevisuals_DZWRDtqMNWq_Coffee_Shop_Broll_Mastery"
       ]
@@ -2350,8 +2434,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Kortafilms",
       "profile_url": "https://www.instagram.com/kortafilms/",
       "video_count": 1,
-      "top_industry": "Làm đẹp",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40kortafilms_DcdthwaTM3J_Camera_Angles_Mastery/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40kortafilms_DcdthwaTM3J_Camera_Angles_Mastery/shot_01_mid.webp",
       "video_ids": [
         "IG_@kortafilms_DcdthwaTM3J_Camera_Angles_Mastery"
       ]
@@ -2361,8 +2445,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Firewood_Klcc",
       "profile_url": "https://www.instagram.com/firewood_klcc/",
       "video_count": 1,
-      "top_industry": "F&B",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40firewood_klcc_DZFzj9YAAmG_Artisanal_Woodfire_Dining/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40firewood_klcc_DZFzj9YAAmG_Artisanal_Woodfire_Dining/shot_01_mid.webp",
       "video_ids": [
         "IG_@firewood_klcc_DZFzj9YAAmG_Artisanal_Woodfire_Dining"
       ]
@@ -2372,10 +2456,21 @@ var FEDU_IDEAS_DATABASE = {
       "name": "The.Vantage.Point",
       "profile_url": "https://www.instagram.com/the.vantage.point/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40the.vantage.point_Dct9JzWKVFo_NYC_Morning_Light/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40the.vantage.point_Dct9JzWKVFo_NYC_Morning_Light/shot_01_mid.webp",
       "video_ids": [
         "IG_@the.vantage.point_Dct9JzWKVFo_NYC_Morning_Light"
+      ]
+    },
+    {
+      "handle": "@AnhSacAnh",
+      "name": "Anh Sắc Ánh & Tuấn VN Creative",
+      "profile_url": "https://www.instagram.com/AnhSacAnh/",
+      "video_count": 1,
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/FB_%40AnhSacAnh_1964049564715249_Thuong_Hieu_Ca_Nhan_Sinh_Loi/shot_01_mid.webp",
+      "video_ids": [
+        "FB_@AnhSacAnh_1964049564715249_Thuong_Hieu_Ca_Nhan_Sinh_Loi"
       ]
     },
     {
@@ -2383,8 +2478,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Sajad_Machu",
       "profile_url": "https://www.instagram.com/sajad_machu/",
       "video_count": 1,
-      "top_industry": "Làm đẹp",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40sajad_machu_DcBjIwPMMfa_Creative_Block_Loop/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40sajad_machu_DcBjIwPMMfa_Creative_Block_Loop/shot_01_mid.webp",
       "video_ids": [
         "IG_@sajad_machu_DcBjIwPMMfa_Creative_Block_Loop"
       ]
@@ -2394,8 +2489,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Slaohuairen",
       "profile_url": "https://www.instagram.com/slaohuairen/",
       "video_count": 1,
-      "top_industry": "Thời trang",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40slaohuairen_DcLblxOy3tN_A_young_girl_in_linen/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40slaohuairen_DcLblxOy3tN_A_young_girl_in_linen/shot_01_mid.webp",
       "video_ids": [
         "IG_@slaohuairen_DcLblxOy3tN_A_young_girl_in_linen"
       ]
@@ -2405,8 +2500,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "岳 🍜 GAKU",
       "profile_url": "https://www.instagram.com/gakuyen/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40gakuyen_Dc0MQfeEwp4_Carousel_Analysis/slide_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40gakuyen_Dc0MQfeEwp4_Carousel_Analysis/slide_01_mid.webp",
       "video_ids": [
         "IG_@gakuyen_Dc0MQfeEwp4_Carousel_Analysis"
       ]
@@ -2416,10 +2511,21 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Kim Kyung-sik",
       "profile_url": "https://www.instagram.com/kyung6film/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40kyung6film_DakY2EST-Tm_Split_City_Shanghai/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40kyung6film_DakY2EST-Tm_Split_City_Shanghai/shot_01_mid.webp",
       "video_ids": [
         "IG_@kyung6film_DakY2EST-Tm_Split_City_Shanghai"
+      ]
+    },
+    {
+      "handle": "@岳",
+      "name": "岳_🍜_Gaku",
+      "profile_url": "https://www.instagram.com/岳/",
+      "video_count": 1,
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40%E5%B2%B3_%F0%9F%8D%9C_GAKU_Dc0MHhTE9z0_Carousel_Analysis/slide_01_mid.webp",
+      "video_ids": [
+        "IG_@岳_🍜_GAKU_Dc0MHhTE9z0_Carousel_Analysis"
       ]
     },
     {
@@ -2427,8 +2533,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Omgadrian",
       "profile_url": "https://www.instagram.com/omgadrian/",
       "video_count": 1,
-      "top_industry": "Du lịch",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_01_mid.webp",
       "video_ids": [
         "IG_@omgadrian_DcqzVfno5Al_Travel_Sequence_Formula"
       ]
@@ -2438,8 +2544,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Andrei_Kostromskikh",
       "profile_url": "https://www.instagram.com/Andrei_Kostromskikh/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Andrei_Kostromskikh_DctRlh0jZlj_Carousel_Analysis/slide_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40Andrei_Kostromskikh_DctRlh0jZlj_Carousel_Analysis/slide_01_mid.webp",
       "video_ids": [
         "IG_@Andrei_Kostromskikh_DctRlh0jZlj_Carousel_Analysis"
       ]
@@ -2449,10 +2555,21 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Thomasmathewt2",
       "profile_url": "https://www.instagram.com/thomasmathewt2/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40thomasmathewt2_DcgTj56Atlc_7_Kitchen_Film_Shots/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40thomasmathewt2_DcgTj56Atlc_7_Kitchen_Film_Shots/shot_01_mid.webp",
       "video_ids": [
         "IG_@thomasmathewt2_DcgTj56Atlc_7_Kitchen_Film_Shots"
+      ]
+    },
+    {
+      "handle": "@𝗧𝗵𝗼𝗺𝗮𝘀",
+      "name": "𝗧𝗵𝗼𝗺𝗮𝘀_𝗠𝗮𝘁𝗵𝗲𝘄",
+      "profile_url": "https://www.instagram.com/𝗧𝗵𝗼𝗺𝗮𝘀/",
+      "video_count": 1,
+      "top_industry": "Unknown",
+      "sample_thumb": "",
+      "video_ids": [
+        "IG_@𝗧𝗵𝗼𝗺𝗮𝘀_𝗠𝗮𝘁𝗵𝗲𝘄_DcgSonjgnkV_Carousel_Analysis"
       ]
     },
     {
@@ -2460,8 +2577,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Little Ruby's Cafe",
       "profile_url": "https://www.instagram.com/rubyscafe/",
       "video_count": 1,
-      "top_industry": "F&B",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40rubyscafe_Db-ylimPqMu_Summer_in_the_Village/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40rubyscafe_Db-ylimPqMu_Summer_in_the_Village/shot_01_mid.webp",
       "video_ids": [
         "IG_@rubyscafe_Db-ylimPqMu_Summer_in_the_Village"
       ]
@@ -2471,10 +2588,21 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Ethan Barber",
       "profile_url": "https://www.instagram.com/ethanbarber.co/",
       "video_count": 1,
-      "top_industry": "Du lịch",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40ethanbarber.co_DW_iQNYDjX7_Summer_in_NYC/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40ethanbarber.co_DW_iQNYDjX7_Summer_in_NYC/shot_01_mid.webp",
       "video_ids": [
         "IG_@ethanbarber.co_DW_iQNYDjX7_Summer_in_NYC"
+      ]
+    },
+    {
+      "handle": "@Startup_TM",
+      "name": "Startup_Tm",
+      "profile_url": "https://www.instagram.com/Startup_TM/",
+      "video_count": 1,
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40Startup_TM_xnAU8Pazc6A_Joe_Rogan_Elon_Musk_Podcast/shot_01_mid.webp",
+      "video_ids": [
+        "IG_@Startup_TM_xnAU8Pazc6A_Joe_Rogan_Elon_Musk_Podcast"
       ]
     },
     {
@@ -2482,8 +2610,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Ethan",
       "profile_url": "https://www.instagram.com/chowyhh/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://media.fedu.vn/images/IG_%40chowyhh_DcTjYUftCcv_Art_of_Composition_London/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40chowyhh_DcTjYUftCcv_Art_of_Composition_London/shot_01_mid.webp",
       "video_ids": [
         "IG_@chowyhh_DcTjYUftCcv_Art_of_Composition_London"
       ]
@@ -2493,10 +2621,32 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Valenti | content creator",
       "profile_url": "https://www.instagram.com/valenti_k41/",
       "video_count": 1,
-      "top_industry": "F&B",
-      "sample_thumb": "https://media.fedu.vn/images/IG_%40valenti_k41_DcL1W34I6lz_DJI_Mic_3_ASMR/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40valenti_k41_DcL1W34I6lz_DJI_Mic_3_ASMR/shot_01_mid.webp",
       "video_ids": [
         "IG_@valenti_k41_DcL1W34I6lz_DJI_Mic_3_ASMR"
+      ]
+    },
+    {
+      "handle": "@thodiahaiduongne",
+      "name": "Thodiahaiduongne",
+      "profile_url": "https://www.instagram.com/thodiahaiduongne/",
+      "video_count": 1,
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/TikTok_%40thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_01_start.webp",
+      "video_ids": [
+        "TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong"
+      ]
+    },
+    {
+      "handle": "@tinanguyen2004",
+      "name": "Tinanguyen2004",
+      "profile_url": "https://www.instagram.com/tinanguyen2004/",
+      "video_count": 1,
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40tinanguyen2004_7673468312290037012_Double_Day_lu%C3%B4n_l%C3%A0_d%E1%BB%8Bp_%C4%91%E1%BB%83_kh%C3%A1ch_h%C3%A0ng_l%E1%BB%B1a_%C4%91%C6%B0%E1%BB%A3c/shot_01_mid.webp",
+      "video_ids": [
+        "IG_@tinanguyen2004_7673468312290037012_Double_Day_luon_la_dip_de_khach_hang_lua_duoc"
       ]
     },
     {
@@ -2504,8 +2654,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Colecoppolino",
       "profile_url": "https://www.instagram.com/colecoppolino/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://media.fedu.vn/images/IG_%40colecoppolino_DcJiRCrTlG1/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40colecoppolino_DcJiRCrTlG1/shot_01_mid.webp",
       "video_ids": [
         "IG_@colecoppolino_DcJiRCrTlG1"
       ]
@@ -2515,8 +2665,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Willwfit",
       "profile_url": "https://www.instagram.com/willwfit/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://media.fedu.vn/images/IG_%40willwfit_DbRak0lsesY_The_Goal_Is_Simple/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40willwfit_DbRak0lsesY_The_Goal_Is_Simple/shot_01_mid.webp",
       "video_ids": [
         "IG_@willwfit_DbRak0lsesY_The_Goal_Is_Simple"
       ]
@@ -2526,8 +2676,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Iamlukeluquire",
       "profile_url": "https://www.instagram.com/iamlukeluquire/",
       "video_count": 1,
-      "top_industry": "Thời trang",
-      "sample_thumb": "https://media.fedu.vn/images/IG_%40iamlukeluquire_DbjCyKgxp8S_Aesthetic_Routine/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40iamlukeluquire_DbjCyKgxp8S_Aesthetic_Routine/shot_01_mid.webp",
       "video_ids": [
         "IG_@iamlukeluquire_DbjCyKgxp8S_Aesthetic_Routine"
       ]
@@ -2537,10 +2687,32 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Lifeofriza",
       "profile_url": "https://www.instagram.com/lifeofriza/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://media.fedu.vn/images/IG_%40lifeofriza_DcTqPjitJl1_Y_Tuong_Thanh_Hien_Thuc_Canva/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40lifeofriza_DcTqPjitJl1_Y_Tuong_Thanh_Hien_Thuc_Canva/shot_01_mid.webp",
       "video_ids": [
         "IG_@lifeofriza_DcTqPjitJl1_Y_Tuong_Thanh_Hien_Thuc_Canva"
+      ]
+    },
+    {
+      "handle": "@madisonkjan",
+      "name": "Madisonkjan",
+      "profile_url": "https://www.instagram.com/madisonkjan/",
+      "video_count": 1,
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40madisonkjan_Da7V4egSQxv_Vietnam_Travel_Cinematic/shot_01_mid.webp",
+      "video_ids": [
+        "IG_@madisonkjan_Da7V4egSQxv_Vietnam_Travel_Cinematic"
+      ]
+    },
+    {
+      "handle": "@kopdinh",
+      "name": "Kopdinh",
+      "profile_url": "https://www.instagram.com/kopdinh/",
+      "video_count": 1,
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/Lat_Cat_Cam_Xuc_-_%40KopDinh/img_001_63c5522e.webp",
+      "video_ids": [
+        "FB_@KopDinh_1398467868829887_Lat_Cat_Cam_Xuc_Kop_Dinh"
       ]
     },
     {
@@ -2548,21 +2720,10 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Samuel Aitken",
       "profile_url": "https://www.instagram.com/samuelaitken_/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://media.fedu.vn/images/Aesthetic_Routine_Fitness_-_%2540samuelaitken/img_001_b0c92ce2.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/Aesthetic_Routine_Fitness_-_%40samuelaitken/img_001_b0c92ce2.webp",
       "video_ids": [
         "IG_@samuelaitken__Da0eP_msVrm_Aesthetic_Routine"
-      ]
-    },
-    {
-      "handle": "@byjxson",
-      "name": "Jason Vargas",
-      "profile_url": "https://www.instagram.com/byjxson/",
-      "video_count": 1,
-      "top_industry": "Xây kênh",
-      "sample_thumb": "https://media.fedu.vn/images/Project_100_Day_01_-_%2540byjxson/img_002_311c68c6.jpg",
-      "video_ids": [
-        "IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01"
       ]
     },
     {
@@ -2570,8 +2731,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Intothethailand",
       "profile_url": "https://www.instagram.com/intothethailand/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://media.fedu.vn/images/IG_%40intothethailand_Dad0d3xtv9E_The_Beauty_of_Bangkok_in_Everyday_Life/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40intothethailand_Dad0d3xtv9E_The_Beauty_of_Bangkok_in_Everyday_Life/shot_01_mid.webp",
       "video_ids": [
         "IG_@intothethailand_Dad0d3xtv9E_The_Beauty_of_Bangkok_in_Everyday_Life"
       ]
@@ -2581,8 +2742,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Andrei Kostromskikh",
       "profile_url": "https://www.instagram.com/kosnio/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://media.fedu.vn/images/IG_%40Andrei_Kostromskikh_DcI-darjckz_Carousel_Analysis/slide_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40Andrei_Kostromskikh_DcI-darjckz_Carousel_Analysis/slide_01_mid.webp",
       "video_ids": [
         "IG_@Andrei_Kostromskikh_DcI-darjckz_Carousel_Analysis"
       ]
@@ -2592,8 +2753,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Bryan Hynes",
       "profile_url": "https://www.instagram.com/bryanhynes/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://media.fedu.vn/images/The_Art_of_Visual_Sequence_-_%2540bryanhynes/img_080_ae283717.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_080_ae283717.webp",
       "video_ids": [
         "IG_@bryanhynes_DacaMHwzEm3_Visual_Sequence"
       ]
@@ -2603,10 +2764,21 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Ken Shoji - Tokyo Videographer",
       "profile_url": "https://www.instagram.com/kenshoji.visuals/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://media.fedu.vn/images/The_Art_of_Static_Shot_-_%2540kenshoji.visuals/img_002_66f52422.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/The_Art_of_Static_Shot_-_%40kenshoji.visuals/img_002_66f52422.webp",
       "video_ids": [
         "IG_@kenshoji.visuals_DZOzwweTc5a_The_Art_of_Static_Shot"
+      ]
+    },
+    {
+      "handle": "@minhmigoi",
+      "name": "Nguyễn Đức Minh",
+      "profile_url": "https://www.instagram.com/minhmigoi/",
+      "video_count": 1,
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/The_Power_of_Composition_-_%40minhmigoi/img_002_4ee0b6c4.webp",
+      "video_ids": [
+        "IG_@minhmigoi_Db0Sn3zvuHP_The_Power_of_Composition"
       ]
     },
     {
@@ -2614,8 +2786,8 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Saigonink_Studio",
       "profile_url": "https://www.instagram.com/saigonink_studio/",
       "video_count": 1,
-      "top_industry": "Bố cục",
-      "sample_thumb": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_01_mid.jpg",
+      "top_industry": "Unknown",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_01_mid.webp",
       "video_ids": [
         "IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo"
       ]
@@ -2635,13 +2807,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "india",
         "name": "Ấn Độ",
@@ -2663,12 +2831,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@mridupawasharma",
         "profile_url": "https://www.instagram.com/mridupawasharma/"
       },
-      "ig_url": "https://www.instagram.com/p/DU7mCyVE4EJ/",
+      "ig_url": "https://www.instagram.com/reel/DU7mCyVE4EJ/",
       "gdrive_folder": "",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mridupawasharma_DU7mCyVE4EJ_Comment_%E2%80%9CLUTS%E2%80%9D_to_get_these_luts_in_your_DMs/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mridupawasharma_DU7mCyVE4EJ_Comment_%E2%80%9CLUTS%E2%80%9D_to_get_these_luts_in_your_DMs/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40mridupawasharma_DU7mCyVE4EJ_Comment_%E2%80%9CLUTS%E2%80%9D_to_get_these_luts_in_your_DMs/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40mridupawasharma_DU7mCyVE4EJ_Comment_%E2%80%9CLUTS%E2%80%9D_to_get_these_luts_in_your_DMs/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DU7mCyVE4EJ.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DU7mCyVE4EJ.mp4",
         "report_url": "reports/IG_@mridupawasharma_DU7mCyVE4EJ_Comment_“LUTS”_to_get_these_luts_in_your_DMs.html",
         "shots_count": 32,
         "duration": "64s",
@@ -2696,13 +2865,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "india",
         "name": "Ấn Độ",
@@ -2724,12 +2889,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@mridupawasharma",
         "profile_url": "https://www.instagram.com/mridupawasharma/"
       },
-      "ig_url": "https://www.instagram.com/p/DaXdrAVzGcc/",
+      "ig_url": "https://www.instagram.com/reel/DaXdrAVzGcc/",
       "gdrive_folder": "",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mridupawasharma_DaXdrAVzGcc_Some_days_you_don%E2%80%99t_need_more_motivation%2C_you/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mridupawasharma_DaXdrAVzGcc_Some_days_you_don%E2%80%99t_need_more_motivation%2C_you/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DaXdrAVzGcc.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40mridupawasharma_DaXdrAVzGcc_Some_days_you_don%E2%80%99t_need_more_motivation%2C_you/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40mridupawasharma_DaXdrAVzGcc_Some_days_you_don%E2%80%99t_need_more_motivation%2C_you/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1bZma0YOJB-tb5TUa8-z9Xby4uBmgHH-R&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1bZma0YOJB-tb5TUa8-z9Xby4uBmgHH-R&export=download",
         "report_url": "reports/IG_@mridupawasharma_DaXdrAVzGcc_Some_days_you_don’t_need_more_motivation,_you.html",
         "shots_count": 41,
         "duration": "82s",
@@ -2757,13 +2923,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "india",
         "name": "Ấn Độ",
@@ -2785,12 +2947,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@mridupawasharma",
         "profile_url": "https://www.instagram.com/mridupawasharma/"
       },
-      "ig_url": "https://www.instagram.com/p/DbnlAB5Twrw/",
+      "ig_url": "https://www.instagram.com/reel/DbnlAB5Twrw/",
       "gdrive_folder": "",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mridupawasharma_DbnlAB5Twrw_Stop_ruining_your_videos_with_these_3_mistake/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mridupawasharma_DbnlAB5Twrw_Stop_ruining_your_videos_with_these_3_mistake/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DbnlAB5Twrw.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40mridupawasharma_DbnlAB5Twrw_Stop_ruining_your_videos_with_these_3_mistake/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40mridupawasharma_DbnlAB5Twrw_Stop_ruining_your_videos_with_these_3_mistake/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1y0jcaTvJaTCr8eh1roH2K5GXblNolZc7&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1y0jcaTvJaTCr8eh1roH2K5GXblNolZc7&export=download",
         "report_url": "reports/IG_@mridupawasharma_DbnlAB5Twrw_Stop_ruining_your_videos_with_these_3_mistake.html",
         "shots_count": 33,
         "duration": "66s",
@@ -2818,13 +2981,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "india",
         "name": "Ấn Độ",
@@ -2846,12 +3005,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@mridupawasharma",
         "profile_url": "https://www.instagram.com/mridupawasharma/"
       },
-      "ig_url": "https://www.instagram.com/p/DV73FCHk1Ej/",
+      "ig_url": "https://www.instagram.com/reel/DV73FCHk1Ej/",
       "gdrive_folder": "https://drive.google.com/open?id=1b8S5DN5qn61KizPDqQ_BR15f2lXQGtT3",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mridupawasharma_DV73FCHk1Ej_Some_days_feel_lighter/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mridupawasharma_DV73FCHk1Ej_Some_days_feel_lighter/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40mridupawasharma_DV73FCHk1Ej_Some_days_feel_lighter/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40mridupawasharma_DV73FCHk1Ej_Some_days_feel_lighter/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DV73FCHk1Ej.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DV73FCHk1Ej.mp4",
         "report_url": "reports/IG_@mridupawasharma_DV73FCHk1Ej_Some_days_feel_lighter.html",
         "shots_count": 33,
         "duration": "66s",
@@ -2879,13 +3039,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "india",
         "name": "Ấn Độ",
@@ -2907,12 +3063,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@mridupawasharma",
         "profile_url": "https://www.instagram.com/mridupawasharma/"
       },
-      "ig_url": "https://www.instagram.com/p/DZcSt_xzqBB/",
+      "ig_url": "https://www.instagram.com/reel/DZcSt_xzqBB/",
       "gdrive_folder": "https://drive.google.com/open?id=1lFaE0N5dKsoWbxQ9oBfeBmYzpFAb_MKo",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mridupawasharma_DZcSt_xzqBB_You_just_need_these_3_friends_in_your_life%21/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mridupawasharma_DZcSt_xzqBB_You_just_need_these_3_friends_in_your_life%21/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40mridupawasharma_DZcSt_xzqBB_You_just_need_these_3_friends_in_your_life%21/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40mridupawasharma_DZcSt_xzqBB_You_just_need_these_3_friends_in_your_life%21/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DZcSt_xzqBB.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DZcSt_xzqBB.mp4",
         "report_url": "reports/IG_@mridupawasharma_DZcSt_xzqBB_You_just_need_these_3_friends_in_your_life!.html",
         "shots_count": 34,
         "duration": "68s",
@@ -2940,13 +3097,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "india",
         "name": "Ấn Độ",
@@ -2968,12 +3121,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@mridupawasharma",
         "profile_url": "https://www.instagram.com/mridupawasharma/"
       },
-      "ig_url": "https://www.instagram.com/p/DYpArQyzs3G/",
+      "ig_url": "https://www.instagram.com/reel/DYpArQyzs3G/",
       "gdrive_folder": "https://drive.google.com/open?id=19or5wP7UxmRbx8izQBlwFrfymioEmu_A",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mridupawasharma_DYpArQyzs3G_Your_phone_videos_are_MEH%E2%80%A6/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mridupawasharma_DYpArQyzs3G_Your_phone_videos_are_MEH%E2%80%A6/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40mridupawasharma_DYpArQyzs3G_Your_phone_videos_are_MEH%E2%80%A6/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40mridupawasharma_DYpArQyzs3G_Your_phone_videos_are_MEH%E2%80%A6/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DYpArQyzs3G.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DYpArQyzs3G.mp4",
         "report_url": "reports/IG_@mridupawasharma_DYpArQyzs3G_Your_phone_videos_are_MEH….html",
         "shots_count": 23,
         "duration": "46s",
@@ -3001,13 +3155,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "india",
         "name": "Ấn Độ",
@@ -3029,12 +3179,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@mridupawasharma",
         "profile_url": "https://www.instagram.com/mridupawasharma/"
       },
-      "ig_url": "https://www.instagram.com/p/DW8w1XNE-Ya/",
+      "ig_url": "https://www.instagram.com/reel/DW8w1XNE-Ya/",
       "gdrive_folder": "https://drive.google.com/open?id=1oZe_zJJaAZfAfwulGBIISOhBB3tHSpbd",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mridupawasharma_DW8w1XNE-Ya_Important_meeting%E2%80%A6_but_the_match_matters_more/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mridupawasharma_DW8w1XNE-Ya_Important_meeting%E2%80%A6_but_the_match_matters_more/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40mridupawasharma_DW8w1XNE-Ya_Important_meeting%E2%80%A6_but_the_match_matters_more/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40mridupawasharma_DW8w1XNE-Ya_Important_meeting%E2%80%A6_but_the_match_matters_more/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DW8w1XNE-Ya.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DW8w1XNE-Ya.mp4",
         "report_url": "reports/IG_@mridupawasharma_DW8w1XNE-Ya_Important_meeting…_but_the_match_matters_more.html",
         "shots_count": 23,
         "duration": "46s",
@@ -3062,13 +3213,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "india",
         "name": "Ấn Độ",
@@ -3090,12 +3237,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@mridupawasharma",
         "profile_url": "https://www.instagram.com/mridupawasharma/"
       },
-      "ig_url": "https://www.instagram.com/p/DUaii-skyis/",
+      "ig_url": "https://www.instagram.com/reel/DUaii-skyis/",
       "gdrive_folder": "https://drive.google.com/open?id=1DOx-JdqOrRqjx9qpmziciKKrnvAcjZxT",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mridupawasharma_DUaii-skyis_Graded_with_my_Signature_LUTs-_LINK_IN_BIO/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mridupawasharma_DUaii-skyis_Graded_with_my_Signature_LUTs-_LINK_IN_BIO/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40mridupawasharma_DUaii-skyis_Graded_with_my_Signature_LUTs-_LINK_IN_BIO/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40mridupawasharma_DUaii-skyis_Graded_with_my_Signature_LUTs-_LINK_IN_BIO/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DUaii-skyis.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DUaii-skyis.mp4",
         "report_url": "reports/IG_@mridupawasharma_DUaii-skyis_Graded_with_my_Signature_LUTs-_LINK_IN_BIO.html",
         "shots_count": 17,
         "duration": "34s",
@@ -3123,13 +3271,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "india",
         "name": "Ấn Độ",
@@ -3151,12 +3295,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@mridupawasharma",
         "profile_url": "https://www.instagram.com/mridupawasharma/"
       },
-      "ig_url": "https://www.instagram.com/p/DSe7DfDEz9L/",
+      "ig_url": "https://www.instagram.com/reel/DSe7DfDEz9L/",
       "gdrive_folder": "https://drive.google.com/open?id=1b3VNum8ruLHQjRu4jv9yOUjFvbJgvXQK",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mridupawasharma_DSe7DfDEz9L_Everything%E2%80%99s_perfect/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mridupawasharma_DSe7DfDEz9L_Everything%E2%80%99s_perfect/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40mridupawasharma_DSe7DfDEz9L_Everything%E2%80%99s_perfect/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40mridupawasharma_DSe7DfDEz9L_Everything%E2%80%99s_perfect/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DSe7DfDEz9L.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DSe7DfDEz9L.mp4",
         "report_url": "reports/IG_@mridupawasharma_DSe7DfDEz9L_Everything’s_perfect.html",
         "shots_count": 15,
         "duration": "30s",
@@ -3184,13 +3329,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "india",
         "name": "Ấn Độ",
@@ -3212,12 +3353,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@mridupawasharma",
         "profile_url": "https://www.instagram.com/mridupawasharma/"
       },
-      "ig_url": "https://www.instagram.com/p/DYEyL_OT1_s/",
+      "ig_url": "https://www.instagram.com/reel/DYEyL_OT1_s/",
       "gdrive_folder": "https://drive.google.com/open?id=1eOJl4nHCycLGQEDA6P7YupehUVWAPnyX",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mridupawasharma_DYEyL_OT1_s_Make_boring_videos_Interesting_%F0%9F%A7%90/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mridupawasharma_DYEyL_OT1_s_Make_boring_videos_Interesting_%F0%9F%A7%90/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40mridupawasharma_DYEyL_OT1_s_Make_boring_videos_Interesting_%F0%9F%A7%90/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40mridupawasharma_DYEyL_OT1_s_Make_boring_videos_Interesting_%F0%9F%A7%90/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DYEyL_OT1_s.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DYEyL_OT1_s.mp4",
         "report_url": "reports/IG_@mridupawasharma_DYEyL_OT1_s_Make_boring_videos_Interesting_🧐.html",
         "shots_count": 13,
         "duration": "26s",
@@ -3245,13 +3387,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "india",
         "name": "Ấn Độ",
@@ -3273,12 +3411,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@mridupawasharma",
         "profile_url": "https://www.instagram.com/mridupawasharma/"
       },
-      "ig_url": "https://www.instagram.com/p/DVYdxPpE7Ji/",
+      "ig_url": "https://www.instagram.com/reel/DVYdxPpE7Ji/",
       "gdrive_folder": "https://drive.google.com/open?id=1_jNSF7LWFBhcaSmetM-nXQE6Bms_OSUq",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mridupawasharma_DVYdxPpE7Ji_Make_BORING_videos_INTERESTING%21/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mridupawasharma_DVYdxPpE7Ji_Make_BORING_videos_INTERESTING%21/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40mridupawasharma_DVYdxPpE7Ji_Make_BORING_videos_INTERESTING%21/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40mridupawasharma_DVYdxPpE7Ji_Make_BORING_videos_INTERESTING%21/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DVYdxPpE7Ji.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DVYdxPpE7Ji.mp4",
         "report_url": "reports/IG_@mridupawasharma_DVYdxPpE7Ji_Make_BORING_videos_INTERESTING!.html",
         "shots_count": 11,
         "duration": "22s",
@@ -3306,13 +3445,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "india",
         "name": "Ấn Độ",
@@ -3334,12 +3469,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@mridupawasharma",
         "profile_url": "https://www.instagram.com/mridupawasharma/"
       },
-      "ig_url": "https://www.instagram.com/p/DQbUum4E5Pu/",
+      "ig_url": "https://www.instagram.com/reel/DQbUum4E5Pu/",
       "gdrive_folder": "https://drive.google.com/open?id=1Ciip8DbtuVW-O3KN-JYBPKavFLcRwrRS",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mridupawasharma_DQbUum4E5Pu_Don%E2%80%99t_let_storage_limits_stop_your_creativity/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mridupawasharma_DQbUum4E5Pu_Don%E2%80%99t_let_storage_limits_stop_your_creativity/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40mridupawasharma_DQbUum4E5Pu_Don%E2%80%99t_let_storage_limits_stop_your_creativity/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40mridupawasharma_DQbUum4E5Pu_Don%E2%80%99t_let_storage_limits_stop_your_creativity/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DQbUum4E5Pu.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DQbUum4E5Pu.mp4",
         "report_url": "reports/IG_@mridupawasharma_DQbUum4E5Pu_Don’t_let_storage_limits_stop_your_creativity.html",
         "shots_count": 42,
         "duration": "84s",
@@ -3367,13 +3503,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -3395,12 +3527,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@by.bennnj",
         "profile_url": "https://www.instagram.com/by.bennnj/"
       },
-      "ig_url": "https://www.instagram.com/p/Ddfa3zCu3kj/",
+      "ig_url": "https://www.instagram.com/reel/Ddfa3zCu3kj/",
       "gdrive_folder": "https://drive.google.com/open?id=1BUZMbHm8ZliOOhauokKC-qEMr2N2xtgy",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40by.bennnj_Ddfa3zCu3kj_Making_cinematic_videos_on_my_Sony_a6400_with/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40by.bennnj_Ddfa3zCu3kj_Making_cinematic_videos_on_my_Sony_a6400_with/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40by.bennnj_Ddfa3zCu3kj_Making_cinematic_videos_on_my_Sony_a6400_with/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40by.bennnj_Ddfa3zCu3kj_Making_cinematic_videos_on_my_Sony_a6400_with/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/Ddfa3zCu3kj.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/Ddfa3zCu3kj.mp4",
         "report_url": "reports/IG_@by.bennnj_Ddfa3zCu3kj_Making_cinematic_videos_on_my_Sony_a6400_with.html",
         "shots_count": 9,
         "duration": "18s",
@@ -3428,13 +3561,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "india",
         "name": "Ấn Độ",
@@ -3456,12 +3585,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@mridupawasharma",
         "profile_url": "https://www.instagram.com/mridupawasharma/"
       },
-      "ig_url": "https://www.instagram.com/p/DBDkvXPyeSN/",
+      "ig_url": "https://www.instagram.com/reel/DBDkvXPyeSN/",
       "gdrive_folder": "https://drive.google.com/open?id=1gZH6xx_LYI-wtUhVR2sRLksikMgC4FKi",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mridupawasharma_DBDkvXPyeSN_If_you_videos_are_boring%2C_try_these_3_sound_d/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mridupawasharma_DBDkvXPyeSN_If_you_videos_are_boring%2C_try_these_3_sound_d/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40mridupawasharma_DBDkvXPyeSN_If_you_videos_are_boring%2C_try_these_3_sound_d/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40mridupawasharma_DBDkvXPyeSN_If_you_videos_are_boring%2C_try_these_3_sound_d/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DBDkvXPyeSN.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DBDkvXPyeSN.mp4",
         "report_url": "reports/IG_@mridupawasharma_DBDkvXPyeSN_If_you_videos_are_boring,_try_these_3_sound_d.html",
         "shots_count": 31,
         "duration": "62s",
@@ -3489,13 +3619,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "india",
         "name": "Ấn Độ",
@@ -3517,12 +3643,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@mridupawasharma",
         "profile_url": "https://www.instagram.com/mridupawasharma/"
       },
-      "ig_url": "https://www.instagram.com/p/DBl0O1RSMtU/",
+      "ig_url": "https://www.instagram.com/reel/DBl0O1RSMtU/",
       "gdrive_folder": "https://drive.google.com/open?id=1T85PjfxU_khZyudbDjlovKzfLfhQLGLd",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mridupawasharma_DBl0O1RSMtU_Stop_thinking_and_start_creating%21/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mridupawasharma_DBl0O1RSMtU_Stop_thinking_and_start_creating%21/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40mridupawasharma_DBl0O1RSMtU_Stop_thinking_and_start_creating%21/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40mridupawasharma_DBl0O1RSMtU_Stop_thinking_and_start_creating%21/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DBl0O1RSMtU.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DBl0O1RSMtU.mp4",
         "report_url": "reports/IG_@mridupawasharma_DBl0O1RSMtU_Stop_thinking_and_start_creating!.html",
         "shots_count": 35,
         "duration": "70s",
@@ -3550,13 +3677,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "india",
         "name": "Ấn Độ",
@@ -3578,12 +3701,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@mridupawasharma",
         "profile_url": "https://www.instagram.com/mridupawasharma/"
       },
-      "ig_url": "https://www.instagram.com/p/DEcQIYAyLRq/",
+      "ig_url": "https://www.instagram.com/reel/DEcQIYAyLRq/",
       "gdrive_folder": "https://drive.google.com/open?id=1PPCFwA7uPl45TtmX6cSo0qaRHDlIAurw",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mridupawasharma_DEcQIYAyLRq_Master_Cinematography_with_just_one_light%21/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mridupawasharma_DEcQIYAyLRq_Master_Cinematography_with_just_one_light%21/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40mridupawasharma_DEcQIYAyLRq_Master_Cinematography_with_just_one_light%21/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40mridupawasharma_DEcQIYAyLRq_Master_Cinematography_with_just_one_light%21/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DEcQIYAyLRq.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DEcQIYAyLRq.mp4",
         "report_url": "reports/IG_@mridupawasharma_DEcQIYAyLRq_Master_Cinematography_with_just_one_light!.html",
         "shots_count": 33,
         "duration": "66s",
@@ -3611,13 +3735,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎙️",
         "badge_color": "purple"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "india",
         "name": "Ấn Độ",
@@ -3639,12 +3759,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@mridupawasharma",
         "profile_url": "https://www.instagram.com/mridupawasharma/"
       },
-      "ig_url": "https://www.instagram.com/p/DHnKt0nxr3E/",
+      "ig_url": "https://www.instagram.com/reel/DHnKt0nxr3E/",
       "gdrive_folder": "https://drive.google.com/open?id=1PE0ZbXNZqD6g0lUiE09u71qef4eEYg_M",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mridupawasharma_DHnKt0nxr3E_Get_studio_quality_voiceovers_without_a_mic%21/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mridupawasharma_DHnKt0nxr3E_Get_studio_quality_voiceovers_without_a_mic%21/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40mridupawasharma_DHnKt0nxr3E_Get_studio_quality_voiceovers_without_a_mic%21/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40mridupawasharma_DHnKt0nxr3E_Get_studio_quality_voiceovers_without_a_mic%21/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DHnKt0nxr3E.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DHnKt0nxr3E.mp4",
         "report_url": "reports/IG_@mridupawasharma_DHnKt0nxr3E_Get_studio_quality_voiceovers_without_a_mic!.html",
         "shots_count": 22,
         "duration": "44s",
@@ -3672,13 +3793,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "india",
         "name": "Ấn Độ",
@@ -3700,12 +3817,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@mridupawasharma",
         "profile_url": "https://www.instagram.com/mridupawasharma/"
       },
-      "ig_url": "https://www.instagram.com/p/DK_9B30RrSD/",
+      "ig_url": "https://www.instagram.com/reel/DK_9B30RrSD/",
       "gdrive_folder": "https://drive.google.com/open?id=1ID9mpLR-o6EGurype_Hla75duXdq0KjG",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mridupawasharma_DK_9B30RrSD_Three_devices_walk_into_a_bar%E2%80%A6_none_of_them_h/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mridupawasharma_DK_9B30RrSD_Three_devices_walk_into_a_bar%E2%80%A6_none_of_them_h/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40mridupawasharma_DK_9B30RrSD_Three_devices_walk_into_a_bar%E2%80%A6_none_of_them_h/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40mridupawasharma_DK_9B30RrSD_Three_devices_walk_into_a_bar%E2%80%A6_none_of_them_h/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DK_9B30RrSD.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DK_9B30RrSD.mp4",
         "report_url": "reports/IG_@mridupawasharma_DK_9B30RrSD_Three_devices_walk_into_a_bar…_none_of_them_h.html",
         "shots_count": 24,
         "duration": "48s",
@@ -3733,13 +3851,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "india",
         "name": "Ấn Độ",
@@ -3761,12 +3875,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@mridupawasharma",
         "profile_url": "https://www.instagram.com/mridupawasharma/"
       },
-      "ig_url": "https://www.instagram.com/p/DEBzJUZyofd/",
+      "ig_url": "https://www.instagram.com/reel/DEBzJUZyofd/",
       "gdrive_folder": "https://drive.google.com/open?id=19ubqZQqAftPTDOWh5CAPviC-rkvDhcPz",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mridupawasharma_DEBzJUZyofd_Get_studio_quality_audio_on_your_phone_with_%40/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mridupawasharma_DEBzJUZyofd_Get_studio_quality_audio_on_your_phone_with_%40/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40mridupawasharma_DEBzJUZyofd_Get_studio_quality_audio_on_your_phone_with_%40/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40mridupawasharma_DEBzJUZyofd_Get_studio_quality_audio_on_your_phone_with_%40/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DEBzJUZyofd.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DEBzJUZyofd.mp4",
         "report_url": "reports/IG_@mridupawasharma_DEBzJUZyofd_Get_studio_quality_audio_on_your_phone_with_@.html",
         "shots_count": 20,
         "duration": "40s",
@@ -3794,13 +3909,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "india",
         "name": "Ấn Độ",
@@ -3822,12 +3933,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@mridupawasharma",
         "profile_url": "https://www.instagram.com/mridupawasharma/"
       },
-      "ig_url": "https://www.instagram.com/p/C_ZzqHXS914/",
+      "ig_url": "https://www.instagram.com/reel/C_ZzqHXS914/",
       "gdrive_folder": "https://drive.google.com/open?id=1iyzIhdB5PkqCFvOGGu0XM9iUDye0yYDS",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mridupawasharma_C_ZzqHXS914_How_to_Master_cinematography_alone/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mridupawasharma_C_ZzqHXS914_How_to_Master_cinematography_alone/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40mridupawasharma_C_ZzqHXS914_How_to_Master_cinematography_alone/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40mridupawasharma_C_ZzqHXS914_How_to_Master_cinematography_alone/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/C_ZzqHXS914.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/C_ZzqHXS914.mp4",
         "report_url": "reports/IG_@mridupawasharma_C_ZzqHXS914_How_to_Master_cinematography_alone.html",
         "shots_count": 20,
         "duration": "40s",
@@ -3855,13 +3967,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "india",
         "name": "Ấn Độ",
@@ -3883,12 +3991,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@mridupawasharma",
         "profile_url": "https://www.instagram.com/mridupawasharma/"
       },
-      "ig_url": "https://www.instagram.com/p/DJqXz8pxEh6/",
+      "ig_url": "https://www.instagram.com/reel/DJqXz8pxEh6/",
       "gdrive_folder": "https://drive.google.com/open?id=1cNLO4ZhweJscBbde4nPzAtYfQbvEqnLe",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mridupawasharma_DJqXz8pxEh6_%E2%80%9CNo_words._Just_fear%2C_silence%E2%80%A6_and_a_phone_ca/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mridupawasharma_DJqXz8pxEh6_%E2%80%9CNo_words._Just_fear%2C_silence%E2%80%A6_and_a_phone_ca/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40mridupawasharma_DJqXz8pxEh6_%E2%80%9CNo_words._Just_fear%2C_silence%E2%80%A6_and_a_phone_ca/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40mridupawasharma_DJqXz8pxEh6_%E2%80%9CNo_words._Just_fear%2C_silence%E2%80%A6_and_a_phone_ca/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DJqXz8pxEh6.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DJqXz8pxEh6.mp4",
         "report_url": "reports/IG_@mridupawasharma_DJqXz8pxEh6_“No_words._Just_fear,_silence…_and_a_phone_ca.html",
         "shots_count": 34,
         "duration": "68s",
@@ -3905,7 +4014,7 @@ var FEDU_IDEAS_DATABASE = {
     },
     {
       "id": "IG_@mridupawasharma_DLW8fdfRG6w_Carousel_Analysis",
-      "shortcode": "DLW90GBRre8",
+      "shortcode": "DLW8fdfRG6w_Carousel_Analysis",
       "title_vi": "B-Roll Bằng Điện Thoại Đơn Giản Mà Đỉnh Cao",
       "quick_takeaway": "Báo cáo phân tích chuyên sâu ngôn ngữ điện ảnh, ánh sáng, góc máy và nhịp dựng 9 phân cảnh.",
       "key_tech": "Establishing Hook Shot • Low-key Lighting • Close-Up / Macro Detail Shot",
@@ -3916,13 +4025,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "india",
         "name": "Ấn Độ",
@@ -3944,12 +4049,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@mridupawasharma",
         "profile_url": "https://www.instagram.com/mridupawasharma/"
       },
-      "ig_url": "https://www.instagram.com/p/DLW90GBRre8/",
+      "ig_url": "https://www.instagram.com/mridupawasharma/",
       "gdrive_folder": "https://drive.google.com/open?id=1hXUDTfqAmwJ3lGlnXb-fISElBM6nV9wK",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mridupawasharma_DLW8fdfRG6w_Carousel_Analysis/slide_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mridupawasharma_DLW8fdfRG6w_Carousel_Analysis/slide_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/carousel_slides/IG_%40mridupawasharma_DLW8fdfRG6w_Carousel_Analysis/slide_01.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40mridupawasharma_DLW8fdfRG6w_Carousel_Analysis/slide_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40mridupawasharma_DLW8fdfRG6w_Carousel_Analysis/slide_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1OdaG7XZYuiDZHiQBJFjv_2UGX72heP3c&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1OdaG7XZYuiDZHiQBJFjv_2UGX72heP3c&export=download",
         "report_url": "reports/IG_@mridupawasharma_DLW8fdfRG6w_Carousel_Analysis.html",
         "shots_count": 9,
         "duration": "18s",
@@ -3977,13 +4083,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "am-thuc",
-        "name": "F&B",
-        "en_name": "Food & Beverage",
-        "icon": "🍜",
-        "badge_color": "amber"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -4005,12 +4107,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@100033115395865",
         "profile_url": "https://www.instagram.com/100033115395865/"
       },
-      "ig_url": "https://www.facebook.com/reel/2304710183702297",
+      "ig_url": "https://www.instagram.com/100033115395865/",
       "gdrive_folder": "https://drive.google.com/open?id=1e5W8aloIBjoMQz7u9FRfBFCibZg4DdTx",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40100033115395865_2304710183702297_Video/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40100033115395865_2304710183702297_Video/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40100033115395865_2304710183702297_Video/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40100033115395865_2304710183702297_Video/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/2304710183702297.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/2304710183702297.mp4",
         "report_url": "reports/IG_@100033115395865_2304710183702297_Video.html",
         "shots_count": 43,
         "duration": "86s",
@@ -4038,13 +4141,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "📖",
         "badge_color": "amber"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -4066,12 +4165,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@sheratonsaigon",
         "profile_url": "https://www.instagram.com/sheratonsaigon/"
       },
-      "ig_url": "https://www.instagram.com/p/Dd_sDyfMRjd/?stkn=MWZlMGp2dGNiMmtpOA==",
+      "ig_url": "https://www.instagram.com/reel/Dd_sDyfMRjd/",
       "gdrive_folder": "https://drive.google.com/open?id=1wQxMHyCl_PoRV9wBF98ym19KVnct95ev",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40sheratonsaigon_Dd_sDyfMRjd_Saigon%E2%80%99s_best-kept_luxury_secret_%F0%9F%91%80/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40sheratonsaigon_Dd_sDyfMRjd_Saigon%E2%80%99s_best-kept_luxury_secret_%F0%9F%91%80/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40sheratonsaigon_Dd_sDyfMRjd_Saigon%E2%80%99s_best-kept_luxury_secret_%F0%9F%91%80/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40sheratonsaigon_Dd_sDyfMRjd_Saigon%E2%80%99s_best-kept_luxury_secret_%F0%9F%91%80/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/Dd_sDyfMRjd.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/Dd_sDyfMRjd.mp4",
         "report_url": "reports/IG_@sheratonsaigon_Dd_sDyfMRjd_Saigon’s_best-kept_luxury_secret_👀.html",
         "shots_count": 53,
         "duration": "106s",
@@ -4099,13 +4199,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -4130,9 +4226,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdxIiI-C4KI/",
       "gdrive_folder": "https://drive.google.com/open?id=17KRXRysfrb2EL1Xy6GyDuVN7iD0oLZkF",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40pablogalafat_DdxIiI-C4KI_Var%C3%ADa_los_planos/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40pablogalafat_DdxIiI-C4KI_Var%C3%ADa_los_planos/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40pablogalafat_DdxIiI-C4KI_Var%C3%ADa_los_planos/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40pablogalafat_DdxIiI-C4KI_Var%C3%ADa_los_planos/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdxIiI-C4KI.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DdxIiI-C4KI.mp4",
         "report_url": "reports/IG_@pablogalafat_DdxIiI-C4KI_Varía_los_planos.html",
         "shots_count": 6,
         "duration": "12s",
@@ -4160,13 +4257,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -4188,12 +4281,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@turkishairlines",
         "profile_url": "https://www.instagram.com/turkishairlines/"
       },
-      "ig_url": "https://www.instagram.com/p/Dd8gb9ss84q/?stkn=dTB3N21mMHJhdTk0",
+      "ig_url": "https://www.instagram.com/reel/Dd8gb9ss84q/",
       "gdrive_folder": "https://drive.google.com/open?id=1YbFFfx3JEpaRY9ZqiliNyXUyBuzoysQ8",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40turkishairlines_Dd8gb9ss84q_A_timeless_destination_where_two_continents_c/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40turkishairlines_Dd8gb9ss84q_A_timeless_destination_where_two_continents_c/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40turkishairlines_Dd8gb9ss84q_A_timeless_destination_where_two_continents_c/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40turkishairlines_Dd8gb9ss84q_A_timeless_destination_where_two_continents_c/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/Dd8gb9ss84q.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/Dd8gb9ss84q.mp4",
         "report_url": "reports/IG_@turkishairlines_Dd8gb9ss84q_A_timeless_destination_where_two_continents_c.html",
         "shots_count": 0,
         "duration": "15s",
@@ -4221,13 +4315,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "india",
         "name": "Ấn Độ",
@@ -4249,12 +4339,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@iamaayushswamy",
         "profile_url": "https://www.instagram.com/iamaayushswamy/"
       },
-      "ig_url": "https://www.instagram.com/p/DcwPu99sDKI/",
+      "ig_url": "https://www.instagram.com/reel/DcwPu99sDKI/",
       "gdrive_folder": "https://drive.google.com/open?id=1X3z2SO0M-lGX8YK6eiutTSOrf6GWxQVw",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40iamaayushswamy_DcwPu99sDKI_how_to_yap_on_camera/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40iamaayushswamy_DcwPu99sDKI_how_to_yap_on_camera/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DcwPu99sDKI.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40iamaayushswamy_DcwPu99sDKI_how_to_yap_on_camera/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40iamaayushswamy_DcwPu99sDKI_how_to_yap_on_camera/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1Gy3KBWKJnlioRux8HEazbGr7fIlpzjgP&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1Gy3KBWKJnlioRux8HEazbGr7fIlpzjgP&export=download",
         "report_url": "reports/IG_@iamaayushswamy_DcwPu99sDKI_how_to_yap_on_camera.html",
         "shots_count": 30,
         "duration": "60s",
@@ -4282,13 +4373,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -4310,12 +4397,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@MasterClass",
         "profile_url": "https://www.instagram.com/MasterClass/"
       },
-      "ig_url": "https://www.youtube.com/watch?v=nNkE1fK9eQs",
+      "ig_url": "https://www.instagram.com/reel/nNkE1fK9eQs/",
       "gdrive_folder": "",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%2540MasterClass_nNkE1fK9eQs_Coach_K_Teaches_Values-Driven_Leadership_Offi/shot_02_mid.webp",
-        "thumb_key": "https://media.fedu.vn/images/IG_%2540MasterClass_nNkE1fK9eQs_Coach_K_Teaches_Values-Driven_Leadership_Offi/shot_03_mid.webp",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40MasterClass_nNkE1fK9eQs_Coach_K_Teaches_Values-Driven_Leadership_Offi/shot_02_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40MasterClass_nNkE1fK9eQs_Coach_K_Teaches_Values-Driven_Leadership_Offi/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/nNkE1fK9eQs.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/nNkE1fK9eQs.mp4",
         "report_url": "reports/IG_@MasterClass_nNkE1fK9eQs_Coach_K_Teaches_Values-Driven_Leadership_Offi.html",
         "shots_count": 22,
         "duration": "44s",
@@ -4343,13 +4431,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -4371,12 +4455,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@MasterClass",
         "profile_url": "https://www.instagram.com/MasterClass/"
       },
-      "ig_url": "https://www.instagram.com/MasterClass/",
+      "ig_url": "https://www.instagram.com/reel/UOAgJxrGKzk/",
       "gdrive_folder": "",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%2540MasterClass_UOAgJxrGKzk_Make_the_Markets_Work_for_You_With_Ray_Dalio/shot_02_mid.webp",
-        "thumb_key": "https://media.fedu.vn/images/IG_%2540MasterClass_UOAgJxrGKzk_Make_the_Markets_Work_for_You_With_Ray_Dalio/shot_03_mid.webp",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40MasterClass_UOAgJxrGKzk_Make_the_Markets_Work_for_You_With_Ray_Dalio/shot_02_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40MasterClass_UOAgJxrGKzk_Make_the_Markets_Work_for_You_With_Ray_Dalio/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/UOAgJxrGKzk.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/UOAgJxrGKzk.mp4",
         "report_url": "reports/IG_@MasterClass_UOAgJxrGKzk_Make_the_Markets_Work_for_You_With_Ray_Dalio.html",
         "shots_count": 23,
         "duration": "46s",
@@ -4404,13 +4489,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -4435,9 +4516,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/TheConflictPlaybook/",
       "gdrive_folder": "",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%2540local_creator_uU8uPchm7is_uU8uPchm7is/shot_02_mid.webp",
-        "thumb_key": "https://media.fedu.vn/images/IG_%2540local_creator_uU8uPchm7is_uU8uPchm7is/shot_03_mid.webp",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40local_creator_uU8uPchm7is_uU8uPchm7is/shot_02_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40local_creator_uU8uPchm7is_uU8uPchm7is/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/creator.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/creator.mp4",
         "report_url": "reports/IG_@local_creator_uU8uPchm7is_uU8uPchm7is.html",
         "shots_count": 3,
         "duration": "6s",
@@ -4465,13 +4547,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -4493,12 +4571,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@MasterClass",
         "profile_url": "https://www.instagram.com/MasterClass/"
       },
-      "ig_url": "https://www.youtube.com/watch?v=q8rX4GUZSsU",
+      "ig_url": "https://www.instagram.com/reel/q8rX4GUZSsU/",
       "gdrive_folder": "https://drive.google.com/open?id=1urerNxGpW_QtVgdvQcwyTgYn3AdEHzsr",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%2540MasterClass_q8rX4GUZSsU_Chris_Voss_Teaches_the_Art_of_Negotiation_Off/shot_02_mid.webp",
-        "thumb_key": "https://media.fedu.vn/images/IG_%2540MasterClass_q8rX4GUZSsU_Chris_Voss_Teaches_the_Art_of_Negotiation_Off/shot_03_mid.webp",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40MasterClass_q8rX4GUZSsU_Chris_Voss_Teaches_the_Art_of_Negotiation_Off/shot_02_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40MasterClass_q8rX4GUZSsU_Chris_Voss_Teaches_the_Art_of_Negotiation_Off/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/q8rX4GUZSsU.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/q8rX4GUZSsU.mp4",
         "report_url": "reports/IG_@MasterClass_q8rX4GUZSsU_Chris_Voss_Teaches_the_Art_of_Negotiation_Off.html",
         "shots_count": 64,
         "duration": "128s",
@@ -4526,13 +4605,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🗣️",
         "badge_color": "blue"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -4554,12 +4629,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@MasterClass",
         "profile_url": "https://www.instagram.com/MasterClass/"
       },
-      "ig_url": "https://www.youtube.com/watch?v=vw77HWoTdoA",
+      "ig_url": "https://www.instagram.com/reel/vw77HWoTdoA/",
       "gdrive_folder": "https://drive.google.com/open?id=1VNjqMlpogvSqEEcH40UAjL81VcP-fsg1",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%2540MasterClass_vw77HWoTdoA_Business_Rebels_Turn_Buyers_Into_Believers_wi/shot_02_mid.webp",
-        "thumb_key": "https://media.fedu.vn/images/IG_%2540MasterClass_vw77HWoTdoA_Business_Rebels_Turn_Buyers_Into_Believers_wi/shot_03_mid.webp",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40MasterClass_vw77HWoTdoA_Business_Rebels_Turn_Buyers_Into_Believers_wi/shot_02_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40MasterClass_vw77HWoTdoA_Business_Rebels_Turn_Buyers_Into_Believers_wi/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/vw77HWoTdoA.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/vw77HWoTdoA.mp4",
         "report_url": "reports/IG_@MasterClass_vw77HWoTdoA_Business_Rebels_Turn_Buyers_Into_Believers_wi.html",
         "shots_count": 55,
         "duration": "110s",
@@ -4587,13 +4663,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -4618,9 +4690,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/MasterClass/",
       "gdrive_folder": "https://drive.google.com/open?id=1AkPXeX_AOvwx8LYw3CpNXiay6jRJtHTh",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%2540local_creator_Introducing%25EF%25BC%259A_MasterClass_Certificates_%255B6nDfNU_Introducing%25EF%25BC%259A_MasterClass_Certificates_%255B6nDfNU/shot_02_mid.webp",
-        "thumb_key": "https://media.fedu.vn/images/IG_%2540local_creator_Introducing%25EF%25BC%259A_MasterClass_Certificates_%255B6nDfNU_Introducing%25EF%25BC%259A_MasterClass_Certificates_%255B6nDfNU/shot_03_mid.webp",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40local_creator_Introducing%EF%BC%9A_MasterClass_Certificates_%5B6nDfNU_Introducing%EF%BC%9A_MasterClass_Certificates_%5B6nDfNU/shot_02_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40local_creator_Introducing%EF%BC%9A_MasterClass_Certificates_%5B6nDfNU_Introducing%EF%BC%9A_MasterClass_Certificates_%5B6nDfNU/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/Introducing%EF%BC%9A_MasterClass_Certificates_%5B6nDfNU.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/Introducing%EF%BC%9A_MasterClass_Certificates_%5B6nDfNU.mp4",
         "report_url": "reports/IG_@local_creator_Introducing：_MasterClass_Certificates_[6nDfNU_Introducing：_MasterClass_Certificates_[6nDfNU.html",
         "shots_count": 34,
         "duration": "68s",
@@ -4648,13 +4721,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "india",
         "name": "Ấn Độ",
@@ -4676,12 +4745,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@mridupawasharma",
         "profile_url": "https://www.instagram.com/mridupawasharma/"
       },
-      "ig_url": "https://www.instagram.com/p/Dd6G0lnI0zj/",
+      "ig_url": "https://www.instagram.com/reel/Dd6G0lnI0zj/",
       "gdrive_folder": "https://drive.google.com/open?id=1M2cAoQGHOjfeuB19hg1PobW2kIHwxvSr",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mridupawasharma_Dd6G0lnI0zj_Shot_my_little_moments_differently_this_time%2C/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mridupawasharma_Dd6G0lnI0zj_Shot_my_little_moments_differently_this_time%2C/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40mridupawasharma_Dd6G0lnI0zj_Shot_my_little_moments_differently_this_time%2C/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40mridupawasharma_Dd6G0lnI0zj_Shot_my_little_moments_differently_this_time%2C/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/Dd6G0lnI0zj.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/Dd6G0lnI0zj.mp4",
         "report_url": "reports/IG_@mridupawasharma_Dd6G0lnI0zj_Shot_my_little_moments_differently_this_time,.html",
         "shots_count": 43,
         "duration": "86s",
@@ -4709,13 +4779,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "japan",
         "name": "Nhật Bản",
@@ -4737,12 +4803,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@shogentle",
         "profile_url": "https://www.instagram.com/shogentle/"
       },
-      "ig_url": "https://www.instagram.com/p/Dah5Tp8oji1/",
+      "ig_url": "https://www.instagram.com/reel/Dah5Tp8oji1/",
       "gdrive_folder": "https://drive.google.com/open?id=1JrrZCbipHd48EvYjCLNx8_kOxn0MC_KC",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40shogentle_Dah5Tp8oji1_The_Sound_Transition_Thing_That_Makes_Cuts_Fe/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40shogentle_Dah5Tp8oji1_The_Sound_Transition_Thing_That_Makes_Cuts_Fe/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40shogentle_Dah5Tp8oji1_The_Sound_Transition_Thing_That_Makes_Cuts_Fe/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40shogentle_Dah5Tp8oji1_The_Sound_Transition_Thing_That_Makes_Cuts_Fe/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/Dah5Tp8oji1.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/Dah5Tp8oji1.mp4",
         "report_url": "reports/IG_@shogentle_Dah5Tp8oji1_The_Sound_Transition_Thing_That_Makes_Cuts_Fe.html",
         "shots_count": 9,
         "duration": "18s",
@@ -4770,13 +4837,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -4798,12 +4861,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@taimoorm",
         "profile_url": "https://www.instagram.com/taimoorm/"
       },
-      "ig_url": "https://www.instagram.com/p/Db1jadggnGA/?utm_source=ig_web_copy_link&stkn=MzRlODBiNWFlZA==",
+      "ig_url": "https://www.instagram.com/reel/Db1jadggnGA/",
       "gdrive_folder": "",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40taimoorm_Db1jadggnGA_Vibe_coding_is_the_future/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40taimoorm_Db1jadggnGA_Vibe_coding_is_the_future/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40taimoorm_Db1jadggnGA_Vibe_coding_is_the_future/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40taimoorm_Db1jadggnGA_Vibe_coding_is_the_future/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/Db1jadggnGA.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/Db1jadggnGA.mp4",
         "report_url": "reports/IG_@taimoorm_Db1jadggnGA_Vibe_coding_is_the_future.html",
         "shots_count": 25,
         "duration": "50s",
@@ -4831,13 +4895,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -4859,12 +4919,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@corentinhuard",
         "profile_url": "https://www.instagram.com/corentinhuard/"
       },
-      "ig_url": "https://www.instagram.com/reel/DbbVPaTsaun/?utm_source=ig_web_copy_link&stkn=NTc4MTIwNjQ2YQ==",
+      "ig_url": "https://www.instagram.com/reel/DbbVPaTsaun/",
       "gdrive_folder": "https://drive.google.com/open?id=18IupHiZVPWV55H7cc-yODrPu0bsB4MuC",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40corentinhuard_DbbVPaTsaun_The_Age_of_Distraction/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40corentinhuard_DbbVPaTsaun_The_Age_of_Distraction/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40corentinhuard_DbbVPaTsaun_The_Age_of_Distraction/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40corentinhuard_DbbVPaTsaun_The_Age_of_Distraction/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DbbVPaTsaun.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DbbVPaTsaun.mp4",
         "report_url": "reports/IG_@corentinhuard_DbbVPaTsaun_The_Age_of_Distraction.html",
         "shots_count": 39,
         "duration": "78s",
@@ -4892,13 +4953,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -4923,9 +4980,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/Dd6kWLjxNQJ/",
       "gdrive_folder": "https://drive.google.com/open?id=1pxLq2jG-jptnIdoDBuPWjAHDZSMNSNAx",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40anatta.ha_Dd6kWLjxNQJ_solo_date_to_the_bookstore_%F0%9F%98%97/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40anatta.ha_Dd6kWLjxNQJ_solo_date_to_the_bookstore_%F0%9F%98%97/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40anatta.ha_Dd6kWLjxNQJ_solo_date_to_the_bookstore_%F0%9F%98%97/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40anatta.ha_Dd6kWLjxNQJ_solo_date_to_the_bookstore_%F0%9F%98%97/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/Dd6kWLjxNQJ.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/Dd6kWLjxNQJ.mp4",
         "report_url": "reports/IG_@anatta.ha_Dd6kWLjxNQJ_solo_date_to_the_bookstore_😗.html",
         "shots_count": 24,
         "duration": "48s",
@@ -4953,13 +5011,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -4981,12 +5035,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@aleexsea",
         "profile_url": "https://www.instagram.com/aleexsea/"
       },
-      "ig_url": "https://www.instagram.com/reel/Ddac5QTtTFH/?utm_source=ig_web_copy_link&stkn=NTc4MTIwNjQ2YQ==",
+      "ig_url": "https://www.instagram.com/reel/Ddac5QTtTFH/",
       "gdrive_folder": "https://drive.google.com/open?id=1kUr1gMlPH0YyxiOjFaT555sTlfE0W12s",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40aleexsea_Ddac5QTtTFH_Making_memories_and_editing_videos._New_vlog/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40aleexsea_Ddac5QTtTFH_Making_memories_and_editing_videos._New_vlog/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40aleexsea_Ddac5QTtTFH_Making_memories_and_editing_videos._New_vlog/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40aleexsea_Ddac5QTtTFH_Making_memories_and_editing_videos._New_vlog/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/Ddac5QTtTFH.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/Ddac5QTtTFH.mp4",
         "report_url": "reports/IG_@aleexsea_Ddac5QTtTFH_Making_memories_and_editing_videos._New_vlog.html",
         "shots_count": 19,
         "duration": "38s",
@@ -5014,13 +5069,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -5045,9 +5096,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DcSXWp_O1JQ/",
       "gdrive_folder": "https://drive.google.com/open?id=1-l_dIjh6cZGRLpkNMv6mpJzR-LXIGTSK",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40therealmarcozavala_DcSXWp_O1JQ_Comment_%E2%80%9Cshot%E2%80%9D_for_a_list_of_10/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40therealmarcozavala_DcSXWp_O1JQ_Comment_%E2%80%9Cshot%E2%80%9D_for_a_list_of_10/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40therealmarcozavala_DcSXWp_O1JQ_Comment_%E2%80%9Cshot%E2%80%9D_for_a_list_of_10/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40therealmarcozavala_DcSXWp_O1JQ_Comment_%E2%80%9Cshot%E2%80%9D_for_a_list_of_10/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DcSXWp_O1JQ.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DcSXWp_O1JQ.mp4",
         "report_url": "reports/IG_@therealmarcozavala_DcSXWp_O1JQ_Comment_“shot”_for_a_list_of_10.html",
         "shots_count": 5,
         "duration": "10s",
@@ -5075,13 +5127,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -5103,12 +5151,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@itsbybrandon",
         "profile_url": "https://www.instagram.com/itsbybrandon/"
       },
-      "ig_url": "https://www.instagram.com/reel/DdGa4hxzlJi/?stkn=MTkzZnZ6djdpZmp5",
+      "ig_url": "https://www.instagram.com/reel/DdGa4hxzlJi/",
       "gdrive_folder": "https://drive.google.com/open?id=1_XocUdQOznz8oNJLkkle6Tgja3ZHWxU8",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40itsbybrandon_DdGa4hxzlJi_Paradigme_le_parfum_by_%40pradabeauty/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40itsbybrandon_DdGa4hxzlJi_Paradigme_le_parfum_by_%40pradabeauty/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40itsbybrandon_DdGa4hxzlJi_Paradigme_le_parfum_by_%40pradabeauty/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40itsbybrandon_DdGa4hxzlJi_Paradigme_le_parfum_by_%40pradabeauty/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdGa4hxzlJi.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DdGa4hxzlJi.mp4",
         "report_url": "reports/IG_@itsbybrandon_DdGa4hxzlJi_Paradigme_le_parfum_by_@pradabeauty.html",
         "shots_count": 7,
         "duration": "14s",
@@ -5136,13 +5185,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -5164,12 +5209,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@mendozallopis",
         "profile_url": "https://www.instagram.com/mendozallopis/"
       },
-      "ig_url": "https://www.instagram.com/reel/Dd4L578RNhz/?utm_source=ig_web_copy_link&stkn=NTc4MTIwNjQ2YQ==",
+      "ig_url": "https://www.instagram.com/reel/Dd4L578RNhz/",
       "gdrive_folder": "https://drive.google.com/open?id=1uyrx5keUl2v-4nwGQXuBDL5p30kX4y5a",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mendozallopis_Dd4L578RNhz_The_Assembling/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mendozallopis_Dd4L578RNhz_The_Assembling/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40mendozallopis_Dd4L578RNhz_The_Assembling/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40mendozallopis_Dd4L578RNhz_The_Assembling/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/Dd4L578RNhz.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/Dd4L578RNhz.mp4",
         "report_url": "reports/IG_@mendozallopis_Dd4L578RNhz_The_Assembling.html",
         "shots_count": 47,
         "duration": "94s",
@@ -5197,13 +5243,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -5225,12 +5267,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@austinwhite711",
         "profile_url": "https://www.instagram.com/austinwhite711/"
       },
-      "ig_url": "https://www.instagram.com/reel/DdUK7JNtjGG/?utm_source=ig_web_copy_link&stkn=NTc4MTIwNjQ2YQ==",
+      "ig_url": "https://www.instagram.com/reel/DdUK7JNtjGG/",
       "gdrive_folder": "https://drive.google.com/open?id=1npvD9PD_XcF29kfKYFQlYP3jFbfz9_zd",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40austinwhite711_DdUK7JNtjGG_is_this_%E2%80%9Callowed%E2%80%9D_%F0%9F%A4%B7%F0%9F%8F%BB%E2%80%8D%E2%99%82%EF%B8%8F/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40austinwhite711_DdUK7JNtjGG_is_this_%E2%80%9Callowed%E2%80%9D_%F0%9F%A4%B7%F0%9F%8F%BB%E2%80%8D%E2%99%82%EF%B8%8F/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40austinwhite711_DdUK7JNtjGG_is_this_%E2%80%9Callowed%E2%80%9D_%F0%9F%A4%B7%F0%9F%8F%BB%E2%80%8D%E2%99%82%EF%B8%8F/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40austinwhite711_DdUK7JNtjGG_is_this_%E2%80%9Callowed%E2%80%9D_%F0%9F%A4%B7%F0%9F%8F%BB%E2%80%8D%E2%99%82%EF%B8%8F/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdUK7JNtjGG.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DdUK7JNtjGG.mp4",
         "report_url": "reports/IG_@austinwhite711_DdUK7JNtjGG_is_this_“allowed”_🤷🏻‍♂️.html",
         "shots_count": 64,
         "duration": "128s",
@@ -5258,13 +5301,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "kien-truc",
-        "name": "Góc nhà đẹp",
-        "en_name": "Architecture & Living",
-        "icon": "🏛️",
-        "badge_color": "emerald"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "japan",
         "name": "Nhật Bản",
@@ -5286,12 +5325,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@hana.konichiwa",
         "profile_url": "https://www.instagram.com/hana.konichiwa/"
       },
-      "ig_url": "https://www.instagram.com/reel/Dd1A6GRz1QN/?stkn=MXIzazRsMm5iY2htZw==",
+      "ig_url": "https://www.instagram.com/reel/Dd1A6GRz1QN/",
       "gdrive_folder": "https://drive.google.com/open?id=1vOfo_SFSb4CnuDi49bfJAom-Ur6-kW40",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40hana.konichiwa_Dd1A6GRz1QN_A_slow_day_between_sunshine_and_rain_%F0%9F%8D%83%F0%9F%8C%A6%EF%B8%8F/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40hana.konichiwa_Dd1A6GRz1QN_A_slow_day_between_sunshine_and_rain_%F0%9F%8D%83%F0%9F%8C%A6%EF%B8%8F/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40hana.konichiwa_Dd1A6GRz1QN_A_slow_day_between_sunshine_and_rain_%F0%9F%8D%83%F0%9F%8C%A6%EF%B8%8F/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40hana.konichiwa_Dd1A6GRz1QN_A_slow_day_between_sunshine_and_rain_%F0%9F%8D%83%F0%9F%8C%A6%EF%B8%8F/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/Dd1A6GRz1QN.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/Dd1A6GRz1QN.mp4",
         "report_url": "reports/IG_@hana.konichiwa_Dd1A6GRz1QN_A_slow_day_between_sunshine_and_rain_🍃🌦️.html",
         "shots_count": 42,
         "duration": "84s",
@@ -5319,13 +5359,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -5347,12 +5383,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@kfconcept",
         "profile_url": "https://www.instagram.com/kfconcept/"
       },
-      "ig_url": "https://www.instagram.com/reel/Dd08G0PBtKk/?stkn=M3pra2VubmZxbDd3",
+      "ig_url": "https://www.instagram.com/reel/Dd08G0PBtKk/",
       "gdrive_folder": "https://drive.google.com/open?id=1fyVdCFd_6UO-daWKjFMRjkQXkWjaFCie",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_%F0%9F%91%80/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_%F0%9F%91%80/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_%F0%9F%91%80/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_%F0%9F%91%80/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/Dd08G0PBtKk.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/Dd08G0PBtKk.mp4",
         "report_url": "reports/IG_@kfconcept_Dd08G0PBtKk_5_Creative_Ways_to_Use_a_Magic_Arm_👀.html",
         "shots_count": 6,
         "duration": "12s",
@@ -5380,13 +5417,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -5411,9 +5444,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/local_creator/",
       "gdrive_folder": "https://drive.google.com/open?id=1OgT8n8xTSdX1qfvLNylxJd9YNLKDUrm1",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40local_creator_fb_ad_fb_ad/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40local_creator_fb_ad_fb_ad/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40local_creator_fb_ad_fb_ad/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40local_creator_fb_ad_fb_ad/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/fb_ad.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/fb_ad.mp4",
         "report_url": "reports/IG_@local_creator_fb_ad_fb_ad.html",
         "shots_count": 11,
         "duration": "22s",
@@ -5441,13 +5475,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -5469,12 +5499,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@sametxhunter",
         "profile_url": "https://www.instagram.com/sametxhunter/"
       },
-      "ig_url": "https://www.instagram.com/reel/DdwxosERt7n/?utm_source=ig_web_copy_link&stkn=NTc4MTIwNjQ2YQ==",
+      "ig_url": "https://www.instagram.com/reel/DdwxosERt7n/",
       "gdrive_folder": "https://drive.google.com/open?id=13IG0wJyf9fn_OfT-5xefar1Vrpwly6Ue",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40sametxhunter_DdwxosERt7n_It%E2%80%99s_Now_or_Never/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40sametxhunter_DdwxosERt7n_It%E2%80%99s_Now_or_Never/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40sametxhunter_DdwxosERt7n_It%E2%80%99s_Now_or_Never/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40sametxhunter_DdwxosERt7n_It%E2%80%99s_Now_or_Never/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdwxosERt7n.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DdwxosERt7n.mp4",
         "report_url": "reports/IG_@sametxhunter_DdwxosERt7n_It’s_Now_or_Never.html",
         "shots_count": 21,
         "duration": "42s",
@@ -5502,13 +5533,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -5533,9 +5560,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DduU6THJQ8y/",
       "gdrive_folder": "https://drive.google.com/open?id=1Wy867kfUetobBstiBdby-tdGzqcAhOlu",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40nouince_DduU6THJQ8y_O_que_traz_mais_autoridade_%F0%9F%91%80/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40nouince_DduU6THJQ8y_O_que_traz_mais_autoridade_%F0%9F%91%80/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40nouince_DduU6THJQ8y_O_que_traz_mais_autoridade_%F0%9F%91%80/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40nouince_DduU6THJQ8y_O_que_traz_mais_autoridade_%F0%9F%91%80/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DduU6THJQ8y.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DduU6THJQ8y.mp4",
         "report_url": "reports/IG_@nouince_DduU6THJQ8y_O_que_traz_mais_autoridade_👀.html",
         "shots_count": 20,
         "duration": "40s",
@@ -5563,13 +5591,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -5591,12 +5615,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@ajit_rathore886",
         "profile_url": "https://www.instagram.com/ajit_rathore886/"
       },
-      "ig_url": "https://www.instagram.com/reel/DdsodC0hSmZ/?utm_source=ig_web_copy_link&stkn=NTc4MTIwNjQ2YQ==",
+      "ig_url": "https://www.instagram.com/reel/DdsodC0hSmZ/",
       "gdrive_folder": "https://drive.google.com/open?id=1eL2BQyOGvKffMN1c1Xz4Cqq3dSrOOv9Q",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40ajit_rathore886_DdsodC0hSmZ_Static_Shots%F0%9F%94%A5%F0%9F%93%BD%EF%B8%8F/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40ajit_rathore886_DdsodC0hSmZ_Static_Shots%F0%9F%94%A5%F0%9F%93%BD%EF%B8%8F/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40ajit_rathore886_DdsodC0hSmZ_Static_Shots%F0%9F%94%A5%F0%9F%93%BD%EF%B8%8F/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40ajit_rathore886_DdsodC0hSmZ_Static_Shots%F0%9F%94%A5%F0%9F%93%BD%EF%B8%8F/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdsodC0hSmZ.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DdsodC0hSmZ.mp4",
         "report_url": "reports/IG_@ajit_rathore886_DdsodC0hSmZ_Static_Shots🔥📽️.html",
         "shots_count": 10,
         "duration": "20s",
@@ -5613,7 +5638,7 @@ var FEDU_IDEAS_DATABASE = {
     },
     {
       "id": "IG_@alexmegino_DdzHC1ljMjk_Carousel_Analysis",
-      "shortcode": "DdzHJCMDAbl",
+      "shortcode": "DdzHC1ljMjk_Carousel_Analysis",
       "title_vi": "Kỷ Luật Thép Của Kẻ Hành Động: Cách Dùng Thời Gian Để Kể Chuyện",
       "quick_takeaway": "Báo cáo phân tích chuyên sâu ngôn ngữ điện ảnh, ánh sáng, góc máy và nhịp dựng 13 phân cảnh.",
       "key_tech": "Establishing Hook Shot • Low-key Lighting • Close-Up / Macro Detail Shot • Medium Tracking Shot",
@@ -5624,13 +5649,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "📖",
         "badge_color": "amber"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -5652,12 +5673,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@alexmegino",
         "profile_url": "https://www.instagram.com/alexmegino/"
       },
-      "ig_url": "https://www.instagram.com/p/DdzHJCMDAbl/?utm_source=ig_web_copy_link&stkn=NTc4MTIwNjQ2YQ==",
+      "ig_url": "https://www.instagram.com/alexmegino/",
       "gdrive_folder": "https://drive.google.com/open?id=1XRNo3e6pNubqB-3XC18ed-xIkIiba9Yu",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40alexmegino_DdzHC1ljMjk_Carousel_Analysis/slide_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40alexmegino_DdzHC1ljMjk_Carousel_Analysis/slide_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/carousel_slides/IG_%40alexmegino_DdzHC1ljMjk_Carousel_Analysis/slide_01.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40alexmegino_DdzHC1ljMjk_Carousel_Analysis/slide_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40alexmegino_DdzHC1ljMjk_Carousel_Analysis/slide_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1OdaG7XZYuiDZHiQBJFjv_2UGX72heP3c&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1OdaG7XZYuiDZHiQBJFjv_2UGX72heP3c&export=download",
         "report_url": "reports/IG_@alexmegino_DdzHC1ljMjk_Carousel_Analysis.html",
         "shots_count": 13,
         "duration": "26s",
@@ -5685,13 +5707,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "india",
         "name": "Ấn Độ",
@@ -5716,9 +5734,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/Dc0tEcOIdwy/",
       "gdrive_folder": "https://drive.google.com/open?id=1DZ035PNlqRm99CsvIu7yTN6Ci-YRJm38",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mridupawasharma_Dc0tEcOIdwy_4_Cuts_Mastery/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mridupawasharma_Dc0tEcOIdwy_4_Cuts_Mastery/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Dc0tEcOIdwy.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40mridupawasharma_Dc0tEcOIdwy_4_Cuts_Mastery/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40mridupawasharma_Dc0tEcOIdwy_4_Cuts_Mastery/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1mX4_oeBi1qkVfnpXCgfCiFSDODtzQI9t&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1mX4_oeBi1qkVfnpXCgfCiFSDODtzQI9t&export=download",
         "report_url": "reports/4 Cuts Mastery - @mridupawasharma.html",
         "shots_count": 24,
         "duration": "48s",
@@ -5746,13 +5765,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -5774,12 +5789,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@ulanzi",
         "profile_url": "https://www.instagram.com/ulanzi/"
       },
-      "ig_url": "https://s.lazada.vn/s.oSa57?c=w",
+      "ig_url": "https://www.instagram.com/ulanzi/",
       "gdrive_folder": "https://drive.google.com/open?id=1Y3ujEAuM1abKPYALopAbpU9Jq9eGiYKi",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40ulanzi_oSa57_Ch%C3%A2n_%C4%90%E1%BA%BF_M%C3%A1y_%E1%BA%A2nh_Nh%E1%BA%B9_v%C3%A0_%C4%90a_N%C4%83ng/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40ulanzi_oSa57_Ch%C3%A2n_%C4%90%E1%BA%BF_M%C3%A1y_%E1%BA%A2nh_Nh%E1%BA%B9_v%C3%A0_%C4%90a_N%C4%83ng/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40ulanzi_oSa57_Ch%C3%A2n_%C4%90%E1%BA%BF_M%C3%A1y_%E1%BA%A2nh_Nh%E1%BA%B9_v%C3%A0_%C4%90a_N%C4%83ng/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40ulanzi_oSa57_Ch%C3%A2n_%C4%90%E1%BA%BF_M%C3%A1y_%E1%BA%A2nh_Nh%E1%BA%B9_v%C3%A0_%C4%90a_N%C4%83ng/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/oSa57.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/oSa57.mp4",
         "report_url": "reports/IG_@ulanzi_oSa57_Chân_Đế_Máy_Ảnh_Nhẹ_và_Đa_Năng.html",
         "shots_count": 23,
         "duration": "46s",
@@ -5807,13 +5823,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -5835,12 +5847,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@ulanzi",
         "profile_url": "https://www.instagram.com/ulanzi/"
       },
-      "ig_url": "https://s.lazada.vn/s.oSaTN?c=w",
+      "ig_url": "https://www.instagram.com/ulanzi/",
       "gdrive_folder": "https://drive.google.com/open?id=1fl62ubttCgd7PIq2mxGVcQruaCCGH7S_",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40ulanzi_oSaTN_Tripod_%26_G%E1%BA%ADy_Selfie_T%E1%BB%B1_%C4%90%E1%BB%99ng_MT86%2C_Cao_1.52m_4/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40ulanzi_oSaTN_Tripod_%26_G%E1%BA%ADy_Selfie_T%E1%BB%B1_%C4%90%E1%BB%99ng_MT86%2C_Cao_1.52m_4/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40ulanzi_oSaTN_Tripod_%26_G%E1%BA%ADy_Selfie_T%E1%BB%B1_%C4%90%E1%BB%99ng_MT86%2C_Cao_1.52m_4/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40ulanzi_oSaTN_Tripod_%26_G%E1%BA%ADy_Selfie_T%E1%BB%B1_%C4%90%E1%BB%99ng_MT86%2C_Cao_1.52m_4/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/oSaTN.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/oSaTN.mp4",
         "report_url": "reports/IG_@ulanzi_oSaTN_Tripod_&_Gậy_Selfie_Tự_Động_MT86,_Cao_1.52m_4.html",
         "shots_count": 17,
         "duration": "34s",
@@ -5868,13 +5881,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -5896,12 +5905,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@page_vrn",
         "profile_url": "https://www.instagram.com/page_vrn/"
       },
-      "ig_url": "https://www.instagram.com/reel/DdT9nr_o_SP/?stkn=OXl5eGE5emFteGds",
+      "ig_url": "https://www.instagram.com/reel/DdT9nr_o_SP/",
       "gdrive_folder": "https://drive.google.com/open?id=121Ucux2VwHoHXQDEwrOrmBM-lwAhvWdS",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40page_vrn_DdT9nr_o_SP_%D0%9A%D0%B0%D0%BA%D0%B8%D0%BC_%D0%B1%D1%8B_%D0%BD%D0%B8_%D0%B1%D1%8B%D0%BB_%D0%B2%D0%B0%D1%88_%D0%B7%D0%B0%D0%B2%D1%82%D1%80%D0%B0%D0%BA%2C_%D0%B2_P%2BAGE_%D0%BE%D0%BD_%D0%B1%D1%83%D0%B4%D0%B5%D1%82/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40page_vrn_DdT9nr_o_SP_%D0%9A%D0%B0%D0%BA%D0%B8%D0%BC_%D0%B1%D1%8B_%D0%BD%D0%B8_%D0%B1%D1%8B%D0%BB_%D0%B2%D0%B0%D1%88_%D0%B7%D0%B0%D0%B2%D1%82%D1%80%D0%B0%D0%BA%2C_%D0%B2_P%2BAGE_%D0%BE%D0%BD_%D0%B1%D1%83%D0%B4%D0%B5%D1%82/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40page_vrn_DdT9nr_o_SP_%D0%9A%D0%B0%D0%BA%D0%B8%D0%BC_%D0%B1%D1%8B_%D0%BD%D0%B8_%D0%B1%D1%8B%D0%BB_%D0%B2%D0%B0%D1%88_%D0%B7%D0%B0%D0%B2%D1%82%D1%80%D0%B0%D0%BA%2C_%D0%B2_P%2BAGE_%D0%BE%D0%BD_%D0%B1%D1%83%D0%B4%D0%B5%D1%82/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40page_vrn_DdT9nr_o_SP_%D0%9A%D0%B0%D0%BA%D0%B8%D0%BC_%D0%B1%D1%8B_%D0%BD%D0%B8_%D0%B1%D1%8B%D0%BB_%D0%B2%D0%B0%D1%88_%D0%B7%D0%B0%D0%B2%D1%82%D1%80%D0%B0%D0%BA%2C_%D0%B2_P%2BAGE_%D0%BE%D0%BD_%D0%B1%D1%83%D0%B4%D0%B5%D1%82/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdT9nr_o_SP.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DdT9nr_o_SP.mp4",
         "report_url": "reports/IG_@page_vrn_DdT9nr_o_SP_Каким_бы_ни_был_ваш_завтрак,_в_P+AGE_он_будет.html",
         "shots_count": 14,
         "duration": "28s",
@@ -5929,13 +5939,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "am-thuc",
-        "name": "F&B",
-        "en_name": "Food & Beverage",
-        "icon": "🍜",
-        "badge_color": "amber"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -5957,12 +5963,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@fiveseven.idn",
         "profile_url": "https://www.instagram.com/fiveseven.idn/"
       },
-      "ig_url": "https://www.instagram.com/reel/DbDAdZShiS9/?stkn=NTd5bGVocHJiMnNl",
+      "ig_url": "https://www.instagram.com/reel/DbDAdZShiS9/",
       "gdrive_folder": "https://drive.google.com/open?id=1Cjm9sRyI88sb0MWtS663qdhBftwoEI2w",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40fiveseven.idn_DbDAdZShiS9_Crispy_outside._Tender_inside/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40fiveseven.idn_DbDAdZShiS9_Crispy_outside._Tender_inside/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40fiveseven.idn_DbDAdZShiS9_Crispy_outside._Tender_inside/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40fiveseven.idn_DbDAdZShiS9_Crispy_outside._Tender_inside/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DbDAdZShiS9.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DbDAdZShiS9.mp4",
         "report_url": "reports/IG_@fiveseven.idn_DbDAdZShiS9_Crispy_outside._Tender_inside.html",
         "shots_count": 5,
         "duration": "10s",
@@ -5990,13 +5997,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "📖",
         "badge_color": "amber"
       },
-      "industry": {
-        "id": "am-thuc",
-        "name": "F&B",
-        "en_name": "Food & Beverage",
-        "icon": "🍜",
-        "badge_color": "amber"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -6018,12 +6021,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@ecuator_cafe",
         "profile_url": "https://www.instagram.com/ecuator_cafe/"
       },
-      "ig_url": "https://www.instagram.com/reel/Dc0iEdiuYZ-/?stkn=NnEzaWt2MjRxdTdi",
+      "ig_url": "https://www.instagram.com/reel/Dc0iEdiuYZ-/",
       "gdrive_folder": "https://drive.google.com/open?id=14jZqD0bo7o1vrrEX-TlNU52h_9oVt3OQ",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40ecuator_cafe_Dc0iEdiuYZ-_Exist%C4%83_pauze_de_cafea_%C8%99i_exist%C4%83_momente_%C3%AEn_ca/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40ecuator_cafe_Dc0iEdiuYZ-_Exist%C4%83_pauze_de_cafea_%C8%99i_exist%C4%83_momente_%C3%AEn_ca/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40ecuator_cafe_Dc0iEdiuYZ-_Exist%C4%83_pauze_de_cafea_%C8%99i_exist%C4%83_momente_%C3%AEn_ca/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40ecuator_cafe_Dc0iEdiuYZ-_Exist%C4%83_pauze_de_cafea_%C8%99i_exist%C4%83_momente_%C3%AEn_ca/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/Dc0iEdiuYZ-.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/Dc0iEdiuYZ-.mp4",
         "report_url": "reports/IG_@ecuator_cafe_Dc0iEdiuYZ-_Există_pauze_de_cafea_și_există_momente_în_ca.html",
         "shots_count": 12,
         "duration": "24s",
@@ -6051,13 +6055,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -6079,12 +6079,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@ulanzi",
         "profile_url": "https://www.instagram.com/ulanzi/"
       },
-      "ig_url": "https://s.lazada.vn/s.ohBhc?c=s",
+      "ig_url": "https://www.instagram.com/ulanzi/",
       "gdrive_folder": "https://drive.google.com/open?id=1LwBMuvrx5NJ4WaH-ksXAk2AI37qsQaNT",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40ulanzi_ohBhc_G%E1%BA%ADy_T%E1%BB%B1_S%C6%B0%E1%BB%9Bng_Ulanzi_MT85_C%C3%B3_%C4%90%C3%A8n_Pin_Nh%E1%BB%8F_v%C3%A0_Ch/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40ulanzi_ohBhc_G%E1%BA%ADy_T%E1%BB%B1_S%C6%B0%E1%BB%9Bng_Ulanzi_MT85_C%C3%B3_%C4%90%C3%A8n_Pin_Nh%E1%BB%8F_v%C3%A0_Ch/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40ulanzi_ohBhc_G%E1%BA%ADy_T%E1%BB%B1_S%C6%B0%E1%BB%9Bng_Ulanzi_MT85_C%C3%B3_%C4%90%C3%A8n_Pin_Nh%E1%BB%8F_v%C3%A0_Ch/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40ulanzi_ohBhc_G%E1%BA%ADy_T%E1%BB%B1_S%C6%B0%E1%BB%9Bng_Ulanzi_MT85_C%C3%B3_%C4%90%C3%A8n_Pin_Nh%E1%BB%8F_v%C3%A0_Ch/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/ohBhc.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/ohBhc.mp4",
         "report_url": "reports/IG_@ulanzi_ohBhc_Gậy_Tự_Sướng_Ulanzi_MT85_Có_Đèn_Pin_Nhỏ_và_Ch.html",
         "shots_count": 27,
         "duration": "54s",
@@ -6112,13 +6113,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -6140,12 +6137,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@ulanzi",
         "profile_url": "https://www.instagram.com/ulanzi/"
       },
-      "ig_url": "https://s.lazada.vn/s.ohxID?c=s",
+      "ig_url": "https://www.instagram.com/ulanzi/",
       "gdrive_folder": "https://drive.google.com/open?id=17y2tpde8wLwSgWpQCU-7gKwRYwv36UTI",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40ulanzi_ohxID_MagSafe_Compatible_Selfie_Stick_Tripod_Produc/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40ulanzi_ohxID_MagSafe_Compatible_Selfie_Stick_Tripod_Produc/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40ulanzi_ohxID_MagSafe_Compatible_Selfie_Stick_Tripod_Produc/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40ulanzi_ohxID_MagSafe_Compatible_Selfie_Stick_Tripod_Produc/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/ohxID.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/ohxID.mp4",
         "report_url": "reports/IG_@ulanzi_ohxID_MagSafe_Compatible_Selfie_Stick_Tripod_Produc.html",
         "shots_count": 1,
         "duration": "2s",
@@ -6173,13 +6171,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "am-thuc",
-        "name": "F&B",
-        "en_name": "Food & Beverage",
-        "icon": "🍜",
-        "badge_color": "amber"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -6201,12 +6195,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@dwslestari",
         "profile_url": "https://www.instagram.com/dwslestari/"
       },
-      "ig_url": "https://www.instagram.com/reel/Ddga9BDzenm/?stkn=cGFvamRqczU1czY3",
+      "ig_url": "https://www.instagram.com/reel/Ddga9BDzenm/",
       "gdrive_folder": "https://drive.google.com/open?id=1kbyWWOFSA450bGpxr-VkkpNSuAu12Lc_",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40dwslestari_Ddga9BDzenm_buat_yang_sering_nanyain_font_yang_aku_pakai%2C/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40dwslestari_Ddga9BDzenm_buat_yang_sering_nanyain_font_yang_aku_pakai%2C/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40dwslestari_Ddga9BDzenm_buat_yang_sering_nanyain_font_yang_aku_pakai%2C/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40dwslestari_Ddga9BDzenm_buat_yang_sering_nanyain_font_yang_aku_pakai%2C/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/Ddga9BDzenm.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/Ddga9BDzenm.mp4",
         "report_url": "reports/IG_@dwslestari_Ddga9BDzenm_buat_yang_sering_nanyain_font_yang_aku_pakai,.html",
         "shots_count": 8,
         "duration": "16s",
@@ -6223,7 +6218,7 @@ var FEDU_IDEAS_DATABASE = {
     },
     {
       "id": "IG_@Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis",
-      "shortcode": "DdRGMalgl4E",
+      "shortcode": "DdRGI36Aj0X_Carousel_Analysis",
       "title_vi": "Đòn Bẩy Đa Góc Máy B-Roll: Nghệ Thuật Tự Quay Quy Trình Lắp Ráp Sản Phẩm Cuốn Hút Cho Solo Creator",
       "quick_takeaway": "Báo cáo phân tích chuyên sâu ngôn ngữ điện ảnh, ánh sáng, góc máy và nhịp dựng 7 phân cảnh.",
       "key_tech": "Establishing Hook Shot • Close-Up / Macro Detail Shot • Low-key Lighting",
@@ -6234,13 +6229,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -6262,12 +6253,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@Chibuzor_Ossai",
         "profile_url": "https://www.instagram.com/Chibuzor_Ossai/"
       },
-      "ig_url": "https://www.instagram.com/p/DdRGMalgl4E/?img_index=6&stkn=MTlheHZpanpqcWYxYg==",
+      "ig_url": "https://www.instagram.com/Chibuzor_Ossai/",
       "gdrive_folder": "https://drive.google.com/open?id=1CNnLeiXJaNlkwwcnwWipR5ttQpAsqPIh",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/carousel_slides/IG_%40Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_01.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_01_mid.jpg",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis/slide_03_mid.jpg",
+        "video_url": "https://drive.google.com/uc?id=1OdaG7XZYuiDZHiQBJFjv_2UGX72heP3c&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1OdaG7XZYuiDZHiQBJFjv_2UGX72heP3c&export=download",
         "report_url": "reports/IG_@Chibuzor_Ossai_DdRGI36Aj0X_Carousel_Analysis.html",
         "shots_count": 7,
         "duration": "14s",
@@ -6295,13 +6287,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -6326,9 +6314,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdZb-x1OuDw/",
       "gdrive_folder": "https://drive.google.com/open?id=1lz1ircSwfjzwzRwUsy12kCogNKGvr0mt",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40framebygeorge_DdZb-x1OuDw_Day_20_learning_cinematography/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40framebygeorge_DdZb-x1OuDw_Day_20_learning_cinematography/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40framebygeorge_DdZb-x1OuDw_Day_20_learning_cinematography/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40framebygeorge_DdZb-x1OuDw_Day_20_learning_cinematography/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdZb-x1OuDw.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DdZb-x1OuDw.mp4",
         "report_url": "reports/IG_@framebygeorge_DdZb-x1OuDw_Day_20_learning_cinematography.html",
         "shots_count": 9,
         "duration": "18s",
@@ -6356,13 +6345,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -6387,9 +6372,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdW1eYoO7Nb/",
       "gdrive_folder": "https://drive.google.com/open?id=1NTRTilyCE3_FP8kb5Aflnwg-RNVCc7Hc",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40framebygeorge_DdW1eYoO7Nb_Day_19_learning_cinematography/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40framebygeorge_DdW1eYoO7Nb_Day_19_learning_cinematography/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40framebygeorge_DdW1eYoO7Nb_Day_19_learning_cinematography/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40framebygeorge_DdW1eYoO7Nb_Day_19_learning_cinematography/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdW1eYoO7Nb.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DdW1eYoO7Nb.mp4",
         "report_url": "reports/IG_@framebygeorge_DdW1eYoO7Nb_Day_19_learning_cinematography.html",
         "shots_count": 8,
         "duration": "16s",
@@ -6417,13 +6403,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -6448,9 +6430,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdejCP_tg7G/",
       "gdrive_folder": "https://drive.google.com/open?id=1_55gHhhZEFtW15e1So3KBR_4URTIkEld",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40framebygeorge_DdejCP_tg7G_Day_22_learning_cinematography/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40framebygeorge_DdejCP_tg7G_Day_22_learning_cinematography/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40framebygeorge_DdejCP_tg7G_Day_22_learning_cinematography/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40framebygeorge_DdejCP_tg7G_Day_22_learning_cinematography/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdejCP_tg7G.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DdejCP_tg7G.mp4",
         "report_url": "reports/IG_@framebygeorge_DdejCP_tg7G_Day_22_learning_cinematography.html",
         "shots_count": 9,
         "duration": "18s",
@@ -6478,13 +6461,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -6509,9 +6488,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DcwVaP0Of8D/",
       "gdrive_folder": "https://drive.google.com/open?id=1DOjAo5ZR9G1Wl_Z6DDu6sNl7Qbt97kSR",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40framebygeorge_DcwVaP0Of8D_Day_5_learning_cinematography/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40framebygeorge_DcwVaP0Of8D_Day_5_learning_cinematography/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40framebygeorge_DcwVaP0Of8D_Day_5_learning_cinematography/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40framebygeorge_DcwVaP0Of8D_Day_5_learning_cinematography/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DcwVaP0Of8D.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DcwVaP0Of8D.mp4",
         "report_url": "reports/IG_@framebygeorge_DcwVaP0Of8D_Day_5_learning_cinematography.html",
         "shots_count": 6,
         "duration": "12s",
@@ -6539,13 +6519,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -6570,9 +6546,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdMh8uRukGJ/",
       "gdrive_folder": "https://drive.google.com/open?id=1JSyWXdo19Jo4A4ndDboBAyFrz_v3c7JD",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40framebygeorge_DdMh8uRukGJ_Day_16_learning_cinematography/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40framebygeorge_DdMh8uRukGJ_Day_16_learning_cinematography/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40framebygeorge_DdMh8uRukGJ_Day_16_learning_cinematography/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40framebygeorge_DdMh8uRukGJ_Day_16_learning_cinematography/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdMh8uRukGJ.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DdMh8uRukGJ.mp4",
         "report_url": "reports/IG_@framebygeorge_DdMh8uRukGJ_Day_16_learning_cinematography.html",
         "shots_count": 11,
         "duration": "22s",
@@ -6600,13 +6577,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -6631,9 +6604,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdPQJLvulmd/",
       "gdrive_folder": "https://drive.google.com/open?id=10XajVkentv46mXLHUEbmQjW0FMgBbFEo",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40framebygeorge_DdPQJLvulmd_Day_17_learning_cinematography/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40framebygeorge_DdPQJLvulmd_Day_17_learning_cinematography/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40framebygeorge_DdPQJLvulmd_Day_17_learning_cinematography/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40framebygeorge_DdPQJLvulmd_Day_17_learning_cinematography/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdPQJLvulmd.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DdPQJLvulmd.mp4",
         "report_url": "reports/IG_@framebygeorge_DdPQJLvulmd_Day_17_learning_cinematography.html",
         "shots_count": 8,
         "duration": "16s",
@@ -6661,13 +6635,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -6692,9 +6662,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdcH-N-ONJw/",
       "gdrive_folder": "https://drive.google.com/open?id=1yk4wFncaPLdsSvNHlNxbRbrNocNvYT3-",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40framebygeorge_DdcH-N-ONJw_Day_21_learning_cinematography/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40framebygeorge_DdcH-N-ONJw_Day_21_learning_cinematography/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40framebygeorge_DdcH-N-ONJw_Day_21_learning_cinematography/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40framebygeorge_DdcH-N-ONJw_Day_21_learning_cinematography/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdcH-N-ONJw.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DdcH-N-ONJw.mp4",
         "report_url": "reports/IG_@framebygeorge_DdcH-N-ONJw_Day_21_learning_cinematography.html",
         "shots_count": 9,
         "duration": "18s",
@@ -6722,13 +6693,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -6753,9 +6720,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdhHCL6OOfK/",
       "gdrive_folder": "https://drive.google.com/open?id=1IFg_OKI7kUOt-ly3c9kHmvTi05aTQAkO",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40framebygeorge_DdhHCL6OOfK_Day_23_learning_cinematography/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40framebygeorge_DdhHCL6OOfK_Day_23_learning_cinematography/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40framebygeorge_DdhHCL6OOfK_Day_23_learning_cinematography/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40framebygeorge_DdhHCL6OOfK_Day_23_learning_cinematography/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdhHCL6OOfK.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DdhHCL6OOfK.mp4",
         "report_url": "reports/IG_@framebygeorge_DdhHCL6OOfK_Day_23_learning_cinematography.html",
         "shots_count": 9,
         "duration": "18s",
@@ -6783,13 +6751,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -6814,9 +6778,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdjxG1Hu8P6/",
       "gdrive_folder": "https://drive.google.com/open?id=1jUMmD4k4pIklvJPWWiCfRx0ZidgMiM65",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40framebygeorge_DdjxG1Hu8P6_Day_24_learning_cinematography/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40framebygeorge_DdjxG1Hu8P6_Day_24_learning_cinematography/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40framebygeorge_DdjxG1Hu8P6_Day_24_learning_cinematography/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40framebygeorge_DdjxG1Hu8P6_Day_24_learning_cinematography/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdjxG1Hu8P6.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DdjxG1Hu8P6.mp4",
         "report_url": "reports/IG_@framebygeorge_DdjxG1Hu8P6_Day_24_learning_cinematography.html",
         "shots_count": 9,
         "duration": "18s",
@@ -6844,13 +6809,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "thoi-trang",
-        "name": "Thời trang",
-        "en_name": "Fashion & Style",
-        "icon": "👔",
-        "badge_color": "pink"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -6875,9 +6836,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdgqYzZM67T/",
       "gdrive_folder": "https://drive.google.com/open?id=1gHfcuXLxNrWlpg6JewI95liPvBzQfXr3",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40iz_hxn_DdgqYzZM67T_How_we_pull_up_in_Smart_Style_%F0%9F%95%B6%EF%B8%8F_#fitcheck_#l/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40iz_hxn_DdgqYzZM67T_How_we_pull_up_in_Smart_Style_%F0%9F%95%B6%EF%B8%8F_#fitcheck_#l/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40iz_hxn_DdgqYzZM67T_How_we_pull_up_in_Smart_Style_%F0%9F%95%B6%EF%B8%8F_%23fitcheck_%23l/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40iz_hxn_DdgqYzZM67T_How_we_pull_up_in_Smart_Style_%F0%9F%95%B6%EF%B8%8F_%23fitcheck_%23l/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdgqYzZM67T.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DdgqYzZM67T.mp4",
         "report_url": "reports/IG_@iz_hxn_DdgqYzZM67T_How_we_pull_up_in_Smart_Style_🕶️_#fitcheck_#l.html",
         "shots_count": 4,
         "duration": "8s",
@@ -6905,13 +6867,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "the-thao",
-        "name": "Thể thao",
-        "en_name": "Sports & Motion",
-        "icon": "🏃",
-        "badge_color": "orange"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -6936,9 +6894,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdtKOH-TN_c/",
       "gdrive_folder": "https://drive.google.com/open?id=1O_tPcBCvKB1Abn7opnTFMB0AR5iasyMn",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40jackwebstter_DdtKOH-TN_c_How_to_film_cinematic_running_shots_part_2/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40jackwebstter_DdtKOH-TN_c_How_to_film_cinematic_running_shots_part_2/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40jackwebstter_DdtKOH-TN_c_How_to_film_cinematic_running_shots_part_2/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40jackwebstter_DdtKOH-TN_c_How_to_film_cinematic_running_shots_part_2/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdtKOH-TN_c.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DdtKOH-TN_c.mp4",
         "report_url": "reports/IG_@jackwebstter_DdtKOH-TN_c_How_to_film_cinematic_running_shots_part_2.html",
         "shots_count": 9,
         "duration": "18s",
@@ -6966,13 +6925,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "thoi-trang",
-        "name": "Thời trang",
-        "en_name": "Fashion & Style",
-        "icon": "👔",
-        "badge_color": "pink"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -6997,9 +6952,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdeYvmLsms6/",
       "gdrive_folder": "https://drive.google.com/open?id=1s3gHzDTW7z54g7HT2ZzXW9g-ScJEPZtD",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mariapark_DdeYvmLsms6_%D0%A7%D0%B0%D0%BA%D1%80%D0%B0_%D0%BD%D0%B0_%D0%BE%D1%81%D0%B5%D0%BD%D0%BD%D0%B8%D0%B5_%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D1%8B_%D0%BE%D1%82%D0%BA%D1%80%D1%8B%D1%82%D0%B0_%F0%9F%A4%A9_%D0%A1%D1%82%D0%B0%D0%B2%D1%8C_%D0%BE%D0%B3%D0%BE%D0%BD%D1%8C/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mariapark_DdeYvmLsms6_%D0%A7%D0%B0%D0%BA%D1%80%D0%B0_%D0%BD%D0%B0_%D0%BE%D1%81%D0%B5%D0%BD%D0%BD%D0%B8%D0%B5_%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D1%8B_%D0%BE%D1%82%D0%BA%D1%80%D1%8B%D1%82%D0%B0_%F0%9F%A4%A9_%D0%A1%D1%82%D0%B0%D0%B2%D1%8C_%D0%BE%D0%B3%D0%BE%D0%BD%D1%8C/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40mariapark_DdeYvmLsms6_%D0%A7%D0%B0%D0%BA%D1%80%D0%B0_%D0%BD%D0%B0_%D0%BE%D1%81%D0%B5%D0%BD%D0%BD%D0%B8%D0%B5_%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D1%8B_%D0%BE%D1%82%D0%BA%D1%80%D1%8B%D1%82%D0%B0_%F0%9F%A4%A9_%D0%A1%D1%82%D0%B0%D0%B2%D1%8C_%D0%BE%D0%B3%D0%BE%D0%BD%D1%8C/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40mariapark_DdeYvmLsms6_%D0%A7%D0%B0%D0%BA%D1%80%D0%B0_%D0%BD%D0%B0_%D0%BE%D1%81%D0%B5%D0%BD%D0%BD%D0%B8%D0%B5_%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D1%8B_%D0%BE%D1%82%D0%BA%D1%80%D1%8B%D1%82%D0%B0_%F0%9F%A4%A9_%D0%A1%D1%82%D0%B0%D0%B2%D1%8C_%D0%BE%D0%B3%D0%BE%D0%BD%D1%8C/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdeYvmLsms6.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DdeYvmLsms6.mp4",
         "report_url": "reports/IG_@mariapark_DdeYvmLsms6_Чакра_на_осенние_образы_открыта_🤩_Ставь_огонь.html",
         "shots_count": 9,
         "duration": "18s",
@@ -7027,13 +6983,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "📖",
         "badge_color": "amber"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -7055,12 +7007,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@pausehereii",
         "profile_url": "https://www.instagram.com/pausehereii/"
       },
-      "ig_url": "https://www.instagram.com/reel/DdGx-fkPeeU/?stkn=N3dkZjY5NXhob2Rp",
+      "ig_url": "https://www.instagram.com/reel/DdGx-fkPeeU/",
       "gdrive_folder": "https://drive.google.com/open?id=1HIlhpyXrcRgOZAaeHmXU0CTZ-0TEIMC8",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40pausehereii_DdGx-fkPeeU_A_DAY_IN_CHIANG_MAI/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40pausehereii_DdGx-fkPeeU_A_DAY_IN_CHIANG_MAI/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40pausehereii_DdGx-fkPeeU_A_DAY_IN_CHIANG_MAI/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40pausehereii_DdGx-fkPeeU_A_DAY_IN_CHIANG_MAI/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdGx-fkPeeU.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DdGx-fkPeeU.mp4",
         "report_url": "reports/IG_@pausehereii_DdGx-fkPeeU_A_DAY_IN_CHIANG_MAI.html",
         "shots_count": 37,
         "duration": "74s",
@@ -7088,13 +7041,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -7116,12 +7065,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@kuzya.tm",
         "profile_url": "https://www.instagram.com/kuzya.tm/"
       },
-      "ig_url": "https://www.instagram.com/p/DdYHuz_sXs0",
+      "ig_url": "https://www.instagram.com/reel/DdYHuz_sXs0/",
       "gdrive_folder": "https://drive.google.com/open?id=1_s9Y0nQITKOKXapdjDfmXtO-JNVcu9Vo",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40KUZYA_%D0%BC%D0%BE%D0%BD%D1%82%D0%B0%D0%B6_Reels_DdYHuz_sXs0_Video_by_kuzya.tm/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40KUZYA_%D0%BC%D0%BE%D0%BD%D1%82%D0%B0%D0%B6_Reels_DdYHuz_sXs0_Video_by_kuzya.tm/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40KUZYA_%D0%BC%D0%BE%D0%BD%D1%82%D0%B0%D0%B6_Reels_DdYHuz_sXs0_Video_by_kuzya.tm/shot_01_mid.jpg",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40KUZYA_%D0%BC%D0%BE%D0%BD%D1%82%D0%B0%D0%B6_Reels_DdYHuz_sXs0_Video_by_kuzya.tm/shot_03_mid.jpg",
         "video_url": "https://media.fedu.vn/videos/DdYHuz_sXs0.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DdYHuz_sXs0.mp4",
         "report_url": "reports/IG_@KUZYA_монтаж_Reels_DdYHuz_sXs0_Video_by_kuzya.tm.html",
         "shots_count": 6,
         "duration": "12s",
@@ -7149,13 +7099,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -7177,12 +7123,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@alecrijks",
         "profile_url": "https://www.instagram.com/alecrijks/"
       },
-      "ig_url": "https://www.instagram.com/p/DdPESzcNS-W",
+      "ig_url": "https://www.instagram.com/reel/DdPESzcNS-W/",
       "gdrive_folder": "https://drive.google.com/open?id=1rDkR-ZuXss0KP_8xVHHV7CcjRH5glT-A",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40A%C5%81EC_RIJKS_DdPESzcNS-W_Video_by_alecrijks/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40A%C5%81EC_RIJKS_DdPESzcNS-W_Video_by_alecrijks/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40A%C5%81EC_RIJKS_DdPESzcNS-W_Video_by_alecrijks/shot_01_mid.jpg",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40A%C5%81EC_RIJKS_DdPESzcNS-W_Video_by_alecrijks/shot_03_mid.jpg",
         "video_url": "https://media.fedu.vn/videos/DdPESzcNS-W.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DdPESzcNS-W.mp4",
         "report_url": "reports/IG_@AŁEC_RIJKS_DdPESzcNS-W_Video_by_alecrijks.html",
         "shots_count": 18,
         "duration": "36s",
@@ -7210,13 +7157,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -7238,12 +7181,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@hdnimedia",
         "profile_url": "https://www.instagram.com/hdnimedia/"
       },
-      "ig_url": "https://www.instagram.com/p/DdlmRIcBw81",
+      "ig_url": "https://www.instagram.com/reel/DdlmRIcBw81/",
       "gdrive_folder": "https://drive.google.com/open?id=1DEy6O_CtKFtXNXaIXbeFxAud8WBUUpOp",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Harry_DdlmRIcBw81_Video_by_hdnimedia/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Harry_DdlmRIcBw81_Video_by_hdnimedia/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40Harry_DdlmRIcBw81_Video_by_hdnimedia/shot_01_mid.jpg",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40Harry_DdlmRIcBw81_Video_by_hdnimedia/shot_03_mid.jpg",
         "video_url": "https://media.fedu.vn/videos/DdlmRIcBw81.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DdlmRIcBw81.mp4",
         "report_url": "reports/IG_@Harry_DdlmRIcBw81_Video_by_hdnimedia.html",
         "shots_count": 16,
         "duration": "32s",
@@ -7271,13 +7215,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -7299,12 +7239,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@takashi.film",
         "profile_url": "https://www.instagram.com/takashi.film/"
       },
-      "ig_url": "https://www.instagram.com/reel/DddqrBQy8lQ/?stkn=NDVweTFxeTk5ejZ4",
+      "ig_url": "https://www.instagram.com/reel/DddqrBQy8lQ/",
       "gdrive_folder": "https://drive.google.com/open?id=1JR5GcB9GC5FtB7o4s6ymo4qNrtxZFHE1",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40takashi.film_DddqrBQy8lQ_One_day%2C_Vietnam._%F0%9F%87%BB%F0%9F%87%B3/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40takashi.film_DddqrBQy8lQ_One_day%2C_Vietnam._%F0%9F%87%BB%F0%9F%87%B3/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40takashi.film_DddqrBQy8lQ_One_day%2C_Vietnam._%F0%9F%87%BB%F0%9F%87%B3/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40takashi.film_DddqrBQy8lQ_One_day%2C_Vietnam._%F0%9F%87%BB%F0%9F%87%B3/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DddqrBQy8lQ.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DddqrBQy8lQ.mp4",
         "report_url": "reports/IG_@takashi.film_DddqrBQy8lQ_One_day,_Vietnam._🇻🇳.html",
         "shots_count": 11,
         "duration": "22s",
@@ -7332,13 +7273,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "📖",
         "badge_color": "amber"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -7360,12 +7297,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@qaqu_uu",
         "profile_url": "https://www.instagram.com/qaqu_uu/"
       },
-      "ig_url": "https://www.instagram.com/reel/Dblr-88PjlJ/?stkn=MXJ3Ym5mMjBlc24ydw==",
+      "ig_url": "https://www.instagram.com/reel/Dblr-88PjlJ/",
       "gdrive_folder": "https://drive.google.com/open?id=1A7n_9slaFXFz-YEHw0m1sT8r6GI-sXKC",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40qaqu_uu_Dblr-88PjlJ_yelena_belova_would_call_this_small_baby_pota/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40qaqu_uu_Dblr-88PjlJ_yelena_belova_would_call_this_small_baby_pota/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40qaqu_uu_Dblr-88PjlJ_yelena_belova_would_call_this_small_baby_pota/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40qaqu_uu_Dblr-88PjlJ_yelena_belova_would_call_this_small_baby_pota/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/Dblr-88PjlJ.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/Dblr-88PjlJ.mp4",
         "report_url": "reports/IG_@qaqu_uu_Dblr-88PjlJ_yelena_belova_would_call_this_small_baby_pota.html",
         "shots_count": 25,
         "duration": "50s",
@@ -7393,13 +7331,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -7421,12 +7355,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@cinematic_lee",
         "profile_url": "https://www.instagram.com/cinematic_lee/"
       },
-      "ig_url": "https://www.instagram.com/reel/Dbd8gmqRAc3/?stkn=azV4c3czdzM0OG81",
+      "ig_url": "https://www.instagram.com/reel/Dbd8gmqRAc3/",
       "gdrive_folder": "https://drive.google.com/open?id=1GpOHM-1HGj5srXqhkvW9bDXT92UKjyNn",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40cinematic_lee_Dbd8gmqRAc3_It%E2%80%99s_a_constant_struggle_%F0%9F%98%85/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40cinematic_lee_Dbd8gmqRAc3_It%E2%80%99s_a_constant_struggle_%F0%9F%98%85/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40cinematic_lee_Dbd8gmqRAc3_It%E2%80%99s_a_constant_struggle_%F0%9F%98%85/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40cinematic_lee_Dbd8gmqRAc3_It%E2%80%99s_a_constant_struggle_%F0%9F%98%85/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/Dbd8gmqRAc3.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/Dbd8gmqRAc3.mp4",
         "report_url": "reports/IG_@cinematic_lee_Dbd8gmqRAc3_It’s_a_constant_struggle_😅.html",
         "shots_count": 12,
         "duration": "24s",
@@ -7443,7 +7378,7 @@ var FEDU_IDEAS_DATABASE = {
     },
     {
       "id": "IG_@dvdnguyen_DdXbbBiEq7P_Carousel_Analysis",
-      "shortcode": "DdXb4mREm6B",
+      "shortcode": "DdXbbBiEq7P_Carousel_Analysis",
       "title_vi": "8 Lát Cắt Điện Ảnh Ẩm Thực Đường Phố Mùa Mưa Sài Gòn — Cú Đấm Vị Giác &amp; Nghệ Thuật Ánh Sáng Thực Chiến",
       "quick_takeaway": "Báo cáo phân tích chuyên sâu ngôn ngữ điện ảnh, ánh sáng, góc máy và nhịp dựng 8 phân cảnh.",
       "key_tech": "Establishing Hook Shot • Close-Up / Macro Detail Shot • Low-key Lighting",
@@ -7454,13 +7389,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "am-thuc",
-        "name": "F&B",
-        "en_name": "Food & Beverage",
-        "icon": "🍜",
-        "badge_color": "amber"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -7482,12 +7413,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@dvdnguyen",
         "profile_url": "https://www.instagram.com/dvdnguyen/"
       },
-      "ig_url": "https://www.instagram.com/p/DdXb4mREm6B/?img_index=5&stkn=MnRva3BtdTZhMDUz",
+      "ig_url": "https://www.instagram.com/dvdnguyen/",
       "gdrive_folder": "https://drive.google.com/open?id=1bePhOYnqH7lCeZ4Z6g9xVTwFl_QmdsTx",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40dvdnguyen_DdXbbBiEq7P_Carousel_Analysis/slide_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40dvdnguyen_DdXbbBiEq7P_Carousel_Analysis/slide_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/carousel_slides/IG_%40dvdnguyen_DdXbbBiEq7P_Carousel_Analysis/slide_01.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40dvdnguyen_DdXbbBiEq7P_Carousel_Analysis/slide_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40dvdnguyen_DdXbbBiEq7P_Carousel_Analysis/slide_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1OdaG7XZYuiDZHiQBJFjv_2UGX72heP3c&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1OdaG7XZYuiDZHiQBJFjv_2UGX72heP3c&export=download",
         "report_url": "reports/IG_@dvdnguyen_DdXbbBiEq7P_Carousel_Analysis.html",
         "shots_count": 8,
         "duration": "16s",
@@ -7504,7 +7436,7 @@ var FEDU_IDEAS_DATABASE = {
     },
     {
       "id": "IG_@shotsbyzaid_DdkimD5DPNL_Carousel_Analysis",
-      "shortcode": "DdkintwjDuE",
+      "shortcode": "DdkimD5DPNL_Carousel_Analysis",
       "title_vi": "5 Góc Quay Điện Ảnh Đột Phá Nâng Cấp Video Của Bạn (5 Shots To Improve Your Content)",
       "quick_takeaway": "Báo cáo phân tích chuyên sâu ngôn ngữ điện ảnh, ánh sáng, góc máy và nhịp dựng 7 phân cảnh.",
       "key_tech": "Establishing Hook Shot • Close-Up / Macro Detail Shot • Low-key Lighting",
@@ -7515,13 +7447,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -7543,12 +7471,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@shotsbyzaid",
         "profile_url": "https://www.instagram.com/shotsbyzaid/"
       },
-      "ig_url": "https://www.instagram.com/p/DdkintwjDuE/?stkn=MW9kcGQ5cm51ODBqYQ==",
+      "ig_url": "https://www.instagram.com/shotsbyzaid/",
       "gdrive_folder": "https://drive.google.com/open?id=1pwQ4qBZFqfQvdBLbseH_oyIjTgkk3xCl",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40shotsbyzaid_DdkimD5DPNL_Carousel_Analysis/slide_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40shotsbyzaid_DdkimD5DPNL_Carousel_Analysis/slide_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/carousel_slides/IG_%40shotsbyzaid_DdkimD5DPNL_Carousel_Analysis/slide_01.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40shotsbyzaid_DdkimD5DPNL_Carousel_Analysis/slide_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40shotsbyzaid_DdkimD5DPNL_Carousel_Analysis/slide_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1OdaG7XZYuiDZHiQBJFjv_2UGX72heP3c&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1OdaG7XZYuiDZHiQBJFjv_2UGX72heP3c&export=download",
         "report_url": "reports/IG_@shotsbyzaid_DdkimD5DPNL_Carousel_Analysis.html",
         "shots_count": 7,
         "duration": "14s",
@@ -7576,13 +7505,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "📖",
         "badge_color": "amber"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -7604,12 +7529,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@elenabuntushak",
         "profile_url": "https://www.instagram.com/elenabuntushak/"
       },
-      "ig_url": "https://www.instagram.com/reel/Ddb6rA7NwQd/?stkn=MWF4dXFwenRjZW44Mg==",
+      "ig_url": "https://www.instagram.com/reel/Ddb6rA7NwQd/",
       "gdrive_folder": "https://drive.google.com/open?id=1jpYV1rRzpuPRMXcYkd1oVjIxfm7pBZFo",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40ELENA_%F0%9D%97%94%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%97%B5%F0%9D%97%B2%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%B0_%F0%9D%97%9C%F0%9D%97%BB%F0%9D%98%80%F0%9D%97%BD%F0%9D%97%B6%F0%9D%97%BF%F0%9D%97%AE%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%BC%F0%9D%97%BB_%F0%9D%97%9F%F0%9D%97%B6%F0%9D%97%B3%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%98%86%F0%9D%97%B9%F0%9D%97%B2_Ddb6rA7NwQd_Video_by_elenabuntushak/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40ELENA_%F0%9D%97%94%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%97%B5%F0%9D%97%B2%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%B0_%F0%9D%97%9C%F0%9D%97%BB%F0%9D%98%80%F0%9D%97%BD%F0%9D%97%B6%F0%9D%97%BF%F0%9D%97%AE%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%BC%F0%9D%97%BB_%F0%9D%97%9F%F0%9D%97%B6%F0%9D%97%B3%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%98%86%F0%9D%97%B9%F0%9D%97%B2_Ddb6rA7NwQd_Video_by_elenabuntushak/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40ELENA_%F0%9D%97%94%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%97%B5%F0%9D%97%B2%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%B0_%F0%9D%97%9C%F0%9D%97%BB%F0%9D%98%80%F0%9D%97%BD%F0%9D%97%B6%F0%9D%97%BF%F0%9D%97%AE%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%BC%F0%9D%97%BB_%F0%9D%97%9F%F0%9D%97%B6%F0%9D%97%B3%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%98%86%F0%9D%97%B9%F0%9D%97%B2_Ddb6rA7NwQd_Video_by_elenabuntushak/shot_01_mid.jpg",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40ELENA_%F0%9D%97%94%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%97%B5%F0%9D%97%B2%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%B0_%F0%9D%97%9C%F0%9D%97%BB%F0%9D%98%80%F0%9D%97%BD%F0%9D%97%B6%F0%9D%97%BF%F0%9D%97%AE%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%BC%F0%9D%97%BB_%F0%9D%97%9F%F0%9D%97%B6%F0%9D%97%B3%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%98%86%F0%9D%97%B9%F0%9D%97%B2_Ddb6rA7NwQd_Video_by_elenabuntushak/shot_01_mid.jpg",
         "video_url": "https://media.fedu.vn/videos/Ddb6rA7NwQd.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/Ddb6rA7NwQd.mp4",
         "report_url": "reports/IG_@ELENA_𝗔𝗲𝘀𝘁𝗵𝗲𝘁𝗶𝗰_𝗜𝗻𝘀𝗽𝗶𝗿𝗮𝘁𝗶𝗼𝗻_𝗟𝗶𝗳𝗲𝘀𝘁𝘆𝗹𝗲_Ddb6rA7NwQd_Video_by_elenabuntushak.html",
         "shots_count": 2,
         "duration": "4s",
@@ -7637,13 +7563,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "japan",
         "name": "Nhật Bản",
@@ -7665,12 +7587,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@jsnhow",
         "profile_url": "https://www.instagram.com/jsnhow/"
       },
-      "ig_url": "https://www.instagram.com/reel/DdncdgVRBIp/?stkn=MXFrMm8xaWhrN3ViaA==",
+      "ig_url": "https://www.instagram.com/reel/DdncdgVRBIp/",
       "gdrive_folder": "https://drive.google.com/open?id=15f4ENSXRedq4eLtFI1lp4sl0POS5aiaB",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40jsnhow_DdncdgVRBIp_Soft_sounds%2C_quiet_minds%2C_and_a_moment_to_jus/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40jsnhow_DdncdgVRBIp_Soft_sounds%2C_quiet_minds%2C_and_a_moment_to_jus/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40jsnhow_DdncdgVRBIp_Soft_sounds%2C_quiet_minds%2C_and_a_moment_to_jus/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40jsnhow_DdncdgVRBIp_Soft_sounds%2C_quiet_minds%2C_and_a_moment_to_jus/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdncdgVRBIp.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DdncdgVRBIp.mp4",
         "report_url": "reports/IG_@jsnhow_DdncdgVRBIp_Soft_sounds,_quiet_minds,_and_a_moment_to_jus.html",
         "shots_count": 20,
         "duration": "40s",
@@ -7698,13 +7621,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -7726,12 +7645,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@celfstudies",
         "profile_url": "https://www.instagram.com/celfstudies/"
       },
-      "ig_url": "https://www.instagram.com/reel/DajU5I5AKIu/?stkn=c25rZGpmMjFrYmVr",
+      "ig_url": "https://www.instagram.com/reel/DajU5I5AKIu/",
       "gdrive_folder": "https://drive.google.com/open?id=1j4mO6nKt6LgUO3IxuX5mZqds_Jx5kiyc",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40celfstudies_DajU5I5AKIu_LA_VLOG_%21%21_%28horizontal_edition%F0%9F%A4%B3%29/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40celfstudies_DajU5I5AKIu_LA_VLOG_%21%21_%28horizontal_edition%F0%9F%A4%B3%29/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40celfstudies_DajU5I5AKIu_LA_VLOG_%21%21_%28horizontal_edition%F0%9F%A4%B3%29/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40celfstudies_DajU5I5AKIu_LA_VLOG_%21%21_%28horizontal_edition%F0%9F%A4%B3%29/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DajU5I5AKIu.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DajU5I5AKIu.mp4",
         "report_url": "reports/IG_@celfstudies_DajU5I5AKIu_LA_VLOG_!!_(horizontal_edition🤳).html",
         "shots_count": 21,
         "duration": "42s",
@@ -7748,7 +7668,7 @@ var FEDU_IDEAS_DATABASE = {
     },
     {
       "id": "IG_@minghan1004_DdESxNlE2Ay_Carousel_Analysis",
-      "shortcode": "DdES7VSk4Fc",
+      "shortcode": "DdESxNlE2Ay_Carousel_Analysis",
       "title_vi": "10 Bố Cục Khung Hình Điện Ảnh &amp; Tuyệt Kỹ Quay Phố Bằng Insta360",
       "quick_takeaway": "Báo cáo phân tích chuyên sâu ngôn ngữ điện ảnh, ánh sáng, góc máy và nhịp dựng 10 phân cảnh.",
       "key_tech": "Establishing Hook Shot • Medium Tracking Shot • Close-Up / Macro Detail Shot • Low-key Lighting",
@@ -7759,13 +7679,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -7787,12 +7703,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@minghan1004",
         "profile_url": "https://www.instagram.com/minghan1004/"
       },
-      "ig_url": "https://www.instagram.com/p/DdES7VSk4Fc/?img_index=2&stkn=cTVpNmkyY2tldWkz",
+      "ig_url": "https://www.instagram.com/minghan1004/",
       "gdrive_folder": "https://drive.google.com/open?id=1lKaYZouaG5kBosLWf-uH6J7bpS1npP0_",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40minghan1004_DdESxNlE2Ay_Carousel_Analysis/slide_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40minghan1004_DdESxNlE2Ay_Carousel_Analysis/slide_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/carousel_slides/IG_%40minghan1004_DdESxNlE2Ay_Carousel_Analysis/slide_01.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40minghan1004_DdESxNlE2Ay_Carousel_Analysis/slide_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40minghan1004_DdESxNlE2Ay_Carousel_Analysis/slide_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1OdaG7XZYuiDZHiQBJFjv_2UGX72heP3c&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1OdaG7XZYuiDZHiQBJFjv_2UGX72heP3c&export=download",
         "report_url": "reports/IG_@minghan1004_DdESxNlE2Ay_Carousel_Analysis.html",
         "shots_count": 10,
         "duration": "20s",
@@ -7820,13 +7737,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "korea",
         "name": "Hàn Quốc",
@@ -7848,12 +7761,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@nana_icroom",
         "profile_url": "https://www.instagram.com/nana_icroom/"
       },
-      "ig_url": "https://www.instagram.com/reel/DdoJCWrT0Do/?stkn=MWFla3FscmRxdm0xaA==",
+      "ig_url": "https://www.instagram.com/reel/DdoJCWrT0Do/",
       "gdrive_folder": "https://drive.google.com/open?id=18lzj7U1p1eJhKXFLjKKqWl4l378SMCEN",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40nana_icroom_DdoJCWrT0Do_vlog%E6%92%AE%E5%BD%B1%E3%80%81%E3%81%A9%E3%82%93%E3%81%AA%E7%94%BB%E8%A7%92%E3%81%A7%E4%BD%95%E3%82%92%E6%92%AE%E3%81%A3%E3%81%9F%E3%82%89%E3%81%84%E3%81%84%E3%81%8B%E3%82%8F%E3%81%8B%E3%82%93%E3%81%AA%E3%81%84%E2%80%A6/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40nana_icroom_DdoJCWrT0Do_vlog%E6%92%AE%E5%BD%B1%E3%80%81%E3%81%A9%E3%82%93%E3%81%AA%E7%94%BB%E8%A7%92%E3%81%A7%E4%BD%95%E3%82%92%E6%92%AE%E3%81%A3%E3%81%9F%E3%82%89%E3%81%84%E3%81%84%E3%81%8B%E3%82%8F%E3%81%8B%E3%82%93%E3%81%AA%E3%81%84%E2%80%A6/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40nana_icroom_DdoJCWrT0Do_vlog%E6%92%AE%E5%BD%B1%E3%80%81%E3%81%A9%E3%82%93%E3%81%AA%E7%94%BB%E8%A7%92%E3%81%A7%E4%BD%95%E3%82%92%E6%92%AE%E3%81%A3%E3%81%9F%E3%82%89%E3%81%84%E3%81%84%E3%81%8B%E3%82%8F%E3%81%8B%E3%82%93%E3%81%AA%E3%81%84%E2%80%A6/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40nana_icroom_DdoJCWrT0Do_vlog%E6%92%AE%E5%BD%B1%E3%80%81%E3%81%A9%E3%82%93%E3%81%AA%E7%94%BB%E8%A7%92%E3%81%A7%E4%BD%95%E3%82%92%E6%92%AE%E3%81%A3%E3%81%9F%E3%82%89%E3%81%84%E3%81%84%E3%81%8B%E3%82%8F%E3%81%8B%E3%82%93%E3%81%AA%E3%81%84%E2%80%A6/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdoJCWrT0Do.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DdoJCWrT0Do.mp4",
         "report_url": "reports/IG_@nana_icroom_DdoJCWrT0Do_vlog撮影、どんな画角で何を撮ったらいいかわかんない….html",
         "shots_count": 20,
         "duration": "40s",
@@ -7881,13 +7795,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "am-thuc",
-        "name": "F&B",
-        "en_name": "Food & Beverage",
-        "icon": "🍜",
-        "badge_color": "amber"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -7909,12 +7819,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@hu321938",
         "profile_url": "https://www.instagram.com/hu321938/"
       },
-      "ig_url": "https://www.instagram.com/reel/DdrKmGFBMzc/?stkn=MXA1dzlhNGZsd21mYQ==",
+      "ig_url": "https://www.instagram.com/reel/DdrKmGFBMzc/",
       "gdrive_folder": "https://drive.google.com/open?id=1XV5vSDQMjtUC89Xlsr1Q3n27zEzPVHR6",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40hu321938_DdrKmGFBMzc_%E6%8B%8D%E5%87%BA%E4%B8%AD%E7%A7%8B%E8%8A%82%E7%9A%84%E6%B0%9B%E5%9B%B4%E6%84%9F/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40hu321938_DdrKmGFBMzc_%E6%8B%8D%E5%87%BA%E4%B8%AD%E7%A7%8B%E8%8A%82%E7%9A%84%E6%B0%9B%E5%9B%B4%E6%84%9F/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40hu321938_DdrKmGFBMzc_%E6%8B%8D%E5%87%BA%E4%B8%AD%E7%A7%8B%E8%8A%82%E7%9A%84%E6%B0%9B%E5%9B%B4%E6%84%9F/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40hu321938_DdrKmGFBMzc_%E6%8B%8D%E5%87%BA%E4%B8%AD%E7%A7%8B%E8%8A%82%E7%9A%84%E6%B0%9B%E5%9B%B4%E6%84%9F/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdrKmGFBMzc.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DdrKmGFBMzc.mp4",
         "report_url": "reports/IG_@hu321938_DdrKmGFBMzc_拍出中秋节的氛围感.html",
         "shots_count": 8,
         "duration": "16s",
@@ -7942,13 +7853,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "thoi-trang",
-        "name": "Thời trang",
-        "en_name": "Fashion & Style",
-        "icon": "👔",
-        "badge_color": "pink"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -7970,12 +7877,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@alenkabalenka",
         "profile_url": "https://www.instagram.com/alenkabalenka/"
       },
-      "ig_url": "https://www.instagram.com/reel/DaJofHTvQw3/?stkn=MXFxYjh5MGtvaWF6aw==",
+      "ig_url": "https://www.instagram.com/reel/DaJofHTvQw3/",
       "gdrive_folder": "https://drive.google.com/open?id=1f2vxG06uSScrGWIQ8wUZCSis4u3plwGT",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40alenkabalenka_DaJofHTvQw3_1010_would_hit_that_corner_again/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40alenkabalenka_DaJofHTvQw3_1010_would_hit_that_corner_again/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40alenkabalenka_DaJofHTvQw3_1010_would_hit_that_corner_again/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40alenkabalenka_DaJofHTvQw3_1010_would_hit_that_corner_again/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DaJofHTvQw3.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DaJofHTvQw3.mp4",
         "report_url": "reports/IG_@alenkabalenka_DaJofHTvQw3_1010_would_hit_that_corner_again.html",
         "shots_count": 5,
         "duration": "10s",
@@ -8003,13 +7911,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -8031,12 +7935,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@31.ioa",
         "profile_url": "https://www.instagram.com/31.ioa/"
       },
-      "ig_url": "https://www.instagram.com/reel/DcYZMc7Sc49/?stkn=NTNzYnhqY2xldDUw",
+      "ig_url": "https://www.instagram.com/reel/DcYZMc7Sc49/",
       "gdrive_folder": "https://drive.google.com/open?id=1zGqGRyDAPcrgo_sBQlxwyQKhi3-ttG1W",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Sodam_Kim_DcYZMc7Sc49_Video_by_31.ioa/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Sodam_Kim_DcYZMc7Sc49_Video_by_31.ioa/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40Sodam_Kim_DcYZMc7Sc49_Video_by_31.ioa/shot_01_mid.jpg",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40Sodam_Kim_DcYZMc7Sc49_Video_by_31.ioa/shot_03_mid.jpg",
         "video_url": "https://media.fedu.vn/videos/DcYZMc7Sc49.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DcYZMc7Sc49.mp4",
         "report_url": "reports/IG_@Sodam_Kim_DcYZMc7Sc49_Video_by_31.ioa.html",
         "shots_count": 10,
         "duration": "20s",
@@ -8064,13 +7969,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -8092,12 +7993,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@holberrydietitian",
         "profile_url": "https://www.instagram.com/holberrydietitian/"
       },
-      "ig_url": "https://www.instagram.com/reel/DcODbRTu-E1/?stkn=MWxhNjhuZGRlZHBxOQ==",
+      "ig_url": "https://www.instagram.com/reel/DcODbRTu-E1/",
       "gdrive_folder": "https://drive.google.com/open?id=14DzuicpD8Ppi-G99YgIBSmYVtG6VhHF3",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40holberrydietitian_DcODbRTu-E1_sunday_morn_%3D_%F0%9F%A5%96%F0%9F%8D%93%F0%9F%AB%90%F0%9F%8D%AF%E2%98%95%EF%B8%8F/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40holberrydietitian_DcODbRTu-E1_sunday_morn_%3D_%F0%9F%A5%96%F0%9F%8D%93%F0%9F%AB%90%F0%9F%8D%AF%E2%98%95%EF%B8%8F/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40holberrydietitian_DcODbRTu-E1_sunday_morn_%3D_%F0%9F%A5%96%F0%9F%8D%93%F0%9F%AB%90%F0%9F%8D%AF%E2%98%95%EF%B8%8F/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40holberrydietitian_DcODbRTu-E1_sunday_morn_%3D_%F0%9F%A5%96%F0%9F%8D%93%F0%9F%AB%90%F0%9F%8D%AF%E2%98%95%EF%B8%8F/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DcODbRTu-E1.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DcODbRTu-E1.mp4",
         "report_url": "reports/IG_@holberrydietitian_DcODbRTu-E1_sunday_morn_=_🥖🍓🫐🍯☕️.html",
         "shots_count": 33,
         "duration": "66s",
@@ -8125,13 +8027,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -8153,12 +8051,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@rubtsov.a",
         "profile_url": "https://www.instagram.com/rubtsov.a/"
       },
-      "ig_url": "https://www.instagram.com/rubtsov.a/",
+      "ig_url": "https://www.instagram.com/reel/DdkHw7gIXLj/",
       "gdrive_folder": "",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40rubtsov.a_DdkHw7gIXLj_%D0%92_%D0%B1%D0%B8%D0%B1%D0%BB%D0%B8%D0%BE%D1%82%D0%B5%D0%BA%D1%83/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40rubtsov.a_DdkHw7gIXLj_%D0%92_%D0%B1%D0%B8%D0%B1%D0%BB%D0%B8%D0%BE%D1%82%D0%B5%D0%BA%D1%83/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40rubtsov.a_DdkHw7gIXLj_%D0%92_%D0%B1%D0%B8%D0%B1%D0%BB%D0%B8%D0%BE%D1%82%D0%B5%D0%BA%D1%83/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40rubtsov.a_DdkHw7gIXLj_%D0%92_%D0%B1%D0%B8%D0%B1%D0%BB%D0%B8%D0%BE%D1%82%D0%B5%D0%BA%D1%83/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdkHw7gIXLj.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DdkHw7gIXLj.mp4",
         "report_url": "reports/IG_@rubtsov.a_DdkHw7gIXLj_В_библиотеку.html",
         "shots_count": 10,
         "duration": "20s",
@@ -8186,13 +8085,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "📖",
         "badge_color": "amber"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -8217,9 +8112,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DddgEE5R2CW/",
       "gdrive_folder": "https://drive.google.com/open?id=1jHLlwt2VYjylAA_kzJTiiYF_qRlKIdnK",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40starsinmycam_DddgEE5R2CW_i_blink_and_it%E2%80%99s_night_time/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40starsinmycam_DddgEE5R2CW_i_blink_and_it%E2%80%99s_night_time/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40starsinmycam_DddgEE5R2CW_i_blink_and_it%E2%80%99s_night_time/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40starsinmycam_DddgEE5R2CW_i_blink_and_it%E2%80%99s_night_time/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DddgEE5R2CW.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DddgEE5R2CW.mp4",
         "report_url": "reports/IG_@starsinmycam_DddgEE5R2CW_i_blink_and_it’s_night_time.html",
         "shots_count": 14,
         "duration": "28s",
@@ -8247,13 +8143,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -8275,12 +8167,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@loveqinghe",
         "profile_url": "https://www.instagram.com/loveqinghe/"
       },
-      "ig_url": "https://www.instagram.com/reel/DdplzLRytOA/?stkn=Ymt5M3cwZW1meWFr",
+      "ig_url": "https://www.instagram.com/reel/DdplzLRytOA/",
       "gdrive_folder": "https://drive.google.com/open?id=13fPjZdgXQRbuS6b0XBKHXh83prqe7jn3",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Flying_DdplzLRytOA_Video_by_loveqinghe/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Flying_DdplzLRytOA_Video_by_loveqinghe/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40Flying_DdplzLRytOA_Video_by_loveqinghe/shot_01_mid.jpg",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40Flying_DdplzLRytOA_Video_by_loveqinghe/shot_03_mid.jpg",
         "video_url": "https://media.fedu.vn/videos/DdplzLRytOA.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DdplzLRytOA.mp4",
         "report_url": "reports/IG_@Flying_DdplzLRytOA_Video_by_loveqinghe.html",
         "shots_count": 10,
         "duration": "20s",
@@ -8308,13 +8201,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "thoi-trang",
-        "name": "Thời trang",
-        "en_name": "Fashion & Style",
-        "icon": "👔",
-        "badge_color": "pink"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -8336,12 +8225,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@lisha_ho",
         "profile_url": "https://www.instagram.com/lisha_ho/"
       },
-      "ig_url": "https://www.instagram.com/reel/Ddqo7-eTI2A/?stkn=MWI3aWJzbTlyaXRkOQ==",
+      "ig_url": "https://www.instagram.com/reel/Ddqo7-eTI2A/",
       "gdrive_folder": "https://drive.google.com/open?id=173H2_gYQ3Jb3fG2L7QBDsKKW1i9UpoLq",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40lisha_ho_Ddqo7-eTI2A_Wait%E2%80%A6_%40ralphlauren_%2B_coffee_at_KLCC_%F0%9F%91%80/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40lisha_ho_Ddqo7-eTI2A_Wait%E2%80%A6_%40ralphlauren_%2B_coffee_at_KLCC_%F0%9F%91%80/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40lisha_ho_Ddqo7-eTI2A_Wait%E2%80%A6_%40ralphlauren_%2B_coffee_at_KLCC_%F0%9F%91%80/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40lisha_ho_Ddqo7-eTI2A_Wait%E2%80%A6_%40ralphlauren_%2B_coffee_at_KLCC_%F0%9F%91%80/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/Ddqo7-eTI2A.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/Ddqo7-eTI2A.mp4",
         "report_url": "reports/IG_@lisha_ho_Ddqo7-eTI2A_Wait…_@ralphlauren_+_coffee_at_KLCC_👀.html",
         "shots_count": 26,
         "duration": "52s",
@@ -8369,13 +8259,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -8397,12 +8283,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@aangelazunigaa",
         "profile_url": "https://www.instagram.com/aangelazunigaa/"
       },
-      "ig_url": "https://www.instagram.com/reel/DdrBPIwIpg-/?stkn=MWcweWE4azhyaWJhbg==",
+      "ig_url": "https://www.instagram.com/reel/DdrBPIwIpg-/",
       "gdrive_folder": "https://drive.google.com/open?id=1EXCY7mh_1c249E-QyK-S-bNXpvCUi1sb",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40aangelazunigaa_DdrBPIwIpg-_BTS_from_Day_56_of_Capturing_10_Clips_Until_I/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40aangelazunigaa_DdrBPIwIpg-_BTS_from_Day_56_of_Capturing_10_Clips_Until_I/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40aangelazunigaa_DdrBPIwIpg-_BTS_from_Day_56_of_Capturing_10_Clips_Until_I/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40aangelazunigaa_DdrBPIwIpg-_BTS_from_Day_56_of_Capturing_10_Clips_Until_I/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdrBPIwIpg-.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DdrBPIwIpg-.mp4",
         "report_url": "reports/IG_@aangelazunigaa_DdrBPIwIpg-_BTS_from_Day_56_of_Capturing_10_Clips_Until_I.html",
         "shots_count": 8,
         "duration": "16s",
@@ -8424,19 +8311,15 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Bóc tách trọn vẹn 6 phân cảnh mẫu mực trong video Reel của @bysuncan: Nghệ thuật In-Camera Action Match Cut dùng cú đấm trực diện che ống kính (Physical Occlusion Transition) để chuyển cảnh từ phòng làm việc ra đỉnh núi lửa hoang sơ theo...",
       "key_tech": "In-Camera Fist Wipe Match Cut, Momentum Kinetic Transition, Beat-Synced Action, Domestic-to-Epic Contrast, Symmetrical Hero Pose",
       "shooting_style": {
-        "id": "chuyen-canh",
-        "name": "Chuyển Cảnh",
-        "en_name": "Transitions & Flow",
-        "icon": "⚡",
-        "badge_color": "rose"
+        "id": "theo-nhip-nhac",
+        "name": "Theo nhịp nhạc",
+        "en_name": "Music Beat & Rhythm",
+        "icon": "🎵",
+        "badge_color": "purple"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -8458,12 +8341,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@bysuncan",
         "profile_url": "https://www.instagram.com/bysuncan/"
       },
-      "ig_url": "https://www.instagram.com/reel/DcvZ-FowD_A/?stkn=Ynd6aGE0bzBtZTF3",
+      "ig_url": "https://www.instagram.com/reel/DcvZ-FowD_A/",
       "gdrive_folder": "https://drive.google.com/open?id=1MuKg5h7d2w-hbxyV3ldPnKYBtjOJeVIn",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DcvZ-FowD_A.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40bysuncan_DcvZ-FowD_A_Smooth_Criminal_Punch_Transition_Travel/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1y3zSD0GyixX_DnPy8JuDPAjo0UfdpeiV&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1y3zSD0GyixX_DnPy8JuDPAjo0UfdpeiV&export=download",
         "report_url": "reports/Smooth Criminal Punch Transition Travel - @bysuncan.html",
         "shots_count": 6,
         "duration": "17.00s",
@@ -8491,13 +8375,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -8519,12 +8399,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@adz.mov",
         "profile_url": "https://www.instagram.com/adz.mov/"
       },
-      "ig_url": "https://www.instagram.com/reel/DdGQQL-ih_O/?stkn=MXhxM3lzcnZrbjI1ZA==",
+      "ig_url": "https://www.instagram.com/reel/DdGQQL-ih_O/",
       "gdrive_folder": "https://drive.google.com/open?id=1VKWWYnGNESEaygN1xFyg1tFjIwpk0fEO",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40adz.mov_DdGQQL-ih_O_the_land_of_smiles_%F0%9F%87%B9%F0%9F%87%AD_#thailand_#cinematograp/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40adz.mov_DdGQQL-ih_O_the_land_of_smiles_%F0%9F%87%B9%F0%9F%87%AD_#thailand_#cinematograp/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40adz.mov_DdGQQL-ih_O_the_land_of_smiles_%F0%9F%87%B9%F0%9F%87%AD_%23thailand_%23cinematograp/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40adz.mov_DdGQQL-ih_O_the_land_of_smiles_%F0%9F%87%B9%F0%9F%87%AD_%23thailand_%23cinematograp/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdGQQL-ih_O.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DdGQQL-ih_O.mp4",
         "report_url": "reports/IG_@adz.mov_DdGQQL-ih_O_the_land_of_smiles_🇹🇭_#thailand_#cinematograp.html",
         "shots_count": 17,
         "duration": "34s",
@@ -8552,13 +8433,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "spa-lam-dep",
-        "name": "Làm đẹp",
-        "en_name": "Beauty & Spa",
-        "icon": "💆",
-        "badge_color": "rose"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "india",
         "name": "Ấn Độ",
@@ -8583,9 +8460,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdpxcaOMaQS/",
       "gdrive_folder": "https://drive.google.com/open?id=16isg21uNDnExzovsvh21ie3i2CJgU4D6",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40iamaayushswamy_DdpxcaOMaQS_caption_placement/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40iamaayushswamy_DdpxcaOMaQS_caption_placement/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40iamaayushswamy_DdpxcaOMaQS_caption_placement/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40iamaayushswamy_DdpxcaOMaQS_caption_placement/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdpxcaOMaQS.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DdpxcaOMaQS.mp4",
         "report_url": "reports/IG_@iamaayushswamy_DdpxcaOMaQS_caption_placement.html",
         "shots_count": 11,
         "duration": "22s",
@@ -8613,13 +8491,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -8644,9 +8518,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/Dc-d8hKRMQm/",
       "gdrive_folder": "https://drive.google.com/open?id=1RywY47h3XGUj7Jm-QuXorTNz1xgNCykp",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40jxnjuvv_Dc-d8hKRMQm_A_city_full_of_joy_everywhere_I_go_%E2%99%A5%EF%B8%8F/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40jxnjuvv_Dc-d8hKRMQm_A_city_full_of_joy_everywhere_I_go_%E2%99%A5%EF%B8%8F/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40jxnjuvv_Dc-d8hKRMQm_A_city_full_of_joy_everywhere_I_go_%E2%99%A5%EF%B8%8F/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40jxnjuvv_Dc-d8hKRMQm_A_city_full_of_joy_everywhere_I_go_%E2%99%A5%EF%B8%8F/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/Dc-d8hKRMQm.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/Dc-d8hKRMQm.mp4",
         "report_url": "reports/IG_@jxnjuvv_Dc-d8hKRMQm_A_city_full_of_joy_everywhere_I_go_♥️.html",
         "shots_count": 17,
         "duration": "34s",
@@ -8674,13 +8549,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -8705,9 +8576,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdoYrPsy9g-/",
       "gdrive_folder": "https://drive.google.com/open?id=11A-_2ispdj1ZnybNBJ6sAPh5XqIoZF-4",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40acupper_DdoYrPsy9g-_hello_is_konnichiwa/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40acupper_DdoYrPsy9g-_hello_is_konnichiwa/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40acupper_DdoYrPsy9g-_hello_is_konnichiwa/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40acupper_DdoYrPsy9g-_hello_is_konnichiwa/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdoYrPsy9g-.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DdoYrPsy9g-.mp4",
         "report_url": "reports/IG_@acupper_DdoYrPsy9g-_hello_is_konnichiwa.html",
         "shots_count": 18,
         "duration": "36s",
@@ -8735,13 +8607,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -8766,9 +8634,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdoWrpERdvD/",
       "gdrive_folder": "https://drive.google.com/open?id=1rO12yj-J-PJ9dovhucnms7wAZeF5HIqU",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mylenesmind_DdoWrpERdvD_can_you_guess_the_theme_%F0%9F%91%80/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mylenesmind_DdoWrpERdvD_can_you_guess_the_theme_%F0%9F%91%80/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40mylenesmind_DdoWrpERdvD_can_you_guess_the_theme_%F0%9F%91%80/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40mylenesmind_DdoWrpERdvD_can_you_guess_the_theme_%F0%9F%91%80/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdoWrpERdvD.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DdoWrpERdvD.mp4",
         "report_url": "reports/IG_@mylenesmind_DdoWrpERdvD_can_you_guess_the_theme_👀.html",
         "shots_count": 18,
         "duration": "36s",
@@ -8785,7 +8654,7 @@ var FEDU_IDEAS_DATABASE = {
     },
     {
       "id": "IG_@yongandmike_DdolqWHEsws_Carousel_Analysis",
-      "shortcode": "DdolzhBkiLA",
+      "shortcode": "DdolqWHEsws_Carousel_Analysis",
       "title_vi": "BỐ CỤC ĐIỆN ẢNH NGHỈ DƯỠNG: CÔNG THỨC 10 PHÂN CẢNH CAROUSEL DU LỊCH ĐA TẦNG CỦA YONG &amp; MIKE (CHIANG RAI)",
       "quick_takeaway": "Bóc tách chi tiết\n                Lưới ảnh (10)",
       "key_tech": "Establishing Hook Shot • Medium Tracking Shot • Close-Up / Macro Detail Shot • Low-key Lighting",
@@ -8796,13 +8665,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "du-lich",
-        "name": "Du lịch",
-        "en_name": "Travel & Culture",
-        "icon": "✈️",
-        "badge_color": "sky"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -8824,12 +8689,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@yongandmike",
         "profile_url": "https://www.instagram.com/yongandmike/"
       },
-      "ig_url": "https://www.instagram.com/p/DdolzhBkiLA/",
+      "ig_url": "https://www.instagram.com/yongandmike/",
       "gdrive_folder": "https://drive.google.com/open?id=1NtzhI2ky7qXfw7rUx15vALfaCxGnyKKv",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40yongandmike_DdolqWHEsws_Carousel_Analysis/slide_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40yongandmike_DdolqWHEsws_Carousel_Analysis/slide_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/carousel_slides/IG_%40yongandmike_DdolqWHEsws_Carousel_Analysis/slide_01.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40yongandmike_DdolqWHEsws_Carousel_Analysis/slide_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40yongandmike_DdolqWHEsws_Carousel_Analysis/slide_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1OdaG7XZYuiDZHiQBJFjv_2UGX72heP3c&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1OdaG7XZYuiDZHiQBJFjv_2UGX72heP3c&export=download",
         "report_url": "reports/IG_@yongandmike_DdolqWHEsws_Carousel_Analysis.html",
         "shots_count": 10,
         "duration": "20s",
@@ -8857,13 +8723,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "japan",
         "name": "Nhật Bản",
@@ -8888,9 +8750,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdpIITJKrmR/",
       "gdrive_folder": "https://drive.google.com/open?id=1cF57zbVIVagOUg77YE_I4WuhjojWi3qH",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._%F0%9F%87%AF%F0%9F%87%B5/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._%F0%9F%87%AF%F0%9F%87%B5/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._%F0%9F%87%AF%F0%9F%87%B5/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._%F0%9F%87%AF%F0%9F%87%B5/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdpIITJKrmR.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DdpIITJKrmR.mp4",
         "report_url": "reports/IG_@filmwithred_DdpIITJKrmR_An_escape_from_the_noise_of_Tokyo._🇯🇵.html",
         "shots_count": 25,
         "duration": "50s",
@@ -8918,13 +8781,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -8949,9 +8808,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/Ddj6wlTxAAJ/",
       "gdrive_folder": "https://drive.google.com/open?id=1VY54zEq1qtEnDTwc_dLiZev9WOe2Adcr",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40laylaa_398_Ddj6wlTxAAJ_%E2%99%A5%EF%B8%8F/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40laylaa_398_Ddj6wlTxAAJ_%E2%99%A5%EF%B8%8F/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40laylaa_398_Ddj6wlTxAAJ_%E2%99%A5%EF%B8%8F/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40laylaa_398_Ddj6wlTxAAJ_%E2%99%A5%EF%B8%8F/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/Ddj6wlTxAAJ.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/Ddj6wlTxAAJ.mp4",
         "report_url": "reports/IG_@laylaa_398_Ddj6wlTxAAJ_♥️.html",
         "shots_count": 21,
         "duration": "42s",
@@ -8979,13 +8839,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "korea",
         "name": "Hàn Quốc",
@@ -9010,9 +8866,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdlmZczPsCE/",
       "gdrive_folder": "https://drive.google.com/open?id=1cBNVTDKPkVxlbKpHBZYiKnQDN-qsbSlX",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40hena_film_vlog_DdlmZczPsCE_%ED%98%BC%EC%9E%90_%EB%A7%8C%EB%93%9C%EB%8A%94%EB%8D%B0_%EC%B4%AC%EC%98%81%EC%9D%80_%EB%88%84%EA%B0%80_%ED%95%98%EB%83%90%EA%B3%A0%EC%9A%94%F0%9F%A4%B7%F0%9F%8F%BB%E2%80%8D%E2%99%80%EF%B8%8F_%EC%A0%9C%ED%92%88%EC%A0%9C%EA%B3%B5/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40hena_film_vlog_DdlmZczPsCE_%ED%98%BC%EC%9E%90_%EB%A7%8C%EB%93%9C%EB%8A%94%EB%8D%B0_%EC%B4%AC%EC%98%81%EC%9D%80_%EB%88%84%EA%B0%80_%ED%95%98%EB%83%90%EA%B3%A0%EC%9A%94%F0%9F%A4%B7%F0%9F%8F%BB%E2%80%8D%E2%99%80%EF%B8%8F_%EC%A0%9C%ED%92%88%EC%A0%9C%EA%B3%B5/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DdlmZczPsCE_%ED%98%BC%EC%9E%90_%EB%A7%8C%EB%93%9C%EB%8A%94%EB%8D%B0_%EC%B4%AC%EC%98%81%EC%9D%80_%EB%88%84%EA%B0%80_%ED%95%98%EB%83%90%EA%B3%A0%EC%9A%94%F0%9F%A4%B7%F0%9F%8F%BB%E2%80%8D%E2%99%80%EF%B8%8F_%EC%A0%9C%ED%92%88%EC%A0%9C%EA%B3%B5/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DdlmZczPsCE_%ED%98%BC%EC%9E%90_%EB%A7%8C%EB%93%9C%EB%8A%94%EB%8D%B0_%EC%B4%AC%EC%98%81%EC%9D%80_%EB%88%84%EA%B0%80_%ED%95%98%EB%83%90%EA%B3%A0%EC%9A%94%F0%9F%A4%B7%F0%9F%8F%BB%E2%80%8D%E2%99%80%EF%B8%8F_%EC%A0%9C%ED%92%88%EC%A0%9C%EA%B3%B5/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdlmZczPsCE.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DdlmZczPsCE.mp4",
         "report_url": "reports/IG_@hena_film_vlog_DdlmZczPsCE_혼자_만드는데_촬영은_누가_하냐고요🤷🏻‍♀️_제품제공.html",
         "shots_count": 23,
         "duration": "46s",
@@ -9030,7 +8887,7 @@ var FEDU_IDEAS_DATABASE = {
     {
       "id": "IG_@jigummmmm_DdnqexOTN8A_설거지하는_모습도_예쁘게_찍을_수_있냐고요",
       "shortcode": "DdnqexOTN8A",
-      "title_vi": "설거지하는 모습도 예쁘게 찍을 수 있냐고요",
+      "title_vi": "Nghệ Thuật Băm Nhỏ Chuyển Động (Micro-Actions) & ASMR B-Roll Đời Thường",
       "quick_takeaway": "Báo cáo phân tích chuyên sâu ngôn ngữ điện ảnh, ánh sáng, góc máy và nhịp dựng 10 phân cảnh.",
       "key_tech": "Establishing Hook Shot • Close-Up / Macro Detail Shot • Medium Tracking Shot • Low-key Lighting",
       "shooting_style": {
@@ -9040,13 +8897,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -9071,9 +8924,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdnqexOTN8A/",
       "gdrive_folder": "https://drive.google.com/open?id=1CH_r7zVJ6gwta51c8ia6nOJ6LUgu0GfO",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40jigummmmm_DdnqexOTN8A_%EC%84%A4%EA%B1%B0%EC%A7%80%ED%95%98%EB%8A%94_%EB%AA%A8%EC%8A%B5%EB%8F%84_%EC%98%88%EC%81%98%EA%B2%8C_%EC%B0%8D%EC%9D%84_%EC%88%98_%EC%9E%88%EB%83%90%EA%B3%A0%EC%9A%94/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40jigummmmm_DdnqexOTN8A_%EC%84%A4%EA%B1%B0%EC%A7%80%ED%95%98%EB%8A%94_%EB%AA%A8%EC%8A%B5%EB%8F%84_%EC%98%88%EC%81%98%EA%B2%8C_%EC%B0%8D%EC%9D%84_%EC%88%98_%EC%9E%88%EB%83%90%EA%B3%A0%EC%9A%94/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40jigummmmm_DdnqexOTN8A_%EC%84%A4%EA%B1%B0%EC%A7%80%ED%95%98%EB%8A%94_%EB%AA%A8%EC%8A%B5%EB%8F%84_%EC%98%88%EC%81%98%EA%B2%8C_%EC%B0%8D%EC%9D%84_%EC%88%98_%EC%9E%88%EB%83%90%EA%B3%A0%EC%9A%94/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40jigummmmm_DdnqexOTN8A_%EC%84%A4%EA%B1%B0%EC%A7%80%ED%95%98%EB%8A%94_%EB%AA%A8%EC%8A%B5%EB%8F%84_%EC%98%88%EC%81%98%EA%B2%8C_%EC%B0%8D%EC%9D%84_%EC%88%98_%EC%9E%88%EB%83%90%EA%B3%A0%EC%9A%94/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdnqexOTN8A.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DdnqexOTN8A.mp4",
         "report_url": "reports/IG_@jigummmmm_DdnqexOTN8A_설거지하는_모습도_예쁘게_찍을_수_있냐고요.html",
         "shots_count": 10,
         "duration": "20s",
@@ -9101,13 +8955,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -9132,9 +8982,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdpZ0RvhwXu/",
       "gdrive_folder": "https://drive.google.com/open?id=1265iDt_n4n25KqIrRQiWIdU-nBAFrlfZ",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40dopeitsdamo_DdpZ0RvhwXu_Art_of_Static_Shots_%F0%9F%8E%A5/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40dopeitsdamo_DdpZ0RvhwXu_Art_of_Static_Shots_%F0%9F%8E%A5/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40dopeitsdamo_DdpZ0RvhwXu_Art_of_Static_Shots_%F0%9F%8E%A5/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40dopeitsdamo_DdpZ0RvhwXu_Art_of_Static_Shots_%F0%9F%8E%A5/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdpZ0RvhwXu.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DdpZ0RvhwXu.mp4",
         "report_url": "reports/IG_@dopeitsdamo_DdpZ0RvhwXu_Art_of_Static_Shots_🎥.html",
         "shots_count": 6,
         "duration": "12s",
@@ -9162,13 +9013,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -9193,9 +9040,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdoooYmq-cd/",
       "gdrive_folder": "https://drive.google.com/open?id=1W18YrkZwvxirTC_zyeVWOHDyvSWfJzKu",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40etaemin_DdoooYmq-cd_Get_ready_for_the_shoot/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40etaemin_DdoooYmq-cd_Get_ready_for_the_shoot/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40etaemin_DdoooYmq-cd_Get_ready_for_the_shoot/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40etaemin_DdoooYmq-cd_Get_ready_for_the_shoot/shot_01_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdoooYmq-cd.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DdoooYmq-cd.mp4",
         "report_url": "reports/IG_@etaemin_DdoooYmq-cd_Get_ready_for_the_shoot.html",
         "shots_count": 1,
         "duration": "2s",
@@ -9212,7 +9060,7 @@ var FEDU_IDEAS_DATABASE = {
     },
     {
       "id": "IG_@davidmurphyfilm_Ddo3aQxjMeq_Carousel_Analysis",
-      "shortcode": "Ddo3h4YDGFv",
+      "shortcode": "Ddo3aQxjMeq_Carousel_Analysis",
       "title_vi": "Carousel Analysis",
       "quick_takeaway": "Báo cáo phân tích chuyên sâu ngôn ngữ điện ảnh, ánh sáng, góc máy và nhịp dựng 11 phân cảnh.",
       "key_tech": "Establishing Hook Shot • Close-Up / Macro Detail Shot • Low-key Lighting • Medium Tracking Shot",
@@ -9223,13 +9071,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -9251,12 +9095,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@davidmurphyfilm",
         "profile_url": "https://www.instagram.com/davidmurphyfilm/"
       },
-      "ig_url": "https://www.instagram.com/p/Ddo3h4YDGFv/",
+      "ig_url": "https://www.instagram.com/davidmurphyfilm/",
       "gdrive_folder": "https://drive.google.com/open?id=1oyvXqkBFmADg382K5xr5RIlrD03DPTFT",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40davidmurphyfilm_Ddo3aQxjMeq_Carousel_Analysis/slide_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40davidmurphyfilm_Ddo3aQxjMeq_Carousel_Analysis/slide_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/carousel_slides/IG_%40davidmurphyfilm_Ddo3aQxjMeq_Carousel_Analysis/slide_01.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40davidmurphyfilm_Ddo3aQxjMeq_Carousel_Analysis/slide_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40davidmurphyfilm_Ddo3aQxjMeq_Carousel_Analysis/slide_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1OdaG7XZYuiDZHiQBJFjv_2UGX72heP3c&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1OdaG7XZYuiDZHiQBJFjv_2UGX72heP3c&export=download",
         "report_url": "reports/IG_@davidmurphyfilm_Ddo3aQxjMeq_Carousel_Analysis.html",
         "shots_count": 11,
         "duration": "22s",
@@ -9284,13 +9129,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -9315,9 +9156,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/Ddo-TSWMZpG/",
       "gdrive_folder": "https://drive.google.com/open?id=1xSm9N6e0gF6gcGmMxKf80K1qurSAwJXm",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40joshdiazfilms_Ddo-TSWMZpG_Video_by_joshdiazfilms/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40joshdiazfilms_Ddo-TSWMZpG_Video_by_joshdiazfilms/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40joshdiazfilms_Ddo-TSWMZpG_Video_by_joshdiazfilms/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40joshdiazfilms_Ddo-TSWMZpG_Video_by_joshdiazfilms/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/Ddo-TSWMZpG.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/Ddo-TSWMZpG.mp4",
         "report_url": "reports/IG_@joshdiazfilms_Ddo-TSWMZpG_Video_by_joshdiazfilms.html",
         "shots_count": 15,
         "duration": "30s",
@@ -9345,13 +9187,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -9376,9 +9214,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/Dap0s2RhySa/",
       "gdrive_folder": "https://drive.google.com/open?id=127YaHjxy_jWKLU8lu486KFqQDziCpugs",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40yifan.liii_Dap0s2RhySa_summer_in_florence_%F0%9F%A4%8D/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40yifan.liii_Dap0s2RhySa_summer_in_florence_%F0%9F%A4%8D/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40yifan.liii_Dap0s2RhySa_summer_in_florence_%F0%9F%A4%8D/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40yifan.liii_Dap0s2RhySa_summer_in_florence_%F0%9F%A4%8D/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/Dap0s2RhySa.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/Dap0s2RhySa.mp4",
         "report_url": "reports/IG_@yifan.liii_Dap0s2RhySa_summer_in_florence_🤍.html",
         "shots_count": 7,
         "duration": "14s",
@@ -9406,13 +9245,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -9434,12 +9269,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@la6vish",
         "profile_url": "https://www.instagram.com/la6vish/"
       },
-      "ig_url": "https://www.instagram.com/reel/DakwX2NBYs1/?utm_source=ig_web_copy_link&stkn=NTc4MTIwNjQ2YQ==",
+      "ig_url": "https://www.instagram.com/reel/DakwX2NBYs1/",
       "gdrive_folder": "https://drive.google.com/open?id=12LdyqY0SY26_mVx1gXWyix5oh79qB_Il",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40la6vish_DakwX2NBYs1_Fukuoka_%F0%9F%87%AF%F0%9F%87%B5/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40la6vish_DakwX2NBYs1_Fukuoka_%F0%9F%87%AF%F0%9F%87%B5/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40la6vish_DakwX2NBYs1_Fukuoka_%F0%9F%87%AF%F0%9F%87%B5/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40la6vish_DakwX2NBYs1_Fukuoka_%F0%9F%87%AF%F0%9F%87%B5/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DakwX2NBYs1.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DakwX2NBYs1.mp4",
         "report_url": "reports/IG_@la6vish_DakwX2NBYs1_Fukuoka_🇯🇵.html",
         "shots_count": 3,
         "duration": "6s",
@@ -9467,13 +9303,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -9495,12 +9327,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@ulanzi",
         "profile_url": "https://www.instagram.com/ulanzi/"
       },
-      "ig_url": "https://s.lazada.vn/s.oUVbZ?c=w",
+      "ig_url": "https://www.instagram.com/ulanzi/",
       "gdrive_folder": "https://drive.google.com/open?id=1QoeN5j8ikkZ9C1ck0JCoMKxzjo6G95uE",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40ulanzi_oUVbZ_Magnetic_Phone_Tripod_Desktop_Stand/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40ulanzi_oUVbZ_Magnetic_Phone_Tripod_Desktop_Stand/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40ulanzi_oUVbZ_Magnetic_Phone_Tripod_Desktop_Stand/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40ulanzi_oUVbZ_Magnetic_Phone_Tripod_Desktop_Stand/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/oUVbZ.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/oUVbZ.mp4",
         "report_url": "reports/IG_@ulanzi_oUVbZ_Magnetic_Phone_Tripod_Desktop_Stand.html",
         "shots_count": 19,
         "duration": "38s",
@@ -9522,19 +9355,15 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Báo cáo phân tích chuyên sâu ngôn ngữ điện ảnh, ánh sáng, góc máy và nhịp dựng 12 phân cảnh.",
       "key_tech": "Auto-Deploy Quadpod • Cold Shoe Mount • Bluetooth Remote • 1.52m Extension • Micro-Beat Pacing",
       "shooting_style": {
-        "id": "dien-anh",
-        "name": "Chỉn Chu",
-        "en_name": "Cinematic Mastery",
-        "icon": "🎬",
-        "badge_color": "sky"
+        "id": "theo-nhip-nhac",
+        "name": "Theo nhịp nhạc",
+        "en_name": "Music Beat & Rhythm",
+        "icon": "🎵",
+        "badge_color": "purple"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -9556,12 +9385,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@ulanzi",
         "profile_url": "https://www.instagram.com/ulanzi/"
       },
-      "ig_url": "https://s.lazada.vn/s.oUV0c?c=w",
+      "ig_url": "https://www.instagram.com/ulanzi/",
       "gdrive_folder": "https://drive.google.com/open?id=1mhJx7U0sFLrfkwJVYQO7k5OpssUzTsn-",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40ulanzi_oUV0c_MT86_Auto-Deploy_Tripod_%26_Selfie_Stick%2C_1.52m/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40ulanzi_oUV0c_MT86_Auto-Deploy_Tripod_%26_Selfie_Stick%2C_1.52m/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40ulanzi_oUV0c_MT86_Auto-Deploy_Tripod_%26_Selfie_Stick%2C_1.52m/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40ulanzi_oUV0c_MT86_Auto-Deploy_Tripod_%26_Selfie_Stick%2C_1.52m/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/oUV0c.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/oUV0c.mp4",
         "report_url": "reports/IG_@ulanzi_oUV0c_MT86_Auto-Deploy_Tripod_&_Selfie_Stick,_1.52m.html",
         "shots_count": 12,
         "duration": "24s",
@@ -9589,13 +9419,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -9617,12 +9443,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@ulanzi",
         "profile_url": "https://www.instagram.com/ulanzi/"
       },
-      "ig_url": "https://s.lazada.vn/s.oU2Dk?c=s",
+      "ig_url": "https://www.instagram.com/ulanzi/",
       "gdrive_folder": "https://drive.google.com/open?id=1RgH7Nkpid8CWVfmCfA_Rqqj4J_CHlge9",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40ulanzi_lazada_Easy_Open_Portable_Aluminum_Trigopod/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40ulanzi_lazada_Easy_Open_Portable_Aluminum_Trigopod/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40ulanzi_lazada_Easy_Open_Portable_Aluminum_Trigopod/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40ulanzi_lazada_Easy_Open_Portable_Aluminum_Trigopod/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/lazada.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/lazada.mp4",
         "report_url": "reports/IG_@ulanzi_lazada_Easy_Open_Portable_Aluminum_Trigopod.html",
         "shots_count": 15,
         "duration": "30s",
@@ -9650,13 +9477,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -9678,12 +9501,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@ulanzi",
         "profile_url": "https://www.instagram.com/ulanzi/"
       },
-      "ig_url": "https://s.lazada.vn/s.oU2DB?c=w",
+      "ig_url": "https://www.instagram.com/ulanzi/",
       "gdrive_folder": "https://drive.google.com/open?id=1Ia3LKZR9RsVtadzPHnNZvkAYVz2P-Qh4",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40ulanzi_oU2DB_Quick_Release_Folding_L_Bracket_and_Plate_Cam/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40ulanzi_oU2DB_Quick_Release_Folding_L_Bracket_and_Plate_Cam/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40ulanzi_oU2DB_Quick_Release_Folding_L_Bracket_and_Plate_Cam/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40ulanzi_oU2DB_Quick_Release_Folding_L_Bracket_and_Plate_Cam/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/ulanzi_oU2DB.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/ulanzi_oU2DB.mp4",
         "report_url": "reports/IG_@ulanzi_oU2DB_Quick_Release_Folding_L_Bracket_and_Plate_Cam.html",
         "shots_count": 1,
         "duration": "2s",
@@ -9711,13 +9535,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "korea",
         "name": "Hàn Quốc",
@@ -9739,12 +9559,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@german991020",
         "profile_url": "https://www.instagram.com/german991020/"
       },
-      "ig_url": "https://www.instagram.com/reel/DdnXgxUyok1/?utm_source=ig_web_copy_link&stkn=NTc4MTIwNjQ2YQ==",
+      "ig_url": "https://www.instagram.com/reel/DdnXgxUyok1/",
       "gdrive_folder": "https://drive.google.com/open?id=1Sq5tKwyS6UMOGGb7TjvpL7C0kI91dDjp",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40german991020_DdnXgxUyok1_South_Korea_stills_-_Final_Series/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40german991020_DdnXgxUyok1_South_Korea_stills_-_Final_Series/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40german991020_DdnXgxUyok1_South_Korea_stills_-_Final_Series/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40german991020_DdnXgxUyok1_South_Korea_stills_-_Final_Series/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdnXgxUyok1.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DdnXgxUyok1.mp4",
         "report_url": "reports/IG_@german991020_DdnXgxUyok1_South_Korea_stills_-_Final_Series.html",
         "shots_count": 29,
         "duration": "58s",
@@ -9772,13 +9593,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -9800,12 +9617,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@maxryman",
         "profile_url": "https://www.instagram.com/maxryman/"
       },
-      "ig_url": "https://www.instagram.com/reel/DdlVIp9S9zv/?stkn=MWQ1NGtnaHRzdDZocw==",
+      "ig_url": "https://www.instagram.com/reel/DdlVIp9S9zv/",
       "gdrive_folder": "https://drive.google.com/open?id=192K5ZToaZSIbmAlMJk3yBQWJALTmjl32",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40maxryman_DdlVIp9S9zv_day_in_the_life_%E2%98%95%EF%B8%8F/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40maxryman_DdlVIp9S9zv_day_in_the_life_%E2%98%95%EF%B8%8F/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40maxryman_DdlVIp9S9zv_day_in_the_life_%E2%98%95%EF%B8%8F/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40maxryman_DdlVIp9S9zv_day_in_the_life_%E2%98%95%EF%B8%8F/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdlVIp9S9zv.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DdlVIp9S9zv.mp4",
         "report_url": "reports/IG_@maxryman_DdlVIp9S9zv_day_in_the_life_☕️.html",
         "shots_count": 17,
         "duration": "34s",
@@ -9822,9 +9640,9 @@ var FEDU_IDEAS_DATABASE = {
     },
     {
       "id": "IG_@mcjacoub_Ddlh5pagYie_Carousel_Analysis",
-      "shortcode": "DdllA9dAfBt",
+      "shortcode": "Ddlh5pagYie_Carousel_Analysis",
       "title_vi": "5 film techniques yang menurut gue worth bang",
-      "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+      "quick_takeaway": "Báo cáo phân tích chuyên sâu ngôn ngữ điện ảnh, ánh sáng, góc máy và nhịp dựng 7 phân cảnh.",
       "key_tech": "Establishing Hook Shot • Low-key Lighting • Close-Up / Macro Detail Shot • Medium Tracking Shot",
       "shooting_style": {
         "id": "dien-anh",
@@ -9833,13 +9651,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -9861,12 +9675,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@mcjacoub",
         "profile_url": "https://www.instagram.com/mcjacoub/"
       },
-      "ig_url": "https://www.instagram.com/p/DdllA9dAfBt/",
+      "ig_url": "https://www.instagram.com/mcjacoub/",
       "gdrive_folder": "https://drive.google.com/open?id=1NYPJnPfl1XDYsQyub0HGUq-lQMv5EjIW",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mcjacoub_Ddlh5pagYie_Carousel_Analysis/slide_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mcjacoub_Ddlh5pagYie_Carousel_Analysis/slide_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/carousel_slides/IG_%40mcjacoub_Ddlh5pagYie_Carousel_Analysis/slide_01.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40mcjacoub_Ddlh5pagYie_Carousel_Analysis/slide_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40mcjacoub_Ddlh5pagYie_Carousel_Analysis/slide_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1OdaG7XZYuiDZHiQBJFjv_2UGX72heP3c&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1OdaG7XZYuiDZHiQBJFjv_2UGX72heP3c&export=download",
         "report_url": "reports/IG_@mcjacoub_Ddlh5pagYie_Carousel_Analysis.html",
         "shots_count": 7,
         "duration": "14s",
@@ -9894,13 +9709,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "📖",
         "badge_color": "amber"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -9922,12 +9733,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@EcomBrand",
         "profile_url": "https://www.instagram.com/EcomBrand/"
       },
-      "ig_url": "https://www.lazada.vn//products/i13340911294-s116601459985.html?spm=a2o42.cart.0.0.358c6f2692mkhg&urlFlag=true&tradePath=%2CcartPriceDrop%2Ccart",
+      "ig_url": "https://www.instagram.com/reel/ECOM_Ulanzi/",
       "gdrive_folder": "https://drive.google.com/open?id=13TlqCDe1yswRqKF3yVF6CP91t6kEmmlI",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40EcomBrand_ECOM_Ulanzi_Ulanzi/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40EcomBrand_ECOM_Ulanzi_Ulanzi/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40EcomBrand_ECOM_Ulanzi_Ulanzi/shot_01_mid.jpg",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40EcomBrand_ECOM_Ulanzi_Ulanzi/shot_03_mid.jpg",
         "video_url": "https://media.fedu.vn/videos/ECOM_Ulanzi.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/ECOM_Ulanzi.mp4",
         "report_url": "reports/IG_@EcomBrand_ECOM_Ulanzi_Ulanzi.html",
         "shots_count": 16,
         "duration": "32s",
@@ -9955,13 +9767,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "am-thuc",
-        "name": "F&B",
-        "en_name": "Food & Beverage",
-        "icon": "🍜",
-        "badge_color": "amber"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -9983,12 +9791,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@mario.prawira",
         "profile_url": "https://www.instagram.com/mario.prawira/"
       },
-      "ig_url": "https://www.instagram.com/reel/DcgEuvwx47P/?stkn=Mno5azhnM3l2amp6",
+      "ig_url": "https://www.instagram.com/reel/DcgEuvwx47P/",
       "gdrive_folder": "https://drive.google.com/open?id=1179_EAbMzoN3AwtT6rP9fOwKUoBNdTTv",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mario.prawira_DcgEuvwx47P_How_to_do_a_before_after_with_a_prop_and_your/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mario.prawira_DcgEuvwx47P_How_to_do_a_before_after_with_a_prop_and_your/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40mario.prawira_DcgEuvwx47P_How_to_do_a_before_after_with_a_prop_and_your/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40mario.prawira_DcgEuvwx47P_How_to_do_a_before_after_with_a_prop_and_your/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DcgEuvwx47P.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DcgEuvwx47P.mp4",
         "report_url": "reports/IG_@mario.prawira_DcgEuvwx47P_How_to_do_a_before_after_with_a_prop_and_your.html",
         "shots_count": 18,
         "duration": "36s",
@@ -10016,13 +9825,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -10044,12 +9849,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@mario.prawira",
         "profile_url": "https://www.instagram.com/mario.prawira/"
       },
-      "ig_url": "https://www.instagram.com/reel/Ddga_xPq9fE/?stkn=bDFocWJrYzRmZ3R4",
+      "ig_url": "https://www.instagram.com/reel/Ddga_xPq9fE/",
       "gdrive_folder": "https://drive.google.com/open?id=17t3eUlVsggq04CFo2XnoxINYrbDcDY3C",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mario.prawira_Ddga_xPq9fE_Jutsu_Transition_Shisha_Version/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mario.prawira_Ddga_xPq9fE_Jutsu_Transition_Shisha_Version/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40mario.prawira_Ddga_xPq9fE_Jutsu_Transition_Shisha_Version/shot_01_mid.jpg",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40mario.prawira_Ddga_xPq9fE_Jutsu_Transition_Shisha_Version/shot_03_mid.jpg",
         "video_url": "https://media.fedu.vn/videos/Ddga_xPq9fE.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/Ddga_xPq9fE.mp4",
         "report_url": "reports/IG_@mario.prawira_Ddga_xPq9fE_Jutsu_Transition_Shisha_Version.html",
         "shots_count": 3,
         "duration": "6s",
@@ -10077,13 +9883,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -10105,12 +9907,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@mario.prawira",
         "profile_url": "https://www.instagram.com/mario.prawira/"
       },
-      "ig_url": "https://www.instagram.com/reel/DdXdf-aBCMu/?stkn=MWVibnk2b3F6bGYwaw==",
+      "ig_url": "https://www.instagram.com/reel/DdXdf-aBCMu/",
       "gdrive_folder": "https://drive.google.com/open?id=1-9gi_IIJzlG2aNDnJ5YT-dlqdQmDc-Bv",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mario.prawira_DdXdf-aBCMu_How_to_film_your_solo_travels_in_a_hotel_room/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mario.prawira_DdXdf-aBCMu_How_to_film_your_solo_travels_in_a_hotel_room/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40mario.prawira_DdXdf-aBCMu_How_to_film_your_solo_travels_in_a_hotel_room/shot_01_mid.jpg",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40mario.prawira_DdXdf-aBCMu_How_to_film_your_solo_travels_in_a_hotel_room/shot_03_mid.jpg",
         "video_url": "https://media.fedu.vn/videos/DdXdf-aBCMu.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DdXdf-aBCMu.mp4",
         "report_url": "reports/IG_@mario.prawira_DdXdf-aBCMu_How_to_film_your_solo_travels_in_a_hotel_room.html",
         "shots_count": 20,
         "duration": "40s",
@@ -10138,13 +9941,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "thoi-trang",
-        "name": "Thời trang",
-        "en_name": "Fashion & Style",
-        "icon": "👔",
-        "badge_color": "pink"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -10166,12 +9965,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@pau.liine",
         "profile_url": "https://www.instagram.com/pau.liine/"
       },
-      "ig_url": "https://www.instagram.com/reel/DdlWfRSMioH/?stkn=dXN2ZGJtdXduamQ4",
+      "ig_url": "https://www.instagram.com/reel/DdlWfRSMioH/",
       "gdrive_folder": "https://drive.google.com/open?id=1Wl29ZNaQVd-t8wMBakkcrfsJ8mG4Nd4Z",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40pauline_%ED%8F%B4%EB%A6%B0_%E1%A5%AB%E1%AD%A1%E3%80%82%E0%BC%98%E2%8B%86%E2%9C%BF_DdlWfRSMioH_Video_by_pau.liine/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40pauline_%ED%8F%B4%EB%A6%B0_%E1%A5%AB%E1%AD%A1%E3%80%82%E0%BC%98%E2%8B%86%E2%9C%BF_DdlWfRSMioH_Video_by_pau.liine/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40pauline_%ED%8F%B4%EB%A6%B0_%E1%A5%AB%E1%AD%A1%E3%80%82%E0%BC%98%E2%8B%86%E2%9C%BF_DdlWfRSMioH_Video_by_pau.liine/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40pauline_%ED%8F%B4%EB%A6%B0_%E1%A5%AB%E1%AD%A1%E3%80%82%E0%BC%98%E2%8B%86%E2%9C%BF_DdlWfRSMioH_Video_by_pau.liine/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdlWfRSMioH.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DdlWfRSMioH.mp4",
         "report_url": "reports/IG_@pauline_폴린_ᥫ᭡。༘⋆✿_DdlWfRSMioH_Video_by_pau.liine.html",
         "shots_count": 17,
         "duration": "34s",
@@ -10189,8 +9989,8 @@ var FEDU_IDEAS_DATABASE = {
     {
       "id": "IG_@หยก.ละกัน_ꔛ_DcA80Aez6Aw_Video_by_yok.lagun",
       "shortcode": "DcA80Aez6Aw",
-      "title_vi": "5 Visual Hooks - 5 Kiểu Diễn Mở Màn Chặn Feed Tự Nhiên (@yok.lagun)",
-      "quick_takeaway": "⚡ 5 Chiêu Diễn Hook Chặn Feed Tự Nhiên: POV Đáy Túi Vải, Kéo Tay Mở Màn, Vừa Nói Vừa Ngồi Xuống, Hất Áo Khoác Swipe và Góc Nhìn Cao Top-down.",
+      "title_vi": "@หยก.ละกัน_ꔛ - Video by yok.lagun",
+      "quick_takeaway": "Báo cáo phân tích chuyên sâu ngôn ngữ điện ảnh, ánh sáng, góc máy và nhịp dựng 10 phân cảnh.",
       "key_tech": "Establishing Hook Shot • Close-Up / Macro Detail Shot",
       "shooting_style": {
         "id": "dien-anh",
@@ -10199,13 +9999,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -10227,12 +10023,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@yok.lagun",
         "profile_url": "https://www.instagram.com/yok.lagun/"
       },
-      "ig_url": "https://www.instagram.com/reel/DcA80Aez6Aw/?stkn=MTNmN3ZsbDhjYm5xcA==",
+      "ig_url": "https://www.instagram.com/reel/DcA80Aez6Aw/",
       "gdrive_folder": "https://drive.google.com/open?id=1oVTlUavPqlb8l_meLPGGTilWnvIFiGWj",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40%E0%B8%AB%E0%B8%A2%E0%B8%81.%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B8%99_%EA%94%9B_DcA80Aez6Aw_Video_by_yok.lagun/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40%E0%B8%AB%E0%B8%A2%E0%B8%81.%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B8%99_%EA%94%9B_DcA80Aez6Aw_Video_by_yok.lagun/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40%E0%B8%AB%E0%B8%A2%E0%B8%81.%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B8%99_%EA%94%9B_DcA80Aez6Aw_Video_by_yok.lagun/shot_01_mid.jpg",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40%E0%B8%AB%E0%B8%A2%E0%B8%81.%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B8%99_%EA%94%9B_DcA80Aez6Aw_Video_by_yok.lagun/shot_03_mid.jpg",
         "video_url": "https://media.fedu.vn/videos/DcA80Aez6Aw.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DcA80Aez6Aw.mp4",
         "report_url": "reports/IG_@หยก.ละกัน_ꔛ_DcA80Aez6Aw_Video_by_yok.lagun.html",
         "shots_count": 10,
         "duration": "20s",
@@ -10260,13 +10057,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "thoi-trang",
-        "name": "Thời trang",
-        "en_name": "Fashion & Style",
-        "icon": "👔",
-        "badge_color": "pink"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -10288,12 +10081,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@zhamyana",
         "profile_url": "https://www.instagram.com/zhamyana/"
       },
-      "ig_url": "https://www.instagram.com/reel/DdeWMWLsaHA/?stkn=NmNvaXp1bTdldHV3",
+      "ig_url": "https://www.instagram.com/reel/DdeWMWLsaHA/",
       "gdrive_folder": "https://drive.google.com/open?id=1p7Bq3B1-kQMM-vxmp4Iw83Kr7EUDp5Xy",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40%D0%96%D0%B0%D0%BC%D1%8C%D1%8F%D0%BD%D0%B0_%D0%9E%D1%81%D0%BE%D0%B7%D0%BD%D0%B0%D0%BD%D0%BD%D1%8B%D0%B9_%D1%81%D1%82%D0%B8%D0%BB%D0%B8%D1%81%D1%82_UGC_DdeWMWLsaHA_Video_by_zhamyana/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40%D0%96%D0%B0%D0%BC%D1%8C%D1%8F%D0%BD%D0%B0_%D0%9E%D1%81%D0%BE%D0%B7%D0%BD%D0%B0%D0%BD%D0%BD%D1%8B%D0%B9_%D1%81%D1%82%D0%B8%D0%BB%D0%B8%D1%81%D1%82_UGC_DdeWMWLsaHA_Video_by_zhamyana/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40%D0%96%D0%B0%D0%BC%D1%8C%D1%8F%D0%BD%D0%B0_%D0%9E%D1%81%D0%BE%D0%B7%D0%BD%D0%B0%D0%BD%D0%BD%D1%8B%D0%B9_%D1%81%D1%82%D0%B8%D0%BB%D0%B8%D1%81%D1%82_UGC_DdeWMWLsaHA_Video_by_zhamyana/shot_01_mid.jpg",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40%D0%96%D0%B0%D0%BC%D1%8C%D1%8F%D0%BD%D0%B0_%D0%9E%D1%81%D0%BE%D0%B7%D0%BD%D0%B0%D0%BD%D0%BD%D1%8B%D0%B9_%D1%81%D1%82%D0%B8%D0%BB%D0%B8%D1%81%D1%82_UGC_DdeWMWLsaHA_Video_by_zhamyana/shot_03_mid.jpg",
         "video_url": "https://media.fedu.vn/videos/DdeWMWLsaHA.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DdeWMWLsaHA.mp4",
         "report_url": "reports/IG_@Жамьяна_Осознанный_стилист_UGC_DdeWMWLsaHA_Video_by_zhamyana.html",
         "shots_count": 3,
         "duration": "6s",
@@ -10321,13 +10115,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "am-thuc",
-        "name": "F&B",
-        "en_name": "Food & Beverage",
-        "icon": "🍜",
-        "badge_color": "amber"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -10349,12 +10139,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@megantanhweewen",
         "profile_url": "https://www.instagram.com/megantanhweewen/"
       },
-      "ig_url": "https://www.instagram.com/reel/DdgwV6dsxcS/?stkn=dDVoNjZvb2p2ZzAw",
+      "ig_url": "https://www.instagram.com/reel/DdgwV6dsxcS/",
       "gdrive_folder": "https://drive.google.com/open?id=1QmXry5txLU4vCZcK6bjiGkbiAGrEg2FU",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Megan_Tan_DdgwV6dsxcS_Video_by_megantanhweewen/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Megan_Tan_DdgwV6dsxcS_Video_by_megantanhweewen/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40Megan_Tan_DdgwV6dsxcS_Video_by_megantanhweewen/shot_01_mid.jpg",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40Megan_Tan_DdgwV6dsxcS_Video_by_megantanhweewen/shot_03_mid.jpg",
         "video_url": "https://media.fedu.vn/videos/DdgwV6dsxcS.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DdgwV6dsxcS.mp4",
         "report_url": "reports/IG_@Megan_Tan_DdgwV6dsxcS_Video_by_megantanhweewen.html",
         "shots_count": 23,
         "duration": "46s",
@@ -10382,13 +10173,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "am-thuc",
-        "name": "F&B",
-        "en_name": "Food & Beverage",
-        "icon": "🍜",
-        "badge_color": "amber"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "korea",
         "name": "Hàn Quốc",
@@ -10410,12 +10197,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@hena_film_vlog",
         "profile_url": "https://www.instagram.com/hena_film_vlog/"
       },
-      "ig_url": "https://www.instagram.com/reel/DdbCdHFKZsP/?utm_source=ig_web_copy_link&stkn=NTc4MTIwNjQ2YQ==",
+      "ig_url": "https://www.instagram.com/reel/DdbCdHFKZsP/",
       "gdrive_folder": "https://drive.google.com/open?id=1TrKEslz5f0-vToucfldVqxVIuHSb19Wp",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40hena_film_vlog_DdbCdHFKZsP_%ED%96%87%EB%B9%9B_%EC%97%86%EB%8A%94_%EC%A7%91%2C_%EC%9D%8C%EC%8B%9D_%EC%B4%AC%EC%98%81_%EA%B0%80%EB%8A%A5%ED%95%A8%F0%9F%A4%94_%EC%A0%9C%ED%92%88%EC%A0%9C%EA%B3%B5/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40hena_film_vlog_DdbCdHFKZsP_%ED%96%87%EB%B9%9B_%EC%97%86%EB%8A%94_%EC%A7%91%2C_%EC%9D%8C%EC%8B%9D_%EC%B4%AC%EC%98%81_%EA%B0%80%EB%8A%A5%ED%95%A8%F0%9F%A4%94_%EC%A0%9C%ED%92%88%EC%A0%9C%EA%B3%B5/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DdlmZczPsCE_%ED%98%BC%EC%9E%90_%EB%A7%8C%EB%93%9C%EB%8A%94%EB%8D%B0_%EC%B4%AC%EC%98%81%EC%9D%80_%EB%88%84%EA%B0%80_%ED%95%98%EB%83%90%EA%B3%A0%EC%9A%94%F0%9F%A4%B7%F0%9F%8F%BB%E2%80%8D%E2%99%80%EF%B8%8F_%EC%A0%9C%ED%92%88%EC%A0%9C%EA%B3%B5/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DcVzQCSP1MR_Healing_Homecoming_Daily_Vlog/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdbCdHFKZsP.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DdbCdHFKZsP.mp4",
         "report_url": "reports/IG_@hena_film_vlog_DdbCdHFKZsP_햇빛_없는_집,_음식_촬영_가능함🤔_제품제공.html",
         "shots_count": 22,
         "duration": "44s",
@@ -10443,13 +10231,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "korea",
         "name": "Hàn Quốc",
@@ -10471,12 +10255,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@german991020",
         "profile_url": "https://www.instagram.com/german991020/"
       },
-      "ig_url": "https://www.instagram.com/reel/DdiSb5Rp2LB/?utm_source=ig_web_copy_link&stkn=NTc4MTIwNjQ2YQ==",
+      "ig_url": "https://www.instagram.com/reel/DdiSb5Rp2LB/",
       "gdrive_folder": "https://drive.google.com/open?id=11zxP1lZnEPdBQIPQ59EXYHRnoeOZ9SAP",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40german991020_DdiSb5Rp2LB_Lost_in_Seoul/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdiSb5Rp2LB.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DdiSb5Rp2LB.mp4",
         "report_url": "reports/IG_@german991020_DdiSb5Rp2LB_Lost_in_Seoul.html",
         "shots_count": 11,
         "duration": "22s",
@@ -10504,13 +10289,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -10535,9 +10316,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdeCKRRRGvd/",
       "gdrive_folder": "https://drive.google.com/open?id=1CR7hseDvzdQYlIY2V8apXle_98MVzGFz",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mylene_mae_DdeCKRRRGvd_Video_by_mylenesmind/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mylene_mae_DdeCKRRRGvd_Video_by_mylenesmind/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40mylene_mae_DdeCKRRRGvd_Video_by_mylenesmind/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40mylene_mae_DdeCKRRRGvd_Video_by_mylenesmind/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdeCKRRRGvd.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DdeCKRRRGvd.mp4",
         "report_url": "reports/IG_@mylene_mae_DdeCKRRRGvd_Video_by_mylenesmind.html",
         "shots_count": 21,
         "duration": "42s",
@@ -10565,13 +10347,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -10593,12 +10371,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@sarodeele",
         "profile_url": "https://www.instagram.com/sarodeele/"
       },
-      "ig_url": "https://www.instagram.com/sarodeele/reel/DXjRnwCISNU/",
+      "ig_url": "https://www.instagram.com/reel/DXjRnwCISNU/",
       "gdrive_folder": "https://drive.google.com/open?id=1SxMHEKzO1xMFvhCrIfqgVjE5Hdj_ujen",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Saro_Deele_DXjRnwCISNU_Video_by_sarodeele/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Saro_Deele_DXjRnwCISNU_Video_by_sarodeele/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DXjRnwCISNU.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40Saro_Deele_DXjRnwCISNU_Video_by_sarodeele/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40Saro_Deele_DXjRnwCISNU_Video_by_sarodeele/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1SMei8RPB2Pf6Bv1opQQ3iqMmGSrjPF31&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1SMei8RPB2Pf6Bv1opQQ3iqMmGSrjPF31&export=download",
         "report_url": "reports/IG_@Saro_Deele_DXjRnwCISNU_Video_by_sarodeele.html",
         "shots_count": 23,
         "duration": "46s",
@@ -10626,13 +10405,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "thuong-hieu",
-        "name": "Xây kênh",
-        "en_name": "Personal Brand",
-        "icon": "💼",
-        "badge_color": "indigo"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -10654,12 +10429,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@jade.got.curious",
         "profile_url": "https://www.instagram.com/jade.got.curious/"
       },
-      "ig_url": "https://www.instagram.com/jade.got.curious/reel/DZwO5X6N_MS/",
+      "ig_url": "https://www.instagram.com/reel/DZwO5X6N_MS/",
       "gdrive_folder": "https://drive.google.com/open?id=1LYPp5c8V2Fiz8JEoPaLi9OvAvDSfr8sd",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DZwO5X6N_MS.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1Weis8NRnI35HqjxJECvr3wVUgE4HhmHd&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1Weis8NRnI35HqjxJECvr3wVUgE4HhmHd&export=download",
         "report_url": "reports/IG_@Jade_Sheng_DZwO5X6N_MS_Video_by_jade.got.curious.html",
         "shots_count": 14,
         "duration": "28s",
@@ -10687,13 +10463,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -10715,12 +10487,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@leticiaqdrs",
         "profile_url": "https://www.instagram.com/leticiaqdrs/"
       },
-      "ig_url": "https://www.instagram.com/p/DYXXgkbxPj7/",
+      "ig_url": "https://www.instagram.com/reel/DYXXgkbxPj7/",
       "gdrive_folder": "https://drive.google.com/open?id=1xc0-Qd09yhuC6vFhe7J-Uu9YMGaskfoz",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Leticia_Quadros_DYXXgkbxPj7_Video_by_leticiaqdrs/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Leticia_Quadros_DYXXgkbxPj7_Video_by_leticiaqdrs/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DYXXgkbxPj7.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40Leticia_Quadros_DYXXgkbxPj7_Video_by_leticiaqdrs/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40Leticia_Quadros_DYXXgkbxPj7_Video_by_leticiaqdrs/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1ZjxcCe9A7j5WJOejaKUdmhiQVjWgpa7P&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1ZjxcCe9A7j5WJOejaKUdmhiQVjWgpa7P&export=download",
         "report_url": "reports/IG_@Leticia_Quadros_DYXXgkbxPj7_Video_by_leticiaqdrs.html",
         "shots_count": 7,
         "duration": "14s",
@@ -10737,7 +10510,7 @@ var FEDU_IDEAS_DATABASE = {
     },
     {
       "id": "IG_@尼莫Nemo_ིྀ_ᗦ↞◃_DclWb98PiK_Video_by_nemo_ooo",
-      "shortcode": "DclWb98PiK",
+      "shortcode": "DclWb98PiK_V",
       "title_vi": "Trải Nghiệm Triển Lãm Nghệ Thuật Số Arte Museum Busan.",
       "quick_takeaway": "Video du lịch trải nghiệm dạng Voice Over bóc tách không gian bảo tàng nghệ thuật số Arte Museum Busan (Hàn Quốc). Điểm sáng nằm ở nhịp điệu cắt gọt linh hoạt: mở đầu bằng màn sóng thần 3D Anamorphic chấn động thị giác, lập tức đảo sang ...",
       "key_tech": "Voice Over • Anamorphic Wave • Góc Nhìn POV • Phản Chiếu Gương Đối Xứng • B-Roll Không Gian Số",
@@ -10748,13 +10521,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎙️",
         "badge_color": "purple"
       },
-      "industry": {
-        "id": "du-lich",
-        "name": "Du lịch",
-        "en_name": "Travel & Culture",
-        "icon": "✈️",
-        "badge_color": "sky"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "india",
         "name": "Ấn Độ",
@@ -10776,12 +10545,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@nemo_ooo",
         "profile_url": "https://www.instagram.com/nemo_ooo/"
       },
-      "ig_url": "https://www.instagram.com/reel/DclWb98PiK_/?stkn=aHVweW5yaHMwbWdn",
+      "ig_url": "https://www.instagram.com/nemo_ooo/",
       "gdrive_folder": "https://drive.google.com/open?id=1GXwo7n7ny0wuu737MIdNOO19b5itzwyH",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40%E5%B0%BC%E8%8E%ABNemo_%E0%BD%B2%E0%BE%80_%E1%97%A6%E2%86%9E%E2%97%83_DclWb98PiK_Video_by_nemo_ooo/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40%E5%B0%BC%E8%8E%ABNemo_%E0%BD%B2%E0%BE%80_%E1%97%A6%E2%86%9E%E2%97%83_DclWb98PiK_Video_by_nemo_ooo/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DclWb98PiK.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40%E5%B0%BC%E8%8E%ABNemo_%E0%BD%B2%E0%BE%80_%E1%97%A6%E2%86%9E%E2%97%83_DclWb98PiK_Video_by_nemo_ooo/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40%E5%B0%BC%E8%8E%ABNemo_%E0%BD%B2%E0%BE%80_%E1%97%A6%E2%86%9E%E2%97%83_DclWb98PiK_Video_by_nemo_ooo/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1YhO_sFe_tO3yNsyTzq55dxLUmJ22amkY&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1YhO_sFe_tO3yNsyTzq55dxLUmJ22amkY&export=download",
         "report_url": "reports/IG_@尼莫Nemo_ིྀ_ᗦ↞◃_DclWb98PiK_Video_by_nemo_ooo.html",
         "shots_count": 13,
         "duration": "26s",
@@ -10809,13 +10579,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "📖",
         "badge_color": "amber"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -10837,12 +10603,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@xiudian",
         "profile_url": "https://www.instagram.com/xiudian/"
       },
-      "ig_url": "https://www.instagram.com/p/DazzVqPBfje",
+      "ig_url": "https://www.instagram.com/reel/DazzVqPBfje/",
       "gdrive_folder": "https://drive.google.com/open?id=1fj0vsLa2k5zyPZ3e13O9J24_zvkqdACC",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40X%C3%8DU_%C4%90I_%C4%82N_DazzVqPBfje_Video_by_xiudian/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40X%C3%8DU_%C4%90I_%C4%82N_DazzVqPBfje_Video_by_xiudian/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DazzVqPBfje.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40X%C3%8DU_%C4%90I_%C4%82N_DazzVqPBfje_Video_by_xiudian/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40X%C3%8DU_%C4%90I_%C4%82N_DazzVqPBfje_Video_by_xiudian/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1YfGyKO_29EZTBm2DSbqxgtczhmym3WfA&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1YfGyKO_29EZTBm2DSbqxgtczhmym3WfA&export=download",
         "report_url": "reports/IG_@XÍU_ĐI_ĂN_DazzVqPBfje_Video_by_xiudian.html",
         "shots_count": 7,
         "duration": "14s",
@@ -10870,13 +10637,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "📖",
         "badge_color": "amber"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -10898,12 +10661,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@mi_no_ie_39",
         "profile_url": "https://www.instagram.com/mi_no_ie_39/"
       },
-      "ig_url": "https://www.instagram.com/p/Db-xDk4vWNQ",
+      "ig_url": "https://www.instagram.com/reel/Db-xDk4vWNQ/",
       "gdrive_folder": "https://drive.google.com/open?id=1Q4JBlIJP8mpHQJef-evSCurRypAkTiuG",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40misa%EF%BD%9C%E7%AF%8940%E5%B9%B4%E3%83%9E%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%B3%E6%9A%AE%E3%82%89%E3%81%97_Db-xDk4vWNQ_Video_by_mi_no_ie_39/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40misa%EF%BD%9C%E7%AF%8940%E5%B9%B4%E3%83%9E%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%B3%E6%9A%AE%E3%82%89%E3%81%97_Db-xDk4vWNQ_Video_by_mi_no_ie_39/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Db-xDk4vWNQ.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40misa%EF%BD%9C%E7%AF%8940%E5%B9%B4%E3%83%9E%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%B3%E6%9A%AE%E3%82%89%E3%81%97_Db-xDk4vWNQ_Video_by_mi_no_ie_39/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40misa%EF%BD%9C%E7%AF%8940%E5%B9%B4%E3%83%9E%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%B3%E6%9A%AE%E3%82%89%E3%81%97_Db-xDk4vWNQ_Video_by_mi_no_ie_39/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1-PnhImGi421E6Tb65SI2z-OH8oeZezJ4&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1-PnhImGi421E6Tb65SI2z-OH8oeZezJ4&export=download",
         "report_url": "reports/IG_@misa｜築40年マンション暮らし_Db-xDk4vWNQ_Video_by_mi_no_ie_39.html",
         "shots_count": 7,
         "duration": "14s",
@@ -10931,13 +10695,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "📖",
         "badge_color": "amber"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -10959,12 +10719,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@studioberdua",
         "profile_url": "https://www.instagram.com/studioberdua/"
       },
-      "ig_url": "https://www.instagram.com/p/DdOu2yRsmDy",
+      "ig_url": "https://www.instagram.com/reel/DdOu2yRsmDy/",
       "gdrive_folder": "https://drive.google.com/open?id=1f9Ieq-YU2Pgxq6hgIKkMgpwfZMLnyliE",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Studio_Berdua_DdOu2yRsmDy_Video_by_studioberdua/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Studio_Berdua_DdOu2yRsmDy_Video_by_studioberdua/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdOu2yRsmDy.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40Studio_Berdua_DdOu2yRsmDy_Video_by_studioberdua/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40Studio_Berdua_DdOu2yRsmDy_Video_by_studioberdua/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1rIzKaO80LS-TYEeX6pLM9Nq2P-GazN6H&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1rIzKaO80LS-TYEeX6pLM9Nq2P-GazN6H&export=download",
         "report_url": "reports/IG_@Studio_Berdua_DdOu2yRsmDy_Video_by_studioberdua.html",
         "shots_count": 14,
         "duration": "28s",
@@ -10992,13 +10753,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "📖",
         "badge_color": "amber"
       },
-      "industry": {
-        "id": "am-thuc",
-        "name": "F&B",
-        "en_name": "Food & Beverage",
-        "icon": "🍜",
-        "badge_color": "amber"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -11020,12 +10777,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@r_6cafe",
         "profile_url": "https://www.instagram.com/r_6cafe/"
       },
-      "ig_url": "https://www.instagram.com/p/Da5KgjAxfOG",
+      "ig_url": "https://www.instagram.com/reel/Da5KgjAxfOG/",
       "gdrive_folder": "https://drive.google.com/open?id=14SXW0ICuWhGrWTU2lfrmcRsljApor3bk",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Rika_%E3%83%93%E3%82%AA%E3%83%88%E3%83%BC%E3%83%97%E3%82%81%E3%81%A0%E3%81%8B%E6%A4%8D%E7%89%A9%E3%81%AE%E3%81%82%E3%82%8B%E6%9A%AE%E3%82%89%E3%81%97_Da5KgjAxfOG_Video_by_r_6cafe/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Rika_%E3%83%93%E3%82%AA%E3%83%88%E3%83%BC%E3%83%97%E3%82%81%E3%81%A0%E3%81%8B%E6%A4%8D%E7%89%A9%E3%81%AE%E3%81%82%E3%82%8B%E6%9A%AE%E3%82%89%E3%81%97_Da5KgjAxfOG_Video_by_r_6cafe/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Da5KgjAxfOG.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40Rika_%E3%83%93%E3%82%AA%E3%83%88%E3%83%BC%E3%83%97%E3%82%81%E3%81%A0%E3%81%8B%E6%A4%8D%E7%89%A9%E3%81%AE%E3%81%82%E3%82%8B%E6%9A%AE%E3%82%89%E3%81%97_Da5KgjAxfOG_Video_by_r_6cafe/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40Rika_%E3%83%93%E3%82%AA%E3%83%88%E3%83%BC%E3%83%97%E3%82%81%E3%81%A0%E3%81%8B%E6%A4%8D%E7%89%A9%E3%81%AE%E3%81%82%E3%82%8B%E6%9A%AE%E3%82%89%E3%81%97_Da5KgjAxfOG_Video_by_r_6cafe/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1cw9_D31MRd8zV8dRO0M9WGv8o7umR5g7&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1cw9_D31MRd8zV8dRO0M9WGv8o7umR5g7&export=download",
         "report_url": "reports/IG_@Rika_ビオトープめだか植物のある暮らし_Da5KgjAxfOG_Video_by_r_6cafe.html",
         "shots_count": 11,
         "duration": "22s",
@@ -11053,13 +10811,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -11081,12 +10835,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@eugcreates.ugc",
         "profile_url": "https://www.instagram.com/eugcreates.ugc/"
       },
-      "ig_url": "https://www.instagram.com/p/DdA1ErpRMg2",
+      "ig_url": "https://www.instagram.com/reel/DdA1ErpRMg2/",
       "gdrive_folder": "https://drive.google.com/open?id=1QApLtcKzu2GSywp5wWHdtfNnBnmEHk77",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Eugenia_Syd_UGC_creator_DdA1ErpRMg2_Video_by_eugcreates.ugc/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Eugenia_Syd_UGC_creator_DdA1ErpRMg2_Video_by_eugcreates.ugc/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdA1ErpRMg2.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40Eugenia_Syd_UGC_creator_DdA1ErpRMg2_Video_by_eugcreates.ugc/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40Eugenia_Syd_UGC_creator_DdA1ErpRMg2_Video_by_eugcreates.ugc/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1G2EW6_EpvstQd8zapZHVQQS_-1NI8oSp&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1G2EW6_EpvstQd8zapZHVQQS_-1NI8oSp&export=download",
         "report_url": "reports/IG_@Eugenia_Syd_UGC_creator_DdA1ErpRMg2_Video_by_eugcreates.ugc.html",
         "shots_count": 9,
         "duration": "18s",
@@ -11114,13 +10869,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "📖",
         "badge_color": "amber"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "korea",
         "name": "Hàn Quốc",
@@ -11142,12 +10893,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@haydenkorean",
         "profile_url": "https://www.instagram.com/haydenkorean/"
       },
-      "ig_url": "https://www.instagram.com/p/Daz3Po8zHIE",
+      "ig_url": "https://www.instagram.com/reel/Daz3Po8zHIE/",
       "gdrive_folder": "https://drive.google.com/open?id=1_zRjagGz50fh6zPiJWuE7lJZbTdPE-LT",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Hayden_Slow_Korean_%26_Daily_Life_Daz3Po8zHIE_Video_by_haydenkorean/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Hayden_Slow_Korean_%26_Daily_Life_Daz3Po8zHIE_Video_by_haydenkorean/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Daz3Po8zHIE.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40Hayden_Slow_Korean_%26_Daily_Life_Daz3Po8zHIE_Video_by_haydenkorean/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40Hayden_Slow_Korean_%26_Daily_Life_Daz3Po8zHIE_Video_by_haydenkorean/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1Hp2PPIhE2zrptqcX90UPTjs2rMPew2lk&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1Hp2PPIhE2zrptqcX90UPTjs2rMPew2lk&export=download",
         "report_url": "reports/IG_@Hayden_Slow_Korean_&_Daily_Life_Daz3Po8zHIE_Video_by_haydenkorean.html",
         "shots_count": 7,
         "duration": "14s",
@@ -11175,13 +10927,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -11203,12 +10951,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@_hyungs",
         "profile_url": "https://www.instagram.com/_hyungs/"
       },
-      "ig_url": "https://www.instagram.com/p/DdWa3o2zc0w",
+      "ig_url": "https://www.instagram.com/reel/DdWa3o2zc0w/",
       "gdrive_folder": "https://drive.google.com/open?id=1brLILpFYjHRn6bKUZbfgAS3fxVbdER6D",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40JAEHYUNG_DdWa3o2zc0w_Video_by__hyungs/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40JAEHYUNG_DdWa3o2zc0w_Video_by__hyungs/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdWa3o2zc0w.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40JAEHYUNG_DdWa3o2zc0w_Video_by__hyungs/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40JAEHYUNG_DdWa3o2zc0w_Video_by__hyungs/shot_01_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1cLJn5nqj8aZCrJsYOeoHVv40BGsPzCOl&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1cLJn5nqj8aZCrJsYOeoHVv40BGsPzCOl&export=download",
         "report_url": "reports/IG_@JAEHYUNG_DdWa3o2zc0w_Video_by__hyungs.html",
         "shots_count": 1,
         "duration": "2s",
@@ -11236,13 +10985,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -11264,12 +11009,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@indanayuu",
         "profile_url": "https://www.instagram.com/indanayuu/"
       },
-      "ig_url": "https://www.instagram.com/p/DccpHbETFSr",
+      "ig_url": "https://www.instagram.com/reel/DccpHbETFSr/",
       "gdrive_folder": "https://drive.google.com/open?id=1YbVTddldNL3jxkHRfrm6qgFsO2ehx5US",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Indang_Ayu_DccpHbETFSr_Video_by_indanayuu/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Indang_Ayu_DccpHbETFSr_Video_by_indanayuu/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DccpHbETFSr.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40Indang_Ayu_DccpHbETFSr_Video_by_indanayuu/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40Indang_Ayu_DccpHbETFSr_Video_by_indanayuu/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1FTIi3M7OvOzZZ5YpOkfWHtRbQZKay6fL&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1FTIi3M7OvOzZZ5YpOkfWHtRbQZKay6fL&export=download",
         "report_url": "reports/IG_@Indang_Ayu_DccpHbETFSr_Video_by_indanayuu.html",
         "shots_count": 8,
         "duration": "16s",
@@ -11297,13 +11043,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -11325,12 +11067,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@ume.izakaya",
         "profile_url": "https://www.instagram.com/ume.izakaya/"
       },
-      "ig_url": "https://www.instagram.com/p/DcVnyJyNWGY",
+      "ig_url": "https://www.instagram.com/reel/DcVnyJyNWGY/",
       "gdrive_folder": "https://drive.google.com/open?id=1aw5kKg-NdXs45CjNVF_-VA5p7Z7fx2kW",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40UME_%F0%9F%93%8D%D0%BC%D0%B8%D0%BD%D1%81%D0%BA-%D0%BC%D0%B8%D1%80_DcVnyJyNWGY_Video_by_ume.izakaya/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40UME_%F0%9F%93%8D%D0%BC%D0%B8%D0%BD%D1%81%D0%BA-%D0%BC%D0%B8%D1%80_DcVnyJyNWGY_Video_by_ume.izakaya/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DcVnyJyNWGY.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40UME_%F0%9F%93%8D%D0%BC%D0%B8%D0%BD%D1%81%D0%BA-%D0%BC%D0%B8%D1%80_DcVnyJyNWGY_Video_by_ume.izakaya/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40UME_%F0%9F%93%8D%D0%BC%D0%B8%D0%BD%D1%81%D0%BA-%D0%BC%D0%B8%D1%80_DcVnyJyNWGY_Video_by_ume.izakaya/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1H30Z9tsLBPa3HVlKTclDhlVIlGM1KMba&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1H30Z9tsLBPa3HVlKTclDhlVIlGM1KMba&export=download",
         "report_url": "reports/IG_@UME_📍минск-мир_DcVnyJyNWGY_Video_by_ume.izakaya.html",
         "shots_count": 9,
         "duration": "18s",
@@ -11358,13 +11101,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -11386,12 +11125,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@focr.sg",
         "profile_url": "https://www.instagram.com/focr.sg/"
       },
-      "ig_url": "https://www.instagram.com/p/DcxcVGtxjNl",
+      "ig_url": "https://www.instagram.com/reel/DcxcVGtxjNl/",
       "gdrive_folder": "https://drive.google.com/open?id=1cnS_6mtlO52naIU-DIE-pRJoiEN8nys8",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DcxcVGtxjNl.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg/shot_02_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1QpXLSybzXgrShstQexi8sX3JS9oYgQR0&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1QpXLSybzXgrShstQexi8sX3JS9oYgQR0&export=download",
         "report_url": "reports/IG_@Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg.html",
         "shots_count": 2,
         "duration": "4s",
@@ -11419,13 +11159,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "korea",
         "name": "Hàn Quốc",
@@ -11447,12 +11183,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@slowkoreanvlog",
         "profile_url": "https://www.instagram.com/slowkoreanvlog/"
       },
-      "ig_url": "https://www.instagram.com/p/Db0tHr8Bs7x",
+      "ig_url": "https://www.instagram.com/reel/Db0tHr8Bs7x/",
       "gdrive_folder": "https://drive.google.com/open?id=11ygVMIp2N-AbkDYAQ-nfVkRVAqmtcXq0",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40%EA%B1%B0%EB%B6%81%EC%9D%B4_%EC%86%8C%EC%98%81_Db0tHr8Bs7x_Video_by_slowkoreanvlog/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40%EA%B1%B0%EB%B6%81%EC%9D%B4_%EC%86%8C%EC%98%81_Db0tHr8Bs7x_Video_by_slowkoreanvlog/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Db0tHr8Bs7x.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40%EA%B1%B0%EB%B6%81%EC%9D%B4_%EC%86%8C%EC%98%81_Db0tHr8Bs7x_Video_by_slowkoreanvlog/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40%EA%B1%B0%EB%B6%81%EC%9D%B4_%EC%86%8C%EC%98%81_Db0tHr8Bs7x_Video_by_slowkoreanvlog/shot_01_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1o9gqk252zhKePStPv_M_t6CKvsTGJtXy&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1o9gqk252zhKePStPv_M_t6CKvsTGJtXy&export=download",
         "report_url": "reports/IG_@거북이_소영_Db0tHr8Bs7x_Video_by_slowkoreanvlog.html",
         "shots_count": 1,
         "duration": "2s",
@@ -11480,13 +11217,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "📖",
         "badge_color": "amber"
       },
-      "industry": {
-        "id": "du-lich",
-        "name": "Du lịch",
-        "en_name": "Travel & Culture",
-        "icon": "✈️",
-        "badge_color": "sky"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -11508,12 +11241,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@gyuree_k",
         "profile_url": "https://www.instagram.com/gyuree_k/"
       },
-      "ig_url": "https://www.instagram.com/p/DdTZsoxTVFz",
+      "ig_url": "https://www.instagram.com/reel/DdTZsoxTVFz/",
       "gdrive_folder": "https://drive.google.com/open?id=1HdVCAZjV9j82oIE9Z_Bu-_ixwVcH0fyK",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40%EA%B7%9C%EB%A6%AC%F0%9F%8D%8A%E3%85%A3Corporate_Girlie%F0%9F%87%B0%F0%9F%87%B7_DdTZsoxTVFz_Video_by_gyuree_k/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40%EA%B7%9C%EB%A6%AC%F0%9F%8D%8A%E3%85%A3Corporate_Girlie%F0%9F%87%B0%F0%9F%87%B7_DdTZsoxTVFz_Video_by_gyuree_k/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdTZsoxTVFz.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40%EA%B7%9C%EB%A6%AC%F0%9F%8D%8A%E3%85%A3Corporate_Girlie%F0%9F%87%B0%F0%9F%87%B7_DdTZsoxTVFz_Video_by_gyuree_k/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40%EA%B7%9C%EB%A6%AC%F0%9F%8D%8A%E3%85%A3Corporate_Girlie%F0%9F%87%B0%F0%9F%87%B7_DdTZsoxTVFz_Video_by_gyuree_k/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1XYgm27Nb9OaCXIwh_dPHxVUagSP48-fR&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1XYgm27Nb9OaCXIwh_dPHxVUagSP48-fR&export=download",
         "report_url": "reports/IG_@규리🍊ㅣCorporate_Girlie🇰🇷_DdTZsoxTVFz_Video_by_gyuree_k.html",
         "shots_count": 23,
         "duration": "46s",
@@ -11541,13 +11275,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -11569,12 +11299,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@yooinoz",
         "profile_url": "https://www.instagram.com/yooinoz/"
       },
-      "ig_url": "https://www.instagram.com/p/DZ8w6MsSMAw",
+      "ig_url": "https://www.instagram.com/reel/DZ8w6MsSMAw/",
       "gdrive_folder": "https://drive.google.com/open?id=17B1h27000Snbr6BE0M1oZvvehy01aP3s",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Jenny_Yoo_%F0%9F%87%B0%F0%9F%87%B7_DZ8w6MsSMAw_Video_by_yooinoz/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Jenny_Yoo_%F0%9F%87%B0%F0%9F%87%B7_DZ8w6MsSMAw_Video_by_yooinoz/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DZ8w6MsSMAw.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40Jenny_Yoo_%F0%9F%87%B0%F0%9F%87%B7_DZ8w6MsSMAw_Video_by_yooinoz/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40Jenny_Yoo_%F0%9F%87%B0%F0%9F%87%B7_DZ8w6MsSMAw_Video_by_yooinoz/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1jdXNcymlBCukKGSPTgf6e6Nhn-MI2Q73&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1jdXNcymlBCukKGSPTgf6e6Nhn-MI2Q73&export=download",
         "report_url": "reports/IG_@Jenny_Yoo_🇰🇷_DZ8w6MsSMAw_Video_by_yooinoz.html",
         "shots_count": 34,
         "duration": "68s",
@@ -11602,13 +11333,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -11630,12 +11357,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@dreakwon",
         "profile_url": "https://www.instagram.com/dreakwon/"
       },
-      "ig_url": "https://www.instagram.com/p/DaClEhzB5WC",
+      "ig_url": "https://www.instagram.com/reel/DaClEhzB5WC/",
       "gdrive_folder": "https://drive.google.com/open?id=1S4sCJFZBrL_26Y6vyEOY3I8xll4SKUQm",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40drea_%28%EC%9D%B4%ED%98%84%29_DaClEhzB5WC_Video_by_dreakwon/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40drea_%28%EC%9D%B4%ED%98%84%29_DaClEhzB5WC_Video_by_dreakwon/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DaClEhzB5WC.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40drea_%28%EC%9D%B4%ED%98%84%29_DaClEhzB5WC_Video_by_dreakwon/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40drea_%28%EC%9D%B4%ED%98%84%29_DaClEhzB5WC_Video_by_dreakwon/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1cNySTCgmdQc7oF4NbjOiY_2PAMTVOMDa&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1cNySTCgmdQc7oF4NbjOiY_2PAMTVOMDa&export=download",
         "report_url": "reports/IG_@drea_(이현)_DaClEhzB5WC_Video_by_dreakwon.html",
         "shots_count": 38,
         "duration": "76s",
@@ -11663,13 +11391,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "korea",
         "name": "Hàn Quốc",
@@ -11691,12 +11415,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@korea_street_views",
         "profile_url": "https://www.instagram.com/korea_street_views/"
       },
-      "ig_url": "https://www.instagram.com/p/DcBXsaezmjo",
+      "ig_url": "https://www.instagram.com/reel/DcBXsaezmjo/",
       "gdrive_folder": "https://drive.google.com/open?id=1FZUyp_litWf6aWgrlRI25B7tzh7naodt",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Korea_Street_Views_DcBXsaezmjo_Video_by_korea_street_views/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Korea_Street_Views_DcBXsaezmjo_Video_by_korea_street_views/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DcBXsaezmjo.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40Korea_Street_Views_DcBXsaezmjo_Video_by_korea_street_views/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40Korea_Street_Views_DcBXsaezmjo_Video_by_korea_street_views/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1rSVpgijHy7eyyDhaPYN9ZpvQitm6jU3b&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1rSVpgijHy7eyyDhaPYN9ZpvQitm6jU3b&export=download",
         "report_url": "reports/IG_@Korea_Street_Views_DcBXsaezmjo_Video_by_korea_street_views.html",
         "shots_count": 3,
         "duration": "6s",
@@ -11713,9 +11438,9 @@ var FEDU_IDEAS_DATABASE = {
     },
     {
       "id": "IG_@Banh_shimano_Dc0-FXlE4kV_Carousel_Analysis",
-      "shortcode": "Dc0-HLUE60-",
+      "shortcode": "Dc0-FXlE4kV_Carousel_Analysis",
       "title_vi": "Video by diego51",
-      "quick_takeaway": "Tác phẩm điện ảnh ngắn gồm 6 phân cảnh được tính toán tỉ mỉ. Bố cục duy trì tỷ lệ khung hình dọc 9:16 sắc nét, khai thác ánh sáng tự nhiên kết hợp tông màu điện ảnh chuyên nghiệp.",
+      "quick_takeaway": "Báo cáo phân tích chuyên sâu ngôn ngữ điện ảnh, ánh sáng, góc máy và nhịp dựng 6 phân cảnh.",
       "key_tech": "Establishing Hook Shot • Low-key Lighting • Medium Tracking Shot • Close-Up / Macro Detail Shot",
       "shooting_style": {
         "id": "dien-anh",
@@ -11724,13 +11449,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -11752,12 +11473,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@Banh_shimano",
         "profile_url": "https://www.instagram.com/Banh_shimano/"
       },
-      "ig_url": "https://www.instagram.com/p/Dc0-HLUE60-/?utm_source=ig_web_copy_link&stkn=NTc4MTIwNjQ2YQ==",
+      "ig_url": "https://www.instagram.com/Banh_shimano/",
       "gdrive_folder": "https://drive.google.com/open?id=1xfnYgWstdUwWu9AXqBr0fkWq2sB9gr9C",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Banh_shimano_Dc0-FXlE4kV_Carousel_Analysis/slide_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Banh_shimano_Dc0-FXlE4kV_Carousel_Analysis/slide_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/carousel_slides/IG_%40Banh_shimano_Dc0-FXlE4kV_Carousel_Analysis/slide_01.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40Banh_shimano_Dc0-FXlE4kV_Carousel_Analysis/slide_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40Banh_shimano_Dc0-FXlE4kV_Carousel_Analysis/slide_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1OdaG7XZYuiDZHiQBJFjv_2UGX72heP3c&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1OdaG7XZYuiDZHiQBJFjv_2UGX72heP3c&export=download",
         "report_url": "reports/IG_@Banh_shimano_Dc0-FXlE4kV_Carousel_Analysis.html",
         "shots_count": 6,
         "duration": "12s",
@@ -11785,13 +11507,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "am-thuc",
-        "name": "F&B",
-        "en_name": "Food & Beverage",
-        "icon": "🍜",
-        "badge_color": "amber"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "korea",
         "name": "Hàn Quốc",
@@ -11813,12 +11531,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@creator",
         "profile_url": "https://www.instagram.com/creator/"
       },
-      "ig_url": "https://www.instagram.com/p/DdVBqUzj3o5",
+      "ig_url": "https://www.instagram.com/reel/DdVBqUzj3o5/",
       "gdrive_folder": "https://drive.google.com/open?id=1Hs-u5AoGHrd-mg49jmBM8I-O2NutDbwQ",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40creator_DdVBqUzj3o5_Video_DdVBqUzj3o5/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40creator_DdVBqUzj3o5_Video_DdVBqUzj3o5/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdVBqUzj3o5.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40creator_DdVBqUzj3o5_Video_DdVBqUzj3o5/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40creator_DdVBqUzj3o5_Video_DdVBqUzj3o5/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1aJ2Lh-R54_RkLXlDojwQnUzMsOVtfgxc&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1aJ2Lh-R54_RkLXlDojwQnUzMsOVtfgxc&export=download",
         "report_url": "reports/IG_@creator_DdVBqUzj3o5_Video_DdVBqUzj3o5.html",
         "shots_count": 3,
         "duration": "6s",
@@ -11846,13 +11565,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "thoi-trang",
-        "name": "Thời trang",
-        "en_name": "Fashion & Style",
-        "icon": "👔",
-        "badge_color": "pink"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -11874,12 +11589,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@clarissaacindy",
         "profile_url": "https://www.instagram.com/clarissaacindy/"
       },
-      "ig_url": "https://www.instagram.com/p/DcgQDZ_JNIr",
+      "ig_url": "https://www.instagram.com/reel/DcgQDZ_JNIr/",
       "gdrive_folder": "https://drive.google.com/open?id=1T7sxGzg-EaG119963kNBrmkIqnTOJTz_",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40%F0%9D%90%82%F0%9D%90%A2%F0%9D%90%A7%F0%9D%90%9D%F0%9D%90%B2%F0%9F%8C%BC_DcgQDZ_JNIr_Video_by_clarissaacindy/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40%F0%9D%90%82%F0%9D%90%A2%F0%9D%90%A7%F0%9D%90%9D%F0%9D%90%B2%F0%9F%8C%BC_DcgQDZ_JNIr_Video_by_clarissaacindy/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DcgQDZ_JNIr.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40%F0%9D%90%82%F0%9D%90%A2%F0%9D%90%A7%F0%9D%90%9D%F0%9D%90%B2%F0%9F%8C%BC_DcgQDZ_JNIr_Video_by_clarissaacindy/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40%F0%9D%90%82%F0%9D%90%A2%F0%9D%90%A7%F0%9D%90%9D%F0%9D%90%B2%F0%9F%8C%BC_DcgQDZ_JNIr_Video_by_clarissaacindy/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=16PvK85hmI1EJL4XJUQwwhz_VCxkuUdgK&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=16PvK85hmI1EJL4XJUQwwhz_VCxkuUdgK&export=download",
         "report_url": "reports/IG_@𝐂𝐢𝐧𝐝𝐲🌼_DcgQDZ_JNIr_Video_by_clarissaacindy.html",
         "shots_count": 10,
         "duration": "20s",
@@ -11907,13 +11623,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "📖",
         "badge_color": "amber"
       },
-      "industry": {
-        "id": "thuong-hieu",
-        "name": "Xây kênh",
-        "en_name": "Personal Brand",
-        "icon": "💼",
-        "badge_color": "indigo"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -11935,12 +11647,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@byjacksonsword",
         "profile_url": "https://www.instagram.com/byjacksonsword/"
       },
-      "ig_url": "https://www.instagram.com/p/DdU4rBeMXZt",
+      "ig_url": "https://www.instagram.com/reel/DdU4rBeMXZt/",
       "gdrive_folder": "https://drive.google.com/open?id=1H366mWBzK1FYscO4jgpr3RJa4KGpj3-P",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Jackson_Sword_DdU4rBeMXZt_Video_by_byjacksonsword/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Jackson_Sword_DdU4rBeMXZt_Video_by_byjacksonsword/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdU4rBeMXZt.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40Jackson_Sword_DdU4rBeMXZt_Video_by_byjacksonsword/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40Jackson_Sword_DdU4rBeMXZt_Video_by_byjacksonsword/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1dDNHOi-WbQKPIfsxFv0iLm-xOSX35U7N&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1dDNHOi-WbQKPIfsxFv0iLm-xOSX35U7N&export=download",
         "report_url": "reports/IG_@Jackson_Sword_DdU4rBeMXZt_Video_by_byjacksonsword.html",
         "shots_count": 8,
         "duration": "16s",
@@ -11968,13 +11681,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -11996,12 +11705,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@creator",
         "profile_url": "https://www.instagram.com/creator/"
       },
-      "ig_url": "https://www.instagram.com/p/DdSs5rahILb",
+      "ig_url": "https://www.instagram.com/reel/DdSs5rahILb/",
       "gdrive_folder": "https://drive.google.com/open?id=1gN1yfvp56MNHGZxPKUnYMBIopV3ak6th",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40creator_DdSs5rahILb_Video_DdSs5rahILb/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40creator_DdSs5rahILb_Video_DdSs5rahILb/shot_03_mid.jpg",
+        "thumb_hook": "",
+        "thumb_key": "",
         "video_url": "https://media.fedu.vn/videos/DdSs5rahILb.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DdSs5rahILb.mp4",
         "report_url": "reports/IG_@creator_DdSs5rahILb_Video_DdSs5rahILb.html",
         "shots_count": 0,
         "duration": "15s",
@@ -12029,13 +11739,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -12057,12 +11763,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@pascal_blaurock",
         "profile_url": "https://www.instagram.com/pascal_blaurock/"
       },
-      "ig_url": "https://www.instagram.com/p/DdT9CF7tGzn",
+      "ig_url": "https://www.instagram.com/reel/DdT9CF7tGzn/",
       "gdrive_folder": "https://drive.google.com/open?id=1CC0q-MyoLsowvikuTodmmaAYaeO-wG88",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Pascal_Blaurock_DdT9CF7tGzn_Video_by_pascal_blaurock/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Pascal_Blaurock_DdT9CF7tGzn_Video_by_pascal_blaurock/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdT9CF7tGzn.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40Pascal_Blaurock_DdT9CF7tGzn_Video_by_pascal_blaurock/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40Pascal_Blaurock_DdT9CF7tGzn_Video_by_pascal_blaurock/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1IxFP2l_Qo95exkj5sFhYzHM_giLWd0Nc&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1IxFP2l_Qo95exkj5sFhYzHM_giLWd0Nc&export=download",
         "report_url": "reports/IG_@Pascal_Blaurock_DdT9CF7tGzn_Video_by_pascal_blaurock.html",
         "shots_count": 14,
         "duration": "28s",
@@ -12090,13 +11797,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "📖",
         "badge_color": "amber"
       },
-      "industry": {
-        "id": "thuong-hieu",
-        "name": "Xây kênh",
-        "en_name": "Personal Brand",
-        "icon": "💼",
-        "badge_color": "indigo"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -12118,12 +11821,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@megantanhweewen",
         "profile_url": "https://www.instagram.com/megantanhweewen/"
       },
-      "ig_url": "https://www.instagram.com/p/DdT4EOzveQL",
+      "ig_url": "https://www.instagram.com/reel/DdT4EOzveQL/",
       "gdrive_folder": "https://drive.google.com/open?id=143z0kwx9S-8onoXKta0EWaRfahIBIwH6",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Megan_Tan_DdT4EOzveQL_Video_by_megantanhweewen/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Megan_Tan_DdT4EOzveQL_Video_by_megantanhweewen/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdT4EOzveQL.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40Megan_Tan_DdT4EOzveQL_Video_by_megantanhweewen/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40Megan_Tan_DdT4EOzveQL_Video_by_megantanhweewen/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1eNX7yR7Z_m2tfANzAFhVfRFWNpwKV0Fg&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1eNX7yR7Z_m2tfANzAFhVfRFWNpwKV0Fg&export=download",
         "report_url": "reports/IG_@Megan_Tan_DdT4EOzveQL_Video_by_megantanhweewen.html",
         "shots_count": 46,
         "duration": "92s",
@@ -12151,13 +11855,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "thoi-trang",
-        "name": "Thời trang",
-        "en_name": "Fashion & Style",
-        "icon": "👔",
-        "badge_color": "pink"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "korea",
         "name": "Hàn Quốc",
@@ -12179,12 +11879,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@yuuxeun",
         "profile_url": "https://www.instagram.com/yuuxeun/"
       },
-      "ig_url": "https://www.instagram.com/p/DdQwL3Ahci1",
+      "ig_url": "https://www.instagram.com/reel/DdQwL3Ahci1/",
       "gdrive_folder": "https://drive.google.com/open?id=1gkuAgqETeupD5LAnmo3D_fF1Vrs6OuVi",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40%EC%8B%A0_%E1%84%8B%E1%85%B2%E1%84%8B%E1%85%B3%E1%86%AB_yueun_shin_DdQwL3Ahci1_Video_by_yuuxeun/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40%EC%8B%A0_%E1%84%8B%E1%85%B2%E1%84%8B%E1%85%B3%E1%86%AB_yueun_shin_DdQwL3Ahci1_Video_by_yuuxeun/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdQwL3Ahci1.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40%EC%8B%A0_%E1%84%8B%E1%85%B2%E1%84%8B%E1%85%B3%E1%86%AB_yueun_shin_DdQwL3Ahci1_Video_by_yuuxeun/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40%EC%8B%A0_%E1%84%8B%E1%85%B2%E1%84%8B%E1%85%B3%E1%86%AB_yueun_shin_DdQwL3Ahci1_Video_by_yuuxeun/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1lGJO0xQWVDaI52hP2-Xd1r6tePvGJBOF&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1lGJO0xQWVDaI52hP2-Xd1r6tePvGJBOF&export=download",
         "report_url": "reports/IG_@신_유은_yueun_shin_DdQwL3Ahci1_Video_by_yuuxeun.html",
         "shots_count": 4,
         "duration": "8s",
@@ -12212,13 +11913,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -12240,12 +11937,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@syooaann",
         "profile_url": "https://www.instagram.com/syooaann/"
       },
-      "ig_url": "https://www.instagram.com/p/Dcx7pQpS6zs",
+      "ig_url": "https://www.instagram.com/reel/Dcx7pQpS6zs/",
       "gdrive_folder": "https://drive.google.com/open?id=1EK51Jedrou_VlxABkztbqV8V68B_HxKI",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%403413882081_Dcx7pQpS6zs_Video_by_syooaann/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%403413882081_Dcx7pQpS6zs_Video_by_syooaann/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Dcx7pQpS6zs.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%403413882081_Dcx7pQpS6zs_Video_by_syooaann/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%403413882081_Dcx7pQpS6zs_Video_by_syooaann/shot_01_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1KCkjopt5p3xJCJPcxbeRSBts83Bu56g4&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1KCkjopt5p3xJCJPcxbeRSBts83Bu56g4&export=download",
         "report_url": "reports/IG_@3413882081_Dcx7pQpS6zs_Video_by_syooaann.html",
         "shots_count": 1,
         "duration": "2s",
@@ -12273,13 +11971,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -12301,12 +11995,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@megantanhweewen",
         "profile_url": "https://www.instagram.com/megantanhweewen/"
       },
-      "ig_url": "https://www.instagram.com/p/DOd8XMMjxcH",
+      "ig_url": "https://www.instagram.com/reel/DOd8XMMjxcH/",
       "gdrive_folder": "https://drive.google.com/open?id=1M46LI4n-xF4i6uQL_fG0-D_3dwAp5-TD",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Megan_Tan_DOd8XMMjxcH_Video_by_megantanhweewen/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Megan_Tan_DOd8XMMjxcH_Video_by_megantanhweewen/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DOd8XMMjxcH.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40Megan_Tan_DOd8XMMjxcH_Video_by_megantanhweewen/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40Megan_Tan_DOd8XMMjxcH_Video_by_megantanhweewen/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1q5LoiPwKOEKeUupDU2Mf4KXD8c39qZ5e&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1q5LoiPwKOEKeUupDU2Mf4KXD8c39qZ5e&export=download",
         "report_url": "reports/IG_@Megan_Tan_DOd8XMMjxcH_Video_by_megantanhweewen.html",
         "shots_count": 4,
         "duration": "8s",
@@ -12324,8 +12019,8 @@ var FEDU_IDEAS_DATABASE = {
     {
       "id": "IG_@Caleb_Natale_Dcbn7Bix-X-_Video_by_calebnatale",
       "shortcode": "Dcbn7Bix-X-",
-      "title_vi": "Video by calebnatale",
-      "quick_takeaway": "Tác phẩm điện ảnh ngắn gồm 8 phân cảnh được tính toán tỉ mỉ. Bố cục duy trì tỷ lệ khung hình dọc 9:16 sắc nét, khai thác ánh sáng tự nhiên kết hợp tông màu điện ảnh chuyên nghiệp.",
+      "title_vi": "X- Video by calebnatale • Director's Report",
+      "quick_takeaway": "Báo cáo phân tích chuyên sâu ngôn ngữ điện ảnh, ánh sáng, góc máy và nhịp dựng 8 phân cảnh.",
       "key_tech": "Macro Detail Shot • Tabletop Lighting • Food Cinematography • Side Lighting 45°",
       "shooting_style": {
         "id": "dien-anh",
@@ -12334,13 +12029,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -12365,12 +12056,13 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/Dcbn7Bix-X-/",
       "gdrive_folder": "https://drive.google.com/open?id=1bOFljT1EkLxdEgnFAxbosiScsunWa0G4",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Caleb_Natale_Dcbn7Bix-X-_Video_by_calebnatale/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Caleb_Natale_Dcbn7Bix-X-_Video_by_calebnatale/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Dcbn7Bix-X-.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40Caleb_Natale_Dcbn7Bix-X-_Video_by_calebnatale/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40Caleb_Natale_Dcbn7Bix-X-_Video_by_calebnatale/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1LmL0QQ0T2R_WeToQTX5Eo6G2j5CJV6wk&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1LmL0QQ0T2R_WeToQTX5Eo6G2j5CJV6wk&export=download",
         "report_url": "reports/IG_@Caleb_Natale_Dcbn7Bix-X-_Video_by_calebnatale.html",
         "shots_count": 8,
-        "duration": "16s",
+        "duration": "16.00s",
         "youtube_id": "",
         "youtube_embed": "",
         "youtube_url": ""
@@ -12395,13 +12087,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "japan",
         "name": "Nhật Bản",
@@ -12426,9 +12114,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdTeHleIqkg/",
       "gdrive_folder": "https://drive.google.com/open?id=1phw5IyEy-KGuMU0z0lEIAqv4-W5efeew",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40AL%2C_The_Creator_Videography_Reels_DdTeHleIqkg_Video_by_shogentle/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40AL%2C_The_Creator_Videography_Reels_DdTeHleIqkg_Video_by_shogentle/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdTeHleIqkg.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40AL%2C_The_Creator_Videography_Reels_DdTeHleIqkg_Video_by_shogentle/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40AL%2C_The_Creator_Videography_Reels_DdTeHleIqkg_Video_by_shogentle/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1G7s1zBlYAQTZa88c5GYfIPOePrvh_dCD&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1G7s1zBlYAQTZa88c5GYfIPOePrvh_dCD&export=download",
         "report_url": "reports/IG_@AL,_The_Creator_Videography_Reels_DdTeHleIqkg_Video_by_shogentle.html",
         "shots_count": 24,
         "duration": "48.00s",
@@ -12456,13 +12145,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "kien-truc",
-        "name": "Góc nhà đẹp",
-        "en_name": "Architecture & Living",
-        "icon": "🏛️",
-        "badge_color": "emerald"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -12487,9 +12172,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/Dc6qXoKoYKh/",
       "gdrive_folder": "",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40iman.lizi_Dc6qXoKoYKh/shot_01_mid.jpg",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40iman.lizi_Dc6qXoKoYKh/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Dc6qXoKoYKh.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40iman.lizi_Dc6qXoKoYKh/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40iman.lizi_Dc6qXoKoYKh/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1mLx_1K2TFKrGUWCHPyLWTQFgETbvdJth&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1mLx_1K2TFKrGUWCHPyLWTQFgETbvdJth&export=download",
         "report_url": "reports/IG_@iman.lizi_Dc6qXoKoYKh.html",
         "shots_count": 8,
         "duration": "25.0s",
@@ -12517,13 +12203,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎙️",
         "badge_color": "purple"
       },
-      "industry": {
-        "id": "am-thuc",
-        "name": "F&B",
-        "en_name": "Food & Beverage",
-        "icon": "🍜",
-        "badge_color": "amber"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -12548,9 +12230,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdSUI9BvhqR/",
       "gdrive_folder": "",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40hayancook_DdSUI9BvhqR/shot_01_mid.jpg",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40hayancook_DdSUI9BvhqR/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdSUI9BvhqR.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40hayancook_DdSUI9BvhqR/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40hayancook_DdSUI9BvhqR/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1BRDBbh2AOYcxmNnCwPqcMP-vXx3hKpUn&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1BRDBbh2AOYcxmNnCwPqcMP-vXx3hKpUn&export=download",
         "report_url": "reports/IG_@hayancook_DdSUI9BvhqR.html",
         "shots_count": 8,
         "duration": "25.0s",
@@ -12578,13 +12261,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎙️",
         "badge_color": "purple"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -12609,9 +12288,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdL6pHDSKRc/",
       "gdrive_folder": "",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40cushygarden_DdL6pHDSKRc/shot_01_mid.jpg",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40cushygarden_DdL6pHDSKRc/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdL6pHDSKRc.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40cushygarden_DdL6pHDSKRc/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40cushygarden_DdL6pHDSKRc/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1YtR7AKnpXOyTfma_Wq4shnZW17j4rFj2&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1YtR7AKnpXOyTfma_Wq4shnZW17j4rFj2&export=download",
         "report_url": "reports/IG_@cushygarden_DdL6pHDSKRc.html",
         "shots_count": 8,
         "duration": "25.0s",
@@ -12639,13 +12319,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "📖",
         "badge_color": "amber"
       },
-      "industry": {
-        "id": "thuong-hieu",
-        "name": "Xây kênh",
-        "en_name": "Personal Brand",
-        "icon": "💼",
-        "badge_color": "indigo"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -12670,9 +12346,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/Db-S8i1hXwF/",
       "gdrive_folder": "",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40dev_zero_Db-S8i1hXwF/shot_01_mid.jpg",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40dev_zero_Db-S8i1hXwF/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Db-S8i1hXwF.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40dev_zero_Db-S8i1hXwF/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40dev_zero_Db-S8i1hXwF/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1s1fDnQq5tT9R1oFDCECRHTRCIFVIhtvT&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1s1fDnQq5tT9R1oFDCECRHTRCIFVIhtvT&export=download",
         "report_url": "reports/IG_@dev_zero_Db-S8i1hXwF.html",
         "shots_count": 8,
         "duration": "25.0s",
@@ -12700,13 +12377,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "kien-truc",
-        "name": "Góc nhà đẹp",
-        "en_name": "Architecture & Living",
-        "icon": "🏛️",
-        "badge_color": "emerald"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "japan",
         "name": "Nhật Bản",
@@ -12731,9 +12404,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/Dco_DevvUla/",
       "gdrive_folder": "",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40nagisa.decor_Dco_DevvUla/shot_01_mid.jpg",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40nagisa.decor_Dco_DevvUla/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Dco_DevvUla.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40nagisa.decor_Dco_DevvUla/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40nagisa.decor_Dco_DevvUla/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1f_B-4HsPYSsra232SugW0ZZrVsgoPZlA&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1f_B-4HsPYSsra232SugW0ZZrVsgoPZlA&export=download",
         "report_url": "reports/IG_@nagisa.decor_Dco_DevvUla.html",
         "shots_count": 8,
         "duration": "25.0s",
@@ -12761,13 +12435,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "du-lich",
-        "name": "Du lịch",
-        "en_name": "Travel & Culture",
-        "icon": "✈️",
-        "badge_color": "sky"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -12792,9 +12462,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdBlAWRO1Hl/",
       "gdrive_folder": "",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40yuto_creator_DdBlAWRO1Hl/shot_01_mid.jpg",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40yuto_creator_DdBlAWRO1Hl/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdBlAWRO1Hl.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40yuto_creator_DdBlAWRO1Hl/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40yuto_creator_DdBlAWRO1Hl/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1Q81YhpI8Sem0lUSjo23Q7exxriBF0JHC&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1Q81YhpI8Sem0lUSjo23Q7exxriBF0JHC&export=download",
         "report_url": "reports/IG_@yuto_creator_DdBlAWRO1Hl.html",
         "shots_count": 6,
         "duration": "25.0s",
@@ -12822,13 +12493,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🗣️",
         "badge_color": "blue"
       },
-      "industry": {
-        "id": "du-lich",
-        "name": "Du lịch",
-        "en_name": "Travel & Culture",
-        "icon": "✈️",
-        "badge_color": "sky"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -12853,9 +12520,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdRGd8evPK-/",
       "gdrive_folder": "",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40beixin_DdRGd8evPK-/shot_01_mid.jpg",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40beixin_DdRGd8evPK-/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdRGd8evPK-.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40beixin_DdRGd8evPK-/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40beixin_DdRGd8evPK-/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=19jME9YNP7ja2oPjPMJ3hTsj-gVOmU_NO&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=19jME9YNP7ja2oPjPMJ3hTsj-gVOmU_NO&export=download",
         "report_url": "reports/IG_@beixin_DdRGd8evPK-.html",
         "shots_count": 8,
         "duration": "25.0s",
@@ -12883,13 +12551,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🗣️",
         "badge_color": "blue"
       },
-      "industry": {
-        "id": "spa-lam-dep",
-        "name": "Làm đẹp",
-        "en_name": "Beauty & Spa",
-        "icon": "💆",
-        "badge_color": "rose"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -12914,9 +12578,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdKGq2TMhf4/",
       "gdrive_folder": "",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40layton_video_DdKGq2TMhf4/shot_01_mid.jpg",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40layton_video_DdKGq2TMhf4/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdKGq2TMhf4.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40layton_video_DdKGq2TMhf4/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40layton_video_DdKGq2TMhf4/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1XqZPEFRHky4VuHxVDU0x3iUqf6zYagwf&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1XqZPEFRHky4VuHxVDU0x3iUqf6zYagwf&export=download",
         "report_url": "reports/IG_@layton_video_DdKGq2TMhf4.html",
         "shots_count": 8,
         "duration": "25.0s",
@@ -12944,13 +12609,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -12975,9 +12636,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdPLvUpBwCl/",
       "gdrive_folder": "",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40kienobifilms_DdPLvUpBwCl/shot_01_mid.jpg",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40kienobifilms_DdPLvUpBwCl/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdPLvUpBwCl.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40kienobifilms_DdPLvUpBwCl/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40kienobifilms_DdPLvUpBwCl/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=17f4y-oTAjMpQyONUaiAmSnJ97CXc1jy_&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=17f4y-oTAjMpQyONUaiAmSnJ97CXc1jy_&export=download",
         "report_url": "reports/IG_@kienobifilms_DdPLvUpBwCl.html",
         "shots_count": 8,
         "duration": "25.0s",
@@ -13005,13 +12667,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "thoi-trang",
-        "name": "Thời trang",
-        "en_name": "Fashion & Style",
-        "icon": "👔",
-        "badge_color": "pink"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "japan",
         "name": "Nhật Bản",
@@ -13036,9 +12694,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DaDFH_TSii8/",
       "gdrive_folder": "",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40aki_japan_DaDFH_TSii8/shot_01_mid.jpg",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40aki_japan_DaDFH_TSii8/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DaDFH_TSii8.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40aki_japan_DaDFH_TSii8/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40aki_japan_DaDFH_TSii8/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=17fluf1FYClqNxPm2p6a2bbW1bZ0uiw3q&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=17fluf1FYClqNxPm2p6a2bbW1bZ0uiw3q&export=download",
         "report_url": "reports/IG_@aki_japan_DaDFH_TSii8.html",
         "shots_count": 8,
         "duration": "25.0s",
@@ -13060,19 +12719,15 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Mẫu video thời trang thương mại: Công thức thử thách ngân sách kết hợp chuyển cảnh búng tay siêu tốc.",
       "key_tech": "Thời Trang & Phụ Kiện • Budget Challenge Hook • Snap Outfit Match Cut • Upbeat Pacing • Zalando Commercial Collaboration",
       "shooting_style": {
-        "id": "chuyen-canh",
-        "name": "Chuyển Cảnh",
-        "en_name": "Transitions & Flow",
-        "icon": "⚡",
-        "badge_color": "rose"
+        "id": "theo-nhip-nhac",
+        "name": "Theo nhịp nhạc",
+        "en_name": "Music Beat & Rhythm",
+        "icon": "🎵",
+        "badge_color": "purple"
       },
-      "industry": {
-        "id": "thoi-trang",
-        "name": "Thời trang",
-        "en_name": "Fashion & Style",
-        "icon": "👔",
-        "badge_color": "pink"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -13097,9 +12752,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdRg_ybtlKI/",
       "gdrive_folder": "",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40nathanael.lct_DdRg_ybtlKI/shot_01_mid.jpg",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40nathanael.lct_DdRg_ybtlKI/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdRg_ybtlKI.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40nathanael.lct_DdRg_ybtlKI/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40nathanael.lct_DdRg_ybtlKI/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=10UmGq8XMm_Dj8SPhgT0K9CaSs-tzTm3W&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=10UmGq8XMm_Dj8SPhgT0K9CaSs-tzTm3W&export=download",
         "report_url": "reports/IG_@nathanael.lct_DdRg_ybtlKI.html",
         "shots_count": 8,
         "duration": "25.0s",
@@ -13127,13 +12783,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "du-lich",
-        "name": "Du lịch",
-        "en_name": "Travel & Culture",
-        "icon": "✈️",
-        "badge_color": "sky"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -13158,9 +12810,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdMrb4ARxHv/",
       "gdrive_folder": "",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40c.j.visuals_DdMrb4ARxHv/shot_01_mid.jpg",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40c.j.visuals_DdMrb4ARxHv/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdMrb4ARxHv.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40c.j.visuals_DdMrb4ARxHv/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40c.j.visuals_DdMrb4ARxHv/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1NweuL1vCEtywHwUDHP17v6gQykK82XFh&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1NweuL1vCEtywHwUDHP17v6gQykK82XFh&export=download",
         "report_url": "reports/IG_@c.j.visuals_DdMrb4ARxHv.html",
         "shots_count": 8,
         "duration": "25.0s",
@@ -13188,13 +12841,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "am-thuc",
-        "name": "F&B",
-        "en_name": "Food & Beverage",
-        "icon": "🍜",
-        "badge_color": "amber"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -13219,9 +12868,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/Dc3PgRbBp-m/",
       "gdrive_folder": "",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40genya_jp_Dc3PgRbBp-m/shot_01_mid.jpg",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40genya_jp_Dc3PgRbBp-m/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Dc3PgRbBp-m.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40genya_jp_Dc3PgRbBp-m/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40genya_jp_Dc3PgRbBp-m/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1XdtYpn5pJbCYPZLi1aDT8lzqueGj_s-e&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1XdtYpn5pJbCYPZLi1aDT8lzqueGj_s-e&export=download",
         "report_url": "reports/IG_@genya_jp_Dc3PgRbBp-m.html",
         "shots_count": 8,
         "duration": "25.0s",
@@ -13249,13 +12899,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "du-lich",
-        "name": "Du lịch",
-        "en_name": "Travel & Culture",
-        "icon": "✈️",
-        "badge_color": "sky"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -13280,9 +12926,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdHGBpZOzIm/",
       "gdrive_folder": "",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40charlotte.arsenault_DdHGBpZOzIm/shot_01_mid.jpg",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40charlotte.arsenault_DdHGBpZOzIm/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdHGBpZOzIm.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40charlotte.arsenault_DdHGBpZOzIm/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40charlotte.arsenault_DdHGBpZOzIm/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1s6cwvJDZNkPuna2m3QB5C_g1dbwVDAAY&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1s6cwvJDZNkPuna2m3QB5C_g1dbwVDAAY&export=download",
         "report_url": "reports/IG_@charlotte.arsenault_DdHGBpZOzIm.html",
         "shots_count": 8,
         "duration": "25.0s",
@@ -13310,13 +12957,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -13341,9 +12984,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdO2XLIKiXo/",
       "gdrive_folder": "",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40arturbr_DdO2XLIKiXo/shot_01_mid.jpg",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40arturbr_DdO2XLIKiXo/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdO2XLIKiXo.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40arturbr_DdO2XLIKiXo/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40arturbr_DdO2XLIKiXo/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1zCO91r3ItXwE3DpThzN1UO5WhrBz-0Ne&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1zCO91r3ItXwE3DpThzN1UO5WhrBz-0Ne&export=download",
         "report_url": "reports/IG_@arturbr_DdO2XLIKiXo.html",
         "shots_count": 8,
         "duration": "25.0s",
@@ -13371,13 +13015,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -13402,9 +13042,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/Dc6Cxf-QRWh/",
       "gdrive_folder": "",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40jazziesillona_Dc6Cxf-QRWh/shot_01_mid.jpg",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40jazziesillona_Dc6Cxf-QRWh/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Dc6Cxf-QRWh.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40jazziesillona_Dc6Cxf-QRWh/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40jazziesillona_Dc6Cxf-QRWh/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1bNpjZ5bqYQQNW3w1YjRMNGOdohEvBXbT&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1bNpjZ5bqYQQNW3w1YjRMNGOdohEvBXbT&export=download",
         "report_url": "reports/IG_@jazziesillona_Dc6Cxf-QRWh.html",
         "shots_count": 8,
         "duration": "25.0s",
@@ -13432,13 +13073,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -13463,9 +13100,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdR7dEIxzT9/",
       "gdrive_folder": "",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40c.j.visuals_DdR7dEIxzT9/shot_01_mid.jpg",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40c.j.visuals_DdR7dEIxzT9/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdR7dEIxzT9.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40c.j.visuals_DdR7dEIxzT9/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40c.j.visuals_DdR7dEIxzT9/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1uGEoVDI1XBuNb6GaGpnFPegaH-6EWsEz&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1uGEoVDI1XBuNb6GaGpnFPegaH-6EWsEz&export=download",
         "report_url": "reports/IG_@c.j.visuals_DdR7dEIxzT9.html",
         "shots_count": 8,
         "duration": "25.0s",
@@ -13493,13 +13131,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "am-thuc",
-        "name": "F&B",
-        "en_name": "Food & Beverage",
-        "icon": "🍜",
-        "badge_color": "amber"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "korea",
         "name": "Hàn Quốc",
@@ -13524,9 +13158,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdBr6LZqkFd/",
       "gdrive_folder": "",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40jusorok_korea_DdBr6LZqkFd/shot_01_mid.jpg",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40jusorok_korea_DdBr6LZqkFd/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdBr6LZqkFd.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40jusorok_korea_DdBr6LZqkFd/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40jusorok_korea_DdBr6LZqkFd/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=15psTu9Mpk-YsBVGdrZhhcoXwcjKIWV0p&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=15psTu9Mpk-YsBVGdrZhhcoXwcjKIWV0p&export=download",
         "report_url": "reports/IG_@jusorok_korea_DdBr6LZqkFd.html",
         "shots_count": 8,
         "duration": "25.0s",
@@ -13554,13 +13189,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "thoi-trang",
-        "name": "Thời trang",
-        "en_name": "Fashion & Style",
-        "icon": "👔",
-        "badge_color": "pink"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -13585,9 +13216,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdRe4-xpHs2/",
       "gdrive_folder": "",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40arianballate_DdRe4-xpHs2/shot_01_mid.jpg",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40arianballate_DdRe4-xpHs2/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdRe4-xpHs2.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40arianballate_DdRe4-xpHs2/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40arianballate_DdRe4-xpHs2/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1roDvyfaQoRdR7Gw-dr-Hp5XsMG3g5WgI&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1roDvyfaQoRdR7Gw-dr-Hp5XsMG3g5WgI&export=download",
         "report_url": "reports/IG_@arianballate_DdRe4-xpHs2.html",
         "shots_count": 8,
         "duration": "25.0s",
@@ -13615,13 +13247,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "thoi-trang",
-        "name": "Thời trang",
-        "en_name": "Fashion & Style",
-        "icon": "👔",
-        "badge_color": "pink"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -13646,9 +13274,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdD_QqPB7aW/",
       "gdrive_folder": "",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40genya_jp_DdD_QqPB7aW/shot_01_mid.jpg",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40genya_jp_DdD_QqPB7aW/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdD_QqPB7aW.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40genya_jp_DdD_QqPB7aW/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40genya_jp_DdD_QqPB7aW/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=17gqXCesMveA8rHtL50nj8bmzR7fmaWmB&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=17gqXCesMveA8rHtL50nj8bmzR7fmaWmB&export=download",
         "report_url": "reports/IG_@genya_jp_DdD_QqPB7aW.html",
         "shots_count": 8,
         "duration": "25.0s",
@@ -13676,13 +13305,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ugc",
-        "name": "UGC",
-        "en_name": "UGC & Ads",
-        "icon": "📱",
-        "badge_color": "amber"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -13704,12 +13329,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@ulanzi.vietnam",
         "profile_url": "https://www.instagram.com/ulanzi.vietnam/"
       },
-      "ig_url": "https://www.lazada.vn/products/pdp-i13344148344-s116633631361.html?c=&channelLpJumpArgs=&clickTrackInfo=query%253Aulanzi%252Bua20%253Bnid%253A13344148344%253Bsrc%253ALazadaMainSrp%253Brn%253A3805aba107017d1fa391a06bedb3781a%253Bregion%253Avn%253Bsku%253A13344148344_VNAMZ%253Bprice%253A1242000%253Bclient%253Adesktop%253Bsupplier_id%253A201110528696%253Bsession_id%253A%253Bbiz_source%253Ah5_internal%253Bslot%253A1%253Butlog_bucket_id%253A470687%253Basc_category_id%253A11068%253Bitem_id%253A13344148344%253Bsku_id%253A116633631361%253Bshop_id%253A5088557%253BtemplateInfo%253A107883_E%2523-1_A3_C%2523164594_J%2523&freeshipping=1&fs_ab=2&fuse_fs=&lang=vi&location=China&price=1.242E%206&priceCompare=skuId%3A116633631361%3Bsource%3Alazada-search-voucher%3Bsn%3A3805aba107017d1fa391a06bedb3781a%3BoriginPrice%3A1242000%3BdisplayPrice%3A1242000%3BisGray%3Afalse%3BsinglePromotionId%3A460000000000000%3BsingleToolCode%3ApromPrice%3BvoucherPricePlugin%3A0%3Btimestamp%3A1789368392145&ratingscore=4.875&request_id=3805aba107017d1fa391a06bedb3781a&review=16&sale=32&search=1&source=search&spm=a2o4n.searchlist.list.1&stock=1",
+      "ig_url": "https://www.instagram.com/ulanzi.vietnam/",
       "gdrive_folder": "https://drive.google.com/open?id=19t43n4ACnEONaOpKK1ceJLg3Lel0AkLG",
       "media": {
         "thumb_hook": "https://img.youtube.com/vi/L4YUJh9ltF0/hqdefault.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/LAZADA_Ulanzi_%C4%90%C3%A8n_LED_Thanh_B%C6%A1m_H%C6%A1i_UA20%2C__thumb.jpg",
-        "video_url": "https://media.fedu.vn/videos/Ulanzi%20UA12%20UA20%20Inflatable%20Magnetic%20Tube%20Light%20-%20%40ulanzi.mp4",
+        "thumb_key": "",
+        "video_url": "https://drive.google.com/uc?id=18A9MvEJYL38rTo6lxhovUQMcVt9b_nHe&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=18A9MvEJYL38rTo6lxhovUQMcVt9b_nHe&export=download",
         "report_url": "reports/Ulanzi UA12 UA20 Inflatable Magnetic Tube Light - @ulanzi.html",
         "shots_count": 18,
         "duration": "42.7s",
@@ -13737,13 +13363,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ugc",
-        "name": "UGC",
-        "en_name": "UGC & Ads",
-        "icon": "📱",
-        "badge_color": "amber"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -13765,12 +13387,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@ulanzi.vietnam",
         "profile_url": "https://www.instagram.com/ulanzi.vietnam/"
       },
-      "ig_url": "https://s.lazada.vn/s.obGd6?c=s",
+      "ig_url": "https://www.instagram.com/ulanzi.vietnam/",
       "gdrive_folder": "",
       "media": {
         "thumb_hook": "https://img.youtube.com/vi/ZUWZ5Uhbz28/hqdefault.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/LAZADA_Ulanzi_Ch%C3%A2n_%C4%90%E1%BA%BF_T%E1%BB%B1_S%C6%B0%E1%BB%9Bng_C%C3%B3_T%E1%BB%AB_T%C3%ADnh__thumb.jpg",
-        "video_url": "https://www.youtube.com/embed/ZUWZ5Uhbz28",
+        "thumb_key": "",
+        "video_url": "https://media.fedu.vn/videos/ZUWZ5Uhbz28",
+        "video_url_original": "https://media.fedu.vn/videos/ZUWZ5Uhbz28",
         "report_url": "",
         "shots_count": 8,
         "duration": "29.1s",
@@ -13798,13 +13421,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -13826,12 +13445,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@kawoon.lee",
         "profile_url": "https://www.instagram.com/kawoon.lee/"
       },
-      "ig_url": "https://www.instagram.com/reel/DatbbgJviTV/?stkn=MW41cXVxOGNwMjUwZw==",
+      "ig_url": "https://www.instagram.com/reel/DatbbgJviTV/",
       "gdrive_folder": "https://drive.google.com/open?id=1BZI-pZznTc7KAL7lbt-Iyj48UoJmujVC",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/shot_03_mid.jpg",
-        "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/Teaching_Nervous_System_Not_Emergency_-_%40kawoon.lee.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency/extracted_shots/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1uyhc5TVwH7m6bPYaeK3XLNHCbq5x-T7v&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1uyhc5TVwH7m6bPYaeK3XLNHCbq5x-T7v&export=download",
         "report_url": "reports/IG_@kawoon.lee_DatbbgJviTV_Teaching_Nervous_System_Not_Emergency.html",
         "shots_count": 8,
         "duration": "27.33s",
@@ -13859,13 +13479,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -13887,12 +13503,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@mercantegi",
         "profile_url": "https://www.instagram.com/mercantegi/"
       },
-      "ig_url": "https://www.instagram.com/mercantegi/",
+      "ig_url": "https://www.instagram.com/reel/DbQtoVPRMWk/",
       "gdrive_folder": "https://drive.google.com/open?id=19USS6XpFGWQSJzEzK6ZsT-g4aoCa7QSJ",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mercantegi_DbQtoVPRMWk_5_Cenas_Criativas_Trabalho/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mercantegi_DbQtoVPRMWk_5_Cenas_Criativas_Trabalho/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DbQtoVPRMWk.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40mercantegi_DbQtoVPRMWk_5_Cenas_Criativas_Trabalho/extracted_shots/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40mercantegi_DbQtoVPRMWk_5_Cenas_Criativas_Trabalho/extracted_shots/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1n11mLGjuCdzbzAV9kaDlcB5sQnbBaITx&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1n11mLGjuCdzbzAV9kaDlcB5sQnbBaITx&export=download",
         "report_url": "reports/5 Cenas Criativas Trabalho - @mercantegi.html",
         "shots_count": 11,
         "duration": "19.17s",
@@ -13920,13 +13537,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "am-thuc",
-        "name": "F&B",
-        "en_name": "Food & Beverage",
-        "icon": "🍜",
-        "badge_color": "amber"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -13948,12 +13561,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@turapinaanastasiia",
         "profile_url": "https://www.instagram.com/turapinaanastasiia/"
       },
-      "ig_url": "https://www.instagram.com/turapinaanastasiia/",
+      "ig_url": "https://www.instagram.com/reel/DdBorQ2KEli/",
       "gdrive_folder": "https://drive.google.com/open?id=1_edbje9S5JP2TMQ-TXsl0h1UUA3Nz5_s",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdBorQ2KEli.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40turapinaanastasiia_DdBorQ2KEli_How_I_Film_Alone_Cafe_UGC_Suction_Mount/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1ArWLJhoOtSdUQiDsnsv1EO2tHt_bBzRG&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1ArWLJhoOtSdUQiDsnsv1EO2tHt_bBzRG&export=download",
         "report_url": "reports/How I Film Alone in a Cafe - UGC Suction Mount - @turapinaanastasiia.html",
         "shots_count": 13,
         "duration": "11.37s",
@@ -13981,13 +13595,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "thoi-trang",
-        "name": "Thời trang",
-        "en_name": "Fashion & Style",
-        "icon": "👔",
-        "badge_color": "pink"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -14009,12 +13619,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@vicgaibar",
         "profile_url": "https://www.instagram.com/vicgaibar/"
       },
-      "ig_url": "https://www.instagram.com/reel/DaGGMTdtawm/?stkn=Mm9kMzh4MG1ybzNx",
+      "ig_url": "https://www.instagram.com/reel/DaGGMTdtawm/",
       "gdrive_folder": "https://drive.google.com/open?id=145DqOK7p01WVztGU3ZUhvoxc_JivIain",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40vicgaibar_DaGGMTdtawm_Cannes_Street_Fit_Check_Tripod_OOTD/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40vicgaibar_DaGGMTdtawm_Cannes_Street_Fit_Check_Tripod_OOTD/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DaGGMTdtawm.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40vicgaibar_DaGGMTdtawm_Cannes_Street_Fit_Check_Tripod_OOTD/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40vicgaibar_DaGGMTdtawm_Cannes_Street_Fit_Check_Tripod_OOTD/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1NM0OyKKorE8361mcGGDXUIN3Z5eIc1XW&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1NM0OyKKorE8361mcGGDXUIN3Z5eIc1XW&export=download",
         "report_url": "reports/Cannes Street Fit Check - @vicgaibar.html",
         "shots_count": 18,
         "duration": "27.20s",
@@ -14042,13 +13653,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "📖",
         "badge_color": "amber"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -14070,12 +13677,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@hannya.tattoos",
         "profile_url": "https://www.instagram.com/hannya.tattoos/"
       },
-      "ig_url": "https://www.instagram.com/p/DdLedJjsbNW/",
+      "ig_url": "https://www.instagram.com/reel/DdLedJjsbNW/",
       "gdrive_folder": "https://drive.google.com/open?id=1RIepbYRGh8Y4hiyQeXd8L4YOGxn0N9JR",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Asian%20Dragon%20Tattoo%20Journey%20-%20%40hannya.tattoos.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1SzgWqWQ7VdtWpN-5n4OrZ9mAsEUZ66MT&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1SzgWqWQ7VdtWpN-5n4OrZ9mAsEUZ66MT&export=download",
         "report_url": "reports/IG_@hannya.tattoos_DdLedJjsbNW_Asian_Dragon_Tattoo_Journey.html",
         "shots_count": 18,
         "duration": "63.03s",
@@ -14097,19 +13705,15 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Bóc tách chuyên sâu toàn diện 25 phân cảnh theo ngôn ngữ đạo diễn và kỹ thuật CapCut Speed Transitions trong video 'Day in my life' phong cách Clean Aesthetic tại San Francisco của lập trình viên kiêm creator Celina (@celfstudies): từ ch...",
       "key_tech": "Staccato Beat Teaser • Frame-in-Frame Mirror • Tactile Speed Ramp • Low-Angle Ninja Walk • Transit Whip-Zoom • Aesthetic Flatlay • Sensory Scoop Macro • Horizontal Shelf Scan • Color Pop Array • Interactive App Showcase • Climax Pouring Pull • Circular Narrative Loop",
       "shooting_style": {
-        "id": "chuyen-canh",
-        "name": "Chuyển Cảnh",
-        "en_name": "Transitions & Flow",
-        "icon": "⚡",
-        "badge_color": "rose"
+        "id": "theo-nhip-nhac",
+        "name": "Theo nhịp nhạc",
+        "en_name": "Music Beat & Rhythm",
+        "icon": "🎵",
+        "badge_color": "purple"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -14134,9 +13738,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdN_aljAIY0/",
       "gdrive_folder": "https://drive.google.com/open?id=1yMebk10dOCBk2OADq2utwUE2AIkuwSHV",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40celfstudies_DdN_aljAIY0_Day_In_My_Life_SF_Speed_Transitions/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40celfstudies_DdN_aljAIY0_Day_In_My_Life_SF_Speed_Transitions/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdN_aljAIY0.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40celfstudies_DdN_aljAIY0_Day_In_My_Life_SF_Speed_Transitions/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40celfstudies_DdN_aljAIY0_Day_In_My_Life_SF_Speed_Transitions/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1BAfc_gWmcRZ6XcA6Cut48a1Ie1fREQ5s&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1BAfc_gWmcRZ6XcA6Cut48a1Ie1fREQ5s&export=download",
         "report_url": "reports/Day In My Life SF Speed Transitions - @celfstudies.html",
         "shots_count": 25,
         "duration": "15.87s",
@@ -14158,19 +13763,15 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Bóc tách 30 phân cảnh chuẩn đạo diễn về nghệ thuật xây dựng kịch bản trải nghiệm du lịch kép (Sensory Pairing Lifestyle): Mở đầu bằng chuỗi Hook 7 nhịp siêu tốc (massage & matcha), dẫn lối khám phá không gian trị liệu đá bazan và ấn huyệ...",
       "key_tech": "7-Beat Sensory Hook • Dual-Experience Lifestyle Pairing • Tactical Hot Stone Basalt • Chasen Whisking ASMR • Latte Marbling Pour • Seamless Walk Bridge • High-Converting DM Voucher CTA",
       "shooting_style": {
-        "id": "dien-anh",
-        "name": "Chỉn Chu",
-        "en_name": "Cinematic Mastery",
-        "icon": "🎬",
-        "badge_color": "sky"
+        "id": "theo-nhip-nhac",
+        "name": "Theo nhịp nhạc",
+        "en_name": "Music Beat & Rhythm",
+        "icon": "🎵",
+        "badge_color": "purple"
       },
-      "industry": {
-        "id": "spa-lam-dep",
-        "name": "Làm đẹp",
-        "en_name": "Beauty & Spa",
-        "icon": "💆",
-        "badge_color": "rose"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -14192,12 +13793,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@hanoi.liebe",
         "profile_url": "https://www.instagram.com/hanoi.liebe/"
       },
-      "ig_url": "https://www.instagram.com/p/DdHf_1yA4WQ/",
+      "ig_url": "https://www.instagram.com/reel/DdHf_1yA4WQ/",
       "gdrive_folder": "https://drive.google.com/open?id=1CGWSETD2YW3yOMbz5cls1Bvq52URsK5y",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40hanoi.liebe_DdHf_1yA4WQ_Massage_and_Matcha/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40hanoi.liebe_DdHf_1yA4WQ_Massage_and_Matcha/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdHf_1yA4WQ.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40hanoi.liebe_DdHf_1yA4WQ_Massage_and_Matcha/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40hanoi.liebe_DdHf_1yA4WQ_Massage_and_Matcha/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1TSaRvnQHJN4OYJgmhIwKHzcrG8rizyNK&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1TSaRvnQHJN4OYJgmhIwKHzcrG8rizyNK&export=download",
         "report_url": "reports/IG_@hanoi.liebe_DdHf_1yA4WQ_Massage_and_Matcha.html",
         "shots_count": 30,
         "duration": "34.80s",
@@ -14219,19 +13821,15 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Bóc tách trọn vẹn 8 phân cảnh mẫu mực chuẩn đạo diễn trong video Reel triệu view tôn vinh sắc thu Hà Nội của @vnexpress_hanoi: Nghệ thuật Fast-Cut Beat Sync kết hợp bố cục ban công đa tầng lớp ngắm Nhà Thờ Lớn, hầm cây cổ thụ Phan Đình P...",
       "key_tech": "Fast-Cut Beat Sync • Balcony Sensory Hook • One-Point Tree Canopy Tunnel • Street Food Sensory Contrast • Blossom Foreground Framing • Telephoto Urban Compression • Iconic Autumn Flower Cart • Heritage Anchor Outro",
       "shooting_style": {
-        "id": "dien-anh",
-        "name": "Chỉn Chu",
-        "en_name": "Cinematic Mastery",
-        "icon": "🎬",
-        "badge_color": "sky"
+        "id": "theo-nhip-nhac",
+        "name": "Theo nhịp nhạc",
+        "en_name": "Music Beat & Rhythm",
+        "icon": "🎵",
+        "badge_color": "purple"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -14253,12 +13851,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@vnexpress_hanoi",
         "profile_url": "https://www.instagram.com/vnexpress_hanoi/"
       },
-      "ig_url": "https://www.instagram.com/reel/DdAyywnSxU8/?stkn=MTU1MXg3YXk4OW8xMQ==",
+      "ig_url": "https://www.instagram.com/reel/DdAyywnSxU8/",
       "gdrive_folder": "https://drive.google.com/open?id=1GXrw8FtkoFNuUrKGp36tTGduZf1gs5hL",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40vnexpress_hanoi_DdAyywnSxU8_Autumn_In_Hanoi/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40vnexpress_hanoi_DdAyywnSxU8_Autumn_In_Hanoi/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdAyywnSxU8.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40vnexpress_hanoi_DdAyywnSxU8_Autumn_In_Hanoi/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40vnexpress_hanoi_DdAyywnSxU8_Autumn_In_Hanoi/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1ZzBfeWAWQWqfZga331YrcV2hULvSOj2A&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1ZzBfeWAWQWqfZga331YrcV2hULvSOj2A&export=download",
         "report_url": "reports/Autumn in Hanoi - @vnexpress_hanoi.html",
         "shots_count": 8,
         "duration": "14.43s",
@@ -14286,13 +13885,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -14314,12 +13909,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@utsint",
         "profile_url": "https://www.instagram.com/utsint/"
       },
-      "ig_url": "https://www.instagram.com/p/DdAYPcwgfv1/",
+      "ig_url": "https://www.instagram.com/reel/DdAYPcwgfv1/",
       "gdrive_folder": "https://drive.google.com/open?id=1C_utEcBCcYsdTEz5UtXrdf9z5feCCOF-",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40utsint_DdAYPcwgfv1_UTS_Vietnam_Open_Day_Campus_Tour/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40utsint_DdAYPcwgfv1_UTS_Vietnam_Open_Day_Campus_Tour/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdAYPcwgfv1.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40utsint_DdAYPcwgfv1_UTS_Vietnam_Open_Day_Campus_Tour/extracted_shots/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40utsint_DdAYPcwgfv1_UTS_Vietnam_Open_Day_Campus_Tour/extracted_shots/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1OyvazuDf6_Ve0OsMK09aZbN-bJopz697&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1OyvazuDf6_Ve0OsMK09aZbN-bJopz697&export=download",
         "report_url": "reports/UTS Vietnam Open Day Campus Tour - @utsint.html",
         "shots_count": 9,
         "duration": "34.00s",
@@ -14347,13 +13943,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "📖",
         "badge_color": "amber"
       },
-      "industry": {
-        "id": "kien-truc",
-        "name": "Góc nhà đẹp",
-        "en_name": "Architecture & Living",
-        "icon": "🏛️",
-        "badge_color": "emerald"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -14378,9 +13970,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdNKlIqPagO/",
       "gdrive_folder": "https://drive.google.com/open?id=1sf_OVQkhH_jNbbaQv1Yr0p7Bvao70uSE",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40the.isaacelguera_DdNKlIqPagO_Kien_Truc_Chuoi_Canh_Sequence/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40the.isaacelguera_DdNKlIqPagO_Kien_Truc_Chuoi_Canh_Sequence/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdNKlIqPagO.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40the.isaacelguera_DdNKlIqPagO_Kien_Truc_Chuoi_Canh_Sequence/extracted_shots/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40the.isaacelguera_DdNKlIqPagO_Kien_Truc_Chuoi_Canh_Sequence/extracted_shots/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1TghJCZcLRbKJEj5hkf2sMmzhUx0obMHo&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1TghJCZcLRbKJEj5hkf2sMmzhUx0obMHo&export=download",
         "report_url": "reports/Kien Truc Chuoi Canh Sequence - @the.isaacelguera.html",
         "shots_count": 21,
         "duration": "74.13s",
@@ -14402,19 +13995,15 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Bóc tách trọn vẹn 8 micro-beats mẫu mực trong video One-Take của @hairpositiveofficial: Phong cách thời trang Carrie Bradshaw, bước chuyển bẻ quán tính Moonwalk, cú rướn người cận cảnh xúc giác và vòng lặp vô tận đỉnh cao.",
       "key_tech": "One-Take Plan Séquence, Carrie Bradshaw Style Runway, Urban Catwalk Pacing, Reverse Moonwalk Beat, Close-Up Push-In Transition, Tactile Hair Play & Curl Bounce, Monochromatic Slate Backdrop, Seamless Infinite Loop Outro",
       "shooting_style": {
-        "id": "chuyen-canh",
-        "name": "Chuyển Cảnh",
-        "en_name": "Transitions & Flow",
-        "icon": "⚡",
-        "badge_color": "rose"
+        "id": "theo-nhip-nhac",
+        "name": "Theo nhịp nhạc",
+        "en_name": "Music Beat & Rhythm",
+        "icon": "🎵",
+        "badge_color": "purple"
       },
-      "industry": {
-        "id": "thoi-trang",
-        "name": "Thời trang",
-        "en_name": "Fashion & Style",
-        "icon": "👔",
-        "badge_color": "pink"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -14436,12 +14025,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@hairpositiveofficial",
         "profile_url": "https://www.instagram.com/hairpositiveofficial/"
       },
-      "ig_url": "https://www.instagram.com/reel/DbOMM0Pu1HA/?stkn=bDQ5NGxlcDBtNGhz",
+      "ig_url": "https://www.instagram.com/reel/DbOMM0Pu1HA/",
       "gdrive_folder": "https://drive.google.com/open?id=1Jxwli-mCsHgBFhUoZhWFH5t9X9W7joNZ",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DbOMM0Pu1HA.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40hairpositiveofficial_DbOMM0Pu1HA_House_of_Hair_One_Take_Curly_Runway/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1-6T09kkpt3iFsM5jk-HM4oS97FrWhEBg&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1-6T09kkpt3iFsM5jk-HM4oS97FrWhEBg&export=download",
         "report_url": "reports/House of Hair One-Take Curly Runway - @hairpositiveofficial.html",
         "shots_count": 8,
         "duration": "13.08s",
@@ -14463,19 +14053,15 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Bóc tách 12 phân cảnh chuẩn đạo diễn theo nhịp dựng Beat-Sync chuẩn xác 1.2 giây/cảnh trong video khám phá không gian mùi hương và quà tặng bản địa 'slow living (quiet places, soft moments)' của MoodMe Saigon (@moodme.sg): từ cú chào sân...",
       "key_tech": "Decal Glass Framing • Action Match Cut Door Push • Multi-Layer Reflection • Symmetrical Shelf Grid • Scent Notes Pedestal • Earthy Tone Staggering • Whimsical Pop-Up • Tactile Handheld Showcase • Chromatic Array • Modern Local Accessory • Herbal Sanctuary • Facade Outro Anchor",
       "shooting_style": {
-        "id": "chuyen-canh",
-        "name": "Chuyển Cảnh",
-        "en_name": "Transitions & Flow",
-        "icon": "⚡",
-        "badge_color": "rose"
+        "id": "theo-nhip-nhac",
+        "name": "Theo nhịp nhạc",
+        "en_name": "Music Beat & Rhythm",
+        "icon": "🎵",
+        "badge_color": "purple"
       },
-      "industry": {
-        "id": "spa-lam-dep",
-        "name": "Làm đẹp",
-        "en_name": "Beauty & Spa",
-        "icon": "💆",
-        "badge_color": "rose"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -14497,12 +14083,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@moodme.sg",
         "profile_url": "https://www.instagram.com/moodme.sg/"
       },
-      "ig_url": "https://www.instagram.com/p/DdL904CMnq3/",
+      "ig_url": "https://www.instagram.com/reel/DdL904CMnq3/",
       "gdrive_folder": "https://drive.google.com/open?id=1KphWjU1Qq6UKnDnKwc6hBPlEov2exaB6",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40moodme.sg_DdL904CMnq3_Slow_Living_Scent_Giftspace/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40moodme.sg_DdL904CMnq3_Slow_Living_Scent_Giftspace/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdL904CMnq3.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40moodme.sg_DdL904CMnq3_Slow_Living_Scent_Giftspace/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40moodme.sg_DdL904CMnq3_Slow_Living_Scent_Giftspace/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1YyRPrj3FxZsvRJ7wl6nr4ShrRNVrArNy&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1YyRPrj3FxZsvRJ7wl6nr4ShrRNVrArNy&export=download",
         "report_url": "reports/Slow Living Scent & Giftspace - @moodme.sg.html",
         "shots_count": 14,
         "duration": "14.67s",
@@ -14524,19 +14111,15 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Bóc tách trọn vẹn 15 phân cảnh mẫu mực trong video Reel triệu view của @jassminechi: Nghệ thuật Fast-Cut Beat-Synced Travel Guide kết hợp bố cục chính diện cân xứng, nghệ thuật lồng khung hình trong khung hình, xếp lớp tiền cảnh hoài cổ ...",
       "key_tech": "Fast-Cut Beat Sync, Shanghai Al-Fresco Lifestyle, Frontal Symmetry, Sensory Action Close-Up, Look-Through Framing, Social Proof Staging, Narrative Outro",
       "shooting_style": {
-        "id": "dien-anh",
-        "name": "Chỉn Chu",
-        "en_name": "Cinematic Mastery",
-        "icon": "🎬",
-        "badge_color": "sky"
+        "id": "theo-nhip-nhac",
+        "name": "Theo nhịp nhạc",
+        "en_name": "Music Beat & Rhythm",
+        "icon": "🎵",
+        "badge_color": "purple"
       },
-      "industry": {
-        "id": "am-thuc",
-        "name": "F&B",
-        "en_name": "Food & Beverage",
-        "icon": "🍜",
-        "badge_color": "amber"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -14558,12 +14141,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@jassminechi",
         "profile_url": "https://www.instagram.com/jassminechi/"
       },
-      "ig_url": "https://www.instagram.com/reel/DdFBLQMOTwM/?stkn=MXNweGVwdDRyYzA5YQ==",
+      "ig_url": "https://www.instagram.com/reel/DdFBLQMOTwM/",
       "gdrive_folder": "https://drive.google.com/open?id=1AbENDdElh2uh30BzczOghjm--9xxeP7f",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdFBLQMOTwM.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40jassminechi_DdFBLQMOTwM_Shanghai_Coffee_Guide/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1emDu_dnfJf4jjgtED7oP2WnwQ13IOoLu&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1emDu_dnfJf4jjgtED7oP2WnwQ13IOoLu&export=download",
         "report_url": "reports/The Ultimate Shanghai Coffee Guide - @jassminechi.html",
         "shots_count": 15,
         "duration": "12.57s",
@@ -14591,13 +14175,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "cong-nghe",
-        "name": "Đồ công nghệ",
-        "en_name": "Tech & Gear",
-        "icon": "📱",
-        "badge_color": "purple"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "korea",
         "name": "Hàn Quốc",
@@ -14619,12 +14199,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@hena_film_vlog",
         "profile_url": "https://www.instagram.com/hena_film_vlog/"
       },
-      "ig_url": "https://www.instagram.com/reel/Db-mZWEKECo/?stkn=bHhhcnlqeDJnNDZh",
+      "ig_url": "https://www.instagram.com/reel/Db-mZWEKECo/",
       "gdrive_folder": "https://drive.google.com/open?id=1Vs39vW4CcrmGQYDf6GGW3NnfMCyYmo12",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40hena_film_vlog_Db-mZWEKECo_4_Cu_May_Sieu_Thi_Ulanzi_MA38_MT85/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40hena_film_vlog_Db-mZWEKECo_4_Cu_May_Sieu_Thi_Ulanzi_MA38_MT85/shot_03_mid.jpg",
-        "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/4%20Cu%20May%20Sieu%20Thi%20Bang%20Gia%20Do%20Ulanzi%20MA38%20MT85%20-%20%40hena_film_vlog.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40hena_film_vlog_Db-mZWEKECo_4_Cu_May_Sieu_Thi_Ulanzi_MA38_MT85/extracted_shots/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40hena_film_vlog_Db-mZWEKECo_4_Cu_May_Sieu_Thi_Ulanzi_MA38_MT85/extracted_shots/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1ynjmpJGwTi2xxrs32WP3r8nusVfIMvZL&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1ynjmpJGwTi2xxrs32WP3r8nusVfIMvZL&export=download",
         "report_url": "reports/4 Cu May Sieu Thi Bang Gia Do Ulanzi MA38 MT85 - @hena_film_vlog.html",
         "shots_count": 10,
         "duration": "19.30s",
@@ -14652,13 +14233,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -14680,12 +14257,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@lee.rabo",
         "profile_url": "https://www.instagram.com/lee.rabo/"
       },
-      "ig_url": "https://www.instagram.com/lee.rabo/",
+      "ig_url": "https://www.instagram.com/reel/Dc3ifsHTIhL/",
       "gdrive_folder": "https://drive.google.com/open?id=1TE1CCndPyCYYuVtA6nJMTOE8WhCrpg_C",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40lee.rabo_Dc3ifsHTIhL_Introverted_Homebody_Freelancer_Daily_Vlog/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40lee.rabo_Dc3ifsHTIhL_Introverted_Homebody_Freelancer_Daily_Vlog/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Dc3ifsHTIhL.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40lee.rabo_Dc3ifsHTIhL_Introverted_Homebody_Freelancer_Daily_Vlog/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40lee.rabo_Dc3ifsHTIhL_Introverted_Homebody_Freelancer_Daily_Vlog/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1ieEKFSw-UZ7vsoC_aWfPPbec4dirGyCt&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1ieEKFSw-UZ7vsoC_aWfPPbec4dirGyCt&export=download",
         "report_url": "reports/A Day in the Life of an Introverted Freelancer - @lee.rabo.html",
         "shots_count": 16,
         "duration": "15.83s",
@@ -14713,13 +14291,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "thoi-trang",
-        "name": "Thời trang",
-        "en_name": "Fashion & Style",
-        "icon": "👔",
-        "badge_color": "pink"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -14744,9 +14318,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdGp4XftvIn/",
       "gdrive_folder": "https://drive.google.com/open?id=1DrCfVLsopXFieYTCiPaqPOd5ICV6wVBM",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40naohasa_DdGp4XftvIn_5_Outfits_Match_Cut_Walk/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40naohasa_DdGp4XftvIn_5_Outfits_Match_Cut_Walk/shot_03_mid.jpg",
-        "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DdGp4XftvIn.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40naohasa_DdGp4XftvIn_5_Outfits_Match_Cut_Walk/extracted_shots/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40naohasa_DdGp4XftvIn_5_Outfits_Match_Cut_Walk/extracted_shots/shot_03_mid.webp",
+        "video_url": "https://media.fedu.vn/videos/5%20Outfits%20Match%20Cut%20Walk%20-%20@naohasa.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/5%20Outfits%20Match%20Cut%20Walk%20-%20@naohasa.mp4",
         "report_url": "reports/5 Outfits Match Cut Walk - @naohasa.html",
         "shots_count": 5,
         "duration": "13.68s",
@@ -14768,19 +14343,15 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Bóc tách ngôn ngữ điện ảnh và nghệ thuật thị giác: .",
       "key_tech": "",
       "shooting_style": {
-        "id": "dien-anh",
-        "name": "Chỉn Chu",
-        "en_name": "Cinematic Mastery",
-        "icon": "🎬",
-        "badge_color": "sky"
+        "id": "theo-nhip-nhac",
+        "name": "Theo nhịp nhạc",
+        "en_name": "Music Beat & Rhythm",
+        "icon": "🎵",
+        "badge_color": "purple"
       },
-      "industry": {
-        "id": "the-thao",
-        "name": "Thể thao",
-        "en_name": "Sports & Motion",
-        "icon": "🏃",
-        "badge_color": "orange"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -14802,12 +14373,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@sanjogchopra",
         "profile_url": "https://www.instagram.com/sanjogchopra/"
       },
-      "ig_url": "https://www.instagram.com/sanjogchopra/",
+      "ig_url": "https://www.instagram.com/reel/Dcxi128sxO9/",
       "gdrive_folder": "https://drive.google.com/open?id=1-7BlIChO1_mFvDRdYTDQAFApRQmeNOrI",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Dcxi128sxO9.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1Kri4_F8TcvKYfeYpgVKAIoet_WUCHZ8-&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1Kri4_F8TcvKYfeYpgVKAIoet_WUCHZ8-&export=download",
         "report_url": "reports/IG_@sanjogchopra_Dcxi128sxO9_Dancing_To_The_Beat_Gym_Motivation.html",
         "shots_count": 17,
         "duration": "9.84s",
@@ -14829,19 +14401,15 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Bóc tách 21 phân cảnh bậc thầy về nghệ thuật sáng tạo nội dung phong cách sống 'A Day In The Life' của Business & Marketing Coach Lizzy Palios. Video thị phạm chi tiết 6 bước kỹ thuật: Lia máy Phải sang Trái, Tăng tốc đoạn lia 2-3x (Whip...",
       "key_tech": "Day In The Life Formula, Pan Right-to-Left Continuity, Speed Ramping 2-3x Whip-Pan, Centered Timestamp Anchors, Spin-on-Beat Audio-Visual Sync, Work & Downtime Balance",
       "shooting_style": {
-        "id": "dien-anh",
-        "name": "Chỉn Chu",
-        "en_name": "Cinematic Mastery",
-        "icon": "🎬",
-        "badge_color": "sky"
+        "id": "theo-nhip-nhac",
+        "name": "Theo nhịp nhạc",
+        "en_name": "Music Beat & Rhythm",
+        "icon": "🎵",
+        "badge_color": "purple"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -14863,12 +14431,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@lizzypalios",
         "profile_url": "https://www.instagram.com/lizzypalios/"
       },
-      "ig_url": "https://www.instagram.com/reel/DdHMOB0xfd1/?stkn=MTU3djY2eTdqMjQxbw==",
+      "ig_url": "https://www.instagram.com/reel/DdHMOB0xfd1/",
       "gdrive_folder": "https://drive.google.com/open?id=1JYbmscjwapUSFA9qM4zxdjxotMVSNkfc",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40lizzypalios_DdHMOB0xfd1_Content_Creation_Process/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40lizzypalios_DdHMOB0xfd1_Content_Creation_Process/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdHMOB0xfd1.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40lizzypalios_DdHMOB0xfd1_Content_Creation_Process/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40lizzypalios_DdHMOB0xfd1_Content_Creation_Process/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1g5cT9WazmMofokiaPPV_xi7gSfh1F08Y&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1g5cT9WazmMofokiaPPV_xi7gSfh1F08Y&export=download",
         "report_url": "reports/IG_@lizzypalios_DdHMOB0xfd1_Content_Creation_Process.html",
         "shots_count": 21,
         "duration": "27.9s",
@@ -14896,13 +14465,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -14924,12 +14489,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@treechurchlogan",
         "profile_url": "https://www.instagram.com/treechurchlogan/"
       },
-      "ig_url": "https://www.instagram.com/treechurchlogan/",
+      "ig_url": "https://www.instagram.com/reel/DcoGfdghNwd/",
       "gdrive_folder": "",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40treechurchlogan_DcoGfdghNwd_Bring_A_Friend_To_Church/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40treechurchlogan_DcoGfdghNwd_Bring_A_Friend_To_Church/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40treechurchlogan_DcoGfdghNwd_Bring_A_Friend_To_Church/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40treechurchlogan_DcoGfdghNwd_Bring_A_Friend_To_Church/shot_03_mid.webp",
         "video_url": "",
+        "video_url_original": "",
         "report_url": "",
         "shots_count": 0,
         "duration": "10.0s",
@@ -14957,13 +14523,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "am-thuc",
-        "name": "F&B",
-        "en_name": "Food & Beverage",
-        "icon": "🍜",
-        "badge_color": "amber"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -14985,12 +14547,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@tattebakery",
         "profile_url": "https://www.instagram.com/tattebakery/"
       },
-      "ig_url": "https://www.instagram.com/reel/DcJM7AWOa__/?stkn=MWE1N3JzbWlwZGVhOQ==",
+      "ig_url": "https://www.instagram.com/tattebakery/",
       "gdrive_folder": "https://drive.google.com/open?id=11KrjCL35NeaATtV2AePDjVWj0j90ywPY",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40tattebakery_DcJM7AWOa___Soundtrack_Of_Newest_Cafe_NYC/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40tattebakery_DcJM7AWOa___Soundtrack_Of_Newest_Cafe_NYC/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DcJM7AWOa__.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40tattebakery_DcJM7AWOa___Soundtrack_Of_Newest_Cafe_NYC/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40tattebakery_DcJM7AWOa___Soundtrack_Of_Newest_Cafe_NYC/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1EDcHyk7Pewhlrh6MCnemcTT3RnTNmgZ_&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1EDcHyk7Pewhlrh6MCnemcTT3RnTNmgZ_&export=download",
         "report_url": "reports/Soundtrack%20of%20Newest%20Cafe%20NYC%20-%20%40tattebakery.html",
         "shots_count": 14,
         "duration": "28s",
@@ -15018,13 +14581,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "thoi-trang",
-        "name": "Thời trang",
-        "en_name": "Fashion & Style",
-        "icon": "👔",
-        "badge_color": "pink"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -15049,9 +14608,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/kristinagoose/",
       "gdrive_folder": "",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images//shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images//shot_03_mid.jpg",
+        "thumb_hook": "",
+        "thumb_key": "",
         "video_url": "",
+        "video_url_original": "",
         "report_url": "",
         "shots_count": 0,
         "duration": "7.25s",
@@ -15079,13 +14639,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "thoi-trang",
-        "name": "Thời trang",
-        "en_name": "Fashion & Style",
-        "icon": "👔",
-        "badge_color": "pink"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -15107,12 +14663,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@saebomoh",
         "profile_url": "https://www.instagram.com/saebomoh/"
       },
-      "ig_url": "https://www.instagram.com/reel/DbH76S5yg5W/?stkn=dmVsa2twaGoyNGI2",
+      "ig_url": "https://www.instagram.com/reel/DbH76S5yg5W/",
       "gdrive_folder": "https://drive.google.com/open?id=1-O9WxOLsK1gVAsxJh9ZZT7Ni4HxjImrz",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/A%20Little%20Hong%20Kong%20A%20Lot%20Of%20Happiness%20-%20@saebomoh.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40saebomoh_DbH76S5yg5W_Summer_Hong_Kong_Travel_Vlog/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1AnCtKf6UV1sfsCGjPQyn3fmhSGb1aiIa&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1AnCtKf6UV1sfsCGjPQyn3fmhSGb1aiIa&export=download",
         "report_url": "reports/A Little Hong Kong A Lot Of Happiness - @saebomoh.html",
         "shots_count": 6,
         "duration": "16.33s",
@@ -15140,13 +14697,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "thoi-trang",
-        "name": "Thời trang",
-        "en_name": "Fashion & Style",
-        "icon": "👔",
-        "badge_color": "pink"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -15168,12 +14721,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@kisho_men",
         "profile_url": "https://www.instagram.com/kisho_men/"
       },
-      "ig_url": "https://www.instagram.com/kisho_men/",
+      "ig_url": "https://www.instagram.com/reel/DcxgmP1zZPk/",
       "gdrive_folder": "https://drive.google.com/open?id=1daXkschS5VsG6IsiZ6RIgWNe8_TSYn12",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40kisho_men_DcxgmP1zZPk_Allblack_Is_My_Dominion/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40kisho_men_DcxgmP1zZPk_Allblack_Is_My_Dominion/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DcxgmP1zZPk.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40kisho_men_DcxgmP1zZPk_Allblack_Is_My_Dominion/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40kisho_men_DcxgmP1zZPk_Allblack_Is_My_Dominion/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1t1YNQmudiJ5nAv5JdpOoreB8lKH19IYm&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1t1YNQmudiJ5nAv5JdpOoreB8lKH19IYm&export=download",
         "report_url": "reports/IG_@kisho_men_DcxgmP1zZPk_Allblack_Is_My_Dominion.html",
         "shots_count": 5,
         "duration": "11.9s",
@@ -15201,13 +14755,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "korea",
         "name": "Hàn Quốc",
@@ -15229,12 +14779,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@korea_bigmama",
         "profile_url": "https://www.instagram.com/korea_bigmama/"
       },
-      "ig_url": "https://www.instagram.com/reel/DdBnto_O0He/?stkn=bjRkbW5jYmduOTR3",
+      "ig_url": "https://www.instagram.com/reel/DdBnto_O0He/",
       "gdrive_folder": "https://drive.google.com/open?id=1EowHEhv1gKD7xejitZkm5hc8OK1D_eq0",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40korea_bigmama_DdBnto_O0He_Banana_Snickers_Twist/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40korea_bigmama_DdBnto_O0He_Banana_Snickers_Twist/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdBnto_O0He.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40korea_bigmama_DdBnto_O0He_Banana_Snickers_Twist/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40korea_bigmama_DdBnto_O0He_Banana_Snickers_Twist/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1PmB81EDu74LBZQe1gaDq96H9osSLm0bc&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1PmB81EDu74LBZQe1gaDq96H9osSLm0bc&export=download",
         "report_url": "reports/IG_@korea_bigmama_DdBnto_O0He_Banana_Snickers_Twist.html",
         "shots_count": 6,
         "duration": "20.33s",
@@ -15262,13 +14813,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "📖",
         "badge_color": "amber"
       },
-      "industry": {
-        "id": "the-thao",
-        "name": "Thể thao",
-        "en_name": "Sports & Motion",
-        "icon": "🏃",
-        "badge_color": "orange"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -15290,12 +14837,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@quinematic",
         "profile_url": "https://www.instagram.com/quinematic/"
       },
-      "ig_url": "https://www.instagram.com/reel/DdH6HGNxEYT/?stkn=cDN1MnVpZTM0YjQ0",
+      "ig_url": "https://www.instagram.com/reel/DdH6HGNxEYT/",
       "gdrive_folder": "https://drive.google.com/open?id=11KKOJuXLuykv1ZlksHdjqcnk1S-9ek02",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40quinematic_DdH6HGNxEYT_Time_To_Go_For_A_Run/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40quinematic_DdH6HGNxEYT_Time_To_Go_For_A_Run/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Time%20To%20Go%20For%20A%20Run%20-%20@quinematic.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40quinematic_DdH6HGNxEYT_Time_To_Go_For_A_Run/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40quinematic_DdH6HGNxEYT_Time_To_Go_For_A_Run/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1KKgy-jCjS4Is3jcuGuKkQaP6TBjOhULP&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1KKgy-jCjS4Is3jcuGuKkQaP6TBjOhULP&export=download",
         "report_url": "reports/Time To Go For A Run - @quinematic.html",
         "shots_count": 16,
         "duration": "12.26s",
@@ -15323,13 +14871,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "spa-lam-dep",
-        "name": "Làm đẹp",
-        "en_name": "Beauty & Spa",
-        "icon": "💆",
-        "badge_color": "rose"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -15351,12 +14895,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@dimasyudhystira",
         "profile_url": "https://www.instagram.com/dimasyudhystira/"
       },
-      "ig_url": "https://www.instagram.com/reel/Dc3DUsvpkrP/?stkn=eDBybW93OWo3bWlz",
+      "ig_url": "https://www.instagram.com/reel/Dc3DUsvpkrP/",
       "gdrive_folder": "https://drive.google.com/open?id=1gZ8vi0mkdIejL6YPvrSIGtAYT02YQ5Cz",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/shot_03_mid.jpg",
-        "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/Gunung%20Sumbing%20Trekking%20Match%20Cut%20-%20%40dimasyudhystira.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40dimasyudhystira_Dc3DUsvpkrP_Gunung_Sumbing_Trekking_Match_Cut/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=18MEyTu0X9v_9lJyQJSfoWrU04xZP5dtc&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=18MEyTu0X9v_9lJyQJSfoWrU04xZP5dtc&export=download",
         "report_url": "reports/Gunung Sumbing Trekking Match Cut - @dimasyudhystira.html",
         "shots_count": 8,
         "duration": "15.30s",
@@ -15378,19 +14923,15 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Bóc tách 3 phân cảnh chuẩn đạo diễn trong kiệt tác hài short-form của Steven Vuu (@steven.vuu): Nghệ thuật đánh lừa kỳ vọng người xem (False Expectations Hook) bằng thói quen buổi sáng mẫu mực, cú ngắt nhịp kịch tính (The Comic Beat Paus...",
       "key_tech": "False Expectations Hook, The Comic Beat Pause, Match-Location Punchline, Hard Cut Reality Check, Lock-Off Camera Contrast, Micro-Expression Freeze, Tactile ASMR Sound",
       "shooting_style": {
-        "id": "dien-anh",
-        "name": "Chỉn Chu",
-        "en_name": "Cinematic Mastery",
-        "icon": "🎬",
-        "badge_color": "sky"
+        "id": "theo-nhip-nhac",
+        "name": "Theo nhịp nhạc",
+        "en_name": "Music Beat & Rhythm",
+        "icon": "🎵",
+        "badge_color": "purple"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -15412,12 +14953,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@steven.vuu",
         "profile_url": "https://www.instagram.com/steven.vuu/"
       },
-      "ig_url": "https://www.instagram.com/reel/DaBLA-QJcrk/?stkn=MXh2c2c3eWVjdTRtbA==",
+      "ig_url": "https://www.instagram.com/reel/DaBLA-QJcrk/",
       "gdrive_folder": "https://drive.google.com/open?id=1gWe4uEuHlmLN6ImVnvT98cDYsB0tz_Dl",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40steven.vuu_DaBLA-QJcrk_How_I_Wake_Up_Skit/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40steven.vuu_DaBLA-QJcrk_How_I_Wake_Up_Skit/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/How%20I%20Wake%20Up%20Skit%20-%20%40steven.vuu.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40steven.vuu_DaBLA-QJcrk_How_I_Wake_Up_Skit/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40steven.vuu_DaBLA-QJcrk_How_I_Wake_Up_Skit/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=10kdcqpe1Ubu7-Rxinb0gdmrGcrDzE6oE&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=10kdcqpe1Ubu7-Rxinb0gdmrGcrDzE6oE&export=download",
         "report_url": "reports/IG_@steven.vuu_DaBLA-QJcrk_How_I_Wake_Up_Skit.html",
         "shots_count": 3,
         "duration": "20.03s",
@@ -15445,13 +14987,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "am-thuc",
-        "name": "F&B",
-        "en_name": "Food & Beverage",
-        "icon": "🍜",
-        "badge_color": "amber"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -15476,9 +15014,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdGRCKwsaaI/",
       "gdrive_folder": "https://drive.google.com/open?id=1Z2Uovd7AL7uKMnhRpBsTfc6mJ7U9RwSY",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40kulniyasally_DdGRCKwsaaI_Kamera_05x_Behind_The_Scene_Food_POV/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40kulniyasally_DdGRCKwsaaI_Kamera_05x_Behind_The_Scene_Food_POV/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdGRCKwsaaI.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40kulniyasally_DdGRCKwsaaI_Kamera_05x_Behind_The_Scene_Food_POV/extracted_shots/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40kulniyasally_DdGRCKwsaaI_Kamera_05x_Behind_The_Scene_Food_POV/extracted_shots/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1_a0AIgmkErEXjrITbRZ2faejtIO-Wred&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1_a0AIgmkErEXjrITbRZ2faejtIO-Wred&export=download",
         "report_url": "reports/IG_@kulniyasally_DdGRCKwsaaI_Kamera_05x_Behind_The_Scene_Food_POV.html",
         "shots_count": 7,
         "duration": "15.33s",
@@ -15506,13 +15045,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "cong-nghe",
-        "name": "Đồ công nghệ",
-        "en_name": "Tech & Gear",
-        "icon": "📱",
-        "badge_color": "purple"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -15534,12 +15069,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@hsuan_yunn",
         "profile_url": "https://www.instagram.com/hsuan_yunn/"
       },
-      "ig_url": "https://www.instagram.com/reel/DdLsL-cSekL/?stkn=MWFyazduMXNnMmk0bg==",
+      "ig_url": "https://www.instagram.com/reel/DdLsL-cSekL/",
       "gdrive_folder": "https://drive.google.com/open?id=1rjW471Zu_gi1z0G-rV7sOnuhGM1aX1jq",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40hsuan_yunn_DdLsL-cSekL_Outdoor_Fashion_Match_Cut_Gear_Showcase/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40hsuan_yunn_DdLsL-cSekL_Outdoor_Fashion_Match_Cut_Gear_Showcase/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdLsL-cSekL.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40hsuan_yunn_DdLsL-cSekL_Outdoor_Fashion_Match_Cut_Gear_Showcase/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40hsuan_yunn_DdLsL-cSekL_Outdoor_Fashion_Match_Cut_Gear_Showcase/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=18lCFHqwYjPDczHjkMKye6RlUF8e9gJt4&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=18lCFHqwYjPDczHjkMKye6RlUF8e9gJt4&export=download",
         "report_url": "reports/Outdoor Fashion Match Cut Gear Showcase - @hsuan_yunn.html",
         "shots_count": 7,
         "duration": "9.27s",
@@ -15567,13 +15103,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "spa-lam-dep",
-        "name": "Làm đẹp",
-        "en_name": "Beauty & Spa",
-        "icon": "💆",
-        "badge_color": "rose"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -15595,12 +15127,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@steven.vuu",
         "profile_url": "https://www.instagram.com/steven.vuu/"
       },
-      "ig_url": "https://www.instagram.com/reel/DdM7gO4yD-c/?stkn=NnJjcHlkcTBheDBj",
+      "ig_url": "https://www.instagram.com/reel/DdM7gO4yD-c/",
       "gdrive_folder": "https://drive.google.com/open?id=1T7j9z63Hh4qD1c86e01Yd-H_2pB1oQeW",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40steven.vuu_DdM7gO4yD-c_Meta_RayBan_Hero_Cosmetics_Skit/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40steven.vuu_DdM7gO4yD-c_Meta_RayBan_Hero_Cosmetics_Skit/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdM7gO4yD-c.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40steven.vuu_DdM7gO4yD-c_Meta_RayBan_Hero_Cosmetics_Skit/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40steven.vuu_DdM7gO4yD-c_Meta_RayBan_Hero_Cosmetics_Skit/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=11wpzTiDpJhuYHR2YtFHf4YNnYBH0QnqM&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=11wpzTiDpJhuYHR2YtFHf4YNnYBH0QnqM&export=download",
         "report_url": "reports/Meta Ray-Ban AI vs Tri Mun Hero Cosmetics Skit - @steven.vuu.html",
         "shots_count": 10,
         "duration": "24.20s",
@@ -15628,13 +15161,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -15659,9 +15188,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdJaKjQCMTm/",
       "gdrive_folder": "https://drive.google.com/open?id=1j4DIeOUcRDlGJVjvfLBO_2bq-8JQu9V6",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdJaKjQCMTm.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1gaJv5LhE1f595ygYeZu1pBBMi2xJAyVp&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1gaJv5LhE1f595ygYeZu1pBBMi2xJAyVp&export=download",
         "report_url": "reports/IG_@yegor.sky_DdJaKjQCMTm_How_To_Film_Yourself_In_City.html",
         "shots_count": 10,
         "duration": "16.21s",
@@ -15689,13 +15219,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ugc",
-        "name": "UGC",
-        "en_name": "UGC & Ads",
-        "icon": "📱",
-        "badge_color": "amber"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -15717,12 +15243,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@ulanzi.vietnam",
         "profile_url": "https://www.instagram.com/ulanzi.vietnam/"
       },
-      "ig_url": "https://www.lazada.vn/products/pdp-i13344148344-s116633631361.html",
+      "ig_url": "https://www.instagram.com/ulanzi.vietnam/",
       "gdrive_folder": "https://drive.google.com/open?id=1MuKg5h7d2w-hbxyV3ldPnKYBtjOJeVIn",
       "media": {
         "thumb_hook": "https://img.youtube.com/vi/adOF33KL6qk/hqdefault.jpg",
-        "thumb_key": "https://img.youtube.com/vi/adOF33KL6qk/maxresdefault.jpg",
-        "video_url": "https://www.youtube.com/embed/adOF33KL6qk",
+        "thumb_key": "https://img.youtube.com/vi/adOF33KL6qk/hqdefault.jpg",
+        "video_url": "https://media.fedu.vn/videos/adOF33KL6qk",
+        "video_url_original": "https://media.fedu.vn/videos/adOF33KL6qk",
         "report_url": "",
         "shots_count": 8,
         "duration": "42.7s",
@@ -15750,13 +15277,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ugc",
-        "name": "UGC",
-        "en_name": "UGC & Ads",
-        "icon": "📱",
-        "badge_color": "amber"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -15778,12 +15301,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@ulanzi.vietnam",
         "profile_url": "https://www.instagram.com/ulanzi.vietnam/"
       },
-      "ig_url": "https://shopee.vn/ULANZI-MT80-Ch%C3%A2n-M%C3%A1y-Tripod-ULANZI-MT-80-Chi%E1%BB%81u-Cao-213cm-T%E1%BA%A3i-Tr%E1%BB%8Dng-5kg-H%C3%A0ng-Ch%C3%ADnh-H%C3%A3ng-i.1146051656.42829427636",
+      "ig_url": "https://www.instagram.com/ulanzi.vietnam/",
       "gdrive_folder": "https://drive.google.com/open?id=1MuKg5h7d2w-hbxyV3ldPnKYBtjOJeVIn",
       "media": {
         "thumb_hook": "https://img.youtube.com/vi/InZ6HgASLnE/hqdefault.jpg",
-        "thumb_key": "https://img.youtube.com/vi/InZ6HgASLnE/maxresdefault.jpg",
-        "video_url": "https://www.youtube.com/embed/InZ6HgASLnE",
+        "thumb_key": "https://img.youtube.com/vi/InZ6HgASLnE/hqdefault.jpg",
+        "video_url": "https://media.fedu.vn/videos/InZ6HgASLnE",
+        "video_url_original": "https://media.fedu.vn/videos/InZ6HgASLnE",
         "report_url": "",
         "shots_count": 9,
         "duration": "54.7s",
@@ -15811,13 +15335,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "cong-nghe",
-        "name": "Đồ công nghệ",
-        "en_name": "Tech & Gear",
-        "icon": "📱",
-        "badge_color": "purple"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -15842,9 +15362,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DaB-gO6hvPX/",
       "gdrive_folder": "https://drive.google.com/open?id=13_XfCZ1WlHUI2E10MsvNS6UQ-75THvh5",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_03_mid.jpg",
-        "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DaB-gO6hvPX.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=18jvQr_-TorX0VD2gTJqVguNwLrmIrR_B&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=18jvQr_-TorX0VD2gTJqVguNwLrmIrR_B&export=download",
         "report_url": "reports/IG_@tsangtastic_DaB-gO6hvPX_Tory_Burch_Summer_Unboxing.html",
         "shots_count": 22,
         "duration": "90s",
@@ -15872,13 +15393,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "japan",
         "name": "Nhật Bản",
@@ -15903,9 +15420,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdCRQnBI4ny/",
       "gdrive_folder": "https://drive.google.com/open?id=1LcqCpSfJI4OSltUd_8SHkyUvJWsVL3b7",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/shot_03_mid.jpg",
-        "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DdCRQnBI4ny.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant/shot_03_mid.webp",
+        "video_url": "https://media.fedu.vn/videos/Fast%20Food%20Outsells%20Restaurant%20-%20@shogentle.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/Fast%20Food%20Outsells%20Restaurant%20-%20@shogentle.mp4",
         "report_url": "reports/IG_@shogentle_DdCRQnBI4ny_Fast_Food_Outsells_Restaurant.html",
         "shots_count": 16,
         "duration": "43.00s",
@@ -15933,13 +15451,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -15964,9 +15478,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DcQy-eEOIHc/",
       "gdrive_folder": "https://drive.google.com/open?id=1EsMUc49uYY3H7kLSkqwiN4h8xWAMLT9y",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/shot_03_mid.jpg",
-        "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/Tornado%20Kick%20Martial%20Arts%20Kinetic%20Hook%20-%20%40aidana_adilkassym.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40aidana_adilkassym_DcQy-eEOIHc_Tornado_Kick_Martial_Arts_Kinetic_Hook/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1KVv2CMmuZdADiZwFXXlku6SHy6aWcf5_&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1KVv2CMmuZdADiZwFXXlku6SHy6aWcf5_&export=download",
         "report_url": "reports/Tornado Kick Martial Arts Kinetic Hook - @aidana_adilkassym.html",
         "shots_count": 7,
         "duration": "10.90s",
@@ -15994,13 +15509,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -16025,9 +15536,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DcxwKHYoBFv/",
       "gdrive_folder": "https://drive.google.com/open?id=1e9HUEN86EvCHqEC-9RG00x1ny6LxBIkD",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/shot_03_mid.jpg",
-        "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DcxwKHYoBFv.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40critos_pro_DcxwKHYoBFv_The_Art_of_Consistency/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1qePWFj98qPZH6DvP8mHCWEQhFPizq_lW&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1qePWFj98qPZH6DvP8mHCWEQhFPizq_lW&export=download",
         "report_url": "reports/The Art of Consistency - @critos_pro.html",
         "shots_count": 17,
         "duration": "10.22s",
@@ -16055,13 +15567,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "thoi-trang",
-        "name": "Thời trang",
-        "en_name": "Fashion & Style",
-        "icon": "👔",
-        "badge_color": "pink"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -16086,9 +15594,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DawDiT2M1p8/",
       "gdrive_folder": "https://drive.google.com/open?id=1WPj3Ds09SkUSZkRDZAcwS43omIEjte9Z",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40jamison.lange_DawDiT2M1p8_Coffee_Outfit_Match_Cut_Fashion/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40jamison.lange_DawDiT2M1p8_Coffee_Outfit_Match_Cut_Fashion/shot_03_mid.jpg",
-        "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DawDiT2M1p8.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40jamison.lange_DawDiT2M1p8_Coffee_Outfit_Match_Cut_Fashion/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40jamison.lange_DawDiT2M1p8_Coffee_Outfit_Match_Cut_Fashion/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1D9q-okkJWT7-s825z90q-bNGr1ivh5kG&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1D9q-okkJWT7-s825z90q-bNGr1ivh5kG&export=download",
         "report_url": "reports/Coffee + Outfit Match Cut Transition - @jamison.lange.html",
         "shots_count": 22,
         "duration": "28.27s",
@@ -16116,13 +15625,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "kien-truc",
-        "name": "Góc nhà đẹp",
-        "en_name": "Architecture & Living",
-        "icon": "🏛️",
-        "badge_color": "emerald"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -16147,9 +15652,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DaH7X34NTNX/",
       "gdrive_folder": "https://drive.google.com/open?id=1z1dc4ozpSK9m95GwFxr-LF0dh20R1-f8",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mako__go_DaH7X34NTNX_Palermo_Sicily/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mako__go_DaH7X34NTNX_Palermo_Sicily/shot_03_mid.jpg",
-        "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DaH7X34NTNX.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40mako__go_DaH7X34NTNX_Palermo_Sicily/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40mako__go_DaH7X34NTNX_Palermo_Sicily/shot_03_mid.webp",
+        "video_url": "https://media.fedu.vn/videos/Palermo%20Sicily%20Static%20Shots%20-%20@mako__go.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/Palermo%20Sicily%20Static%20Shots%20-%20@mako__go.mp4",
         "report_url": "reports/Palermo Sicily Static Shots - @mako__go.html",
         "shots_count": 7,
         "duration": "14.10s",
@@ -16177,13 +15683,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "kien-truc",
-        "name": "Góc nhà đẹp",
-        "en_name": "Architecture & Living",
-        "icon": "🏛️",
-        "badge_color": "emerald"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -16208,9 +15710,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/Dc-LDGRsCDN/",
       "gdrive_folder": "https://drive.google.com/open?id=1O1c5DsjpV8TGTlSOB-tUalHEfOkSJIcc",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Dc-LDGRsCDN.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40allinbcoffee_Dc-LDGRsCDN_allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=10sk7NNamDYtyjPkby97hZHftu_yode55&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=10sk7NNamDYtyjPkby97hZHftu_yode55&export=download",
         "report_url": "reports/allinB_Coffee_Khong_Gian_Quan_Vibe_Thu_Thai_Sai_Gon_-_@allinbcoffee.html",
         "shots_count": 14,
         "duration": "14.43s",
@@ -16238,13 +15741,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -16269,9 +15768,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdEshZtz9Rb/",
       "gdrive_folder": "https://drive.google.com/open?id=1Px04k5l7_xJAuv3BpaSd7LZLNz-9HjDT",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdEshZtz9Rb.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40joshdiazfilms_DdEshZtz9Rb_Lifestyle_Habit_Cinematic_Routine/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1q04wvmL7rGGdODQEqmGF_oxdvuin4YsZ&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1q04wvmL7rGGdODQEqmGF_oxdvuin4YsZ&export=download",
         "report_url": "reports/Lifestyle Habit & Cinematic Routine - @joshdiazfilms.html",
         "shots_count": 9,
         "duration": "18.39s",
@@ -16299,13 +15799,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🚶",
         "badge_color": "emerald"
       },
-      "industry": {
-        "id": "spa-lam-dep",
-        "name": "Làm đẹp",
-        "en_name": "Beauty & Spa",
-        "icon": "💆",
-        "badge_color": "rose"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -16330,9 +15826,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdF-qr0s4Kk/",
       "gdrive_folder": "https://drive.google.com/open?id=1G4OYFuArGebQVN5wHfIagrnpp_SMxkuB",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DdF-qr0s4Kk.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1wK3fwcyV1BuCOMObY-5thscrCtdnwOqn&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1wK3fwcyV1BuCOMObY-5thscrCtdnwOqn&export=download",
         "report_url": "reports/IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa.html",
         "shots_count": 20,
         "duration": "44.67s",
@@ -16360,13 +15857,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -16388,15 +15881,74 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@watch.gabe",
         "profile_url": "https://www.instagram.com/watch.gabe/"
       },
-      "ig_url": "https://www.instagram.com/p/Dc3immEILSE/",
+      "ig_url": "https://www.instagram.com/reel/Dc3immEILSE/",
       "gdrive_folder": "https://drive.google.com/open?id=1MsLWqdOZVm6QKJHV7b8b5QYtsEFsMgEC",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40watch.gabe_Dc3immEILSE_Build_B_Roll_Library_Year/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40watch.gabe_Dc3immEILSE_Build_B_Roll_Library_Year/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Xay_Dung_Kho_B_Roll_Dung_1_Nam_-_@watch.gabe.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40watch.gabe_Dc3immEILSE_Build_B_Roll_Library_Year/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40watch.gabe_Dc3immEILSE_Build_B_Roll_Library_Year/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1J1ldw7-sIPUHDIL0SIRjvM-KGC2bcz2B&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1J1ldw7-sIPUHDIL0SIRjvM-KGC2bcz2B&export=download",
         "report_url": "reports/Xay_Dung_Kho_B_Roll_Dung_1_Nam_-_@watch.gabe.html",
         "shots_count": 7,
         "duration": "47.80s",
+        "youtube_id": "",
+        "youtube_embed": "",
+        "youtube_url": ""
+      },
+      "complexity": {
+        "id": "de",
+        "label": "🟢 Dễ làm theo (3-8 shots)"
+      },
+      "is_personal": false,
+      "is_excluded": false
+    },
+    {
+      "id": "IG_@Gabe_Harris_Dc3ih_5jlqz_Carousel_Analysis",
+      "shortcode": "Dc3ih_5jlqz_Carousel_Analysis",
+      "title_vi": "Video by watch.gabe",
+      "quick_takeaway": "Tác phẩm điện ảnh ngắn gồm 7 phân cảnh được tính toán tỉ mỉ. Bố cục duy trì tỷ lệ khung hình dọc 9:16 sắc nét, khai thác ánh sáng tự nhiên kết hợp tông màu điện ảnh chuyên nghiệp.",
+      "key_tech": "Hyper-Realistic Food Tattoo • Result-First Hook • Macro Needle ASMR • Wet Towel Wipe Reveal • Audio-Visual Rhyme • Cultural Identity Storytelling • Unpopular Opinion Hook • Procreate iPad Mockup • Museum Lighting Glide",
+      "shooting_style": {
+        "id": "storytelling",
+        "name": "Kể Chuyện",
+        "en_name": "Storytelling",
+        "icon": "📖",
+        "badge_color": "amber"
+      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
+      "country": {
+        "id": "us_eu",
+        "name": "Âu Mỹ",
+        "en_name": "US & Europe",
+        "flag": "🇺🇸/🇪🇺",
+        "badge_color": "purple"
+      },
+      "purpose": "Showcase thị giác & Thẩm mỹ",
+      "tech_tags": [
+        "Hyper-Realistic Food Tattoo • Result-First Hook • Macro Needle ASMR • Wet Towel Wipe Reveal • Audio-Visual Rhyme • Cultural Identity Storytelling • Unpopular Opinion Hook • Procreate iPad Mockup • Museum Lighting Glide"
+      ],
+      "transition_level": null,
+      "is_ad_bot": false,
+      "fedu_optimization": {},
+      "logic_explanation": "",
+      "creator": {
+        "raw": "@Gabe_Harris",
+        "name": "Gabe_Harris",
+        "handle": "@Gabe_Harris",
+        "profile_url": "https://www.instagram.com/Gabe_Harris/"
+      },
+      "ig_url": "https://www.instagram.com/Gabe_Harris/",
+      "gdrive_folder": "https://drive.google.com/open?id=1a0IDCkNY-ldnUxxfaTH5tn-q-M_U4E1v",
+      "media": {
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40Gabe_Harris_Dc3ih_5jlqz_Carousel_Analysis/slide_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40Gabe_Harris_Dc3ih_5jlqz_Carousel_Analysis/slide_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1OdaG7XZYuiDZHiQBJFjv_2UGX72heP3c&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1OdaG7XZYuiDZHiQBJFjv_2UGX72heP3c&export=download",
+        "report_url": "reports/IG_@Gabe_Harris_Dc3ih_5jlqz_Carousel_Analysis.html",
+        "shots_count": 7,
+        "duration": "14s",
         "youtube_id": "",
         "youtube_embed": "",
         "youtube_url": ""
@@ -16421,13 +15973,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -16452,9 +16000,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdBDvZph1od/",
       "gdrive_folder": "https://drive.google.com/open?id=1kIvOxphPKOBP3TcOhGw50wmUAy1u0UPs",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/shot_03_mid.jpg",
-        "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DdBDvZph1od.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40hey.lirules_DdBDvZph1od_Hoi_An_Natural_Mask_Transitions/shot_03_mid.webp",
+        "video_url": "https://media.fedu.vn/videos/Hoi%20An%20Natural%20Mask%20Transitions%20-%20@hey.lirules.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/Hoi%20An%20Natural%20Mask%20Transitions%20-%20@hey.lirules.mp4",
         "report_url": "reports/Hoi An Natural Mask Transitions - @hey.lirules.html",
         "shots_count": 11,
         "duration": "22s",
@@ -16482,13 +16031,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "am-thuc",
-        "name": "F&B",
-        "en_name": "Food & Beverage",
-        "icon": "🍜",
-        "badge_color": "amber"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -16513,9 +16058,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/Dc1w07upyNF/",
       "gdrive_folder": "https://drive.google.com/open?id=1BALvZL0ldFb4w1u6RblSleE3Ew0jPGLB",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40alena.feda_Dc1w07upyNF_Food_Filming_Mastery_From_Scratch/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40alena.feda_Dc1w07upyNF_Food_Filming_Mastery_From_Scratch/shot_03_mid.jpg",
-        "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/Food%20Filming%20%26%20Styling%20Mastery%20-%20%40alena.feda.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40alena.feda_Dc1w07upyNF_Food_Filming_Mastery_From_Scratch/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40alena.feda_Dc1w07upyNF_Food_Filming_Mastery_From_Scratch/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1zR9CUwuztuob3HOX1RnhB4jADDXJiq3i&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1zR9CUwuztuob3HOX1RnhB4jADDXJiq3i&export=download",
         "report_url": "reports/Food Filming & Styling Mastery - @alena.feda.html",
         "shots_count": 15,
         "duration": "40.80s",
@@ -16543,13 +16089,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -16574,9 +16116,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DcyS2KEm7-v/",
       "gdrive_folder": "https://drive.google.com/drive/folders/IG_@ulanzi.global_DcyS2KEm7-v_Ulanzi_LA30_RGB_Air_Tube_Light",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40ulanzi.global_DcyS2KEm7-v_Ulanzi_LA30_RGB_Air_Tube_Light/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40ulanzi.global_DcyS2KEm7-v_Ulanzi_LA30_RGB_Air_Tube_Light/shot_03_mid.jpg",
-        "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DcyS2KEm7-v.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40ulanzi.global_DcyS2KEm7-v_Ulanzi_LA30_RGB_Air_Tube_Light/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40ulanzi.global_DcyS2KEm7-v_Ulanzi_LA30_RGB_Air_Tube_Light/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1jRNAcRduPQEH1IhdgQLF5vFtvtSGIQsT&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1jRNAcRduPQEH1IhdgQLF5vFtvtSGIQsT&export=download",
         "report_url": "reports/IG_@ulanzi.global_DcyS2KEm7-v_Ulanzi_LA30_RGB_Air_Tube_Light.html",
         "shots_count": 0,
         "duration": "19.89s",
@@ -16604,13 +16147,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -16635,12 +16174,13 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DcoPBXdDPro/",
       "gdrive_folder": "https://drive.google.com/open?id=1fpyyC9R_VTSGbGweluV1L8q7xoPzr0Z_",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40inbex.id_DcoPBXdDPro_Lighting_Tripod_Setup_Guide/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40inbex.id_DcoPBXdDPro_Lighting_Tripod_Setup_Guide/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DcoPBXdDPro.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40inbex.id_DcoPBXdDPro_Lighting_Tripod_Setup_Guide/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40inbex.id_DcoPBXdDPro_Lighting_Tripod_Setup_Guide/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1bEFPaWfGz2rIq39mYhHQ3sRrVSPF75gb&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1bEFPaWfGz2rIq39mYhHQ3sRrVSPF75gb&export=download",
         "report_url": "reports/IG_@inbex.id_DcoPBXdDPro_Lighting_Tripod_Setup_Guide.html",
         "shots_count": 7,
-        "duration": "9.30s",
+        "duration": "9.3s",
         "youtube_id": "",
         "youtube_embed": "",
         "youtube_url": ""
@@ -16659,19 +16199,15 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Báo cáo phân tích chuyên sâu 16 phân cảnh về triết lý ánh sáng Chiaroscuro: phản biện sai lầm 5 đèn phẳng lẹt, đối chiếu 4 kiệt tác Hollywood (The Batman, Zendaya, Pulp Fiction, Kingsman) và kỹ thuật vòng lặp vô tận (Infinite Loop).",
       "key_tech": "Chiaroscuro Lighting, Rembrandt Split Light, Pattern Interrupt, Proof Stacking, Infinite Narrative Loop, Staging Escalation",
       "shooting_style": {
-        "id": "dien-anh",
-        "name": "Chỉn Chu",
-        "en_name": "Cinematic Mastery",
-        "icon": "🎬",
-        "badge_color": "sky"
+        "id": "theo-nhip-nhac",
+        "name": "Theo nhịp nhạc",
+        "en_name": "Music Beat & Rhythm",
+        "icon": "🎵",
+        "badge_color": "purple"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "japan",
         "name": "Nhật Bản",
@@ -16696,9 +16232,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DcyDbGmItDV/",
       "gdrive_folder": "https://drive.google.com/open?id=1K-HsLMQnyrJPtNaW71H0IQC6OtGybNrq",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_03_mid.jpg",
-        "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DcyDbGmItDV.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40shogentle_DcyDbGmItDV_One_Lamp_Beats_Five/shot_03_mid.webp",
+        "video_url": "https://media.fedu.vn/videos/One%20Lamp%20Beats%20Five%20-%20@shogentle.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/One%20Lamp%20Beats%20Five%20-%20@shogentle.mp4",
         "report_url": "reports/IG_@shogentle_DcyDbGmItDV_One_Lamp_Beats_Five.html",
         "shots_count": 16,
         "duration": "26.00s",
@@ -16720,19 +16257,15 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Bóc tách 17 phân cảnh đập hộp ASMR và phô diễn quang học đèn pin mini Ulanzi LM01: Mở màn bằng Hero Shot tương phản đỏ hoàng hôn (Sunset Lamp Silhouette), chuỗi Staccato Gobo Flash Montage 11 micro-cuts siêu tốc ăn khớp beat lofi, nghi t...",
       "key_tech": "Cinematic ASMR Unboxing • Staccato Gobo Flash Montage • Macro Extreme Close-Up • Sunset Lamp Halo Silhouette • Optical Zoom Lens • Tactile Sound Design",
       "shooting_style": {
-        "id": "dien-anh",
-        "name": "Chỉn Chu",
-        "en_name": "Cinematic Mastery",
-        "icon": "🎬",
-        "badge_color": "sky"
-      },
-      "industry": {
-        "id": "cong-nghe",
-        "name": "Đồ công nghệ",
-        "en_name": "Tech & Gear",
-        "icon": "📱",
+        "id": "theo-nhip-nhac",
+        "name": "Theo nhịp nhạc",
+        "en_name": "Music Beat & Rhythm",
+        "icon": "🎵",
         "badge_color": "purple"
       },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -16757,9 +16290,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/Dca9-aWotLM/",
       "gdrive_folder": "https://drive.google.com/open?id=1VXI2neew872QlO8zaeUiW2uJhSufX_aQ",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Dca9-aWotLM.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1RZS2u3QQEbf5eGDRSFI4LBonlcugzIXL&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1RZS2u3QQEbf5eGDRSFI4LBonlcugzIXL&export=download",
         "report_url": "reports/IG_@_mubeenart_Dca9-aWotLM_Unboxing_Ulanzi_LM01.html",
         "shots_count": 17,
         "duration": "23.56s",
@@ -16787,13 +16321,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🗣️",
         "badge_color": "blue"
       },
-      "industry": {
-        "id": "thuong-hieu",
-        "name": "Xây kênh",
-        "en_name": "Personal Brand",
-        "icon": "💼",
-        "badge_color": "indigo"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -16818,9 +16348,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DZXpNj_IveV/",
       "gdrive_folder": "https://drive.google.com/open?id=1_fhbSxPGnlm4uZbZ54mgD9qCg7sJ4Xo-",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40alexboissetgrowth_DZXpNj_IveV_Masterclass_Crecer_En_Redes/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40alexboissetgrowth_DZXpNj_IveV_Masterclass_Crecer_En_Redes/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DZXpNj_IveV.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40alexboissetgrowth_DZXpNj_IveV_Masterclass_Crecer_En_Redes/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40alexboissetgrowth_DZXpNj_IveV_Masterclass_Crecer_En_Redes/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1_QYS1Ow3NNP46_He_A93NML7WATIiBjv&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1_QYS1Ow3NNP46_He_A93NML7WATIiBjv&export=download",
         "report_url": "reports/IG_@alexboissetgrowth_DZXpNj_IveV_Masterclass_Crecer_En_Redes.html",
         "shots_count": 7,
         "duration": "28.32s",
@@ -16848,13 +16379,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "am-thuc",
-        "name": "F&B",
-        "en_name": "Food & Beverage",
-        "icon": "🍜",
-        "badge_color": "amber"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "korea",
         "name": "Hàn Quốc",
@@ -16879,9 +16406,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DbVhTUiznEp/",
       "gdrive_folder": "https://drive.google.com/open?id=1ezHBSOtXaYsct9HqWLsiJ_sPHHwGXGc1",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40cafe.pilgrim_DbVhTUiznEp_Cafe_Saan_Euljiro/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40cafe.pilgrim_DbVhTUiznEp_Cafe_Saan_Euljiro/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DbVhTUiznEp.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40cafe.pilgrim_DbVhTUiznEp_Cafe_Saan_Euljiro/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40cafe.pilgrim_DbVhTUiznEp_Cafe_Saan_Euljiro/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1Qim0RwweqzjFIRpOTdbh37ndlqf5E9ks&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1Qim0RwweqzjFIRpOTdbh37ndlqf5E9ks&export=download",
         "report_url": "reports/IG_@cafe.pilgrim_DbVhTUiznEp_Cafe_Saan_Euljiro.html",
         "shots_count": 10,
         "duration": "10.13s",
@@ -16903,19 +16431,15 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Phân tích chuyên sâu 18 phân cảnh thể thao & phong cách sống của nhà sáng tạo nội dung / vận động viên người Áo Nico Rauchenwald. Video khai thác nhịp dựng cắt cảnh siêu tốc (Beat-Synced Montage) chuẩn xác từng 20 khung hình (~0.67s) the...",
       "key_tech": "Beat-Synced Micro-Montage • Static Typography Visual Anchor • High-Contrast Juxtaposition • Low-Key Gym Silhouette • In-Field Tailgate Staging • Volumetric Steam God Rays • Open-Ended YouTube Bridge",
       "shooting_style": {
-        "id": "dien-anh",
-        "name": "Chỉn Chu",
-        "en_name": "Cinematic Mastery",
-        "icon": "🎬",
-        "badge_color": "sky"
+        "id": "theo-nhip-nhac",
+        "name": "Theo nhịp nhạc",
+        "en_name": "Music Beat & Rhythm",
+        "icon": "🎵",
+        "badge_color": "purple"
       },
-      "industry": {
-        "id": "the-thao",
-        "name": "Thể thao",
-        "en_name": "Sports & Motion",
-        "icon": "🏃",
-        "badge_color": "orange"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -16940,12 +16464,13 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DbJcoLdssK6/",
       "gdrive_folder": "https://drive.google.com/drive/folders/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DbJcoLdssK6.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1Ns71lXO-22gOPivFbA-irIc52c1B4qjw&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1Ns71lXO-22gOPivFbA-irIc52c1B4qjw&export=download",
         "report_url": "reports/IG_@nicorauchenwald_DbJcoLdssK6_99_Laps_Prep_Day_In_The_Life.html",
         "shots_count": 18,
-        "duration": "11.80s",
+        "duration": "11.8s",
         "youtube_id": "",
         "youtube_embed": "",
         "youtube_url": ""
@@ -16970,13 +16495,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "du-lich",
-        "name": "Du lịch",
-        "en_name": "Travel & Culture",
-        "icon": "✈️",
-        "badge_color": "sky"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -17001,9 +16522,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/Dc-6BFdi7bU/",
       "gdrive_folder": "https://drive.google.com/open?id=1skJy6ziPGvGdFFXdFSgaJGKKuVvZdhPq",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Dc-6BFdi7bU.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1oGjl97iy_prEZ8RIAKIyJnLucJO8J03p&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1oGjl97iy_prEZ8RIAKIyJnLucJO8J03p&export=download",
         "report_url": "reports/IG_@yegor.sky_Dc-6BFdi7bU_Cinematic_Suitcase_Sequence.html",
         "shots_count": 10,
         "duration": "15.12s",
@@ -17025,19 +16547,15 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Bóc tách 9 phân cảnh chuẩn thể thao & lifestyle về kỹ thuật Motion Match Cut chuyển đổi tức thì từ trang phục thường nhật (quần âu, áo thun đen, giày da) sang bộ trang phục chạy bộ chuyên nghiệp (áo gió siêu nhẹ, quần compression, giày c...",
       "key_tech": "In-Place Motion Match Cut • Momentum Continuation Kick • Beat-Synced Dynamic Warm-Up Jump Cuts • Single-Leg Balance Anchor • High-Contrast Color Pop (Black to White) • Anticipation Peak Outro",
       "shooting_style": {
-        "id": "chuyen-canh",
-        "name": "Chuyển Cảnh",
-        "en_name": "Transitions & Flow",
-        "icon": "⚡",
-        "badge_color": "rose"
+        "id": "theo-nhip-nhac",
+        "name": "Theo nhịp nhạc",
+        "en_name": "Music Beat & Rhythm",
+        "icon": "🎵",
+        "badge_color": "purple"
       },
-      "industry": {
-        "id": "the-thao",
-        "name": "Thể thao",
-        "en_name": "Sports & Motion",
-        "icon": "🏃",
-        "badge_color": "orange"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -17062,9 +16580,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DcgN1bsKUmi/",
       "gdrive_folder": "https://drive.google.com/open?id=17onmcIyjEG8W38B32ArnNk5EmNF2Ly2G",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40etaemin_DcgN1bsKUmi_Transition_Into_Running_Mode/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40etaemin_DcgN1bsKUmi_Transition_Into_Running_Mode/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DcgN1bsKUmi.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40etaemin_DcgN1bsKUmi_Transition_Into_Running_Mode/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40etaemin_DcgN1bsKUmi_Transition_Into_Running_Mode/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1mLIj6JvUMgcacYgzVDCjKBgJ-rE7NOBE&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1mLIj6JvUMgcacYgzVDCjKBgJ-rE7NOBE&export=download",
         "report_url": "reports/IG_@etaemin_DcgN1bsKUmi_Transition_Into_Running_Mode.html",
         "shots_count": 9,
         "duration": "12.28s",
@@ -17086,19 +16605,15 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Bóc tách trọn vẹn 3 phân cảnh mẫu mực trong video Reel 6.0s của @jesussropero: Nghệ thuật Match Cut động năng (Kinetic Momentum) kết nối cú đạp chân trần trong nhà và cú dậm giày da ngoài trời, góc quay siêu thấp sát mặt đất (Ground-Leve...",
       "key_tech": "Fast-Paced Rhythm Cut, Match Cut Quần Áo, Foot Stamp Lens-Wipe, Ground-Level Low-Angle, Kinetic Typography, Camera Pickup Transition, 120 BPM Beat Sync, Hero Strut Walking",
       "shooting_style": {
-        "id": "chuyen-canh",
-        "name": "Chuyển Cảnh",
-        "en_name": "Transitions & Flow",
-        "icon": "⚡",
-        "badge_color": "rose"
+        "id": "theo-nhip-nhac",
+        "name": "Theo nhịp nhạc",
+        "en_name": "Music Beat & Rhythm",
+        "icon": "🎵",
+        "badge_color": "purple"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -17123,12 +16638,13 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/Dc9LUXLAHkc/",
       "gdrive_folder": "https://drive.google.com/open?id=1hIyEsw3ySne3E8YUD_xtyqcJFx1wROpF",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40jesussropero_Dc9LUXLAHkc_Getting_Ready_Faster_Than_Ever/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40jesussropero_Dc9LUXLAHkc_Getting_Ready_Faster_Than_Ever/shot_03_mid.jpg",
-        "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/Getting%20Ready%20Faster%20Than%20Ever%20-%20%40jesussropero.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40jesussropero_Dc9LUXLAHkc_Getting_Ready_Faster_Than_Ever/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40jesussropero_Dc9LUXLAHkc_Getting_Ready_Faster_Than_Ever/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1qAPo7OkR19CftnE5L8_9-7OE8FDU3ky1&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1qAPo7OkR19CftnE5L8_9-7OE8FDU3ky1&export=download",
         "report_url": "reports/Getting Ready Faster Than Ever - @jesussropero.html",
         "shots_count": 3,
-        "duration": "6.00s",
+        "duration": "6s",
         "youtube_id": "",
         "youtube_embed": "",
         "youtube_url": ""
@@ -17153,13 +16669,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -17184,12 +16696,13 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DbILcfyxZot/",
       "gdrive_folder": "https://drive.google.com/open?id=1d6tpi3b5AWIY9Vpl0YQP_Dhh9BJv_ms-",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DbILcfyxZot.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40layton_video_DbILcfyxZot_6_Shots_in_60_Seconds/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1SrDm0nCkv5Z3fjdn7KyNsCVzQeiiaFNj&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1SrDm0nCkv5Z3fjdn7KyNsCVzQeiiaFNj&export=download",
         "report_url": "reports/IG_@layton_video_DbILcfyxZot_6_Shots_in_60_Seconds.html",
         "shots_count": 9,
-        "duration": "74.44s",
+        "duration": "18s",
         "youtube_id": "",
         "youtube_embed": "",
         "youtube_url": ""
@@ -17214,13 +16727,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "kien-truc",
-        "name": "Góc nhà đẹp",
-        "en_name": "Architecture & Living",
-        "icon": "🏛️",
-        "badge_color": "emerald"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -17242,15 +16751,16 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@wowshoebwow",
         "profile_url": "https://www.instagram.com/wowshoebwow/"
       },
-      "ig_url": "https://www.instagram.com/p/Db_EEZtjJBI/",
+      "ig_url": "https://www.instagram.com/reel/Db_EEZtjJBI/",
       "gdrive_folder": "https://drive.google.com/open?id=1glu30c5zhOll3t45nH-G9RhILc02a7rE",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40wowshoebwow_Db_EEZtjJBI_Moving_Postcards_London_Trafalgar/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40wowshoebwow_Db_EEZtjJBI_Moving_Postcards_London_Trafalgar/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Db_EEZtjJBI.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40wowshoebwow_Db_EEZtjJBI_Moving_Postcards_London_Trafalgar/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40wowshoebwow_Db_EEZtjJBI_Moving_Postcards_London_Trafalgar/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=16PC9R6EeatEA4RpO5f2vhqCAt3kic08P&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=16PC9R6EeatEA4RpO5f2vhqCAt3kic08P&export=download",
         "report_url": "reports/IG_@wowshoebwow_Db_EEZtjJBI_Moving_Postcards_London_Trafalgar.html",
         "shots_count": 3,
-        "duration": "6.08s",
+        "duration": "6s",
         "youtube_id": "",
         "youtube_embed": "",
         "youtube_url": ""
@@ -17275,13 +16785,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -17303,15 +16809,16 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@gogosapu",
         "profile_url": "https://www.instagram.com/gogosapu/"
       },
-      "ig_url": "https://www.instagram.com/p/Db5TrGYlKbD/",
+      "ig_url": "https://www.instagram.com/reel/Db5TrGYlKbD/",
       "gdrive_folder": "https://drive.google.com/open?id=1sjXi_rTTKJ4pXMdDy720bLTzbCl_WyXw",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40gogosapu_Db5TrGYlKbD_Still_vs_Moving_Frame_Story/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40gogosapu_Db5TrGYlKbD_Still_vs_Moving_Frame_Story/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Db5TrGYlKbD.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40gogosapu_Db5TrGYlKbD_Still_vs_Moving_Frame_Story/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40gogosapu_Db5TrGYlKbD_Still_vs_Moving_Frame_Story/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1Z40dz-d3MDcWkgu4TenxKVnbJXO6pytY&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1Z40dz-d3MDcWkgu4TenxKVnbJXO6pytY&export=download",
         "report_url": "reports/IG_@gogosapu_Db5TrGYlKbD_Still_vs_Moving_Frame_Story.html",
         "shots_count": 3,
-        "duration": "8.10s",
+        "duration": "6s",
         "youtube_id": "",
         "youtube_embed": "",
         "youtube_url": ""
@@ -17336,13 +16843,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🚶",
         "badge_color": "emerald"
       },
-      "industry": {
-        "id": "spa-lam-dep",
-        "name": "Làm đẹp",
-        "en_name": "Beauty & Spa",
-        "icon": "💆",
-        "badge_color": "rose"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -17364,15 +16867,16 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@neolumo.uralsk",
         "profile_url": "https://www.instagram.com/neolumo.uralsk/"
       },
-      "ig_url": "https://www.instagram.com/p/DcOUP2PsMsP/",
+      "ig_url": "https://www.instagram.com/reel/DcOUP2PsMsP/",
       "gdrive_folder": "https://drive.google.com/open?id=1SYMRNlx7b3TN8fQiWumiqkpePaJ3k__s",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40neolumo.uralsk_DcOUP2PsMsP_Medical_Commercial_Authority/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40neolumo.uralsk_DcOUP2PsMsP_Medical_Commercial_Authority/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DcOUP2PsMsP.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40neolumo.uralsk_DcOUP2PsMsP_Medical_Commercial_Authority/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40neolumo.uralsk_DcOUP2PsMsP_Medical_Commercial_Authority/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1l379bqqjzcr2763cPlJLq5LvDaF49qij&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1l379bqqjzcr2763cPlJLq5LvDaF49qij&export=download",
         "report_url": "reports/IG_@neolumo.uralsk_DcOUP2PsMsP_Medical_Commercial_Authority.html",
         "shots_count": 16,
-        "duration": "44.93s",
+        "duration": "32s",
         "youtube_id": "",
         "youtube_embed": "",
         "youtube_url": ""
@@ -17397,13 +16901,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🗣️",
         "badge_color": "blue"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -17425,12 +16925,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@jade.got.curious",
         "profile_url": "https://www.instagram.com/jade.got.curious/"
       },
-      "ig_url": "https://www.instagram.com/p/DbgtGKjNcH9/",
+      "ig_url": "https://www.instagram.com/reel/DbgtGKjNcH9/",
       "gdrive_folder": "https://drive.google.com/open?id=1BsfPgoxHhoAQaYe5XCzdciwuCYvJmUSL",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40jade.got.curious_DbgtGKjNcH9_10_Weeks_Challenge_Storytelling/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40jade.got.curious_DbgtGKjNcH9_10_Weeks_Challenge_Storytelling/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DbgtGKjNcH9.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40jade.got.curious_DbgtGKjNcH9_10_Weeks_Challenge_Storytelling/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40jade.got.curious_DbgtGKjNcH9_10_Weeks_Challenge_Storytelling/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=135oZAIYjwYe-tu-qdUSuqIbB9-FRvxbG&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=135oZAIYjwYe-tu-qdUSuqIbB9-FRvxbG&export=download",
         "report_url": "reports/IG_@jade.got.curious_DbgtGKjNcH9_10_Weeks_Challenge_Storytelling.html",
         "shots_count": 28,
         "duration": "56s",
@@ -17458,13 +16959,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "📖",
         "badge_color": "amber"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "korea",
         "name": "Hàn Quốc",
@@ -17486,12 +16983,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@hena_film_vlog",
         "profile_url": "https://www.instagram.com/hena_film_vlog/"
       },
-      "ig_url": "https://www.instagram.com/p/DcVzQCSP1MR/",
+      "ig_url": "https://www.instagram.com/reel/DcVzQCSP1MR/",
       "gdrive_folder": "https://drive.google.com/open?id=1DYkTfMHquImgLh_7TkxVt44o8KPoxvVz",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40hena_film_vlog_DcVzQCSP1MR_Healing_Homecoming_Daily_Vlog/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40hena_film_vlog_DcVzQCSP1MR_Healing_Homecoming_Daily_Vlog/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DcVzQCSP1MR.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DcVzQCSP1MR_Healing_Homecoming_Daily_Vlog/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DcVzQCSP1MR_Healing_Homecoming_Daily_Vlog/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1gwXcUvDhLvYtmfcMkn1p-Er1y39drZHP&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1gwXcUvDhLvYtmfcMkn1p-Er1y39drZHP&export=download",
         "report_url": "reports/IG_@hena_film_vlog_DcVzQCSP1MR_Healing_Homecoming_Daily_Vlog.html",
         "shots_count": 14,
         "duration": "28s",
@@ -17519,13 +17017,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎙️",
         "badge_color": "purple"
       },
-      "industry": {
-        "id": "thuong-hieu",
-        "name": "Xây kênh",
-        "en_name": "Personal Brand",
-        "icon": "💼",
-        "badge_color": "indigo"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -17547,15 +17041,16 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@jackwebstter",
         "profile_url": "https://www.instagram.com/jackwebstter/"
       },
-      "ig_url": "https://www.instagram.com/p/DcJIT4DzPhj/",
+      "ig_url": "https://www.instagram.com/reel/DcJIT4DzPhj/",
       "gdrive_folder": "https://drive.google.com/open?id=1UBG-KF3IOIDrj6Y-CfbV3pU2B-Iint5h",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40jackwebstter_DcJIT4DzPhj_Minimalist_Discipline_Chiaroscuro/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40jackwebstter_DcJIT4DzPhj_Minimalist_Discipline_Chiaroscuro/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DcJIT4DzPhj.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40jackwebstter_DcJIT4DzPhj_Minimalist_Discipline_Chiaroscuro/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40jackwebstter_DcJIT4DzPhj_Minimalist_Discipline_Chiaroscuro/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1QikdPm6QHGPYLbXxbZTECXwfSgkq1Vhr&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1QikdPm6QHGPYLbXxbZTECXwfSgkq1Vhr&export=download",
         "report_url": "reports/IG_@jackwebstter_DcJIT4DzPhj_Minimalist_Discipline_Chiaroscuro.html",
         "shots_count": 4,
-        "duration": "9.00s",
+        "duration": "8s",
         "youtube_id": "",
         "youtube_embed": "",
         "youtube_url": ""
@@ -17580,13 +17075,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -17608,12 +17099,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@srdtrv",
         "profile_url": "https://www.instagram.com/srdtrv/"
       },
-      "ig_url": "https://www.instagram.com/p/DcbJDDNi7h8/",
+      "ig_url": "https://www.instagram.com/reel/DcbJDDNi7h8/",
       "gdrive_folder": "https://drive.google.com/open?id=10qCN6xKJwbCxrgeEuLg37lvPMlZAWiI2",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40srdtrv_DcbJDDNi7h8_Behind_The_Scenes_Directing_Mastery/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40srdtrv_DcbJDDNi7h8_Behind_The_Scenes_Directing_Mastery/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DcbJDDNi7h8.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40srdtrv_DcbJDDNi7h8_Behind_The_Scenes_Directing_Mastery/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40srdtrv_DcbJDDNi7h8_Behind_The_Scenes_Directing_Mastery/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1L4__ItnXK9Jfio2B3BRjpDsF6WU88J8S&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1L4__ItnXK9Jfio2B3BRjpDsF6WU88J8S&export=download",
         "report_url": "reports/IG_@srdtrv_DcbJDDNi7h8_Behind_The_Scenes_Directing_Mastery.html",
         "shots_count": 14,
         "duration": "28s",
@@ -17641,13 +17133,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "du-lich",
-        "name": "Du lịch",
-        "en_name": "Travel & Culture",
-        "icon": "✈️",
-        "badge_color": "sky"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -17669,12 +17157,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@withgeorgy",
         "profile_url": "https://www.instagram.com/withgeorgy/"
       },
-      "ig_url": "https://www.instagram.com/p/Db7_3rpgK5c/",
+      "ig_url": "https://www.instagram.com/reel/Db7_3rpgK5c/",
       "gdrive_folder": "https://drive.google.com/open?id=1rodEc-uWIFfruN6EVV7pqn6_l08dOmD-",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40withgeorgy_Db7_3rpgK5c_Cinematic_Travel_iPhone_Mastery/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40withgeorgy_Db7_3rpgK5c_Cinematic_Travel_iPhone_Mastery/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Db7_3rpgK5c.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40withgeorgy_Db7_3rpgK5c_Cinematic_Travel_iPhone_Mastery/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40withgeorgy_Db7_3rpgK5c_Cinematic_Travel_iPhone_Mastery/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1JI_iY1PwEQHv3ls3IQnguX4QWSXhQlZf&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1JI_iY1PwEQHv3ls3IQnguX4QWSXhQlZf&export=download",
         "report_url": "reports/IG_@withgeorgy_Db7_3rpgK5c_Cinematic_Travel_iPhone_Mastery.html",
         "shots_count": 8,
         "duration": "16s",
@@ -17702,13 +17191,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "kien-truc",
-        "name": "Góc nhà đẹp",
-        "en_name": "Architecture & Living",
-        "icon": "🏛️",
-        "badge_color": "emerald"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "korea",
         "name": "Hàn Quốc",
@@ -17730,12 +17215,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@bewoom_",
         "profile_url": "https://www.instagram.com/bewoom_/"
       },
-      "ig_url": "https://www.instagram.com/p/DcYxC8wvt1z/",
+      "ig_url": "https://www.instagram.com/reel/DcYxC8wvt1z/",
       "gdrive_folder": "https://drive.google.com/open?id=1vsHh7QP4U8emuEuKuBUcUi4ELjlWQL4j",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40bewoom__DcYxC8wvt1z_Sasohan_Daejeon_Hanok_Serenity/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40bewoom__DcYxC8wvt1z_Sasohan_Daejeon_Hanok_Serenity/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DcYxC8wvt1z.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40bewoom__DcYxC8wvt1z_Sasohan_Daejeon_Hanok_Serenity/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40bewoom__DcYxC8wvt1z_Sasohan_Daejeon_Hanok_Serenity/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1ubBDHEUI2-Rz-YYYFkm23mzs4QAxg41W&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1ubBDHEUI2-Rz-YYYFkm23mzs4QAxg41W&export=download",
         "report_url": "reports/IG_@bewoom__DcYxC8wvt1z_Sasohan_Daejeon_Hanok_Serenity.html",
         "shots_count": 11,
         "duration": "22s",
@@ -17763,13 +17249,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -17791,12 +17273,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@onethebaha",
         "profile_url": "https://www.instagram.com/onethebaha/"
       },
-      "ig_url": "https://www.instagram.com/p/DcWEp8-swbB/",
+      "ig_url": "https://www.instagram.com/reel/DcWEp8-swbB/",
       "gdrive_folder": "https://drive.google.com/open?id=1G2xabre631yRXxAs8hkEykoVvzCKauJg",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40onethebaha_DcWEp8-swbB_Seamless_Spin_Whip_Pan_Tutorial/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40onethebaha_DcWEp8-swbB_Seamless_Spin_Whip_Pan_Tutorial/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DcWEp8-swbB.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40onethebaha_DcWEp8-swbB_Seamless_Spin_Whip_Pan_Tutorial/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40onethebaha_DcWEp8-swbB_Seamless_Spin_Whip_Pan_Tutorial/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=15YEN2ogmuA_SU2GLrqbM36QgTewUDvR_&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=15YEN2ogmuA_SU2GLrqbM36QgTewUDvR_&export=download",
         "report_url": "reports/IG_@onethebaha_DcWEp8-swbB_Seamless_Spin_Whip_Pan_Tutorial.html",
         "shots_count": 3,
         "duration": "6s",
@@ -17824,13 +17307,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "the-thao",
-        "name": "Thể thao",
-        "en_name": "Sports & Motion",
-        "icon": "🏃",
-        "badge_color": "orange"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -17852,15 +17331,16 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@brandon.dtd",
         "profile_url": "https://www.instagram.com/brandon.dtd/"
       },
-      "ig_url": "https://www.instagram.com/p/DcTbD0MR-V_/",
+      "ig_url": "https://www.instagram.com/brandon.dtd/",
       "gdrive_folder": "https://drive.google.com/open?id=1TKQpa0f7lLSvOjz8zDax64P6tGjIF19q",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40brandon.dtd_DcTbD0MR-V__Discipline_Motivation_Obsession/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40brandon.dtd_DcTbD0MR-V__Discipline_Motivation_Obsession/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DcTbD0MR-V_.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40brandon.dtd_DcTbD0MR-V__Discipline_Motivation_Obsession/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40brandon.dtd_DcTbD0MR-V__Discipline_Motivation_Obsession/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1FZoD4pk9LW_XefR8nptg3f7WUrG3Rfby&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1FZoD4pk9LW_XefR8nptg3f7WUrG3Rfby&export=download",
         "report_url": "reports/IG_@brandon.dtd_DcTbD0MR-V__Discipline_Motivation_Obsession.html",
         "shots_count": 18,
-        "duration": "21.90s",
+        "duration": "36s",
         "youtube_id": "",
         "youtube_embed": "",
         "youtube_url": ""
@@ -17885,13 +17365,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "spa-lam-dep",
-        "name": "Làm đẹp",
-        "en_name": "Beauty & Spa",
-        "icon": "💆",
-        "badge_color": "rose"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "india",
         "name": "Ấn Độ",
@@ -17913,12 +17389,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@photoknack.in",
         "profile_url": "https://www.instagram.com/photoknack.in/"
       },
-      "ig_url": "https://www.instagram.com/p/DcD30ThT7Zm/",
+      "ig_url": "https://www.instagram.com/reel/DcD30ThT7Zm/",
       "gdrive_folder": "https://drive.google.com/open?id=1cmZxru_yRZ0Apotda1GqOm_1l4NCv5Dx",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40photoknack.in_DcD30ThT7Zm_Small_Balcony_Big_Frame_Perspective/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40photoknack.in_DcD30ThT7Zm_Small_Balcony_Big_Frame_Perspective/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DcD30ThT7Zm.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40photoknack.in_DcD30ThT7Zm_Small_Balcony_Big_Frame_Perspective/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40photoknack.in_DcD30ThT7Zm_Small_Balcony_Big_Frame_Perspective/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1TQNQz6ch94rb-ogzsBymROso192h0SF0&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1TQNQz6ch94rb-ogzsBymROso192h0SF0&export=download",
         "report_url": "reports/IG_@photoknack.in_DcD30ThT7Zm_Small_Balcony_Big_Frame_Perspective.html",
         "shots_count": 4,
         "duration": "8s",
@@ -17946,13 +17423,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "kien-truc",
-        "name": "Góc nhà đẹp",
-        "en_name": "Architecture & Living",
-        "icon": "🏛️",
-        "badge_color": "emerald"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "korea",
         "name": "Hàn Quốc",
@@ -17974,12 +17447,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@nana_icroom",
         "profile_url": "https://www.instagram.com/nana_icroom/"
       },
-      "ig_url": "https://www.instagram.com/p/Db-jmp6TXNT/",
+      "ig_url": "https://www.instagram.com/reel/Db-jmp6TXNT/",
       "gdrive_folder": "https://drive.google.com/open?id=1AoQxfZ4SEOphLjmPFEt7Tz8BBtUl3kg_",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40nana_icroom_Db-jmp6TXNT_5_Japanese_Vlog_Compositions/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40nana_icroom_Db-jmp6TXNT_5_Japanese_Vlog_Compositions/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Db-jmp6TXNT.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40nana_icroom_Db-jmp6TXNT_5_Japanese_Vlog_Compositions/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40nana_icroom_Db-jmp6TXNT_5_Japanese_Vlog_Compositions/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=14NQIVVpCL1syxcarhmJkHV43IpbhHwzN&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=14NQIVVpCL1syxcarhmJkHV43IpbhHwzN&export=download",
         "report_url": "reports/IG_@nana_icroom_Db-jmp6TXNT_5_Japanese_Vlog_Compositions.html",
         "shots_count": 20,
         "duration": "40s",
@@ -18007,13 +17481,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "am-thuc",
-        "name": "F&B",
-        "en_name": "Food & Beverage",
-        "icon": "🍜",
-        "badge_color": "amber"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -18035,12 +17505,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@lacapturevisuals",
         "profile_url": "https://www.instagram.com/lacapturevisuals/"
       },
-      "ig_url": "https://www.instagram.com/p/DZWRDtqMNWq/",
+      "ig_url": "https://www.instagram.com/reel/DZWRDtqMNWq/",
       "gdrive_folder": "https://drive.google.com/open?id=15GH43kt8MEwQBvvnUslOWcO9uvsHf9Jj",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40lacapturevisuals_DZWRDtqMNWq_Coffee_Shop_Broll_Mastery/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40lacapturevisuals_DZWRDtqMNWq_Coffee_Shop_Broll_Mastery/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DZWRDtqMNWq.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40lacapturevisuals_DZWRDtqMNWq_Coffee_Shop_Broll_Mastery/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40lacapturevisuals_DZWRDtqMNWq_Coffee_Shop_Broll_Mastery/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1h7djUywdQ40r5Q6V1B6HeLlGtIFDtjaq&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1h7djUywdQ40r5Q6V1B6HeLlGtIFDtjaq&export=download",
         "report_url": "reports/IG_@lacapturevisuals_DZWRDtqMNWq_Coffee_Shop_Broll_Mastery.html",
         "shots_count": 14,
         "duration": "28s",
@@ -18068,13 +17539,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🗣️",
         "badge_color": "blue"
       },
-      "industry": {
-        "id": "cong-nghe",
-        "name": "Đồ công nghệ",
-        "en_name": "Tech & Gear",
-        "icon": "📱",
-        "badge_color": "purple"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -18096,12 +17563,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@pascal_blaurock",
         "profile_url": "https://www.instagram.com/pascal_blaurock/"
       },
-      "ig_url": "https://www.instagram.com/p/Dcd2VeyNJQx/",
+      "ig_url": "https://www.instagram.com/reel/Dcd2VeyNJQx/",
       "gdrive_folder": "https://drive.google.com/open?id=1pRYt2nK3WtrkJwoCeaVY6qYhnDJBp6xW",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40pascal_blaurock_Dcd2VeyNJQx_iPhone_Cinema_Settings_Mastery/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40pascal_blaurock_Dcd2VeyNJQx_iPhone_Cinema_Settings_Mastery/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Dcd2VeyNJQx.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40pascal_blaurock_Dcd2VeyNJQx_iPhone_Cinema_Settings_Mastery/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40pascal_blaurock_Dcd2VeyNJQx_iPhone_Cinema_Settings_Mastery/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1vbgowMp3iksKESJDArHgQwM9NjxqydVH&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1vbgowMp3iksKESJDArHgQwM9NjxqydVH&export=download",
         "report_url": "reports/IG_@pascal_blaurock_Dcd2VeyNJQx_iPhone_Cinema_Settings_Mastery.html",
         "shots_count": 24,
         "duration": "48s",
@@ -18129,13 +17597,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "spa-lam-dep",
-        "name": "Làm đẹp",
-        "en_name": "Beauty & Spa",
-        "icon": "💆",
-        "badge_color": "rose"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -18157,12 +17621,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@kortafilms",
         "profile_url": "https://www.instagram.com/kortafilms/"
       },
-      "ig_url": "https://www.instagram.com/p/DcdthwaTM3J/",
+      "ig_url": "https://www.instagram.com/reel/DcdthwaTM3J/",
       "gdrive_folder": "https://drive.google.com/open?id=1Oz7Q6yL1ql5Pv__UfAi_uEG_NaGwHkos",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40kortafilms_DcdthwaTM3J_Camera_Angles_Mastery/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40kortafilms_DcdthwaTM3J_Camera_Angles_Mastery/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DcdthwaTM3J.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40kortafilms_DcdthwaTM3J_Camera_Angles_Mastery/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40kortafilms_DcdthwaTM3J_Camera_Angles_Mastery/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1INt7OQ9RV7Li1bcTPWl0dNjDP0dwyKU0&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1INt7OQ9RV7Li1bcTPWl0dNjDP0dwyKU0&export=download",
         "report_url": "reports/IG_@kortafilms_DcdthwaTM3J_Camera_Angles_Mastery.html",
         "shots_count": 8,
         "duration": "16s",
@@ -18190,13 +17655,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "cong-nghe",
-        "name": "Đồ công nghệ",
-        "en_name": "Tech & Gear",
-        "icon": "📱",
-        "badge_color": "purple"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "korea",
         "name": "Hàn Quốc",
@@ -18221,9 +17682,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DY_0KNxvNJa/",
       "gdrive_folder": "https://drive.google.com/open?id=16KsPU6lUhohxcNDTAy-9GTEA-46PqIkQ",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40hena_film_vlog_DY_0KNxvNJa_Unboxing_Cinematic_Flow/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40hena_film_vlog_DY_0KNxvNJa_Unboxing_Cinematic_Flow/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DY_0KNxvNJa.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DY_0KNxvNJa_Unboxing_Cinematic_Flow/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DY_0KNxvNJa_Unboxing_Cinematic_Flow/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1Rqu1l5435y-N6qNgtPfWUYz5nlVbXtth&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1Rqu1l5435y-N6qNgtPfWUYz5nlVbXtth&export=download",
         "report_url": "reports/5 Góc Quay Mở Hộp Unboxing Điện Ảnh - @hena_film_vlog.html",
         "shots_count": 26,
         "duration": "52s",
@@ -18251,13 +17713,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "am-thuc",
-        "name": "F&B",
-        "en_name": "Food & Beverage",
-        "icon": "🍜",
-        "badge_color": "amber"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -18279,12 +17737,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@firewood_klcc",
         "profile_url": "https://www.instagram.com/firewood_klcc/"
       },
-      "ig_url": "https://www.instagram.com/p/DZFzj9YAAmG/",
+      "ig_url": "https://www.instagram.com/reel/DZFzj9YAAmG/",
       "gdrive_folder": "https://drive.google.com/open?id=1qxMig74H8BZUoaLp1yytes3bAcWeM4yg",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40firewood_klcc_DZFzj9YAAmG_Artisanal_Woodfire_Dining/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40firewood_klcc_DZFzj9YAAmG_Artisanal_Woodfire_Dining/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Artisanal%20Woodfire%20Dining%20-%20@firewood_klcc.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40firewood_klcc_DZFzj9YAAmG_Artisanal_Woodfire_Dining/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40firewood_klcc_DZFzj9YAAmG_Artisanal_Woodfire_Dining/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1ceYH8EvoPIoCBnyQK3NrMnooREp5Rj2K&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1ceYH8EvoPIoCBnyQK3NrMnooREp5Rj2K&export=download",
         "report_url": "reports/Artisanal Woodfire Dining - @firewood_klcc.html",
         "shots_count": 23,
         "duration": "46s",
@@ -18303,7 +17762,7 @@ var FEDU_IDEAS_DATABASE = {
       "id": "IG_@the.vantage.point_Dct9JzWKVFo_NYC_Morning_Light",
       "shortcode": "Dct9JzWKVFo",
       "title_vi": "The Beauty of Static - NYC Morning Light",
-      "quick_takeaway": "Tuyệt tác thị giác tôn vinh 'Vẻ đẹp của sự Tĩnh Lặng' (The Beauty of Static) giữa nhịp sống hối hả của New York City buổi sớm. Tác giả đã bậc thầy sử dụng các góc máy khóa tĩnh (locked-off shots), kết hợp nguồn ánh sáng tự nhiên xiên góc...",
+      "quick_takeaway": "Khám phá nghệ thuật góc máy tĩnh đỉnh cao (The Beauty of Static) bắt trọn ánh nắng ban mai New York, thủ pháp Chiaroscuro, tương phản kiến trúc và nhịp sống phố Tàu qua 9 phân cảnh điện ảnh đắt giá.",
       "key_tech": "Static Cinematography, Early Morning Sunlight, Chiaroscuro Contrast, One-Point Perspective, Architectural Symmetry",
       "shooting_style": {
         "id": "dien-anh",
@@ -18312,13 +17771,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -18343,9 +17798,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/Dct9JzWKVFo/",
       "gdrive_folder": "https://drive.google.com/open?id=1hqw6sy-TmJw8B-pEmOku5nrdNzsKxrSB",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40the.vantage.point_Dct9JzWKVFo_NYC_Morning_Light/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40the.vantage.point_Dct9JzWKVFo_NYC_Morning_Light/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/NYC_Morning_Light%20-%20%40the.vantage.point.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40the.vantage.point_Dct9JzWKVFo_NYC_Morning_Light/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40the.vantage.point_Dct9JzWKVFo_NYC_Morning_Light/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=17_hNOuwrCeI_r3AQ8IOBYOfukbY8maDc&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=17_hNOuwrCeI_r3AQ8IOBYOfukbY8maDc&export=download",
         "report_url": "reports/IG_@the.vantage.point_Dct9JzWKVFo_NYC_Morning_Light.html",
         "shots_count": 9,
         "duration": "18s",
@@ -18373,13 +17829,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "the-thao",
-        "name": "Thể thao",
-        "en_name": "Sports & Motion",
-        "icon": "🏃",
-        "badge_color": "orange"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -18401,12 +17853,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@vietmac",
         "profile_url": "https://www.instagram.com/vietmac/"
       },
-      "ig_url": "https://instagram.com/vietmac",
+      "ig_url": "https://www.instagram.com/vietmac/",
       "gdrive_folder": "https://drive.google.com/open?id=1LMBSOrcjvikn7AnULasSatqjHtxvgdOJ",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0904_%40vietmac/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0904_%40vietmac/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Practice_Cinematic_Chay_0904_@vietmac.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/Practice_Cinematic_Chay_0904_%40vietmac/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/Practice_Cinematic_Chay_0904_%40vietmac/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1fJ2urdhT_A3ITHrTrDVX5g4JOXJfOCqh&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1fJ2urdhT_A3ITHrTrDVX5g4JOXJfOCqh&export=download",
         "report_url": "reports/Practice_Cinematic_Chay_0904 - @vietmac.html",
         "shots_count": 27,
         "duration": "54s",
@@ -18434,13 +17887,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "the-thao",
-        "name": "Thể thao",
-        "en_name": "Sports & Motion",
-        "icon": "🏃",
-        "badge_color": "orange"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -18462,12 +17911,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@vietmac",
         "profile_url": "https://www.instagram.com/vietmac/"
       },
-      "ig_url": "https://instagram.com/vietmac",
+      "ig_url": "https://www.instagram.com/vietmac/",
       "gdrive_folder": "https://drive.google.com/open?id=128pX0sxQ_M9JihcI-tS6cK9FVccUPfW-",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_2_%40vietmac/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_2_%40vietmac/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Practice_Cinematic_Chay_0903_2_@vietmac.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/Practice_Cinematic_Chay_0903_2_%40vietmac/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/Practice_Cinematic_Chay_0903_2_%40vietmac/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1G5zdghHlbDJ_uHU5j7LaNd_Dn8nSWse8&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1G5zdghHlbDJ_uHU5j7LaNd_Dn8nSWse8&export=download",
         "report_url": "reports/Practice_Cinematic_Chay_0903_2 - @vietmac.html",
         "shots_count": 14,
         "duration": "28s",
@@ -18495,13 +17945,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "📖",
         "badge_color": "amber"
       },
-      "industry": {
-        "id": "cong-nghe",
-        "name": "Đồ công nghệ",
-        "en_name": "Tech & Gear",
-        "icon": "📱",
-        "badge_color": "purple"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -18523,12 +17969,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@beixin",
         "profile_url": "https://www.instagram.com/beixin/"
       },
-      "ig_url": "https://www.instagram.com/p/Dc0zzrWj8Vu/",
+      "ig_url": "https://www.instagram.com/reel/Dc0zzrWj8Vu/",
       "gdrive_folder": "https://drive.google.com/open?id=17CID39yrjDvmbpaiV1G3NLg6YcMOXwhU",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Dc0zzrWj8Vu.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1_XqZpgDOl6OyumHQIobXIjtaIGOdY_IM&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1_XqZpgDOl6OyumHQIobXIjtaIGOdY_IM&export=download",
         "report_url": "reports/IG_@beixin_Dc0zzrWj8Vu_Sony_Kando_2026_Camera_Gear.html",
         "shots_count": 7,
         "duration": "14s",
@@ -18556,13 +18003,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -18587,9 +18030,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/Dcz7nniBEFe/",
       "gdrive_folder": "https://drive.google.com/open?id=1TKIoygqsb_wcoGb1vKeBHMoAJwmdO8po",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40jsnhow_Dcz7nniBEFe_Unwinding/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40jsnhow_Dcz7nniBEFe_Unwinding/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Dcz7nniBEFe.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40jsnhow_Dcz7nniBEFe_Unwinding/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40jsnhow_Dcz7nniBEFe_Unwinding/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1Tsy_Sp3fBSxMBEcl9Og-uKoeijhQaeYC&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1Tsy_Sp3fBSxMBEcl9Og-uKoeijhQaeYC&export=download",
         "report_url": "reports/Unwinding - @jsnhow.html",
         "shots_count": 14,
         "duration": "28s",
@@ -18617,13 +18061,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🗣️",
         "badge_color": "blue"
       },
-      "industry": {
-        "id": "thuong-hieu",
-        "name": "Xây kênh",
-        "en_name": "Personal Brand",
-        "icon": "💼",
-        "badge_color": "indigo"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -18645,12 +18085,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@AnhSacAnh",
         "profile_url": "https://www.instagram.com/AnhSacAnh/"
       },
-      "ig_url": "https://www.facebook.com/share/v/18TWbzspFY/",
+      "ig_url": "https://www.instagram.com/AnhSacAnh/",
       "gdrive_folder": "https://drive.google.com/open?id=1_ioDKkqC_oJ1-jjBLa8xDZM3e7TDcUky",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/FB_%40AnhSacAnh_1964049564715249_Thuong_Hieu_Ca_Nhan_Sinh_Loi/shot_01_mid.jpg",
-        "thumb_key": "https://media.fedu.vn/images/FB_%40AnhSacAnh_1964049564715249_Thuong_Hieu_Ca_Nhan_Sinh_Loi/shot_17_mid.jpg",
-        "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/Thuong_Hieu_Ca_Nhan_Sinh_Loi_Anh_Sac_Anh.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/FB_%40AnhSacAnh_1964049564715249_Thuong_Hieu_Ca_Nhan_Sinh_Loi/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/FB_%40AnhSacAnh_1964049564715249_Thuong_Hieu_Ca_Nhan_Sinh_Loi/shot_17_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1ELH6ltQzTVLb6n8ejxGnHKRU2cgz4kC4&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1ELH6ltQzTVLb6n8ejxGnHKRU2cgz4kC4&export=download",
         "report_url": "reports/Thuong_Hieu_Ca_Nhan_Sinh_Loi_Anh_Sac_Anh.html",
         "shots_count": 48,
         "duration": "96s",
@@ -18678,13 +18119,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "📖",
         "badge_color": "amber"
       },
-      "industry": {
-        "id": "spa-lam-dep",
-        "name": "Làm đẹp",
-        "en_name": "Beauty & Spa",
-        "icon": "💆",
-        "badge_color": "rose"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "india",
         "name": "Ấn Độ",
@@ -18709,9 +18146,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DcBjIwPMMfa/",
       "gdrive_folder": "https://drive.google.com/open?id=1c86dD5xopNco9pBLP8sSjqrw_uGrzI4A",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40sajad_machu_DcBjIwPMMfa_Creative_Block_Loop/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40sajad_machu_DcBjIwPMMfa_Creative_Block_Loop/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DcBjIwPMMfa.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40sajad_machu_DcBjIwPMMfa_Creative_Block_Loop/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40sajad_machu_DcBjIwPMMfa_Creative_Block_Loop/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1eTHgWp-fB1j6ErUu6zSAiEtIUuwLLq8j&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1eTHgWp-fB1j6ErUu6zSAiEtIUuwLLq8j&export=download",
         "report_url": "reports/Creative Block Loop - @sajad_machu.html",
         "shots_count": 14,
         "duration": "28s",
@@ -18739,13 +18177,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "thoi-trang",
-        "name": "Thời trang",
-        "en_name": "Fashion & Style",
-        "icon": "👔",
-        "badge_color": "pink"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -18767,12 +18201,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@slaohuairen",
         "profile_url": "https://www.instagram.com/slaohuairen/"
       },
-      "ig_url": "https://www.instagram.com/reels/DcLblxOy3tN/",
+      "ig_url": "https://www.instagram.com/reel/DcLblxOy3tN/",
       "gdrive_folder": "https://drive.google.com/open?id=1Ji5ous5WM4UrP8V5025RO1OtT7kGAzhJ",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40slaohuairen_DcLblxOy3tN_A_young_girl_in_linen/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40slaohuairen_DcLblxOy3tN_A_young_girl_in_linen/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DcLblxOy3tN.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40slaohuairen_DcLblxOy3tN_A_young_girl_in_linen/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40slaohuairen_DcLblxOy3tN_A_young_girl_in_linen/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=13TTePrAkjNYWwP4b7S14Jod7CPvmvq4j&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=13TTePrAkjNYWwP4b7S14Jod7CPvmvq4j&export=download",
         "report_url": "reports/IG_@slaohuairen_DcLblxOy3tN_A_young_girl_in_linen.html",
         "shots_count": 13,
         "duration": "26s",
@@ -18789,7 +18224,7 @@ var FEDU_IDEAS_DATABASE = {
     },
     {
       "id": "IG_@gakuyen_Dc0MQfeEwp4_Carousel_Analysis",
-      "shortcode": "Dc0MQfeEwp4",
+      "shortcode": "Dc0MQfeEwp4_Carousel_Analysis",
       "title_vi": "How to Sound Design SFX (Bóc Tách 10 Slide Thiết Kế Âm Thanh) - @gakuyen",
       "quick_takeaway": "Chuỗi bài giảng Carousel 10 slide kinh điển của @gakuyen giải mã toàn bộ bí quyết thiết kế âm thanh (Sound Design / SFX) đỉnh cao trong video ngắn. Tác giả vận dụng xuất sắc quy tắc \"Layering &amp; Keeping it simple\": Từ khâu quay footag...",
       "key_tech": "SFX Layering, Raw Cicada Contrast Bias, Picture Lock First, Synth Riser Anchor, 5-Layer Audio Stacking, 9-Track Timeline Architecture",
@@ -18800,13 +18235,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -18828,12 +18259,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@gakuyen",
         "profile_url": "https://www.instagram.com/gakuyen/"
       },
-      "ig_url": "https://www.instagram.com/p/Dc0MQfeEwp4/?utm_source=ig_web_copy_link&igsi=NTc4MTIwNjQ2YQ==",
+      "ig_url": "https://www.instagram.com/gakuyen/",
       "gdrive_folder": "https://drive.google.com/open?id=1AA_oaJSpEyMktoRp2t6pvSwWkk3CbDKb",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40gakuyen_Dc0MQfeEwp4_Carousel_Analysis/slide_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40gakuyen_Dc0MQfeEwp4_Carousel_Analysis/slide_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/How_to_Sound_Design_SFX_-_@gakuyen.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40gakuyen_Dc0MQfeEwp4_Carousel_Analysis/slide_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40gakuyen_Dc0MQfeEwp4_Carousel_Analysis/slide_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1t5nbryifY8xH-orgRml1xv0n_fVkyl6T&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1t5nbryifY8xH-orgRml1xv0n_fVkyl6T&export=download",
         "report_url": "reports/IG_@gakuyen_Dc0MQfeEwp4_Carousel_Analysis.html",
         "shots_count": 10,
         "duration": "20s",
@@ -18861,13 +18293,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "korea",
         "name": "Hàn Quốc",
@@ -18889,12 +18317,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@kyung6film",
         "profile_url": "https://www.instagram.com/kyung6film/"
       },
-      "ig_url": "https://www.instagram.com/reel/DakY2EST-Tm/?utm_source=ig_web_copy_link&igsi=NTc4MTIwNjQ2YQ==",
+      "ig_url": "https://www.instagram.com/reel/DakY2EST-Tm/",
       "gdrive_folder": "https://drive.google.com/open?id=1f2HQgSjHIRxz4OpjfSqGVj9jwNifLMqh",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40kyung6film_DakY2EST-Tm_Split_City_Shanghai/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40kyung6film_DakY2EST-Tm_Split_City_Shanghai/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Split%20City%20Shanghai%20-%20%40kyung6film.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40kyung6film_DakY2EST-Tm_Split_City_Shanghai/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40kyung6film_DakY2EST-Tm_Split_City_Shanghai/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1SNVBn_BOQgDiylUAlzMfPFYISQTVMJBr&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1SNVBn_BOQgDiylUAlzMfPFYISQTVMJBr&export=download",
         "report_url": "reports/IG_@kyung6film_DakY2EST-Tm_Split_City_Shanghai.html",
         "shots_count": 5,
         "duration": "10s",
@@ -18922,13 +18351,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -18950,13 +18375,72 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@by.bennnj",
         "profile_url": "https://www.instagram.com/by.bennnj/"
       },
-      "ig_url": "https://www.instagram.com/reel/Dcvxba1OvrD/?utm_source=ig_web_copy_link&igsi=NTc4MTIwNjQ2YQ==",
+      "ig_url": "https://www.instagram.com/reel/Dcvxba1OvrD/",
       "gdrive_folder": "https://drive.google.com/open?id=1sMxOJ4AhsaO6-qe-MJjtiH70J_Ov7z3e",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Dcvxba1OvrD.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1w6WsfHi6Y1kXXIKyJIVNOvPYu9sqA7zi&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1w6WsfHi6Y1kXXIKyJIVNOvPYu9sqA7zi&export=download",
         "report_url": "reports/Koti Sunset Ambient Lamp - @by.bennnj.html",
+        "shots_count": 10,
+        "duration": "20s",
+        "youtube_id": "",
+        "youtube_embed": "",
+        "youtube_url": ""
+      },
+      "complexity": {
+        "id": "trung-binh",
+        "label": "🟡 Trung bình (9-18 shots)"
+      },
+      "is_personal": false,
+      "is_excluded": false
+    },
+    {
+      "id": "IG_@岳_🍜_GAKU_Dc0MHhTE9z0_Carousel_Analysis",
+      "shortcode": "Dc0MHhTE9z0_Carousel_Analysis",
+      "title_vi": "@岳_🍜_GAKU - Video by gakuyen",
+      "quick_takeaway": "Tác phẩm điện ảnh ngắn gồm 10 phân cảnh được tính toán tỉ mỉ. Bố cục duy trì tỷ lệ khung hình dọc 9:16 sắc nét, khai thác ánh sáng tự nhiên kết hợp tông màu điện ảnh chuyên nghiệp.",
+      "key_tech": "Hyper-Realistic Food Tattoo • Result-First Hook • Macro Needle ASMR • Wet Towel Wipe Reveal • Audio-Visual Rhyme • Cultural Identity Storytelling • Unpopular Opinion Hook • Procreate iPad Mockup • Museum Lighting Glide",
+      "shooting_style": {
+        "id": "storytelling",
+        "name": "Kể Chuyện",
+        "en_name": "Storytelling",
+        "icon": "📖",
+        "badge_color": "amber"
+      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
+      "country": {
+        "id": "us_eu",
+        "name": "Âu Mỹ",
+        "en_name": "US & Europe",
+        "flag": "🇺🇸/🇪🇺",
+        "badge_color": "purple"
+      },
+      "purpose": "Showcase thị giác & Thẩm mỹ",
+      "tech_tags": [
+        "Hyper-Realistic Food Tattoo • Result-First Hook • Macro Needle ASMR • Wet Towel Wipe Reveal • Audio-Visual Rhyme • Cultural Identity Storytelling • Unpopular Opinion Hook • Procreate iPad Mockup • Museum Lighting Glide"
+      ],
+      "transition_level": null,
+      "is_ad_bot": false,
+      "fedu_optimization": {},
+      "logic_explanation": "",
+      "creator": {
+        "raw": "@岳_🍜_GAKU",
+        "name": "岳_🍜_Gaku",
+        "handle": "@岳",
+        "profile_url": "https://www.instagram.com/岳/"
+      },
+      "ig_url": "https://www.instagram.com/岳/",
+      "gdrive_folder": "https://drive.google.com/open?id=1RQpnn8NAHw1h7Ny-pi4w6wTrJbTvJsmH",
+      "media": {
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40%E5%B2%B3_%F0%9F%8D%9C_GAKU_Dc0MHhTE9z0_Carousel_Analysis/slide_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40%E5%B2%B3_%F0%9F%8D%9C_GAKU_Dc0MHhTE9z0_Carousel_Analysis/slide_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1OdaG7XZYuiDZHiQBJFjv_2UGX72heP3c&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1OdaG7XZYuiDZHiQBJFjv_2UGX72heP3c&export=download",
+        "report_url": "reports/IG_@岳_🍜_GAKU_Dc0MHhTE9z0_Carousel_Analysis.html",
         "shots_count": 10,
         "duration": "20s",
         "youtube_id": "",
@@ -18983,13 +18467,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "the-thao",
-        "name": "Thể thao",
-        "en_name": "Sports & Motion",
-        "icon": "🏃",
-        "badge_color": "orange"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -19011,12 +18491,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@vietmac",
         "profile_url": "https://www.instagram.com/vietmac/"
       },
-      "ig_url": "https://instagram.com/vietmac",
+      "ig_url": "https://www.instagram.com/vietmac/",
       "gdrive_folder": "https://drive.google.com/open?id=128pX0sxQ_M9JihcI-tS6cK9FVccUPfW-",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_%40vietmac/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/Practice_Cinematic_Chay_0903_%40vietmac/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/practice_cinematic_chay_0903.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/Practice_Cinematic_Chay_0903_%40vietmac/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/Practice_Cinematic_Chay_0903_%40vietmac/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1_hsoWbM2PCvOdrJSMOWjGe5rY_-cwB3R&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1_hsoWbM2PCvOdrJSMOWjGe5rY_-cwB3R&export=download",
         "report_url": "reports/Practice_Cinematic_Chay_0903 - @vietmac.html",
         "shots_count": 8,
         "duration": "16s",
@@ -19038,19 +18519,15 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Bóc tách 18 phân cảnh nhịp nhanh (Micro-beat Editing) mẫu mực về đời sống và năng suất cá nhân: Nghệ thuật dùng hành động vật lý dọn dẹp giường ngủ, pha cà phê và sắp xếp bàn làm việc để tạo cảm giác kiểm soát cuộc sống, kết hợp ánh sáng...",
       "key_tech": "Micro-beat Montage, Natural Daylight Ingestion, Kinetic Prop Action, Central 9:16 Framing, Warm Amber Aesthetic",
       "shooting_style": {
-        "id": "voice-over",
-        "name": "Lồng Tiếng",
-        "en_name": "Voice Over",
-        "icon": "🎙️",
+        "id": "theo-nhip-nhac",
+        "name": "Theo nhịp nhạc",
+        "en_name": "Music Beat & Rhythm",
+        "icon": "🎵",
         "badge_color": "purple"
       },
-      "industry": {
-        "id": "am-thuc",
-        "name": "F&B",
-        "en_name": "Food & Beverage",
-        "icon": "🍜",
-        "badge_color": "amber"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -19075,9 +18552,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/Dctj7NfNimM/",
       "gdrive_folder": "https://drive.google.com/open?id=1owVk1KQgebjv4L-43GhpL8CPyukXmKKb",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Dctj7NfNimM.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40joshdiazfilms_Dctj7NfNimM_Life_Feel_Put_Together/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1UK_EIfi3m0AaCI4vdkQazTFbI-d22JzX&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1UK_EIfi3m0AaCI4vdkQazTFbI-d22JzX&export=download",
         "report_url": "reports/Life Feel Put Together - @joshdiazfilms.html",
         "shots_count": 18,
         "duration": "36s",
@@ -19105,13 +18583,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "📖",
         "badge_color": "amber"
       },
-      "industry": {
-        "id": "thuong-hieu",
-        "name": "Xây kênh",
-        "en_name": "Personal Brand",
-        "icon": "💼",
-        "badge_color": "indigo"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -19136,9 +18610,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DceDPc2yVm0/",
       "gdrive_folder": "https://drive.google.com/open?id=17fy_ONjHfUVSByDhb7uWqCedDODvf629",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40joshdiazfilms_DceDPc2yVm0_Worst_Person_To_Text/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40joshdiazfilms_DceDPc2yVm0_Worst_Person_To_Text/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DceDPc2yVm0.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40joshdiazfilms_DceDPc2yVm0_Worst_Person_To_Text/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40joshdiazfilms_DceDPc2yVm0_Worst_Person_To_Text/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1jCy3rFWF25HlzxAdQbYWwrdgz7JgQYa0&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1jCy3rFWF25HlzxAdQbYWwrdgz7JgQYa0&export=download",
         "report_url": "reports/Worst Person to Text - @joshdiazfilms.html",
         "shots_count": 11,
         "duration": "22s",
@@ -19166,13 +18641,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "cong-nghe",
-        "name": "Đồ công nghệ",
-        "en_name": "Tech & Gear",
-        "icon": "📱",
-        "badge_color": "purple"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -19197,9 +18668,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DcJjGy1tG7d/",
       "gdrive_folder": "https://drive.google.com/open?id=1el1Tl2_SrEoGBtDBzlNlgOaMvi7pWjg5",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40joshdiazfilms_DcJjGy1tG7d_DJI_Drone_Unboxing/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40joshdiazfilms_DcJjGy1tG7d_DJI_Drone_Unboxing/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DcJjGy1tG7d.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40joshdiazfilms_DcJjGy1tG7d_DJI_Drone_Unboxing/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40joshdiazfilms_DcJjGy1tG7d_DJI_Drone_Unboxing/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1vYHt0436tsO4ozJmp8Uxl1XXLSmS6p-n&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1vYHt0436tsO4ozJmp8Uxl1XXLSmS6p-n&export=download",
         "report_url": "reports/DJI Drone Unboxing - @joshdiazfilms.html",
         "shots_count": 7,
         "duration": "14s",
@@ -19227,13 +18699,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎙️",
         "badge_color": "purple"
       },
-      "industry": {
-        "id": "kien-truc",
-        "name": "Góc nhà đẹp",
-        "en_name": "Architecture & Living",
-        "icon": "🏛️",
-        "badge_color": "emerald"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -19258,9 +18726,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/Db1hf_vO67m/",
       "gdrive_folder": "https://drive.google.com/open?id=1SQM_3WlmEzb2Mp-sMqYzuJQi7RsjUjJw",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40joshdiazfilms_Db1hf_vO67m_Simple_Life_Routine/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40joshdiazfilms_Db1hf_vO67m_Simple_Life_Routine/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Db1hf_vO67m.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40joshdiazfilms_Db1hf_vO67m_Simple_Life_Routine/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40joshdiazfilms_Db1hf_vO67m_Simple_Life_Routine/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1sG3V-ymm7U8se6vJl6BtM9n1IuBvd9iH&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1sG3V-ymm7U8se6vJl6BtM9n1IuBvd9iH&export=download",
         "report_url": "reports/Simple Life Dinner Routine - @joshdiazfilms.html",
         "shots_count": 14,
         "duration": "28s",
@@ -19288,13 +18757,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎙️",
         "badge_color": "purple"
       },
-      "industry": {
-        "id": "thuong-hieu",
-        "name": "Xây kênh",
-        "en_name": "Personal Brand",
-        "icon": "💼",
-        "badge_color": "indigo"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -19319,9 +18784,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/Dbow9xKOCje/",
       "gdrive_folder": "https://drive.google.com/open?id=1_L61dn245-QWN-XM5nwj0jqIbllk9w7F",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40joshdiazfilms_Dbow9xKOCje_Falling_Behind_Mindset/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40joshdiazfilms_Dbow9xKOCje_Falling_Behind_Mindset/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Dbow9xKOCje.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40joshdiazfilms_Dbow9xKOCje_Falling_Behind_Mindset/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40joshdiazfilms_Dbow9xKOCje_Falling_Behind_Mindset/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1RReMPrkjbN0r076QzgKT486IzNz2LCT4&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1RReMPrkjbN0r076QzgKT486IzNz2LCT4&export=download",
         "report_url": "reports/Falling Behind Mindset - @joshdiazfilms.html",
         "shots_count": 14,
         "duration": "28s",
@@ -19349,13 +18815,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "du-lich",
-        "name": "Du lịch",
-        "en_name": "Travel & Culture",
-        "icon": "✈️",
-        "badge_color": "sky"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -19380,9 +18842,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DcqzVfno5Al/",
       "gdrive_folder": "https://drive.google.com/open?id=11c_53qFBpRCcSdJI7ZN2KPZmZdDgV0T4",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DcqzVfno5Al.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40omgadrian_DcqzVfno5Al_Travel_Sequence_Formula/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1hC_Olw7-JJ2FfMQluqW7duuLdnRwfi5b&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1hC_Olw7-JJ2FfMQluqW7duuLdnRwfi5b&export=download",
         "report_url": "reports/Travel Sequence Formula - @omgadrian.html",
         "shots_count": 11,
         "duration": "22s",
@@ -19410,13 +18873,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "india",
         "name": "Ấn Độ",
@@ -19441,9 +18900,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DF2sOsNyNlY/",
       "gdrive_folder": "https://drive.google.com/open?id=1UGTHreQpGU9sb3DKsn23W_-t6c8bT-Ir",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mridupawasharma_DF2sOsNyNlY_3_Hooks_Mastery/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40mridupawasharma_DF2sOsNyNlY_3_Hooks_Mastery/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DF2sOsNyNlY.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40mridupawasharma_DF2sOsNyNlY_3_Hooks_Mastery/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40mridupawasharma_DF2sOsNyNlY_3_Hooks_Mastery/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1U6_gEyq1byLTZN4zO52UY93PQ5gXQLTc&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1U6_gEyq1byLTZN4zO52UY93PQ5gXQLTc&export=download",
         "report_url": "reports/3 Hooks Mastery - @mridupawasharma.html",
         "shots_count": 8,
         "duration": "16s",
@@ -19460,7 +18920,7 @@ var FEDU_IDEAS_DATABASE = {
     },
     {
       "id": "IG_@Andrei_Kostromskikh_DctRlh0jZlj_Carousel_Analysis",
-      "shortcode": "DctRykCjcp2",
+      "shortcode": "DctRlh0jZlj_Carousel_Analysis",
       "title_vi": "Andrei Kostromskikh • Phân Tích Phân Cảnh Carousel Đa Video & Ngôn Ngữ Điện Ảnh",
       "quick_takeaway": "Tác phẩm điện ảnh ngắn gồm 8 phân cảnh được tính toán tỉ mỉ. Bố cục duy trì tỷ lệ khung hình dọc 9:16 sắc nét, khai thác ánh sáng tự nhiên kết hợp tông màu điện ảnh chuyên nghiệp.",
       "key_tech": "Cinematic Lighting, Composition Mastery, Color Grading, Storyboard Rhythm, Carousel Flow",
@@ -19471,13 +18931,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -19499,12 +18955,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@Andrei_Kostromskikh",
         "profile_url": "https://www.instagram.com/Andrei_Kostromskikh/"
       },
-      "ig_url": "https://www.instagram.com/p/DctRykCjcp2/",
+      "ig_url": "https://www.instagram.com/Andrei_Kostromskikh/",
       "gdrive_folder": "https://drive.google.com/open?id=1c6b1gEwVqVbKkLqNnF9c4b7m",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Andrei_Kostromskikh_DctRlh0jZlj_Carousel_Analysis/slide_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Andrei_Kostromskikh_DctRlh0jZlj_Carousel_Analysis/slide_03_mid.jpg",
-        "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/carousel_slides/IG_%40Andrei_Kostromskikh_DctRlh0jZlj_Carousel_Analysis/slide_01.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40Andrei_Kostromskikh_DctRlh0jZlj_Carousel_Analysis/slide_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40Andrei_Kostromskikh_DctRlh0jZlj_Carousel_Analysis/slide_03_mid.webp",
+        "video_url": "https://media.fedu.vn/videos/DctRykCjcp2.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DctRykCjcp2.mp4",
         "report_url": "reports/IG_@Andrei_Kostromskikh_DctRlh0jZlj_Carousel_Analysis.html",
         "shots_count": 10,
         "duration": "20s",
@@ -19532,13 +18989,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "📖",
         "badge_color": "amber"
       },
-      "industry": {
-        "id": "am-thuc",
-        "name": "F&B",
-        "en_name": "Food & Beverage",
-        "icon": "🍜",
-        "badge_color": "amber"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "japan",
         "name": "Nhật Bản",
@@ -19563,9 +19016,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DcJDJjVJGy6/",
       "gdrive_folder": "https://drive.google.com/open?id=17oPx_x3vPJwqjkFHhYnICFaEqNGKaPHq",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DcJDJjVJGy6.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1gsKwStfEAVj7qQP9CzBjDeq4sQ-JJfI7&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1gsKwStfEAVj7qQP9CzBjDeq4sQ-JJfI7&export=download",
         "report_url": "reports/IG_@shogentle_DcJDJjVJGy6_The_Invisible_Prep_in_Video.html",
         "shots_count": 14,
         "duration": "30s",
@@ -19593,13 +19047,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "india",
         "name": "Ấn Độ",
@@ -19621,12 +19071,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@thomasmathewt2",
         "profile_url": "https://www.instagram.com/thomasmathewt2/"
       },
-      "ig_url": "https://www.instagram.com/p/DcgTj56Atlc/?img_index=6",
+      "ig_url": "https://www.instagram.com/reel/DcgTj56Atlc/",
       "gdrive_folder": "https://drive.google.com/open?id=1G7QjrcYgvD0iPrXGjANIkj1QREdxb7_R",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40thomasmathewt2_DcgTj56Atlc_7_Kitchen_Film_Shots/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40thomasmathewt2_DcgTj56Atlc_7_Kitchen_Film_Shots/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/7%20Shots%20For%20Your%20Next%20Kitchen%20Film%20-%20%40thomasmathewt2.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40thomasmathewt2_DcgTj56Atlc_7_Kitchen_Film_Shots/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40thomasmathewt2_DcgTj56Atlc_7_Kitchen_Film_Shots/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1O-ln1GJ_bL2UXdfgTcK_WnsYcG_zkidA&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1O-ln1GJ_bL2UXdfgTcK_WnsYcG_zkidA&export=download",
         "report_url": "reports/7%20Shots%20For%20Your%20Next%20Kitchen%20Film%20-%20%40thomasmathewt2.html",
         "shots_count": 8,
         "duration": "16s",
@@ -19654,13 +19105,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "cong-nghe",
-        "name": "Đồ công nghệ",
-        "en_name": "Tech & Gear",
-        "icon": "📱",
-        "badge_color": "purple"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -19685,9 +19132,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/Dcil1WWiXOC/",
       "gdrive_folder": "https://drive.google.com/open?id=1CC76FHu-MM8sC3XQIV2khq9SdSAT-6bZ",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40yegor.sky_Dcil1WWiXOC_Cinematic_Unboxing/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40yegor.sky_Dcil1WWiXOC_Cinematic_Unboxing/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Cinematic%20Unboxing%20Mastery%20-%20%40yegor.sky.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40yegor.sky_Dcil1WWiXOC_Cinematic_Unboxing/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40yegor.sky_Dcil1WWiXOC_Cinematic_Unboxing/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=19j6DPKYopzSCN_koR_Bk1EuZsTW3VHtf&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=19j6DPKYopzSCN_koR_Bk1EuZsTW3VHtf&export=download",
         "report_url": "reports/Cinematic Unboxing Mastery - @yegor.sky.html",
         "shots_count": 10,
         "duration": "15.00s",
@@ -19703,25 +19151,79 @@ var FEDU_IDEAS_DATABASE = {
       "is_excluded": false
     },
     {
+      "id": "IG_@𝗧𝗵𝗼𝗺𝗮𝘀_𝗠𝗮𝘁𝗵𝗲𝘄_DcgSonjgnkV_Carousel_Analysis",
+      "shortcode": "DcgSonjgnkV_Carousel_Analysis",
+      "title_vi": "@𝗧𝗵𝗼𝗺𝗮𝘀_𝗠𝗮𝘁𝗵𝗲𝘄 - Video by thomasmathewt2",
+      "quick_takeaway": "Tác phẩm điện ảnh ngắn gồm 0 phân cảnh được tính toán tỉ mỉ. Bố cục duy trì tỷ lệ khung hình dọc 9:16 sắc nét, khai thác ánh sáng tự nhiên kết hợp tông màu điện ảnh chuyên nghiệp.",
+      "key_tech": "Hyper-Realistic Food Tattoo • Result-First Hook • Macro Needle ASMR • Wet Towel Wipe Reveal • Audio-Visual Rhyme • Cultural Identity Storytelling • Unpopular Opinion Hook • Procreate iPad Mockup • Museum Lighting Glide",
+      "shooting_style": {
+        "id": "storytelling",
+        "name": "Kể Chuyện",
+        "en_name": "Storytelling",
+        "icon": "📖",
+        "badge_color": "amber"
+      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
+      "country": {
+        "id": "us_eu",
+        "name": "Âu Mỹ",
+        "en_name": "US & Europe",
+        "flag": "🇺🇸/🇪🇺",
+        "badge_color": "purple"
+      },
+      "purpose": "Showcase thị giác & Thẩm mỹ",
+      "tech_tags": [
+        "Hyper-Realistic Food Tattoo • Result-First Hook • Macro Needle ASMR • Wet Towel Wipe Reveal • Audio-Visual Rhyme • Cultural Identity Storytelling • Unpopular Opinion Hook • Procreate iPad Mockup • Museum Lighting Glide"
+      ],
+      "transition_level": null,
+      "is_ad_bot": false,
+      "fedu_optimization": {},
+      "logic_explanation": "",
+      "creator": {
+        "raw": "@𝗧𝗵𝗼𝗺𝗮𝘀_𝗠𝗮𝘁𝗵𝗲𝘄",
+        "name": "𝗧𝗵𝗼𝗺𝗮𝘀_𝗠𝗮𝘁𝗵𝗲𝘄",
+        "handle": "@𝗧𝗵𝗼𝗺𝗮𝘀",
+        "profile_url": "https://www.instagram.com/𝗧𝗵𝗼𝗺𝗮𝘀/"
+      },
+      "ig_url": "https://www.instagram.com/𝗧𝗵𝗼𝗺𝗮𝘀/",
+      "gdrive_folder": "https://drive.google.com/open?id=1oRzu0YhS5Slu2zFr-J6htAYyA6bkCTSd",
+      "media": {
+        "thumb_hook": "",
+        "thumb_key": "",
+        "video_url": "",
+        "video_url_original": "",
+        "report_url": "reports/IG_@𝗧𝗵𝗼𝗺𝗮𝘀_𝗠𝗮𝘁𝗵𝗲𝘄_DcgSonjgnkV_Carousel_Analysis.html",
+        "shots_count": 0,
+        "duration": "15s",
+        "youtube_id": "",
+        "youtube_embed": "",
+        "youtube_url": ""
+      },
+      "complexity": {
+        "id": "de",
+        "label": "🟢 Dễ làm theo (3-8 shots)"
+      },
+      "is_personal": false,
+      "is_excluded": true
+    },
+    {
       "id": "IG_@rubyscafe_Db-ylimPqMu_Summer_in_the_Village",
       "shortcode": "Db-ylimPqMu",
       "title_vi": "Little Ruby's Cafe • Summer in West Village NYC & Nghệ Thuật Bối Cảnh F&B",
       "quick_takeaway": "Bóc tách 14 phân cảnh mẫu mực trong video 16.3s của @rubyscafe: Nghệ thuật thiết lập bối cảnh văn hóa bản địa (Neighborhood Essence), nén tiêu cự One WTC, vòm cây xanh West Village, chân dung đạp xe Citi Bike với dứa tươi, bàn tiệc ẩm th...",
       "key_tech": "Local Cultural Hook, Perspective Telephoto Compression, Green Canopy Symmetrical Tunnel, Lifestyle Movement Beats, Food Styling Editorial Flat-Lay, Frame-in-Frame Window Look, NYC Yellow Cab Finale",
       "shooting_style": {
-        "id": "dien-anh",
-        "name": "Chỉn Chu",
-        "en_name": "Cinematic Mastery",
-        "icon": "🎬",
-        "badge_color": "sky"
+        "id": "theo-nhip-nhac",
+        "name": "Theo nhịp nhạc",
+        "en_name": "Music Beat & Rhythm",
+        "icon": "🎵",
+        "badge_color": "purple"
       },
-      "industry": {
-        "id": "am-thuc",
-        "name": "F&B",
-        "en_name": "Food & Beverage",
-        "icon": "🍜",
-        "badge_color": "amber"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -19746,9 +19248,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/Db-ylimPqMu/",
       "gdrive_folder": "https://drive.google.com/open?id=1UxECyC7kDh3aEAFJCcyCtkVMvCreiHiD",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40rubyscafe_Db-ylimPqMu_Summer_in_the_Village/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40rubyscafe_Db-ylimPqMu_Summer_in_the_Village/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Summer%20in%20the%20Village%20-%20%40rubyscafe.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40rubyscafe_Db-ylimPqMu_Summer_in_the_Village/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40rubyscafe_Db-ylimPqMu_Summer_in_the_Village/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1cklevf2n4RhWcHCKcfRAGkGIN816VpL1&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1cklevf2n4RhWcHCKcfRAGkGIN816VpL1&export=download",
         "report_url": "reports/Summer in the Village - @rubyscafe.html",
         "shots_count": 14,
         "duration": "16.32s",
@@ -19770,19 +19273,15 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Bóc tách trọn vẹn 34 phân cảnh thực chiến trong video ngắn 38.8s của Mridupawan Sharma: Mở đầu bằng nỗi đau cạn kiệt dung lượng điện thoại (Ritual Hook), bùng nổ chuỗi Fast-Cut Delete Montage 14 clips xóa kỷ niệm xót xa, mở khóa giải phá...",
       "key_tech": "Pain-Point Hook (Ritual), Fast-Cut Delete Montage, 4K ProRes Direct SSD Recording, MagSafe Magnetic Rigging, Extreme Outdoor Durability Test, Zero-Latency On-The-Go Editing, Kinetic Transition Beats, Commercial Hero Product Showcase",
       "shooting_style": {
-        "id": "chuyen-canh",
-        "name": "Chuyển Cảnh",
-        "en_name": "Transitions & Flow",
-        "icon": "⚡",
-        "badge_color": "rose"
+        "id": "theo-nhip-nhac",
+        "name": "Theo nhịp nhạc",
+        "en_name": "Music Beat & Rhythm",
+        "icon": "🎵",
+        "badge_color": "purple"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "india",
         "name": "Ấn Độ",
@@ -19807,9 +19306,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DWD7Lv4E8N8/",
       "gdrive_folder": "https://drive.google.com/open?id=1sHPE-gdpGbwr-MIpKgIALBzJGPfkJykq",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40mridupawasharma_DWD7Lv4E8N8_SanDisk_Creator_SSD/shot_01_mid.jpg",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40mridupawasharma_DWD7Lv4E8N8_SanDisk_Creator_SSD/shot_17_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/SanDisk%20Creator%20Phone%20SSD%20-%20%40mridupawasharma.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40mridupawasharma_DWD7Lv4E8N8_SanDisk_Creator_SSD/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40mridupawasharma_DWD7Lv4E8N8_SanDisk_Creator_SSD/shot_17_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1NPrR3b6eN2TIQzM8MEjFKV2p9WDhACSt&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1NPrR3b6eN2TIQzM8MEjFKV2p9WDhACSt&export=download",
         "report_url": "reports/SanDisk Creator Phone SSD - @mridupawasharma.html",
         "shots_count": 34,
         "duration": "68s",
@@ -19831,19 +19331,15 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Bóc tách chuyên sâu 26 phân cảnh đậm chất điện ảnh du ký Manhattan: Khởi đầu bằng ốc đảo tĩnh lặng The Lake tại Central Park, bùng nổ năng lượng với chuỗi Fast-cut Montage 6 frames (0.2s/shot) theo nhịp beat trống, khai thác nghệ thuật á...",
       "key_tech": "POV Storytelling, Fast-Cut Beat-Matched Montage (6 frames), Golden Hour Lens Flare, One-Point Perspective Leading Lines, Frame-in-Frame Canopy, Vintage Kodak Portra 400 Glow",
       "shooting_style": {
-        "id": "storytelling",
-        "name": "Kể Chuyện",
-        "en_name": "Storytelling",
-        "icon": "📖",
-        "badge_color": "amber"
+        "id": "theo-nhip-nhac",
+        "name": "Theo nhịp nhạc",
+        "en_name": "Music Beat & Rhythm",
+        "icon": "🎵",
+        "badge_color": "purple"
       },
-      "industry": {
-        "id": "du-lich",
-        "name": "Du lịch",
-        "en_name": "Travel & Culture",
-        "icon": "✈️",
-        "badge_color": "sky"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -19868,9 +19364,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DW_iQNYDjX7/",
       "gdrive_folder": "https://drive.google.com/drive/folders/1sZ_uVw1hB4X_Wp5Y-s_1mQcW42502Vwz?usp=drivesdk",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40ethanbarber.co_DW_iQNYDjX7_Summer_in_NYC/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40ethanbarber.co_DW_iQNYDjX7_Summer_in_NYC/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/Summer%20in%20New%20York%20City%20-%20@ethanbarber.co.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40ethanbarber.co_DW_iQNYDjX7_Summer_in_NYC/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40ethanbarber.co_DW_iQNYDjX7_Summer_in_NYC/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1zBgDUi3YBYP5EeZF_nkjfJ3odjFZw4LQ&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1zBgDUi3YBYP5EeZF_nkjfJ3odjFZw4LQ&export=download",
         "report_url": "reports/Summer in New York City - @ethanbarber.co.html",
         "shots_count": 26,
         "duration": "52s",
@@ -19898,13 +19395,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -19932,6 +19425,7 @@ var FEDU_IDEAS_DATABASE = {
         "thumb_hook": "https://media.fedu.vn/broll_plans/BROLL_PLAN_20260827_TimesCity_Basketball/assets/scene_01.jpg",
         "thumb_key": "https://media.fedu.vn/broll_plans/BROLL_PLAN_20260827_TimesCity_Basketball/assets/ref_01.jpg",
         "video_url": "",
+        "video_url_original": "",
         "report_url": "https://media.fedu.vn/broll_plans/BROLL_PLAN_20260827_TimesCity_Basketball/BROLL_PLAN_20260827_TimesCity_Basketball.html",
         "shots_count": 6,
         "duration": "12s",
@@ -19959,13 +19453,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "📖",
         "badge_color": "amber"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -19987,12 +19477,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@Startup_TM",
         "profile_url": "https://www.instagram.com/Startup_TM/"
       },
-      "ig_url": "https://youtu.be/xnAU8Pazc6A?si=OKvMADW-1A37qidv",
+      "ig_url": "https://www.instagram.com/reel/xnAU8Pazc6A/",
       "gdrive_folder": "https://drive.google.com/open?id=1N0GdLmp9DsYoM70nStwHtkxxs3eopLmc",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Startup_TM_xnAU8Pazc6A_Joe_Rogan_Elon_Musk_Podcast/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40Startup_TM_xnAU8Pazc6A_Joe_Rogan_Elon_Musk_Podcast/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40Startup_TM_xnAU8Pazc6A_Joe_Rogan_Elon_Musk_Podcast/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40Startup_TM_xnAU8Pazc6A_Joe_Rogan_Elon_Musk_Podcast/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/xnAU8Pazc6A.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/xnAU8Pazc6A.mp4",
         "report_url": "reports/IG_@Startup_TM_xnAU8Pazc6A_Joe_Rogan_Elon_Musk_Podcast.html",
         "shots_count": 0,
         "duration": "15s",
@@ -20020,13 +19511,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -20051,9 +19538,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DcTjYUftCcv/",
       "gdrive_folder": "https://drive.google.com/open?id=1_f9kLEN3MjCneak0ntLFb9knGZRPzsuX",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40chowyhh_DcTjYUftCcv_Art_of_Composition_London/shot_01_mid.jpg",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40chowyhh_DcTjYUftCcv_Art_of_Composition_London/shot_02_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/The%20Art%20of%20Composition%20in%20London%20-%20@chowyhh.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40chowyhh_DcTjYUftCcv_Art_of_Composition_London/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40chowyhh_DcTjYUftCcv_Art_of_Composition_London/shot_02_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1TucTma9PPN_LTrTLnErtfb0UOJHjhAwv&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1TucTma9PPN_LTrTLnErtfb0UOJHjhAwv&export=download",
         "report_url": "reports/The Art of Composition in London - @chowyhh.html",
         "shots_count": 5,
         "duration": "16.42s",
@@ -20081,13 +19569,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "am-thuc",
-        "name": "F&B",
-        "en_name": "Food & Beverage",
-        "icon": "🍜",
-        "badge_color": "amber"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -20112,9 +19596,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DcL1W34I6lz/",
       "gdrive_folder": "https://drive.google.com/open?id=1g6_TcnrJySGNSInxNEJxndEr8mZbGv-k",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40valenti_k41_DcL1W34I6lz_DJI_Mic_3_ASMR/shot_01_mid.jpg",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40valenti_k41_DcL1W34I6lz_DJI_Mic_3_ASMR/shot_06_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DJI%20Mic%203%20ASMR%20Cinematic%20-%20@valenti_k41.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40valenti_k41_DcL1W34I6lz_DJI_Mic_3_ASMR/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40valenti_k41_DcL1W34I6lz_DJI_Mic_3_ASMR/shot_06_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1J5l1oQvDgNcXYDZE0zyOw3qBVEOcu5yN&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1J5l1oQvDgNcXYDZE0zyOw3qBVEOcu5yN&export=download",
         "report_url": "reports/DJI Mic 3 ASMR Cinematic - @valenti_k41.html",
         "shots_count": 14,
         "duration": "28s",
@@ -20142,13 +19627,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -20170,12 +19651,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@vietmac",
         "profile_url": "https://www.instagram.com/vietmac/"
       },
-      "ig_url": "https://vietndj.github.io/reports/Practice_Cinematic_2508%20-%20@vietmac.html",
+      "ig_url": "https://www.instagram.com/vietmac/",
       "gdrive_folder": "https://drive.google.com/open?id=1rOCjNE-NO57Ohp6MwZKOA51lZZAUbtXM",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/Practice_Cinematic_2508_%40vietmac/shot_04_mid.jpg",
-        "thumb_key": "https://media.fedu.vn/images/Practice_Cinematic_2508_%40vietmac/shot_01_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/practice_cinematic_2508.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/Practice_Cinematic_2508_%40vietmac/shot_04_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/Practice_Cinematic_2508_%40vietmac/shot_01_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1m13KCL2Fve8tLH2VNjfPogsACSbNuwHQ&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1m13KCL2Fve8tLH2VNjfPogsACSbNuwHQ&export=download",
         "report_url": "reports/Practice_Cinematic_2508 - @vietmac.html",
         "shots_count": 19,
         "duration": "38s",
@@ -20203,13 +19685,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -20231,12 +19709,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@vietmac",
         "profile_url": "https://www.instagram.com/vietmac/"
       },
-      "ig_url": "https://vietndj.github.io/reports/Practice_Cinematic_01%20-%20@vietmac.html",
+      "ig_url": "https://www.instagram.com/vietmac/",
       "gdrive_folder": "https://drive.google.com/open?id=17NkfVMp0UTPw2wHC26Bo3Bu9g3LPIyI_",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/Practice_Cinematic_01_%40vietmac/shot_01_mid.jpg",
-        "thumb_key": "https://media.fedu.vn/images/Practice_Cinematic_01_%40vietmac/shot_12_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/practice_cinematic_01.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/Practice_Cinematic_01_%40vietmac/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/Practice_Cinematic_01_%40vietmac/shot_12_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=15synRi3FtHVt9q3tWmFlt6xdxbMHVKaO&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=15synRi3FtHVt9q3tWmFlt6xdxbMHVKaO&export=download",
         "report_url": "reports/Practice_Cinematic_01 - @vietmac.html",
         "shots_count": 25,
         "duration": "50s",
@@ -20264,13 +19743,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -20292,12 +19767,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@arturbr",
         "profile_url": "https://www.instagram.com/arturbr/"
       },
-      "ig_url": "https://www.instagram.com/reel/DcOQSCMqho0/?utm_source=ig_web_copy_link&igsi=NTc4MTIwNjQ2YQ==",
+      "ig_url": "https://www.instagram.com/reel/DcOQSCMqho0/",
       "gdrive_folder": "https://drive.google.com/open?id=1aauVQ80nFyj9KAl2e0OkOfk4DL7vq81f",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_01_mid.jpg",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/DcOQSCMqho0.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40arturbr_DcOQSCMqho0_Personal_Cinema_Viture/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1oqmG1OfRFfuCcL6rN90MRz-mrekNv3MZ&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1oqmG1OfRFfuCcL6rN90MRz-mrekNv3MZ&export=download",
         "report_url": "reports/Personal Cinema - @arturbr.html",
         "shots_count": 18,
         "duration": "20.00s",
@@ -20325,13 +19801,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "am-thuc",
-        "name": "F&B",
-        "en_name": "Food & Beverage",
-        "icon": "🍜",
-        "badge_color": "amber"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -20359,6 +19831,7 @@ var FEDU_IDEAS_DATABASE = {
         "thumb_hook": "https://media.fedu.vn/locations/raw/loc_01.jpg",
         "thumb_key": "https://media.fedu.vn/locations/raw/loc_03.jpg",
         "video_url": "",
+        "video_url_original": "",
         "report_url": "reports/Bao_Cao_Boi_Canh_Thuc_Chien_R2.html",
         "shots_count": 144,
         "duration": "288s",
@@ -20386,13 +19859,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "the-thao",
-        "name": "Thể thao",
-        "en_name": "Sports & Motion",
-        "icon": "🏃",
-        "badge_color": "orange"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -20417,9 +19886,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/Self_Practice/",
       "gdrive_folder": "https://drive.google.com/open?id=1MuKg5h7d2w-hbxyV3ldPnKYBtjOJeVIn",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/Chay_Bo_Times_City_-_%2540Self_Practice/img_001_d3929600.jpg",
-        "thumb_key": "https://media.fedu.vn/images/Chay_Bo_Times_City_-_%2540Self_Practice/img_003_f4a21091.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/Chay_Bo_Times_City_-_%40Self_Practice/img_001_d3929600.webp",
+        "thumb_key": "https://media.fedu.vn/images/Chay_Bo_Times_City_-_%40Self_Practice/img_003_f4a21091.webp",
         "video_url": "",
+        "video_url_original": "",
         "report_url": "reports/Chay_Bo_Times_City - @Self_Practice.html",
         "shots_count": 20,
         "duration": "40s",
@@ -20447,13 +19917,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "📖",
         "badge_color": "amber"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -20478,9 +19944,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/withyuee/",
       "gdrive_folder": "https://drive.google.com/open?id=1MuKg5h7d2w-hbxyV3ldPnKYBtjOJeVIn",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/Visual_Storytelling_Carousel_-_%2540withyuee/img_001_f678a262.jpg",
-        "thumb_key": "https://media.fedu.vn/images/Visual_Storytelling_Carousel_-_%2540withyuee/img_003_ab7e9aa6.jpg",
-        "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/carousel_slides/slide_01.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/Visual_Storytelling_Carousel_-_%40withyuee/img_001_f678a262.webp",
+        "thumb_key": "https://media.fedu.vn/images/Visual_Storytelling_Carousel_-_%40withyuee/img_003_ab7e9aa6.webp",
+        "video_url": "",
+        "video_url_original": "",
         "report_url": "reports/Visual_Storytelling_Carousel - @withyuee.html",
         "shots_count": 5,
         "duration": "10s",
@@ -20508,13 +19975,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -20539,9 +20002,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/withyuee/",
       "gdrive_folder": "https://drive.google.com/open?id=1MuKg5h7d2w-hbxyV3ldPnKYBtjOJeVIn",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/Hong_Kong_Urban_Transitions_-_%2540withyuee/img_001_f338d92e.jpg",
-        "thumb_key": "https://media.fedu.vn/images/Hong_Kong_Urban_Transitions_-_%2540withyuee/img_003_5bd4e9f3.jpg",
-        "video_url": "https://media.fedu.vn/videos/Hong_Kong_Urban_Transitions%20-%20%40withyuee.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/Hong_Kong_Urban_Transitions_-_%40withyuee/img_001_f338d92e.webp",
+        "thumb_key": "https://media.fedu.vn/images/Hong_Kong_Urban_Transitions_-_%40withyuee/img_003_5bd4e9f3.webp",
+        "video_url": "https://drive.google.com/uc?id=1wBEpGE7cQIjEqp3T0GiXVRhpW-9zbUvx&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1wBEpGE7cQIjEqp3T0GiXVRhpW-9zbUvx&export=download",
         "report_url": "reports/Hong_Kong_Urban_Transitions - @withyuee.html",
         "shots_count": 21,
         "duration": "42s",
@@ -20569,13 +20033,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -20600,9 +20060,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/withyuee/",
       "gdrive_folder": "https://drive.google.com/open?id=1MuKg5h7d2w-hbxyV3ldPnKYBtjOJeVIn",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/Hong_Kong_Cinematography_Guide_-_%2540withyuee/img_001_4c61efb5.jpg",
-        "thumb_key": "https://media.fedu.vn/images/Hong_Kong_Cinematography_Guide_-_%2540withyuee/img_003_469ee782.jpg",
-        "video_url": "https://media.fedu.vn/videos/Hong_Kong_Cinematography_Guide%20-%20%40withyuee.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/Hong_Kong_Cinematography_Guide_-_%40withyuee/img_001_4c61efb5.webp",
+        "thumb_key": "https://media.fedu.vn/images/Hong_Kong_Cinematography_Guide_-_%40withyuee/img_003_469ee782.webp",
+        "video_url": "https://drive.google.com/uc?id=12d3CZA_yekKhu3Ts5I3wEDurISYPGeD2&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=12d3CZA_yekKhu3Ts5I3wEDurISYPGeD2&export=download",
         "report_url": "reports/Hong_Kong_Cinematography_Guide - @withyuee.html",
         "shots_count": 28,
         "duration": "56s",
@@ -20630,13 +20091,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -20661,9 +20118,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/withyuee/",
       "gdrive_folder": "https://drive.google.com/open?id=1MuKg5h7d2w-hbxyV3ldPnKYBtjOJeVIn",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/Hong_Kong_Bamboo_Scaffolding_-_%2540withyuee/img_001_84d02fa0.jpg",
-        "thumb_key": "https://media.fedu.vn/images/Hong_Kong_Bamboo_Scaffolding_-_%2540withyuee/img_003_02cc6fea.jpg",
-        "video_url": "https://media.fedu.vn/videos/Hong_Kong_Bamboo_Scaffolding%20-%20%40withyuee.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_001_84d02fa0.webp",
+        "thumb_key": "https://media.fedu.vn/images/Hong_Kong_Bamboo_Scaffolding_-_%40withyuee/img_003_02cc6fea.webp",
+        "video_url": "https://drive.google.com/uc?id=1kYjXsBSPSPNDFBWo1A1uY3TEA3gXLvzl&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1kYjXsBSPSPNDFBWo1A1uY3TEA3gXLvzl&export=download",
         "report_url": "reports/Hong_Kong_Bamboo_Scaffolding - @withyuee.html",
         "shots_count": 16,
         "duration": "32s",
@@ -20691,13 +20149,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎙️",
         "badge_color": "purple"
       },
-      "industry": {
-        "id": "am-thuc",
-        "name": "F&B",
-        "en_name": "Food & Beverage",
-        "icon": "🍜",
-        "badge_color": "amber"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -20719,12 +20173,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@thodiahaiduongne",
         "profile_url": "https://www.instagram.com/thodiahaiduongne/"
       },
-      "ig_url": "https://www.tiktok.com/@thodiahaiduongne/video/7350657143906913544",
+      "ig_url": "https://www.instagram.com/thodiahaiduongne/",
       "gdrive_folder": "https://drive.google.com/open?id=1MuKg5h7d2w-hbxyV3ldPnKYBtjOJeVIn",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/TikTok_%40thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_01_start.jpg",
-        "thumb_key": "https://media.fedu.vn/images/TikTok_%40thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_01_end.jpg",
-        "video_url": "https://media.fedu.vn/videos/Mua%20Sua%20Do%20Hai%20Duong%20-%20%40thodiahaiduongne.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/TikTok_%40thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_01_start.webp",
+        "thumb_key": "https://media.fedu.vn/images/TikTok_%40thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_01_end.webp",
+        "video_url": "https://drive.google.com/uc?id=1HKuUdVsokHvqexx8_nUpxmA6apqh14jl&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1HKuUdVsokHvqexx8_nUpxmA6apqh14jl&export=download",
         "report_url": "reports/Mua Sua Do Hai Duong - @thodiahaiduongne.html",
         "shots_count": 15,
         "duration": "30s",
@@ -20752,13 +20207,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🚶",
         "badge_color": "emerald"
       },
-      "industry": {
-        "id": "spa-lam-dep",
-        "name": "Làm đẹp",
-        "en_name": "Beauty & Spa",
-        "icon": "💆",
-        "badge_color": "rose"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -20780,12 +20231,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@tinanguyen2004",
         "profile_url": "https://www.instagram.com/tinanguyen2004/"
       },
-      "ig_url": "https://www.tiktok.com/@tinanguyen2004/video/7673468312290037012",
+      "ig_url": "https://www.instagram.com/reel/Day_luon_la/",
       "gdrive_folder": "https://drive.google.com/open?id=1MuKg5h7d2w-hbxyV3ldPnKYBtjOJeVIn",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40tinanguyen2004_7673468312290037012_Double_Day_lu%C3%B4n_l%C3%A0_d%E1%BB%8Bp_%C4%91%E1%BB%83_kh%C3%A1ch_h%C3%A0ng_l%E1%BB%B1a_%C4%91%C6%B0%E1%BB%A3c/shot_01_mid.jpg",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40tinanguyen2004_7673468312290037012_Double_Day_lu%C3%B4n_l%C3%A0_d%E1%BB%8Bp_%C4%91%E1%BB%83_kh%C3%A1ch_h%C3%A0ng_l%E1%BB%B1a_%C4%91%C6%B0%E1%BB%A3c/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/7673468312290037012.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40tinanguyen2004_7673468312290037012_Double_Day_lu%C3%B4n_l%C3%A0_d%E1%BB%8Bp_%C4%91%E1%BB%83_kh%C3%A1ch_h%C3%A0ng_l%E1%BB%B1a_%C4%91%C6%B0%E1%BB%A3c/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40tinanguyen2004_7673468312290037012_Double_Day_lu%C3%B4n_l%C3%A0_d%E1%BB%8Bp_%C4%91%E1%BB%83_kh%C3%A1ch_h%C3%A0ng_l%E1%BB%B1a_%C4%91%C6%B0%E1%BB%A3c/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1Hj0neaC578HiiSiI3SwV3Scw7I0VJZJ6&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1Hj0neaC578HiiSiI3SwV3Scw7I0VJZJ6&export=download",
         "report_url": "reports/IG_@tinanguyen2004_7673468312290037012_Double_Day_luôn_là_dịp_để_khách_hàng_lựa_được.html",
         "shots_count": 14,
         "duration": "28s",
@@ -20807,19 +20259,15 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Phân tích cấu trúc 30 shots cắt nhịp đập thần tốc (~0.53s/shot), nghệ thuật tương phản thị giác giữa khổ luyện và thăng hoa lượng tử.",
       "key_tech": "Fast Beat Pacing, Visual Juxtaposition, Low-Key Silhouette, Macro Detail, Hero Framing",
       "shooting_style": {
-        "id": "dien-anh",
-        "name": "Chỉn Chu",
-        "en_name": "Cinematic Mastery",
-        "icon": "🎬",
-        "badge_color": "sky"
+        "id": "theo-nhip-nhac",
+        "name": "Theo nhịp nhạc",
+        "en_name": "Music Beat & Rhythm",
+        "icon": "🎵",
+        "badge_color": "purple"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -20844,9 +20292,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DcJiRCrTlG1/",
       "gdrive_folder": "https://drive.google.com/open?id=1MaFlfsSpjbXwTIQylI3AkU2Q1Fa-f3IH",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40colecoppolino_DcJiRCrTlG1/shot_01_mid.jpg",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40colecoppolino_DcJiRCrTlG1/shot_02_mid.jpg",
-        "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DcJiRCrTlG1.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40colecoppolino_DcJiRCrTlG1/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40colecoppolino_DcJiRCrTlG1/shot_02_mid.webp",
+        "video_url": "https://media.fedu.vn/videos/Ky_Luat_Thep_Va_Buoc_Nhay_Luong_Tu_Doi_Doi%20-%20@colecoppolino.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/Ky_Luat_Thep_Va_Buoc_Nhay_Luong_Tu_Doi_Doi%20-%20@colecoppolino.mp4",
         "report_url": "reports/Ky_Luat_Thep_Va_Buoc_Nhay_Luong_Tu_Doi_Doi - @colecoppolino.html",
         "shots_count": 1,
         "duration": "2s",
@@ -20874,13 +20323,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -20905,9 +20350,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DcTk0RGgtBO/",
       "gdrive_folder": "https://drive.google.com/open?id=1_CLq42-dPSdma7BYkRY9PFf6Xf0ftv6P",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40withyuee_DcTk0RGgtBO_Hong_Kong_Cinematic_Cityscape/shot_01_mid.jpg",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40withyuee_DcTk0RGgtBO_Hong_Kong_Cinematic_Cityscape/shot_02_mid.jpg",
-        "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DcTk0RGgtBO.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40withyuee_DcTk0RGgtBO_Hong_Kong_Cinematic_Cityscape/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40withyuee_DcTk0RGgtBO_Hong_Kong_Cinematic_Cityscape/shot_02_mid.webp",
+        "video_url": "https://media.fedu.vn/videos/Hong_Kong_Cinematic_Cityscape%20-%20@withyuee.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/Hong_Kong_Cinematic_Cityscape%20-%20@withyuee.mp4",
         "report_url": "reports/Hong_Kong_Cinematic_Cityscape - @withyuee.html",
         "shots_count": 20,
         "duration": "40s",
@@ -20935,13 +20381,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "kien-truc",
-        "name": "Góc nhà đẹp",
-        "en_name": "Architecture & Living",
-        "icon": "🏛️",
-        "badge_color": "emerald"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "japan",
         "name": "Nhật Bản",
@@ -20963,12 +20405,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@ioana_iftode",
         "profile_url": "https://www.instagram.com/ioana_iftode/"
       },
-      "ig_url": "https://www.instagram.com/p/Db7zNC0jPwV/",
+      "ig_url": "https://www.instagram.com/reel/Db7zNC0jPwV/",
       "gdrive_folder": "https://drive.google.com/open?id=1BpA3qkvy1766YGz9rZ07X5HdRzl8vUsL",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40ioana_iftode_Db7zNC0jPwV_Tokyo_Slow_Life_Magic_Moments/shot_01_mid.jpg",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40ioana_iftode_Db7zNC0jPwV_Tokyo_Slow_Life_Magic_Moments/shot_02_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40ioana_iftode_Db7zNC0jPwV_Tokyo_Slow_Life_Magic_Moments/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40ioana_iftode_Db7zNC0jPwV_Tokyo_Slow_Life_Magic_Moments/shot_02_mid.webp",
         "video_url": "",
+        "video_url_original": "",
         "report_url": "reports/Tokyo_Slow_Life_Magic_Moments - @ioana_iftode.html",
         "shots_count": 9,
         "duration": "18s",
@@ -20996,13 +20439,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -21027,9 +20466,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DbRak0lsesY/",
       "gdrive_folder": "https://drive.google.com/open?id=16aDWoLvVc-oq0vLJmNVyi2Fj0z6ywm4q",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40willwfit_DbRak0lsesY_The_Goal_Is_Simple/shot_01_mid.jpg",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40willwfit_DbRak0lsesY_The_Goal_Is_Simple/shot_02_mid.jpg",
-        "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DbRak0lsesY.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40willwfit_DbRak0lsesY_The_Goal_Is_Simple/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40willwfit_DbRak0lsesY_The_Goal_Is_Simple/shot_02_mid.webp",
+        "video_url": "https://media.fedu.vn/videos/The_Goal_Is_Simple_Gym_Motivation%20-%20@willwfit.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/The_Goal_Is_Simple_Gym_Motivation%20-%20@willwfit.mp4",
         "report_url": "reports/The_Goal_Is_Simple_Gym_Motivation - @willwfit.html",
         "shots_count": 1,
         "duration": "2s",
@@ -21057,13 +20497,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "📖",
         "badge_color": "amber"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "japan",
         "name": "Nhật Bản",
@@ -21085,12 +20521,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@ioana_iftode",
         "profile_url": "https://www.instagram.com/ioana_iftode/"
       },
-      "ig_url": "https://www.instagram.com/p/DcYQVYJjHa-/",
+      "ig_url": "https://www.instagram.com/reel/DcYQVYJjHa-/",
       "gdrive_folder": "https://drive.google.com/open?id=1X5yR8iSuizx8DgNkzz0NaWH0boKZWx09",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40ioana_iftode_DcYQVYJjHa-_Tokyo_Slow_Life_Visual_Diaries/shot_01_mid.jpg",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40ioana_iftode_DcYQVYJjHa-_Tokyo_Slow_Life_Visual_Diaries/shot_02_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40ioana_iftode_DcYQVYJjHa-_Tokyo_Slow_Life_Visual_Diaries/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40ioana_iftode_DcYQVYJjHa-_Tokyo_Slow_Life_Visual_Diaries/shot_02_mid.webp",
         "video_url": "",
+        "video_url_original": "",
         "report_url": "reports/Tokyo_Slow_Life_Visual_Diaries - @ioana_iftode.html",
         "shots_count": 10,
         "duration": "20s",
@@ -21118,13 +20555,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "thoi-trang",
-        "name": "Thời trang",
-        "en_name": "Fashion & Style",
-        "icon": "👔",
-        "badge_color": "pink"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -21149,9 +20582,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DbjCyKgxp8S/",
       "gdrive_folder": "https://drive.google.com/open?id=1FkvKU7WPw6YZqS_DtaM4AePYQk6V07XB",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40iamlukeluquire_DbjCyKgxp8S_Aesthetic_Routine/shot_01_mid.jpg",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40iamlukeluquire_DbjCyKgxp8S_Aesthetic_Routine/shot_02_mid.jpg",
-        "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DbjCyKgxp8S.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40iamlukeluquire_DbjCyKgxp8S_Aesthetic_Routine/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40iamlukeluquire_DbjCyKgxp8S_Aesthetic_Routine/shot_02_mid.webp",
+        "video_url": "https://media.fedu.vn/videos/Aesthetic_Routine%20-%20@iamlukeluquire.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/Aesthetic_Routine%20-%20@iamlukeluquire.mp4",
         "report_url": "reports/Aesthetic_Routine - @iamlukeluquire.html",
         "shots_count": 1,
         "duration": "2s",
@@ -21179,13 +20613,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎙️",
         "badge_color": "purple"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -21210,9 +20640,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DcTqPjitJl1/",
       "gdrive_folder": "https://drive.google.com/open?id=1h_b9iJQe5tSfKAidBFFVsSLtv9GhLj_q",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40lifeofriza_DcTqPjitJl1_Y_Tuong_Thanh_Hien_Thuc_Canva/shot_01_mid.jpg",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40lifeofriza_DcTqPjitJl1_Y_Tuong_Thanh_Hien_Thuc_Canva/shot_02_mid.jpg",
-        "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/DcTqPjitJl1.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40lifeofriza_DcTqPjitJl1_Y_Tuong_Thanh_Hien_Thuc_Canva/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40lifeofriza_DcTqPjitJl1_Y_Tuong_Thanh_Hien_Thuc_Canva/shot_02_mid.webp",
+        "video_url": "https://media.fedu.vn/videos/Y_Tuong_Thanh_Hien_Thuc_Canva%20-%20@lifeofriza.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/Y_Tuong_Thanh_Hien_Thuc_Canva%20-%20@lifeofriza.mp4",
         "report_url": "reports/Y_Tuong_Thanh_Hien_Thuc_Canva - @lifeofriza.html",
         "shots_count": 1,
         "duration": "2s",
@@ -21234,19 +20665,15 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "Phân tích 15 phân cảnh du lịch điện ảnh Việt Nam: Kỹ thuật nhịp cắt Fast Montage đồng bộ beat nhạc, chuyển cảnh nối đường chân trời, góc quay flycam hẻm Tu Sản và nhịp thở thị giác phố cổ.",
       "key_tech": "Fast Montage Beat Sync, Leading Lines, Horizon Match Cut, Emotional Anchor, Flycam Aerial",
       "shooting_style": {
-        "id": "chuyen-canh",
-        "name": "Chuyển Cảnh",
-        "en_name": "Transitions & Flow",
-        "icon": "⚡",
-        "badge_color": "rose"
+        "id": "theo-nhip-nhac",
+        "name": "Theo nhịp nhạc",
+        "en_name": "Music Beat & Rhythm",
+        "icon": "🎵",
+        "badge_color": "purple"
       },
-      "industry": {
-        "id": "du-lich",
-        "name": "Du lịch",
-        "en_name": "Travel & Culture",
-        "icon": "✈️",
-        "badge_color": "sky"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -21271,9 +20698,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/Da7V4egSQxv/",
       "gdrive_folder": "https://drive.google.com/open?id=1O7r_FX-_nMvpRbYxKWjKyD__lLreBVWp",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40madisonkjan_Da7V4egSQxv_Vietnam_Travel_Cinematic/shot_01_mid.jpg",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40madisonkjan_Da7V4egSQxv_Vietnam_Travel_Cinematic/shot_02_mid.jpg",
-        "video_url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/videos/The_Next_Station_Is_Vietnam%20-%20%40madisonkjan.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40madisonkjan_Da7V4egSQxv_Vietnam_Travel_Cinematic/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40madisonkjan_Da7V4egSQxv_Vietnam_Travel_Cinematic/shot_02_mid.webp",
+        "video_url": "https://media.fedu.vn/videos/The_Next_Station_Is_Vietnam%20-%20@madisonkjan.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/The_Next_Station_Is_Vietnam%20-%20@madisonkjan.mp4",
         "report_url": "reports/The_Next_Station_Is_Vietnam - @madisonkjan.html",
         "shots_count": 1,
         "duration": "2s",
@@ -21301,13 +20729,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -21329,12 +20753,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@kopdinh",
         "profile_url": "https://www.instagram.com/kopdinh/"
       },
-      "ig_url": "https://web.facebook.com/reel/1398467868829887/?s=single_unit",
+      "ig_url": "https://www.instagram.com/kopdinh/",
       "gdrive_folder": "https://drive.google.com/open?id=1G1Lt_WAF1GSuXD4ccXprArfdeovz3Poa",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/Lat_Cat_Cam_Xuc_-_%2540KopDinh/img_001_63c5522e.jpg",
-        "thumb_key": "https://media.fedu.vn/images/Lat_Cat_Cam_Xuc_-_%2540KopDinh/img_003_b0b34390.jpg",
-        "video_url": "https://media.fedu.vn/videos/Lat_Cat_Cam_Xuc%20-%20%40KopDinh.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/Lat_Cat_Cam_Xuc_-_%40KopDinh/img_001_63c5522e.webp",
+        "thumb_key": "https://media.fedu.vn/images/Lat_Cat_Cam_Xuc_-_%40KopDinh/img_003_b0b34390.webp",
+        "video_url": "https://drive.google.com/uc?id=1QxyZkwjUqTMylCT1lVn_LlM8_RfoEr7n&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1QxyZkwjUqTMylCT1lVn_LlM8_RfoEr7n&export=download",
         "report_url": "reports/Lat_Cat_Cam_Xuc - @KopDinh.html",
         "shots_count": 3,
         "duration": "6s",
@@ -21362,13 +20787,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -21390,12 +20811,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@withyuee",
         "profile_url": "https://www.instagram.com/withyuee/"
       },
-      "ig_url": "https://www.instagram.com/p/DUqQaPbkfcQ/",
+      "ig_url": "https://www.instagram.com/reel/DUqQaPbkfcQ/",
       "gdrive_folder": "https://drive.google.com/open?id=10UqUp7x20sUi9nRGP8qYNNB9omq5FMIa",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/Chinese_New_Year_Hong_Kong_-_%2540withyuee/img_001_cbc24138.jpg",
-        "thumb_key": "https://media.fedu.vn/images/Chinese_New_Year_Hong_Kong_-_%2540withyuee/img_003_bafbc8e0.jpg",
-        "video_url": "https://media.fedu.vn/videos/Chinese_New_Year_Hong_Kong%20-%20%40withyuee.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_001_cbc24138.webp",
+        "thumb_key": "https://media.fedu.vn/images/Chinese_New_Year_Hong_Kong_-_%40withyuee/img_003_bafbc8e0.webp",
+        "video_url": "https://drive.google.com/uc?id=1t38w7kNqHxVVH78NdFVZjSRZ1k_lLwna&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1t38w7kNqHxVVH78NdFVZjSRZ1k_lLwna&export=download",
         "report_url": "reports/Chinese_New_Year_Hong_Kong - @withyuee.html",
         "shots_count": 1,
         "duration": "2s",
@@ -21423,13 +20845,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -21451,12 +20869,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@withyuee",
         "profile_url": "https://www.instagram.com/withyuee/"
       },
-      "ig_url": "https://www.instagram.com/withyuee/p/DO8arRxEZvh/",
+      "ig_url": "https://www.instagram.com/reel/DO8arRxEZvh/",
       "gdrive_folder": "https://drive.google.com/open?id=1jm5KkWr9XH6aWRvB4S8yZt-04fehPSCV",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/extracted_shots/slide_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/extracted_shots/slide_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/carousel_slides/slide_01_DO8aI3uker6.mp4",
+        "thumb_hook": "",
+        "thumb_key": "",
+        "video_url": "https://media.fedu.vn/videos/slide_01_DO8aI3uker6.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/slide_01_DO8aI3uker6.mp4",
         "report_url": "reports/Hong_Kong_Visual_Rhythm_Carousel - @withyuee.html",
         "shots_count": 8,
         "duration": "16s",
@@ -21484,13 +20903,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -21512,12 +20927,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@withyuee",
         "profile_url": "https://www.instagram.com/withyuee/"
       },
-      "ig_url": "https://www.instagram.com/p/DVQ3Gh6Efk1/",
+      "ig_url": "https://www.instagram.com/reel/DVQ3Gh6Efk1/",
       "gdrive_folder": "https://drive.google.com/open?id=1IvbwMbmFTwe3iEOtyu8kE560RPj_0uaf",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/Spring_in_Hong_Kong_-_%2540withyuee/img_001_bac7352a.jpg",
-        "thumb_key": "https://media.fedu.vn/images/Spring_in_Hong_Kong_-_%2540withyuee/img_003_1d27bf11.jpg",
-        "video_url": "https://media.fedu.vn/videos/Spring_in_Hong_Kong%20-%20%40withyuee.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/Spring_in_Hong_Kong_-_%40withyuee/img_001_bac7352a.webp",
+        "thumb_key": "https://media.fedu.vn/images/Spring_in_Hong_Kong_-_%40withyuee/img_003_1d27bf11.webp",
+        "video_url": "https://drive.google.com/uc?id=1heH4Sv3M9UII9w793LC6XEmTCrFye0kf&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1heH4Sv3M9UII9w793LC6XEmTCrFye0kf&export=download",
         "report_url": "reports/Spring_in_Hong_Kong - @withyuee.html",
         "shots_count": 1,
         "duration": "2s",
@@ -21545,13 +20961,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "📖",
         "badge_color": "amber"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -21573,12 +20985,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@samuelaitken_",
         "profile_url": "https://www.instagram.com/samuelaitken_/"
       },
-      "ig_url": "https://www.instagram.com/p/Da0eP_msVrm/",
+      "ig_url": "https://www.instagram.com/reel/Da0eP_msVrm/",
       "gdrive_folder": null,
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/Aesthetic_Routine_Fitness_-_%2540samuelaitken/img_001_b0c92ce2.jpg",
-        "thumb_key": "https://media.fedu.vn/images/Aesthetic_Routine_Fitness_-_%2540samuelaitken/img_003_450cd1cb.jpg",
-        "video_url": "https://media.fedu.vn/videos/Aesthetic_Routine_Fitness%20-%20%40samuelaitken_.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/Aesthetic_Routine_Fitness_-_%40samuelaitken/img_001_b0c92ce2.webp",
+        "thumb_key": "https://media.fedu.vn/images/Aesthetic_Routine_Fitness_-_%40samuelaitken/img_003_450cd1cb.webp",
+        "video_url": "https://drive.google.com/uc?id=1jeh6b3dSTLV3onk-WHBtW0mvA_0M2xcW&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1jeh6b3dSTLV3onk-WHBtW0mvA_0M2xcW&export=download",
         "report_url": "reports/Aesthetic_Routine_Fitness - @samuelaitken_.html",
         "shots_count": 19,
         "duration": "38s",
@@ -21594,8 +21007,66 @@ var FEDU_IDEAS_DATABASE = {
       "is_excluded": false
     },
     {
-      "id": "IG_@by.bennnj_DbKauxkoJU_Making_beginner_cameras_look_cinematic",
+      "id": "IG_@by.bennnj_DbKauxkoJU_",
       "shortcode": "DbKauxkoJU",
+      "title_vi": "Phân Tích Chi Tiết Video IG_@by.bennnj_DbKauxkoJU_",
+      "quick_takeaway": "🎯 TỔNG QUAN PHONG CÁCH THỊ GIÁC &amp; NGÔN NGỮ ĐIỆN ẢNH:\nHướng dẫn làm chủ quy tắc góc màn trập 180° (1/50s), khóa Manual Kelvin cân bằng trắng, sử dụng kính lọc Black Pro-Mist và bố trí ánh sáng tương phản.",
+      "key_tech": "Cỡ cảnh, động tác máy, nhịp điệu thị giác",
+      "shooting_style": {
+        "id": "dien-anh",
+        "name": "Chỉn Chu",
+        "en_name": "Cinematic Mastery",
+        "icon": "🎬",
+        "badge_color": "sky"
+      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
+      "country": {
+        "id": "us_eu",
+        "name": "Âu Mỹ",
+        "en_name": "US & Europe",
+        "flag": "🇺🇸/🇪🇺",
+        "badge_color": "purple"
+      },
+      "purpose": "Showcase thị giác & Thẩm mỹ",
+      "tech_tags": [
+        "Cỡ cảnh, động tác máy, nhịp điệu thị giác"
+      ],
+      "transition_level": null,
+      "is_ad_bot": false,
+      "fedu_optimization": {},
+      "logic_explanation": "",
+      "creator": {
+        "raw": "@creator",
+        "name": "Creator",
+        "handle": "@creator",
+        "profile_url": "https://www.instagram.com/creator/"
+      },
+      "ig_url": "https://www.instagram.com/creator/",
+      "gdrive_folder": null,
+      "media": {
+        "thumb_hook": "https://media.fedu.vn/images/Making_Beginner_Cameras_Look_Cinematic_-_%40by.bennnj/img_001_7dd798e3.webp",
+        "thumb_key": "https://media.fedu.vn/images/Making_Beginner_Cameras_Look_Cinematic_-_%40by.bennnj/img_003_0f92bae8.webp",
+        "video_url": "",
+        "video_url_original": "",
+        "report_url": "reports/Making_Beginner_Cameras_Look_Cinematic - @by.bennnj.html",
+        "shots_count": 0,
+        "duration": "50s",
+        "youtube_id": "",
+        "youtube_embed": "",
+        "youtube_url": ""
+      },
+      "complexity": {
+        "id": "de",
+        "label": "🟢 Dễ làm theo (3-8 shots)"
+      },
+      "is_personal": false,
+      "is_excluded": true
+    },
+    {
+      "id": "IG_@by.bennnj_DbKauxkoJU_Making_beginner_cameras_look_cinematic",
+      "shortcode": "DbKauxkoJU_M",
       "title_vi": "Bí Quyết Biến Máy Ảnh Nhập Môn Trông Như Phim Điện Ảnh (Sony ZV-E10)",
       "quick_takeaway": "🎯 TỔNG QUAN PHONG CÁCH THỊ GIÁC &amp; NGÔN NGỮ ĐIỆN ẢNH:\nHướng dẫn làm chủ quy tắc góc màn trập 180° (1/50s), khóa Manual Kelvin cân bằng trắng, sử dụng kính lọc Black Pro-Mist và bố trí ánh sáng tương phản.",
       "key_tech": "180° Shutter Rule, Manual White Balance, Black Diffusion Mist Filter, Dynamic Range",
@@ -21606,13 +21077,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -21634,12 +21101,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@by.bennnj",
         "profile_url": "https://www.instagram.com/by.bennnj/"
       },
-      "ig_url": "https://www.instagram.com/p/DbKauxkoJU_/",
+      "ig_url": "https://www.instagram.com/by.bennnj/",
       "gdrive_folder": null,
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/Making_Beginner_Cameras_Look_Cinematic_-_%2540by.bennnj/img_001_7dd798e3.jpg",
-        "thumb_key": "https://media.fedu.vn/images/Making_Beginner_Cameras_Look_Cinematic_-_%2540by.bennnj/img_003_0f92bae8.jpg",
-        "video_url": "https://media.fedu.vn/videos/Making_Beginner_Cameras_Look_Cinematic%20-%20%40by.bennnj.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/Making_Beginner_Cameras_Look_Cinematic_-_%40by.bennnj/img_001_7dd798e3.webp",
+        "thumb_key": "https://media.fedu.vn/images/Making_Beginner_Cameras_Look_Cinematic_-_%40by.bennnj/img_003_0f92bae8.webp",
+        "video_url": "https://drive.google.com/uc?id=1b0eCGK5yrCZRmjpDQseBBi4oEhhF4wj9&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1b0eCGK5yrCZRmjpDQseBBi4oEhhF4wj9&export=download",
         "report_url": "reports/Making_Beginner_Cameras_Look_Cinematic - @by.bennnj.html",
         "shots_count": 36,
         "duration": "50s",
@@ -21656,7 +21124,7 @@ var FEDU_IDEAS_DATABASE = {
     },
     {
       "id": "IG_@jazziesillona_DXUG_1TjwJu_Carousel_Analysis",
-      "shortcode": "DXUG_1TjwJu",
+      "shortcode": "DXUG_1TjwJu_Carousel_Analysis",
       "title_vi": "Chuỗi Carousel 6 Slide Video: Kỹ Thuật Đẩy Nhanh Tiết Tấu Giữ Chân Khán Giả",
       "quick_takeaway": "🎯 TỔNG QUAN PHONG CÁCH THỊ GIÁC &amp; NGÔN NGỮ ĐIỆN ẢNH:\n\n🎯 CHIẾN LƯỢC CẤU TRÚC CAROUSEL SERIES:\n    • Dạng bài: Tuyển tập chuỗi 6 video ngắn không lời thoại (Visual-first Lifestyle / Fashion Lookbook) kết hợp âm nhạc thịnh hành. • Công ...",
       "key_tech": "Carousel Retention Rate, 4:5 Mobile Ratio, Slide Transition Flow",
@@ -21667,13 +21135,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "thoi-trang",
-        "name": "Thời trang",
-        "en_name": "Fashion & Style",
-        "icon": "👔",
-        "badge_color": "pink"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -21695,12 +21159,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@jazziesillona",
         "profile_url": "https://www.instagram.com/jazziesillona/"
       },
-      "ig_url": "https://www.instagram.com/p/DXUG_1TjwJu/",
+      "ig_url": "https://www.instagram.com/jazziesillona/",
       "gdrive_folder": null,
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/Visual_Stopping_Power_Carousel_-_%2540jazziesillona/img_001_3ed9942d.jpg",
-        "thumb_key": "https://media.fedu.vn/images/Visual_Stopping_Power_Carousel_-_%2540jazziesillona/img_003_8c9d0578.jpg",
-        "video_url": "https://media.fedu.vn/videos/carousel_slides/slide_01.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/Visual_Stopping_Power_Carousel_-_%40jazziesillona/img_001_3ed9942d.webp",
+        "thumb_key": "https://media.fedu.vn/images/Visual_Stopping_Power_Carousel_-_%40jazziesillona/img_003_8c9d0578.webp",
+        "video_url": "https://drive.google.com/uc?id=1OdaG7XZYuiDZHiQBJFjv_2UGX72heP3c&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1OdaG7XZYuiDZHiQBJFjv_2UGX72heP3c&export=download",
         "report_url": "reports/Visual_Stopping_Power_Carousel - @jazziesillona.html",
         "shots_count": 6,
         "duration": "12s",
@@ -21717,7 +21182,7 @@ var FEDU_IDEAS_DATABASE = {
     },
     {
       "id": "IG_@jazziesillona_DW8lBR9Dzop_Carousel_Analysis",
-      "shortcode": "DW8lBR9Dzop",
+      "shortcode": "DW8lBR9Dzop_Carousel_Analysis",
       "title_vi": "Nghệ Thuật Xây Dựng Nhịp Điệu Thị Giác Trong Chuỗi Video Carousel Đa Slide",
       "quick_takeaway": "🎯 TỔNG QUAN PHONG CÁCH THỊ GIÁC &amp; NGÔN NGỮ ĐIỆN ẢNH:\n\n🎯 Tổng Quan Nghệ Thuật (Art Direction): Tuyển tập 8 video phong cách \"Moving Postcards\" (Bưu thiếp động) đưa người xem qua từng góc nhìn văn hóa, nhịp sống và màu sắc Hong Kong. S...",
       "key_tech": "Visual Rhythm Carousel, Stopping Power, 9:16 Mobile Framing, Hook-to-CTA Pipeline",
@@ -21728,13 +21193,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -21756,12 +21217,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@jazziesillona",
         "profile_url": "https://www.instagram.com/jazziesillona/"
       },
-      "ig_url": "https://www.instagram.com/p/DW8lBR9Dzop/",
+      "ig_url": "https://www.instagram.com/jazziesillona/",
       "gdrive_folder": "https://drive.google.com/open?id=11L_hnSSKkQ0hSWHuQx74vzsQDnhVS5hN",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/Street_Photography_Carousel_-_%2540jazziesillona/img_001_e7c4fa90.jpg",
-        "thumb_key": "https://media.fedu.vn/images/Street_Photography_Carousel_-_%2540jazziesillona/img_003_e0df5078.jpg",
-        "video_url": "https://media.fedu.vn/videos/carousel_slides/slide_01.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_001_e7c4fa90.webp",
+        "thumb_key": "https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_003_e0df5078.webp",
+        "video_url": "https://drive.google.com/uc?id=1OdaG7XZYuiDZHiQBJFjv_2UGX72heP3c&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1OdaG7XZYuiDZHiQBJFjv_2UGX72heP3c&export=download",
         "report_url": "reports/Street_Photography_Carousel - @jazziesillona.html",
         "shots_count": 8,
         "duration": "16s",
@@ -21778,7 +21240,7 @@ var FEDU_IDEAS_DATABASE = {
     },
     {
       "id": "IG_@Jazzie_DWnsVqWj2XN_Carousel_Analysis",
-      "shortcode": "DWnsVqWj2XN",
+      "shortcode": "DWnsVqWj2XN_Carousel_Analysis",
       "title_vi": "Album 7 Slide Video Dạo Phố & Nghệ Thuật Chọn Điểm Cắt Cảnh Tự Nhiên",
       "quick_takeaway": "🎯 TỔNG QUAN PHONG CÁCH THỊ GIÁC &amp; NGÔN NGỮ ĐIỆN ẢNH:\n\nTỔNG QUAN HỆ THỐNG QUAY &amp; HẬU KỲ",
       "key_tech": "Natural Cut Point, Swipe Continuity, Eye-tracking Flow",
@@ -21789,13 +21251,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -21817,15 +21275,16 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@jazziesillona",
         "profile_url": "https://www.instagram.com/jazziesillona/"
       },
-      "ig_url": "https://www.instagram.com/p/DWnsVqWj2XN/",
+      "ig_url": "https://www.instagram.com/jazziesillona/",
       "gdrive_folder": null,
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/carousel_slides/slide_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/carousel_slides/slide_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/carousel_slides/slide_01.mp4",
+        "thumb_hook": "",
+        "thumb_key": "",
+        "video_url": "https://drive.google.com/uc?id=1OdaG7XZYuiDZHiQBJFjv_2UGX72heP3c&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1OdaG7XZYuiDZHiQBJFjv_2UGX72heP3c&export=download",
         "report_url": "reports/Everyday_Filming_Logic_Carousel - @jazziesillona.html",
         "shots_count": 7,
-        "duration": "48s",
+        "duration": "14s",
         "youtube_id": "",
         "youtube_embed": "",
         "youtube_url": ""
@@ -21839,7 +21298,7 @@ var FEDU_IDEAS_DATABASE = {
     },
     {
       "id": "IG_@jazziesillona_DWrDUymD4_a_Carousel_Analysis",
-      "shortcode": "DWrDUymD4_a",
+      "shortcode": "DWrDUymD4_a_Carousel_Analysis",
       "title_vi": "Bộ 4 Slide Video Thẩm Mỹ: Sự Kết Hợp Giữa Âm Nhạc & Chuyển Động Chậm",
       "quick_takeaway": "🎯 TỔNG QUAN PHONG CÁCH THỊ GIÁC &amp; NGÔN NGỮ ĐIỆN ẢNH:\nKhai thác chuyển động Slow-motion 60fps làm chậm 40%, bắt trọn ánh sáng hoàng hôn lấp lánh trên trang phục và phụ kiện thời trang.",
       "key_tech": "Slow Motion 60fps to 24fps, Sunset Rim Light, Texture Focus",
@@ -21850,13 +21309,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "thoi-trang",
-        "name": "Thời trang",
-        "en_name": "Fashion & Style",
-        "icon": "👔",
-        "badge_color": "pink"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -21878,12 +21333,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@jazziesillona",
         "profile_url": "https://www.instagram.com/jazziesillona/"
       },
-      "ig_url": "https://www.instagram.com/p/DWrDUymD4_a/",
+      "ig_url": "https://www.instagram.com/jazziesillona/",
       "gdrive_folder": null,
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/Mood_and_Tone_Carousel_-_%2540jazziesillona/img_001_0dc61289.jpg",
-        "thumb_key": "https://media.fedu.vn/images/Mood_and_Tone_Carousel_-_%2540jazziesillona/img_011_b22e8cde.jpg",
-        "video_url": "https://media.fedu.vn/videos/carousel_slides/slide_01_DWrDQgoj7Uw.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/Mood_and_Tone_Carousel_-_%40jazziesillona/img_001_0dc61289.webp",
+        "thumb_key": "https://media.fedu.vn/images/Mood_and_Tone_Carousel_-_%40jazziesillona/img_011_b22e8cde.webp",
+        "video_url": "https://media.fedu.vn/videos/slide_01_DWrDQgoj7Uw.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/slide_01_DWrDQgoj7Uw.mp4",
         "report_url": "reports/Mood_and_Tone_Carousel - @jazziesillona.html",
         "shots_count": 8,
         "duration": "16s",
@@ -21900,7 +21356,7 @@ var FEDU_IDEAS_DATABASE = {
     },
     {
       "id": "IG_@Jakarta_Videographer_Jacoub_Anwar_DbnwnkrAVQ9_Carousel_Analysis",
-      "shortcode": "DbnwnkrAVQ9",
+      "shortcode": "DbnwnkrAVQ9_Carousel_Analysis",
       "title_vi": "7 Quy Tắc Vàng Quay Phim Đường Phố: Khung Hình Tĩnh & Thị Sai 3 Lớp",
       "quick_takeaway": "🎯 TỔNG QUAN PHONG CÁCH THỊ GIÁC &amp; NGÔN NGỮ ĐIỆN ẢNH:\n\nTriết Lý Cốt Lõi: \"Less Camera Movement Looks Better - Movement in Story, Not in Camera\"\n\n        Bộ bài giảng video đúc kết quy tắc vàng trong quay phim đường phố (Street Cinemat...",
       "key_tech": "Static Frame Mise-en-scène, Parallax 3 Lớp, Horizon Line Alignment, Sony Cinema FX30",
@@ -21911,13 +21367,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🗣️",
         "badge_color": "blue"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -21939,12 +21391,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@mcjacoub",
         "profile_url": "https://www.instagram.com/mcjacoub/"
       },
-      "ig_url": "https://www.instagram.com/p/DbnwnkrAVQ9/",
+      "ig_url": "https://www.instagram.com/mcjacoub/",
       "gdrive_folder": null,
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/Quy_Tac_Quay_Phim_Carousel_-_%2540Jacoub_Anwar/img_001_35384a7a.jpg",
-        "thumb_key": "https://media.fedu.vn/images/Quy_Tac_Quay_Phim_Carousel_-_%2540Jacoub_Anwar/img_003_db4b14ed.jpg",
-        "video_url": "https://media.fedu.vn/videos/carousel_slides/slide_01.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/Quy_Tac_Quay_Phim_Carousel_-_%40Jacoub_Anwar/img_001_35384a7a.webp",
+        "thumb_key": "https://media.fedu.vn/images/Quy_Tac_Quay_Phim_Carousel_-_%40Jacoub_Anwar/img_003_db4b14ed.webp",
+        "video_url": "https://drive.google.com/uc?id=1OdaG7XZYuiDZHiQBJFjv_2UGX72heP3c&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1OdaG7XZYuiDZHiQBJFjv_2UGX72heP3c&export=download",
         "report_url": "reports/Quy_Tac_Quay_Phim_Carousel - @Jacoub_Anwar.html",
         "shots_count": 7,
         "duration": "14s",
@@ -21961,7 +21414,7 @@ var FEDU_IDEAS_DATABASE = {
     },
     {
       "id": "IG_@Jazzie_DU2CTKzEqvl_Carousel_Analysis",
-      "shortcode": "DU2CTKzEqvl",
+      "shortcode": "DU2CTKzEqvl_Carousel_Analysis",
       "title_vi": "Chuỗi 8 Slide Video Sáng Tạo Không Gian Sống & Bố Cục Tối Giản",
       "quick_takeaway": "🎯 TỔNG QUAN PHONG CÁCH THỊ GIÁC &amp; NGÔN NGỮ ĐIỆN ẢNH:\nPhong cách quay kiến trúc nội thất tối giản, đường nét thẳng đứng và ánh sáng gián tiếp từ đèn hắt tường tạo cảm giác ấm cúng.",
       "key_tech": "Interior Architecture Framing, Indirect Ambient Lighting, Clean Lines",
@@ -21972,13 +21425,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "kien-truc",
-        "name": "Góc nhà đẹp",
-        "en_name": "Architecture & Living",
-        "icon": "🏛️",
-        "badge_color": "emerald"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -22000,12 +21449,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@jazziesillona",
         "profile_url": "https://www.instagram.com/jazziesillona/"
       },
-      "ig_url": "https://www.instagram.com/p/DU2CTKzEqvl/",
+      "ig_url": "https://www.instagram.com/jazziesillona/",
       "gdrive_folder": null,
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/Urban_Texture_Carousel_-_%2540jazziesillona/img_001_e012a6d8.jpg",
-        "thumb_key": "https://media.fedu.vn/images/Urban_Texture_Carousel_-_%2540jazziesillona/img_003_25d59c75.jpg",
-        "video_url": "https://media.fedu.vn/videos/carousel_slides/slide_01.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/Urban_Texture_Carousel_-_%40jazziesillona/img_001_e012a6d8.webp",
+        "thumb_key": "https://media.fedu.vn/images/Urban_Texture_Carousel_-_%40jazziesillona/img_003_25d59c75.webp",
+        "video_url": "https://drive.google.com/uc?id=1OdaG7XZYuiDZHiQBJFjv_2UGX72heP3c&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1OdaG7XZYuiDZHiQBJFjv_2UGX72heP3c&export=download",
         "report_url": "reports/Urban_Texture_Carousel - @jazziesillona.html",
         "shots_count": 8,
         "duration": "16s",
@@ -22033,13 +21483,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -22061,12 +21507,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@jazziesillona",
         "profile_url": "https://www.instagram.com/jazziesillona/"
       },
-      "ig_url": "https://www.instagram.com/p/DbIA2jwPHCV/",
+      "ig_url": "https://www.instagram.com/reel/DbIA2jwPHCV/",
       "gdrive_folder": null,
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/Hong_Kong_Alleyways_Cinematic_-_%2540jazziesillona/img_001_00ff8166.jpg",
-        "thumb_key": "https://media.fedu.vn/images/Hong_Kong_Alleyways_Cinematic_-_%2540jazziesillona/img_003_ef0401c7.jpg",
-        "video_url": "https://media.fedu.vn/videos/Hong_Kong_Alleyways_Cinematic%20-%20%40jazziesillona.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/Hong_Kong_Alleyways_Cinematic_-_%40jazziesillona/img_001_00ff8166.webp",
+        "thumb_key": "https://media.fedu.vn/images/Hong_Kong_Alleyways_Cinematic_-_%40jazziesillona/img_003_ef0401c7.webp",
+        "video_url": "https://drive.google.com/uc?id=1S-6VroPxZgQj9SbAbBR0cQGYzpCoWB0Q&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1S-6VroPxZgQj9SbAbBR0cQGYzpCoWB0Q&export=download",
         "report_url": "reports/Hong_Kong_Alleyways_Cinematic - @jazziesillona.html",
         "shots_count": 4,
         "duration": "8s",
@@ -22082,11 +21529,11 @@ var FEDU_IDEAS_DATABASE = {
       "is_excluded": false
     },
     {
-      "id": "IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01",
-      "shortcode": "Dal3RFpA5nI",
-      "title_vi": "Project 100 Day 01 • Nghệ Thuật Kể Chuyện Đa Góc Máy Một Ngày Sáng Tạo",
-      "quick_takeaway": "🎯 TỔNG QUAN PHONG CÁCH THỊ GIÁC &amp; NGÔN NGỮ ĐIỆN ẢNH:\n\n\n⚡ 01. Nhịp Dựng Match-Cut &amp; Quán Tính\nSử dụng kỹ thuật cắt nối chuyển động (Momentum Match Cut) và gạt khung bằng vật thể tiền cảnh (Wipe Cut) để nối liền các địa điểm khác n...",
-      "key_tech": "Car Wipe Transition, Momentum Match Cut, POV Immersion, Through-Glass Observer, Target Cart Wheel Cam, In-Cart Reverse Cam, Shoot-Through Shelf, Symmetrical Aisle Leading Lines, 3-Stage Jump Cut, Satisfying Key Foley Hook",
+      "id": "REMAKE_Byjxson_Quang_Cao_Dong_Ho_Bam_Gio",
+      "shortcode": "Dong_Ho_Bam",
+      "title_vi": "Quảng Cáo Đồng Hồ Bấm Giờ: 'Làm Chủ 86.400 Giây' (Ánh Xạ @byjxson)",
+      "quick_takeaway": "Bản đồ ánh xạ bối cảnh thực chiến 15 phân cảnh: Chuyển thể vlog điện ảnh 13.8s của @byjxson sang 6 bối cảnh thực tế tại Times City & Home Studio để quay TVC/Reel quảng cáo đồng hồ bấm giờ Focus Timer Pro.",
+      "key_tech": "Context Mapping 1-to-1, Batch Shooting Checklist, Foreground Object Wipe, Momentum Match Cut, Shoot-Through Foliage, Multi-Tier Pacing",
       "shooting_style": {
         "id": "chuyen-canh",
         "name": "Chuyển Cảnh",
@@ -22094,41 +21541,38 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "thuong-hieu",
-        "name": "Xây kênh",
-        "en_name": "Personal Brand",
-        "icon": "💼",
-        "badge_color": "indigo"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
-        "id": "us_eu",
-        "name": "Âu Mỹ",
-        "en_name": "US & Europe",
-        "flag": "🇺🇸/🇪🇺",
-        "badge_color": "purple"
+        "id": "vietnam",
+        "name": "Việt Nam",
+        "en_name": "Vietnam",
+        "flag": "🇻🇳",
+        "badge_color": "emerald"
       },
       "purpose": "Showcase thị giác & Thẩm mỹ",
       "tech_tags": [
-        "Car Wipe Transition, Momentum Match Cut, POV Immersion, Through-Glass Observer, Target Cart Wheel Cam, In-Cart Reverse Cam, Shoot-Through Shelf, Symmetrical Aisle Leading Lines, 3-Stage Jump Cut, Satisfying Key Foley Hook"
+        "Context Mapping 1-to-1, Batch Shooting Checklist, Foreground Object Wipe, Momentum Match Cut, Shoot-Through Foliage, Multi-Tier Pacing"
       ],
       "transition_level": null,
       "is_ad_bot": false,
       "fedu_optimization": {},
       "logic_explanation": "",
       "creator": {
-        "raw": "@byjxson (Jason Vargas)",
-        "name": "Jason Vargas",
+        "raw": "Anh Việt x @byjxson Remake Engine",
+        "name": "Anh Việt x @byjxson Remake Engine",
         "handle": "@byjxson",
         "profile_url": "https://www.instagram.com/byjxson/"
       },
-      "ig_url": "https://www.instagram.com/reel/Dal3RFpA5nI/",
-      "gdrive_folder": "https://drive.google.com/open?id=1PnG2yVaM0eXeHBPw0p1xk-mAPXRKlLC3",
+      "ig_url": "https://www.instagram.com/reel/Dong_Ho_Bam/",
+      "gdrive_folder": "https://drive.google.com/drive/folders/1e6_uF7W2m4R8Z8e8_remake_watch",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/Project_100_Day_01_-_%2540byjxson/img_002_311c68c6.jpg",
-        "thumb_key": "https://media.fedu.vn/images/Project_100_Day_01_-_%2540byjxson/img_006_b30f0d67.jpg",
-        "video_url": "https://media.fedu.vn/videos/Project%20100%20Day%2001%20-%20%40byjxson.mp4",
-        "report_url": "reports/Project 100 Day 01 - @byjxson.html",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_01_start.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40byjxson_Dal3RFpA5nI_Project_100_Day_01/shot_01_end.webp",
+        "video_url": "https://drive.google.com/uc?id=1Bo8fQcr9297_AsFEYjebV31NW7-YoCc_&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1Bo8fQcr9297_AsFEYjebV31NW7-YoCc_&export=download",
+        "report_url": "reports/Quang_Cao_Dong_Ho_Bam_Gio_Byjxson.html",
         "shots_count": 15,
         "duration": "30s",
         "youtube_id": "",
@@ -22155,13 +21599,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -22183,12 +21623,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@intothethailand",
         "profile_url": "https://www.instagram.com/intothethailand/"
       },
-      "ig_url": "https://www.instagram.com/reel/Dad0d3xtv9E/?igsi=MWtlNjNsdzU1aW8zOQ==",
+      "ig_url": "https://www.instagram.com/reel/Dad0d3xtv9E/",
       "gdrive_folder": "https://drive.google.com/open?id=1JCmITyV4dgyNDNvRuNbhVF9M5U0ZVM7O",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40intothethailand_Dad0d3xtv9E_The_Beauty_of_Bangkok_in_Everyday_Life/shot_01_mid.jpg",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40intothethailand_Dad0d3xtv9E_The_Beauty_of_Bangkok_in_Everyday_Life/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/IG_@intothethailand_Dad0d3xtv9E_The_Beauty_of_Bangkok_in_Everyday_Life.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40intothethailand_Dad0d3xtv9E_The_Beauty_of_Bangkok_in_Everyday_Life/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40intothethailand_Dad0d3xtv9E_The_Beauty_of_Bangkok_in_Everyday_Life/shot_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1ox5R4MK5NuiIybHk57_0lcOB127RlW3U&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1ox5R4MK5NuiIybHk57_0lcOB127RlW3U&export=download",
         "report_url": "reports/IG_@intothethailand_Dad0d3xtv9E_The_Beauty_of_Bangkok_in_Everyday_Life.html",
         "shots_count": 7,
         "duration": "14s",
@@ -22205,7 +21646,7 @@ var FEDU_IDEAS_DATABASE = {
     },
     {
       "id": "IG_@Andrei_Kostromskikh_DcI-darjckz_Carousel_Analysis",
-      "shortcode": "DcI-darjckz",
+      "shortcode": "DcI-darjckz_Carousel_Analysis",
       "title_vi": "Carousel Multi-Slide Retention Masterclass - Nghệ Thuật Giữ Chân Chuỗi Video Đa Slide",
       "quick_takeaway": "Phân tích toàn diện album Carousel 8 slide video của đạo diễn hình ảnh Andrei Kostromskikh. Báo cáo mổ xẻ cấu trúc phân bổ thời lượng, nhịp điệu chuyển động giữa các slide và cách thiết lập điểm kích thích vuốt tiếp (Swipe Hook) để tối đ...",
       "key_tech": "Multi-Slide Carousel Architecture, Slide-by-Slide Retention Curve, Visual Consistency, Swipe Momentum",
@@ -22216,13 +21657,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -22244,12 +21681,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@kosnio",
         "profile_url": "https://www.instagram.com/kosnio/"
       },
-      "ig_url": "https://www.instagram.com/p/DcI-darjckz/",
+      "ig_url": "https://www.instagram.com/kosnio/",
       "gdrive_folder": "https://drive.google.com/open?id=1MuKg5h7d2w-hbxyV3ldPnKYBtjOJeVIn",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40Andrei_Kostromskikh_DcI-darjckz_Carousel_Analysis/slide_01_mid.jpg",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40Andrei_Kostromskikh_DcI-darjckz_Carousel_Analysis/slide_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/carousel_slides/IG_%40Andrei_Kostromskikh_DcI-darjckz_Carousel_Analysis/slide_01.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40Andrei_Kostromskikh_DcI-darjckz_Carousel_Analysis/slide_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40Andrei_Kostromskikh_DcI-darjckz_Carousel_Analysis/slide_03_mid.webp",
+        "video_url": "https://drive.google.com/uc?id=1OdaG7XZYuiDZHiQBJFjv_2UGX72heP3c&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1OdaG7XZYuiDZHiQBJFjv_2UGX72heP3c&export=download",
         "report_url": "reports/IG_@Andrei_Kostromskikh_DcI-darjckz_Carousel_Analysis.html",
         "shots_count": 0,
         "duration": "15s",
@@ -22277,13 +21715,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "📖",
         "badge_color": "amber"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -22308,9 +21742,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/local/",
       "gdrive_folder": "https://drive.google.com/open?id=1MuKg5h7d2w-hbxyV3ldPnKYBtjOJeVIn",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%2540local_creator_video_video/img_001_64380ecb.jpg",
-        "thumb_key": "https://media.fedu.vn/images/IG_%2540local_creator_video_video/img_003_0fe2b694.jpg",
-        "video_url": "https://media.fedu.vn/videos/video.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40local_creator_video_video/img_001_64380ecb.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40local_creator_video_video/img_003_0fe2b694.webp",
+        "video_url": "https://drive.google.com/uc?id=11TkvYJ21CDe4XyonbPS1SkrqDeB1_cBO&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=11TkvYJ21CDe4XyonbPS1SkrqDeB1_cBO&export=download",
         "report_url": "reports/IG_@local_creator_video_video.html",
         "shots_count": 5,
         "duration": "10s",
@@ -22338,13 +21773,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "📖",
         "badge_color": "amber"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -22369,9 +21800,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/local/",
       "gdrive_folder": "https://drive.google.com/open?id=1MuKg5h7d2w-hbxyV3ldPnKYBtjOJeVIn",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%2540local_creator_video_ig_video_ig/img_001_3c289bad.jpg",
-        "thumb_key": "https://media.fedu.vn/images/IG_%2540local_creator_video_ig_video_ig/img_003_7c3a7180.jpg",
-        "video_url": "https://media.fedu.vn/videos/video_ig.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40local_creator_video_ig_video_ig/img_001_3c289bad.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40local_creator_video_ig_video_ig/img_003_7c3a7180.webp",
+        "video_url": "https://drive.google.com/uc?id=1cLqOrvOeI3h1C-po7nLLggKi9lBVGEvV&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1cLqOrvOeI3h1C-po7nLLggKi9lBVGEvV&export=download",
         "report_url": "reports/IG_@local_creator_video_ig_video_ig.html",
         "shots_count": 14,
         "duration": "28s",
@@ -22399,13 +21831,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "📖",
         "badge_color": "amber"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "japan",
         "name": "Nhật Bản",
@@ -22427,15 +21855,74 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@ioana_iftode",
         "profile_url": "https://www.instagram.com/ioana_iftode/"
       },
-      "ig_url": "https://www.instagram.com/p/DbqCYu4DAz2/",
+      "ig_url": "https://www.instagram.com/reel/DbqCYu4DAz2/",
       "gdrive_folder": "https://drive.google.com/open?id=1UqfFMAycOSALgcDuUjy-FdbQASyNrAux",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/Kyoto_Slow_Life_Visual_Diaries_-_%2540ioana_iftode/img_056_2c7f6609.jpg",
-        "thumb_key": "https://media.fedu.vn/images/Kyoto_Slow_Life_Visual_Diaries_-_%2540ioana_iftode/img_006_b84c134c.jpg",
-        "video_url": "https://media.fedu.vn/videos/Kyoto%20Slow%20Life%20Visual%20Diaries%20-%20%40ioana_iftode.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/Kyoto_Slow_Life_Visual_Diaries_-_%40ioana_iftode/img_056_2c7f6609.webp",
+        "thumb_key": "https://media.fedu.vn/images/Kyoto_Slow_Life_Visual_Diaries_-_%40ioana_iftode/img_006_b84c134c.webp",
+        "video_url": "https://drive.google.com/uc?id=13fq9ADndQtUHJJDs3n3GVFQONaM4BCfZ&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=13fq9ADndQtUHJJDs3n3GVFQONaM4BCfZ&export=download",
         "report_url": "reports/Kyoto Slow Life Visual Diaries - @ioana_iftode.html",
         "shots_count": 10,
         "duration": "20s",
+        "youtube_id": "",
+        "youtube_embed": "",
+        "youtube_url": ""
+      },
+      "complexity": {
+        "id": "trung-binh",
+        "label": "🟡 Trung bình (9-18 shots)"
+      },
+      "is_personal": false,
+      "is_excluded": false
+    },
+    {
+      "id": "IG_@byjxson_Dal3RFpA5nI_Project_100_Day_01",
+      "shortcode": "Dal3RFpA5nI",
+      "title_vi": "Project 100 Day 01 • Nghệ Thuật Kể Chuyện Đa Góc Máy Một Ngày Sáng Tạo",
+      "quick_takeaway": "🎯 TỔNG QUAN PHONG CÁCH THỊ GIÁC &amp; NGÔN NGỮ ĐIỆN ẢNH:\n\n\n⚡ 01. Nhịp Dựng Match-Cut &amp; Quán Tính\nSử dụng kỹ thuật cắt nối chuyển động (Momentum Match Cut) và gạt khung bằng vật thể tiền cảnh (Wipe Cut) để nối liền các địa điểm khác n...",
+      "key_tech": "Car Wipe Transition, Momentum Match Cut, POV Immersion, Through-Glass Observer, Target Cart Wheel Cam, In-Cart Reverse Cam, Shoot-Through Shelf, Symmetrical Aisle Leading Lines, 3-Stage Jump Cut, Satisfying Key Foley Hook",
+      "shooting_style": {
+        "id": "chuyen-canh",
+        "name": "Chuyển Cảnh",
+        "en_name": "Transitions & Flow",
+        "icon": "⚡",
+        "badge_color": "rose"
+      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
+      "country": {
+        "id": "us_eu",
+        "name": "Âu Mỹ",
+        "en_name": "US & Europe",
+        "flag": "🇺🇸/🇪🇺",
+        "badge_color": "purple"
+      },
+      "purpose": "Showcase thị giác & Thẩm mỹ",
+      "tech_tags": [
+        "Car Wipe Transition, Momentum Match Cut, POV Immersion, Through-Glass Observer, Target Cart Wheel Cam, In-Cart Reverse Cam, Shoot-Through Shelf, Symmetrical Aisle Leading Lines, 3-Stage Jump Cut, Satisfying Key Foley Hook"
+      ],
+      "transition_level": null,
+      "is_ad_bot": false,
+      "fedu_optimization": {},
+      "logic_explanation": "",
+      "creator": {
+        "raw": "@byjxson (Jason Vargas)",
+        "name": "Jason Vargas",
+        "handle": "@byjxson",
+        "profile_url": "https://www.instagram.com/byjxson/"
+      },
+      "ig_url": "https://www.instagram.com/reel/Dal3RFpA5nI/",
+      "gdrive_folder": "https://drive.google.com/open?id=1PnG2yVaM0eXeHBPw0p1xk-mAPXRKlLC3",
+      "media": {
+        "thumb_hook": "https://media.fedu.vn/images/Project_100_Day_01_-_%40byjxson/img_002_311c68c6.webp",
+        "thumb_key": "https://media.fedu.vn/images/Project_100_Day_01_-_%40byjxson/img_006_b30f0d67.webp",
+        "video_url": "https://drive.google.com/uc?id=1Bo8fQcr9297_AsFEYjebV31NW7-YoCc_&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1Bo8fQcr9297_AsFEYjebV31NW7-YoCc_&export=download",
+        "report_url": "reports/Project 100 Day 01 - @byjxson.html",
+        "shots_count": 15,
+        "duration": "30s",
         "youtube_id": "",
         "youtube_embed": "",
         "youtube_url": ""
@@ -22460,13 +21947,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -22491,9 +21974,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DacaMHwzEm3/",
       "gdrive_folder": "https://drive.google.com/open?id=1MuKg5h7d2w-hbxyV3ldPnKYBtjOJeVIn",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/The_Art_of_Visual_Sequence_-_%2540bryanhynes/img_080_ae283717.jpg",
-        "thumb_key": "https://media.fedu.vn/images/The_Art_of_Visual_Sequence_-_%2540bryanhynes/img_082_406f7de9.jpg",
-        "video_url": "https://media.fedu.vn/videos/The%20Art%20of%20Visual%20Sequence%20-%20%40bryanhynes.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_080_ae283717.webp",
+        "thumb_key": "https://media.fedu.vn/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_082_406f7de9.webp",
+        "video_url": "https://drive.google.com/uc?id=1FDXuIuSh2w2qQ3l8YUTDk2xMIBjqvZG2&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1FDXuIuSh2w2qQ3l8YUTDk2xMIBjqvZG2&export=download",
         "report_url": "reports/The Art of Visual Sequence - @bryanhynes.html",
         "shots_count": 20,
         "duration": "50s",
@@ -22521,13 +22005,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "japan",
         "name": "Nhật Bản",
@@ -22552,9 +22032,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DZOzwweTc5a/",
       "gdrive_folder": "https://drive.google.com/open?id=134GOJHmvW-2gtshjGE6snVfWF-rIWE2J",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/The_Art_of_Static_Shot_-_%2540kenshoji.visuals/img_002_66f52422.jpg",
-        "thumb_key": "https://media.fedu.vn/images/The_Art_of_Static_Shot_-_%2540kenshoji.visuals/img_006_6e867305.jpg",
-        "video_url": "https://media.fedu.vn/videos/The%20Art%20of%20Static%20Shot%20-%20%40kenshoji.visuals.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/The_Art_of_Static_Shot_-_%40kenshoji.visuals/img_002_66f52422.webp",
+        "thumb_key": "https://media.fedu.vn/images/The_Art_of_Static_Shot_-_%40kenshoji.visuals/img_006_6e867305.webp",
+        "video_url": "https://drive.google.com/uc?id=1YvbZUZ-4f6pS7aYwLxw_LbLLNO9HjUzN&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1YvbZUZ-4f6pS7aYwLxw_LbLLNO9HjUzN&export=download",
         "report_url": "reports/The Art of Static Shot - @kenshoji.visuals.html",
         "shots_count": 11,
         "duration": "50s",
@@ -22576,19 +22057,15 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "🎯 TỔNG QUAN PHONG CÁCH THỊ GIÁC &amp; NGÔN NGỮ ĐIỆN ẢNH:\n\n\n🌀 1. Cấu Trúc Nhịp Dựng 'Concept-to-Execution'\nCơ chế Ghép Đôi: Video xây dựng theo cấu trúc nhịp điệu hoàn hảo: mỗi kỹ thuật gồm 0.67s Biểu đồ đồ họa (Concept Diagram) trên nền ...",
       "key_tech": "Golden Ratio (Fibonacci Spiral), Central Axis Symmetry, Geometric Frame in Frame, Rule of Thirds Matrix, Minimalist Negative Space, Diagonal Leading Lines, Rhythm & Pattern Interruption, Monumental Scale Contrast, Audio-Visual Beat Sync, 16:9 Cinematic Widescreen",
       "shooting_style": {
-        "id": "dien-anh",
-        "name": "Chỉn Chu",
-        "en_name": "Cinematic Mastery",
-        "icon": "🎬",
-        "badge_color": "sky"
+        "id": "theo-nhip-nhac",
+        "name": "Theo nhịp nhạc",
+        "en_name": "Music Beat & Rhythm",
+        "icon": "🎵",
+        "badge_color": "purple"
       },
-      "industry": {
-        "id": "spa-lam-dep",
-        "name": "Làm đẹp",
-        "en_name": "Beauty & Spa",
-        "icon": "💆",
-        "badge_color": "rose"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -22613,9 +22090,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/Db0Sn3zvuHP/",
       "gdrive_folder": "https://drive.google.com/open?id=1CwqT1mDdbFvOydj_JaswZ-AOmbJdd_OP",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/The_Power_of_Composition_-_%2540minhmigoi/img_002_4ee0b6c4.jpg",
-        "thumb_key": "https://media.fedu.vn/images/The_Power_of_Composition_-_%2540minhmigoi/img_006_df195b94.jpg",
-        "video_url": "https://media.fedu.vn/videos/The%20Power%20of%20Composition%20-%20%40minhmigoi.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/The_Power_of_Composition_-_%40minhmigoi/img_002_4ee0b6c4.webp",
+        "thumb_key": "https://media.fedu.vn/images/The_Power_of_Composition_-_%40minhmigoi/img_006_df195b94.webp",
+        "video_url": "https://drive.google.com/uc?id=1m_2U6WEoktEiM4RUoEoKUPUR-apj5kfQ&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1m_2U6WEoktEiM4RUoEoKUPUR-apj5kfQ&export=download",
         "report_url": "reports/The Power of Composition - @minhmigoi.html",
         "shots_count": 15,
         "duration": "30s",
@@ -22643,13 +22121,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🗣️",
         "badge_color": "blue"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -22671,12 +22145,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@mcjacoub",
         "profile_url": "https://www.instagram.com/mcjacoub/"
       },
-      "ig_url": "https://www.instagram.com/p/Db22SIxAVtJ/",
+      "ig_url": "https://www.instagram.com/reel/Db22SIxAVtJ/",
       "gdrive_folder": "https://drive.google.com/open?id=17aNB4M2W3umg0zVdbHjWDg36X6lopAMl",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/Camera_Angles_Mastery_-_%2540mcjacoub/img_028_b372b147.jpg",
-        "thumb_key": "https://media.fedu.vn/images/Camera_Angles_Mastery_-_%2540mcjacoub/img_030_d98291c4.jpg",
-        "video_url": "https://media.fedu.vn/videos/Camera%20Angles%20Mastery%20-%20%40mcjacoub.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/Camera_Angles_Mastery_-_%40mcjacoub/img_028_b372b147.webp",
+        "thumb_key": "https://media.fedu.vn/images/Camera_Angles_Mastery_-_%40mcjacoub/img_030_d98291c4.webp",
+        "video_url": "https://drive.google.com/uc?id=1qE9ytBxmopecZbdBEqZJW3DzZYEsEF24&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1qE9ytBxmopecZbdBEqZJW3DzZYEsEF24&export=download",
         "report_url": "reports/Camera Angles Mastery - @mcjacoub.html",
         "shots_count": 7,
         "duration": "50s",
@@ -22698,19 +22173,15 @@ var FEDU_IDEAS_DATABASE = {
       "quick_takeaway": "🎯 TỔNG QUAN PHONG CÁCH THỊ GIÁC &amp; NGÔN NGỮ ĐIỆN ẢNH:\nBóc tách toàn diện 21 phân cảnh mẫu mực điện ảnh du ký: Bố cục tỷ lệ 4:3 cổ điển, bảng màu nhiệt đới Kodak Portra, 2 đợt cắt nhanh Fast-cut Montage 4-6 frames đồng bộ nhịp nhạc, ch...",
       "key_tech": "4:3 Classic Framing, Kodak Portra Color Grading, Fast-Cut Montage (4-6 frames), Beat-Sync Cutting, Bokeh Temporal Dilation, Heritage Architecture, Candid Portrait",
       "shooting_style": {
-        "id": "storytelling",
-        "name": "Kể Chuyện",
-        "en_name": "Storytelling",
-        "icon": "📖",
-        "badge_color": "amber"
+        "id": "theo-nhip-nhac",
+        "name": "Theo nhịp nhạc",
+        "en_name": "Music Beat & Rhythm",
+        "icon": "🎵",
+        "badge_color": "purple"
       },
-      "industry": {
-        "id": "du-lich",
-        "name": "Du lịch",
-        "en_name": "Travel & Culture",
-        "icon": "✈️",
-        "badge_color": "sky"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -22732,12 +22203,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@qfroost",
         "profile_url": "https://www.instagram.com/qfroost/"
       },
-      "ig_url": "https://www.instagram.com/p/DXWKIztktTN/",
+      "ig_url": "https://www.instagram.com/reel/DXWKIztktTN/",
       "gdrive_folder": "https://drive.google.com/open?id=1SA3Wev1zigwae5uDoF_a6nzqXa0WpLOj",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/Saigon%252C_Vietnam_-_%2540qfroost/img_002_d655a123.jpg",
-        "thumb_key": "https://media.fedu.vn/images/Saigon%252C_Vietnam_-_%2540qfroost/img_006_43d6f3a5.jpg",
-        "video_url": "https://media.fedu.vn/videos/Saigon%2C%20Vietnam%20-%20%40qfroost.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/Saigon%2C_Vietnam_-_%40qfroost/img_002_d655a123.webp",
+        "thumb_key": "https://media.fedu.vn/images/Saigon%2C_Vietnam_-_%40qfroost/img_006_43d6f3a5.webp",
+        "video_url": "https://drive.google.com/uc?id=12NJ_X2dPgJtbvCnzteCeWBTWh9iBYGsQ&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=12NJ_X2dPgJtbvCnzteCeWBTWh9iBYGsQ&export=download",
         "report_url": "reports/Saigon, Vietnam - @qfroost.html",
         "shots_count": 21,
         "duration": "42s",
@@ -22765,13 +22237,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "📖",
         "badge_color": "amber"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -22793,12 +22261,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@qfroost",
         "profile_url": "https://www.instagram.com/qfroost/"
       },
-      "ig_url": "https://www.instagram.com/p/Dah8zTnNgq5/",
+      "ig_url": "https://www.instagram.com/reel/Dah8zTnNgq5/",
       "gdrive_folder": "https://drive.google.com/open?id=1tnEjlaUS9cmIeWtV4KWumG20Hw8LGMHc",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/Ray-Ban_Meta_System_-_%2540qfroost/img_002_7fa52771.jpg",
-        "thumb_key": "https://media.fedu.vn/images/Ray-Ban_Meta_System_-_%2540qfroost/img_006_c802aff9.jpg",
-        "video_url": "https://media.fedu.vn/videos/Ray-Ban%20Meta%20System%20-%20%40qfroost.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/Ray-Ban_Meta_System_-_%40qfroost/img_002_7fa52771.webp",
+        "thumb_key": "https://media.fedu.vn/images/Ray-Ban_Meta_System_-_%40qfroost/img_006_c802aff9.webp",
+        "video_url": "https://drive.google.com/uc?id=13zn2hQC_AOdnYOTqoVuB18luyqg0bjjz&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=13zn2hQC_AOdnYOTqoVuB18luyqg0bjjz&export=download",
         "report_url": "reports/Ray-Ban Meta System - @qfroost.html",
         "shots_count": 23,
         "duration": "46s",
@@ -22826,13 +22295,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🗣️",
         "badge_color": "blue"
       },
-      "industry": {
-        "id": "spa-lam-dep",
-        "name": "Làm đẹp",
-        "en_name": "Beauty & Spa",
-        "icon": "💆",
-        "badge_color": "rose"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -22854,12 +22319,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@qfroost",
         "profile_url": "https://www.instagram.com/qfroost/"
       },
-      "ig_url": "https://www.instagram.com/p/DbdG7v1tjrz/",
+      "ig_url": "https://www.instagram.com/reel/DbdG7v1tjrz/",
       "gdrive_folder": "https://drive.google.com/open?id=1ebKxcOP6OaPdlgaA3kXIOzAP3j4WKI_R",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/Quy_Trinh_Sang_Tao_Adobe_Firefly_-_%2540qfroost/img_002_8f1351ef.jpg",
-        "thumb_key": "https://media.fedu.vn/images/Quy_Trinh_Sang_Tao_Adobe_Firefly_-_%2540qfroost/img_006_6e9310da.jpg",
-        "video_url": "https://media.fedu.vn/videos/Quy_Trinh_Sang_Tao_Adobe_Firefly%20-%20%40qfroost.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/Quy_Trinh_Sang_Tao_Adobe_Firefly_-_%40qfroost/img_002_8f1351ef.webp",
+        "thumb_key": "https://media.fedu.vn/images/Quy_Trinh_Sang_Tao_Adobe_Firefly_-_%40qfroost/img_006_6e9310da.webp",
+        "video_url": "https://drive.google.com/uc?id=12ZYv4xhLkvIf-h_cX-6t4IpUB_GhLzky&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=12ZYv4xhLkvIf-h_cX-6t4IpUB_GhLzky&export=download",
         "report_url": "reports/Quy_Trinh_Sang_Tao_Adobe_Firefly - @qfroost.html",
         "shots_count": 25,
         "duration": "50s",
@@ -22887,13 +22353,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "du-lich",
-        "name": "Du lịch",
-        "en_name": "Travel & Culture",
-        "icon": "✈️",
-        "badge_color": "sky"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -22915,12 +22377,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@jeromememe",
         "profile_url": "https://www.instagram.com/jeromememe/"
       },
-      "ig_url": "https://www.instagram.com/p/Db-zVchOXV7/",
+      "ig_url": "https://www.instagram.com/reel/Db-zVchOXV7/",
       "gdrive_folder": "https://drive.google.com/open?id=1-IEEAxSYsWxoGWDbYlJYWE2JHDt1rGfU",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/People_of_Bhutan_-_%2540jeromememe/img_002_c7376907.jpg",
-        "thumb_key": "https://media.fedu.vn/images/People_of_Bhutan_-_%2540jeromememe/img_006_f8001919.jpg",
-        "video_url": "https://media.fedu.vn/videos/People%20of%20Bhutan%20-%20%40jeromememe.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/People_of_Bhutan_-_%40jeromememe/img_002_c7376907.webp",
+        "thumb_key": "https://media.fedu.vn/images/People_of_Bhutan_-_%40jeromememe/img_006_f8001919.webp",
+        "video_url": "https://drive.google.com/uc?id=18P5YtX6jKnoZTqmZIgZmA_tjU1Huunj-&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=18P5YtX6jKnoZTqmZIgZmA_tjU1Huunj-&export=download",
         "report_url": "reports/People of Bhutan - @jeromememe.html",
         "shots_count": 17,
         "duration": "50s",
@@ -22948,13 +22411,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "du-lich",
-        "name": "Du lịch",
-        "en_name": "Travel & Culture",
-        "icon": "✈️",
-        "badge_color": "sky"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -22976,12 +22435,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@jeromememe",
         "profile_url": "https://www.instagram.com/jeromememe/"
       },
-      "ig_url": "https://www.instagram.com/p/DQuEXMbj8fT/",
+      "ig_url": "https://www.instagram.com/reel/DQuEXMbj8fT/",
       "gdrive_folder": "https://drive.google.com/open?id=1Uooaf1OhLuXKTuY7sWBNkkicMWj6oRGE",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/People_of_Porto_-_%2540jeromememe/img_002_c7376907.jpg",
-        "thumb_key": "https://media.fedu.vn/images/People_of_Porto_-_%2540jeromememe/img_006_f8001919.jpg",
-        "video_url": "https://media.fedu.vn/videos/People_of_Porto%20-%20%40jeromememe.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/People_of_Porto_-_%40jeromememe/img_002_c7376907.webp",
+        "thumb_key": "https://media.fedu.vn/images/People_of_Porto_-_%40jeromememe/img_006_f8001919.webp",
+        "video_url": "https://drive.google.com/uc?id=1erAxsaiS3ouCcNMUUGyszDjHiuMbHKy1&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1erAxsaiS3ouCcNMUUGyszDjHiuMbHKy1&export=download",
         "report_url": "reports/People_of_Porto - @jeromememe.html",
         "shots_count": 11,
         "duration": "50s",
@@ -23009,13 +22469,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "du-lich",
-        "name": "Du lịch",
-        "en_name": "Travel & Culture",
-        "icon": "✈️",
-        "badge_color": "sky"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -23037,12 +22493,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@jeromememe",
         "profile_url": "https://www.instagram.com/jeromememe/"
       },
-      "ig_url": "https://www.instagram.com/p/DQmKgPDEWgJ/",
+      "ig_url": "https://www.instagram.com/reel/DQmKgPDEWgJ/",
       "gdrive_folder": "https://drive.google.com/open?id=1NxAGAkjmvehCqXj5Hizp1Dax0xl0xwzR",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/Artisans_of_Venice_-_%2540jeromememe/img_002_a927da23.jpg",
-        "thumb_key": "https://media.fedu.vn/images/Artisans_of_Venice_-_%2540jeromememe/img_006_50edaa56.jpg",
-        "video_url": "https://media.fedu.vn/videos/Artisans%20of%20Venice%20-%20%40jeromememe.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/Artisans_of_Venice_-_%40jeromememe/img_002_a927da23.webp",
+        "thumb_key": "https://media.fedu.vn/images/Artisans_of_Venice_-_%40jeromememe/img_006_50edaa56.webp",
+        "video_url": "https://drive.google.com/uc?id=1Pn8g6LPPjbtE6Z-oa2z-pKsNeRV9LPrf&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1Pn8g6LPPjbtE6Z-oa2z-pKsNeRV9LPrf&export=download",
         "report_url": "reports/Artisans of Venice - @jeromememe.html",
         "shots_count": 26,
         "duration": "50s",
@@ -23070,13 +22527,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "⚡",
         "badge_color": "rose"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "asia_other",
         "name": "Châu Á Khác",
@@ -23101,9 +22554,10 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DbGMt3oIaZm/",
       "gdrive_folder": "https://drive.google.com/open?id=1fcbzeZR63fm8KcKRmMieN5PJ-72UcKSS",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/People_of_Copenhagen_-_%2540jeromememe/img_002_c4d4b5a4.jpg",
-        "thumb_key": "https://media.fedu.vn/images/People_of_Copenhagen_-_%2540jeromememe/img_006_b1f70076.jpg",
-        "video_url": "https://media.fedu.vn/videos/People%20of%20Copenhagen%20-%20%40jeromememe.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/People_of_Copenhagen_-_%40jeromememe/img_002_c4d4b5a4.webp",
+        "thumb_key": "https://media.fedu.vn/images/People_of_Copenhagen_-_%40jeromememe/img_006_b1f70076.webp",
+        "video_url": "https://drive.google.com/uc?id=1_zeb1foHqbDQZ-1cFOA6a4UamvAUJRao&export=download",
+        "video_url_original": "https://drive.google.com/uc?id=1_zeb1foHqbDQZ-1cFOA6a4UamvAUJRao&export=download",
         "report_url": "reports/People of Copenhagen - @jeromememe.html",
         "shots_count": 15,
         "duration": "500s",
@@ -23131,13 +22585,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "📖",
         "badge_color": "amber"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "vietnam",
         "name": "Việt Nam",
@@ -23159,12 +22609,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@saigonink_studio",
         "profile_url": "https://www.instagram.com/saigonink_studio/"
       },
-      "ig_url": "https://www.instagram.com/saigonink_studio/",
+      "ig_url": "https://www.instagram.com/reel/DdNq5CxszVl/",
       "gdrive_folder": "",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_03_mid.jpg",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/studio.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/studio.mp4",
         "report_url": "reports/IG_@saigonink_studio_DdNq5CxszVl_Bun_Bo_Hue_Tattoo.html",
         "shots_count": 14,
         "duration": "28s",
@@ -23192,13 +22643,9 @@ var FEDU_IDEAS_DATABASE = {
         "icon": "🎬",
         "badge_color": "sky"
       },
-      "industry": {
-        "id": "ky-thuat-quay",
-        "name": "Bố cục",
-        "en_name": "Filmmaking Mastery",
-        "icon": "🎯",
-        "badge_color": "blue"
-      },
+      "industries": [],
+      "x_factors": [],
+      "tags": [],
       "country": {
         "id": "us_eu",
         "name": "Âu Mỹ",
@@ -23220,12 +22667,13 @@ var FEDU_IDEAS_DATABASE = {
         "handle": "@nemo_ooo",
         "profile_url": "https://www.instagram.com/nemo_ooo/"
       },
-      "ig_url": "https://www.instagram.com/nemo_ooo/",
+      "ig_url": "https://www.instagram.com/reel/DbF_D2MB6BR/",
       "gdrive_folder": "",
       "media": {
-        "thumb_hook": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40%E5%B0%BC%E8%8E%ABNemo_%E0%BD%B2%E0%BE%80_%E1%97%A6%E2%86%9E%E2%97%83_DbF_D2MB6BR_Video_by_nemo_ooo/shot_01_mid.jpg",
-        "thumb_key": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/IG_%40%E5%B0%BC%E8%8E%ABNemo_%E0%BD%B2%E0%BE%80_%E1%97%A6%E2%86%9E%E2%97%83_DbF_D2MB6BR_Video_by_nemo_ooo/shot_03_mid.jpg",
-        "video_url": "https://media.fedu.vn/videos/ིྀ.mp4",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40%E5%B0%BC%E8%8E%ABNemo_%E0%BD%B2%E0%BE%80_%E1%97%A6%E2%86%9E%E2%97%83_DbF_D2MB6BR_Video_by_nemo_ooo/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40%E5%B0%BC%E8%8E%ABNemo_%E0%BD%B2%E0%BE%80_%E1%97%A6%E2%86%9E%E2%97%83_DbF_D2MB6BR_Video_by_nemo_ooo/shot_03_mid.webp",
+        "video_url": "https://media.fedu.vn/videos/%E0%BD%B2%E0%BE%80.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/%E0%BD%B2%E0%BE%80.mp4",
         "report_url": "reports/IG_@尼莫Nemo_ིྀ_ᗦ↞◃_DbF_D2MB6BR_Video_by_nemo_ooo.html",
         "shots_count": 25,
         "duration": "50s",
