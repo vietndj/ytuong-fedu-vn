@@ -828,7 +828,7 @@ var FEDU_IDEAS_DATABASE = {
       "profile_url": "https://www.instagram.com/withyuee/",
       "video_count": 8,
       "top_industry": "Kỹ Thuật Quay Dựng & Điện Ảnh",
-      "sample_thumb": "https://media.fedu.vn/images/Visual_Storytelling_Carousel_-_%40withyuee/img_001_f678a262.webp",
+      "sample_thumb": "",
       "video_ids": [
         "Visual_Storytelling_Carousel_@withyuee",
         "Hong_Kong_Urban_Transitions_@withyuee",
@@ -1045,7 +1045,7 @@ var FEDU_IDEAS_DATABASE = {
       "profile_url": "https://www.instagram.com/qfroost/",
       "video_count": 3,
       "top_industry": "Công Nghệ & Thiết Bị",
-      "sample_thumb": "https://media.fedu.vn/images/Saigon%2C_Vietnam_-_%40qfroost/img_002_d655a123.webp",
+      "sample_thumb": "",
       "video_ids": [
         "IG_@qfroost_DXWKIztktTN_Saigon_Vietnam",
         "IG_@qfroost_Dah8zTnNgq5_Ray_Ban_Meta_System",
@@ -3134,7 +3134,7 @@ var FEDU_IDEAS_DATABASE = {
       "profile_url": "https://www.instagram.com/thodiahaiduongne/",
       "video_count": 1,
       "top_industry": "Ẩm Thực & F&B",
-      "sample_thumb": "https://media.fedu.vn/images/TikTok_%40thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_01_start.webp",
+      "sample_thumb": "",
       "video_ids": [
         "TikTok_@thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong"
       ]
@@ -3255,7 +3255,7 @@ var FEDU_IDEAS_DATABASE = {
       "profile_url": "https://www.instagram.com/bryanhynes/",
       "video_count": 1,
       "top_industry": "Thương Hiệu Cá Nhân & Dịch Vụ",
-      "sample_thumb": "https://media.fedu.vn/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_080_ae283717.webp",
+      "sample_thumb": "",
       "video_ids": [
         "IG_@bryanhynes_DacaMHwzEm3_Visual_Sequence"
       ]
@@ -3266,7 +3266,7 @@ var FEDU_IDEAS_DATABASE = {
       "profile_url": "https://www.instagram.com/kenshoji.visuals/",
       "video_count": 1,
       "top_industry": "Ẩm Thực & F&B",
-      "sample_thumb": "https://media.fedu.vn/images/The_Art_of_Static_Shot_-_%40kenshoji.visuals/img_002_66f52422.webp",
+      "sample_thumb": "",
       "video_ids": [
         "IG_@kenshoji.visuals_DZOzwweTc5a_The_Art_of_Static_Shot"
       ]
@@ -3277,7 +3277,7 @@ var FEDU_IDEAS_DATABASE = {
       "profile_url": "https://www.instagram.com/minhmigoi/",
       "video_count": 1,
       "top_industry": "Kỹ Thuật Quay Dựng & Điện Ảnh",
-      "sample_thumb": "https://media.fedu.vn/images/The_Power_of_Composition_-_%40minhmigoi/img_002_4ee0b6c4.webp",
+      "sample_thumb": "",
       "video_ids": [
         "IG_@minhmigoi_Db0Sn3zvuHP_The_Power_of_Composition"
       ]
@@ -11498,8 +11498,8 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdbCdHFKZsP/",
       "gdrive_folder": "https://drive.google.com/open?id=1TrKEslz5f0-vToucfldVqxVIuHSb19Wp",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DdlmZczPsCE_%ED%98%BC%EC%9E%90_%EB%A7%8C%EB%93%9C%EB%8A%94%EB%8D%B0_%EC%B4%AC%EC%98%81%EC%9D%80_%EB%88%84%EA%B0%80_%ED%95%98%EB%83%90%EA%B3%A0%EC%9A%94%F0%9F%A4%B7%F0%9F%8F%BB%E2%80%8D%E2%99%80%EF%B8%8F_%EC%A0%9C%ED%92%88%EC%A0%9C%EA%B3%B5/shot_01_mid.webp",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DdlmZczPsCE_%ED%98%BC%EC%9E%90_%EB%A7%8C%EB%93%9C%EB%8A%94%EB%8D%B0_%EC%B4%AC%EC%98%81%EC%9D%80_%EB%88%84%EA%B0%80_%ED%95%98%EB%83%90%EA%B3%A0%EC%9A%94%F0%9F%A4%B7%F0%9F%8F%BB%E2%80%8D%E2%99%80%EF%B8%8F_%EC%A0%9C%ED%92%88%EC%A0%9C%EA%B3%B5/shot_03_mid.webp",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DY_0KNxvNJa_Unboxing_Cinematic_Flow/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40hena_film_vlog_Db-mZWEKECo_4_Cu_May_Sieu_Thi_Ulanzi_MA38_MT85/extracted_shots/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdbCdHFKZsP.mp4",
         "video_url_original": "https://media.fedu.vn/videos/DdbCdHFKZsP.mp4",
         "report_url": "reports/IG_@hena_film_vlog_DdbCdHFKZsP_햇빛_없는_집,_음식_촬영_가능함🤔_제품제공.html",
@@ -23381,8 +23381,8 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/withyuee/",
       "gdrive_folder": "https://drive.google.com/open?id=1MuKg5h7d2w-hbxyV3ldPnKYBtjOJeVIn",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/Visual_Storytelling_Carousel_-_%40withyuee/img_001_f678a262.webp",
-        "thumb_key": "https://media.fedu.vn/images/Visual_Storytelling_Carousel_-_%40withyuee/img_003_ab7e9aa6.webp",
+        "thumb_hook": "",
+        "thumb_key": "",
         "video_url": "",
         "video_url_original": "",
         "report_url": "reports/Visual_Storytelling_Carousel - @withyuee.html",
@@ -23671,8 +23671,8 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/thodiahaiduongne/",
       "gdrive_folder": "https://drive.google.com/open?id=1MuKg5h7d2w-hbxyV3ldPnKYBtjOJeVIn",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/TikTok_%40thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_01_start.webp",
-        "thumb_key": "https://media.fedu.vn/images/TikTok_%40thodiahaiduongne_7350657143906913544_Mua_Sua_Do_Hai_Duong/shot_01_end.webp",
+        "thumb_hook": "",
+        "thumb_key": "",
         "video_url": "https://drive.google.com/uc?id=1HKuUdVsokHvqexx8_nUpxmA6apqh14jl&export=download",
         "video_url_original": "https://drive.google.com/uc?id=1HKuUdVsokHvqexx8_nUpxmA6apqh14jl&export=download",
         "report_url": "reports/Mua Sua Do Hai Duong - @thodiahaiduongne.html",
@@ -24597,8 +24597,8 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DVQ3Gh6Efk1/",
       "gdrive_folder": "https://drive.google.com/open?id=1IvbwMbmFTwe3iEOtyu8kE560RPj_0uaf",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/Spring_in_Hong_Kong_-_%40withyuee/img_001_bac7352a.webp",
-        "thumb_key": "https://media.fedu.vn/images/Spring_in_Hong_Kong_-_%40withyuee/img_003_1d27bf11.webp",
+        "thumb_hook": "",
+        "thumb_key": "",
         "video_url": "https://drive.google.com/uc?id=1heH4Sv3M9UII9w793LC6XEmTCrFye0kf&export=download",
         "video_url_original": "https://drive.google.com/uc?id=1heH4Sv3M9UII9w793LC6XEmTCrFye0kf&export=download",
         "report_url": "reports/Spring_in_Hong_Kong - @withyuee.html",
@@ -24887,8 +24887,8 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/jazziesillona/",
       "gdrive_folder": null,
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/Visual_Stopping_Power_Carousel_-_%40jazziesillona/img_001_3ed9942d.webp",
-        "thumb_key": "https://media.fedu.vn/images/Visual_Stopping_Power_Carousel_-_%40jazziesillona/img_003_8c9d0578.webp",
+        "thumb_hook": "",
+        "thumb_key": "",
         "video_url": "https://drive.google.com/uc?id=1OdaG7XZYuiDZHiQBJFjv_2UGX72heP3c&export=download",
         "video_url_original": "https://drive.google.com/uc?id=1OdaG7XZYuiDZHiQBJFjv_2UGX72heP3c&export=download",
         "report_url": "reports/Visual_Stopping_Power_Carousel - @jazziesillona.html",
@@ -24957,8 +24957,8 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/jazziesillona/",
       "gdrive_folder": "https://drive.google.com/open?id=11L_hnSSKkQ0hSWHuQx74vzsQDnhVS5hN",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_001_e7c4fa90.webp",
-        "thumb_key": "https://media.fedu.vn/images/Street_Photography_Carousel_-_%40jazziesillona/img_003_e0df5078.webp",
+        "thumb_hook": "",
+        "thumb_key": "",
         "video_url": "https://drive.google.com/uc?id=1OdaG7XZYuiDZHiQBJFjv_2UGX72heP3c&export=download",
         "video_url_original": "https://drive.google.com/uc?id=1OdaG7XZYuiDZHiQBJFjv_2UGX72heP3c&export=download",
         "report_url": "reports/Street_Photography_Carousel - @jazziesillona.html",
@@ -25243,8 +25243,8 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/jazziesillona/",
       "gdrive_folder": null,
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/Urban_Texture_Carousel_-_%40jazziesillona/img_001_e012a6d8.webp",
-        "thumb_key": "https://media.fedu.vn/images/Urban_Texture_Carousel_-_%40jazziesillona/img_003_25d59c75.webp",
+        "thumb_hook": "",
+        "thumb_key": "",
         "video_url": "https://drive.google.com/uc?id=1OdaG7XZYuiDZHiQBJFjv_2UGX72heP3c&export=download",
         "video_url_original": "https://drive.google.com/uc?id=1OdaG7XZYuiDZHiQBJFjv_2UGX72heP3c&export=download",
         "report_url": "reports/Urban_Texture_Carousel - @jazziesillona.html",
@@ -25873,8 +25873,8 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DacaMHwzEm3/",
       "gdrive_folder": "https://drive.google.com/open?id=1MuKg5h7d2w-hbxyV3ldPnKYBtjOJeVIn",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_080_ae283717.webp",
-        "thumb_key": "https://media.fedu.vn/images/The_Art_of_Visual_Sequence_-_%40bryanhynes/img_082_406f7de9.webp",
+        "thumb_hook": "",
+        "thumb_key": "",
         "video_url": "https://drive.google.com/uc?id=1FDXuIuSh2w2qQ3l8YUTDk2xMIBjqvZG2&export=download",
         "video_url_original": "https://drive.google.com/uc?id=1FDXuIuSh2w2qQ3l8YUTDk2xMIBjqvZG2&export=download",
         "report_url": "reports/The Art of Visual Sequence - @bryanhynes.html",
@@ -25946,8 +25946,8 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DZOzwweTc5a/",
       "gdrive_folder": "https://drive.google.com/open?id=134GOJHmvW-2gtshjGE6snVfWF-rIWE2J",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/The_Art_of_Static_Shot_-_%40kenshoji.visuals/img_002_66f52422.webp",
-        "thumb_key": "https://media.fedu.vn/images/The_Art_of_Static_Shot_-_%40kenshoji.visuals/img_006_6e867305.webp",
+        "thumb_hook": "",
+        "thumb_key": "",
         "video_url": "https://drive.google.com/uc?id=1YvbZUZ-4f6pS7aYwLxw_LbLLNO9HjUzN&export=download",
         "video_url_original": "https://drive.google.com/uc?id=1YvbZUZ-4f6pS7aYwLxw_LbLLNO9HjUzN&export=download",
         "report_url": "reports/The Art of Static Shot - @kenshoji.visuals.html",
@@ -26019,8 +26019,8 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/Db0Sn3zvuHP/",
       "gdrive_folder": "https://drive.google.com/open?id=1CwqT1mDdbFvOydj_JaswZ-AOmbJdd_OP",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/The_Power_of_Composition_-_%40minhmigoi/img_002_4ee0b6c4.webp",
-        "thumb_key": "https://media.fedu.vn/images/The_Power_of_Composition_-_%40minhmigoi/img_006_df195b94.webp",
+        "thumb_hook": "",
+        "thumb_key": "",
         "video_url": "https://drive.google.com/uc?id=1m_2U6WEoktEiM4RUoEoKUPUR-apj5kfQ&export=download",
         "video_url_original": "https://drive.google.com/uc?id=1m_2U6WEoktEiM4RUoEoKUPUR-apj5kfQ&export=download",
         "report_url": "reports/The Power of Composition - @minhmigoi.html",
@@ -26165,8 +26165,8 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DXWKIztktTN/",
       "gdrive_folder": "https://drive.google.com/open?id=1SA3Wev1zigwae5uDoF_a6nzqXa0WpLOj",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/Saigon%2C_Vietnam_-_%40qfroost/img_002_d655a123.webp",
-        "thumb_key": "https://media.fedu.vn/images/Saigon%2C_Vietnam_-_%40qfroost/img_006_43d6f3a5.webp",
+        "thumb_hook": "",
+        "thumb_key": "",
         "video_url": "https://drive.google.com/uc?id=12NJ_X2dPgJtbvCnzteCeWBTWh9iBYGsQ&export=download",
         "video_url_original": "https://drive.google.com/uc?id=12NJ_X2dPgJtbvCnzteCeWBTWh9iBYGsQ&export=download",
         "report_url": "reports/Saigon, Vietnam - @qfroost.html",
