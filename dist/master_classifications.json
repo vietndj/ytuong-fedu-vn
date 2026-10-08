@@ -13694,29 +13694,29 @@
     "index": 111,
     "creator": "@mridupawasharma",
     "creator_name": "Mridupawan Sharma",
-    "title": "JBL Noise Cancelling Earbuds - 'Less Distractions, More Ideas' & Nghệ Thuật Kể Chuyện Quảng Cáo Âm Thanh",
-    "shots_count": 37,
-    "duration": "0.15s",
+    "title": "Nghệ Thuật Kể Chuyện Bằng Nỗi Đau & Tương Phản Màu Sắc",
+    "shots_count": 41,
+    "duration": "37.3s",
     "shooting_style": {
-      "id": "storytelling",
-      "name": "Storytelling",
-      "icon": "📖"
+      "id": "broll-storytelling",
+      "name": "broll-storytelling",
+      "icon": "🎬"
     },
     "industry": {
       "id": "cong-nghe",
-      "name": "Công Nghệ & Thiết Bị",
-      "icon": "📱"
+      "name": "cong-nghe",
+      "icon": "🎯"
     },
     "purpose": "Quảng cáo tai nghe chống ồn JBL Noise Cancelling",
     "tech_tags": [
-      "Distraction Isolation Hook",
-      "Sound Mute Effect",
-      "Commercial Pacing",
-      "Urban Focus"
+      "Product Hero",
+      "Typography",
+      "Action",
+      "Pain Point"
     ],
     "logic_explanation": "Kể câu chuyện về người làm sáng tạo cần sự yên tĩnh giữa phố thị ồn ào, dùng hiệu ứng triệt tiêu âm thanh khi đeo tai nghe JBL để làm nổi bật sản phẩm.",
     "is_excluded": true,
-    "quick_takeaway": "Phân tích 37 phân cảnh video thương mại điện ảnh xuất sắc quảng bá dòng tai nghe chống ồn JBL Noise Cancelling Earbuds. Tác phẩm kể câu chuyện về sự tập trung của nhà sáng tạo nội dung qua thông điệp 'Less Distractions, More Ideas', khai...",
+    "quick_takeaway": "Quảng cáo tai nghe JBL mượn câu chuyện nỗi đau mất tập trung để dẫn dắt sản phẩm như vị cứu tinh. Nổi bật với màu sắc tương phản mạnh và kỹ thuật typography đè lên bokeh mờ.",
     "country": {
       "id": "india",
       "name": "Ấn Độ",
@@ -13732,7 +13732,10 @@
       "ig_seeding_hook": "Follow @mridupawasharma để học cách trình bày thông số công nghệ hấp dẫn, bố cục bàn làm việc hiện đại và phong cách unboxing cuốn hút.",
       "course_industry_mapping": "Review Thiết Bị, Mở Hộp Unboxing Đồ Công Nghệ & Gear",
       "transition_level": null
-    }
+    },
+    "youtube_id": "jl3OgHjcn00",
+    "youtube_url": "https://youtu.be/jl3OgHjcn00",
+    "youtube_embed": "https://www.youtube.com/embed/jl3OgHjcn00"
   },
   "DbnlAB5Twrw": {
     "id": "IG_@Mridupawan_Sharma_DbnlAB5Twrw_Video_by_mridupawasharma",
@@ -26797,7 +26800,7 @@
       "Pacing"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
-    "is_excluded": false,
+    "is_excluded": true,
     "quick_takeaway": "Cách sử dụng đạo cụ vật lý trực quan để neo giữ sự chú ý ngay giây đầu tiên.",
     "country": {
       "id": "us_eu",
@@ -26834,7 +26837,7 @@
       "Pacing"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
-    "is_excluded": false,
+    "is_excluded": true,
     "quick_takeaway": "Cách sử dụng đạo cụ vật lý trực quan để neo giữ sự chú ý ngay giây đầu tiên.",
     "country": {
       "id": "us_eu",
@@ -26996,7 +26999,9 @@
     },
     "youtube_id": "-GVbbAHSGMA",
     "youtube_url": "https://youtu.be/-GVbbAHSGMA",
-    "youtube_embed": "https://www.youtube.com/embed/-GVbbAHSGMA"
+    "youtube_embed": "https://www.youtube.com/embed/-GVbbAHSGMA",
+    "hidden": true,
+    "private": true
   },
   "DV73FCHk1Ej": {
     "id": "IG_@mridupawasharma_DV73FCHk1Ej_Some_days_feel_lighter",

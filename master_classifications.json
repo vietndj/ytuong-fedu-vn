@@ -26800,7 +26800,7 @@
       "Pacing"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
-    "is_excluded": false,
+    "is_excluded": true,
     "quick_takeaway": "Cách sử dụng đạo cụ vật lý trực quan để neo giữ sự chú ý ngay giây đầu tiên.",
     "country": {
       "id": "us_eu",
@@ -26837,7 +26837,7 @@
       "Pacing"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
-    "is_excluded": false,
+    "is_excluded": true,
     "quick_takeaway": "Cách sử dụng đạo cụ vật lý trực quan để neo giữ sự chú ý ngay giây đầu tiên.",
     "country": {
       "id": "us_eu",
