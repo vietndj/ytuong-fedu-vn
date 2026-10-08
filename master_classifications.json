@@ -26999,7 +26999,9 @@
     },
     "youtube_id": "-GVbbAHSGMA",
     "youtube_url": "https://youtu.be/-GVbbAHSGMA",
-    "youtube_embed": "https://www.youtube.com/embed/-GVbbAHSGMA"
+    "youtube_embed": "https://www.youtube.com/embed/-GVbbAHSGMA",
+    "hidden": true,
+    "private": true
   },
   "DV73FCHk1Ej": {
     "id": "IG_@mridupawasharma_DV73FCHk1Ej_Some_days_feel_lighter",
