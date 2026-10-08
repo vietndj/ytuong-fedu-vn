@@ -4,9 +4,9 @@
  */
 var FEDU_IDEAS_DATABASE = {
   "generated_at": "2026-09-13T18:00:00+07:00",
-  "total_scene_items": 351,
-  "total_unique_ideas": 330,
-  "total_active_ideas": 301,
+  "total_scene_items": 353,
+  "total_unique_ideas": 332,
+  "total_active_ideas": 303,
   "total_excluded_ideas": 29,
   "total_creators": 221,
   "shooting_styles": [
@@ -73,6 +73,14 @@ var FEDU_IDEAS_DATABASE = {
       "icon": "🎥",
       "badge_color": "zinc",
       "desc": "Hậu trường quay dựng, góc máy setup thiết bị cho Solo Creator."
+    },
+    {
+      "id": "cinematic",
+      "name": "cinematic",
+      "en_name": "Cinematic",
+      "icon": "🎬",
+      "badge_color": "purple",
+      "desc": "Kiểu quay cinematic."
     },
     {
       "id": "Talking Head",
@@ -502,12 +510,13 @@ var FEDU_IDEAS_DATABASE = {
   "shooting_style_stats": {
     "walk-and-talk": 4,
     "voice-over": 12,
-    "talking-head": 36,
+    "talking-head": 37,
     "storytelling": 24,
     "dien-anh": 95,
     "chuyen-canh": 54,
     "theo-nhip-nhac": 3,
     "bts": 0,
+    "cinematic": 1,
     "Talking Head": 8,
     "Review / Product Showcase": 1,
     "Review / Trải Nghiệm": 1,
@@ -651,7 +660,7 @@ var FEDU_IDEAS_DATABASE = {
     "am-thuc": 22,
     "du-lich": 17,
     "cong-nghe": 38,
-    "kien-truc": 34,
+    "kien-truc": 35,
     "the-thao": 5,
     "ky-thuat-quay": 38,
     "ugc": 5
@@ -713,7 +722,7 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "country_stats": {
-    "us_eu": 206,
+    "us_eu": 208,
     "korea": 10,
     "india": 3,
     "japan": 7,
@@ -726,18 +735,19 @@ var FEDU_IDEAS_DATABASE = {
     "ad_bot_count": 7
   },
   "deleted_ids": [
-    "IG_@creator_video_Video_video",
-    "video"
+    "video",
+    "IG_@creator_video_Video_video"
   ],
   "creators_hub": [
     {
       "handle": "@mridupawasharma",
       "name": "Mridupawasharma",
       "profile_url": "https://www.instagram.com/mridupawasharma/",
-      "video_count": 13,
-      "top_industry": "Công Nghệ & Thiết Bị",
-      "sample_thumb": "https://media.fedu.vn/images/IG_%40mridupawasharma_DBDkvXPyeSN_If_you_videos_are_boring%2C_try_these_3_sound_d/shot_01_mid.webp",
+      "video_count": 14,
+      "top_industry": "Kiến Trúc & Không Gian Sống",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40mridupawasharma_DQbUum4E5Pu_Don%E2%80%99t_let_storage_limits_stop_your_creativity/shot_01_mid.webp",
       "video_ids": [
+        "IG_@mridupawasharma_DQbUum4E5Pu_Don’t_let_storage_limits_stop_your_creativity",
         "IG_@mridupawasharma_DBDkvXPyeSN_If_you_videos_are_boring,_try_these_3_sound_d",
         "IG_@mridupawasharma_DBl0O1RSMtU_Stop_thinking_and_start_creating!",
         "IG_@mridupawasharma_DEcQIYAyLRq_Master_Cinematography_with_just_one_light!",
@@ -927,6 +937,19 @@ var FEDU_IDEAS_DATABASE = {
         "IG_@jeromememe_DQuEXMbj8fT_People_of_Porto",
         "IG_@jeromememe_DQmKgPDEWgJ_Artisans_of_Venice",
         "IG_@jeromememe_DbGMt3oIaZm_People_of_Copenhagen"
+      ]
+    },
+    {
+      "handle": "@by.bennnj",
+      "name": "By Bennnj",
+      "profile_url": "https://www.instagram.com/by.bennnj/",
+      "video_count": 3,
+      "top_industry": "quay-phim",
+      "sample_thumb": "https://media.fedu.vn/images/IG_%40by.bennnj_Ddfa3zCu3kj_Making_cinematic_videos_on_my_Sony_a6400_with/shot_01_mid.webp",
+      "video_ids": [
+        "IG_@by.bennnj_Ddfa3zCu3kj_Making_cinematic_videos_on_my_Sony_a6400_with",
+        "IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp",
+        "IG_@by.bennnj_DbKauxkoJU_Making_beginner_cameras_look_cinematic"
       ]
     },
     {
@@ -1221,18 +1244,6 @@ var FEDU_IDEAS_DATABASE = {
       "video_ids": [
         "IG_@neolumo.uralsk_DdF-qr0s4Kk_Spa_Y_Khoa",
         "IG_@neolumo.uralsk_DcOUP2PsMsP_Medical_Commercial_Authority"
-      ]
-    },
-    {
-      "handle": "@by.bennnj",
-      "name": "By.Bennnj",
-      "profile_url": "https://www.instagram.com/by.bennnj/",
-      "video_count": 2,
-      "top_industry": "Kỹ Thuật Quay Dựng & Điện Ảnh",
-      "sample_thumb": "https://media.fedu.vn/images/IG_%40by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp/shot_01_mid.webp",
-      "video_ids": [
-        "IG_@by.bennnj_Dcvxba1OvrD_Koti_Sunset_Ambient_Lamp",
-        "IG_@by.bennnj_DbKauxkoJU_Making_beginner_cameras_look_cinematic"
       ]
     },
     {
@@ -3262,6 +3273,139 @@ var FEDU_IDEAS_DATABASE = {
     }
   ],
   "ideas": [
+    {
+      "id": "IG_@mridupawasharma_DQbUum4E5Pu_Don’t_let_storage_limits_stop_your_creativity",
+      "shortcode": "DQbUum4E5Pu",
+      "title_vi": "Giải Pháp Lưu Trữ Cho iPhone Filmmaking Với SanDisk SSD",
+      "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+      "key_tech": "Establishing Hook Shot • Low-key Lighting • Close-Up / Macro Detail Shot",
+      "shooting_style": {
+        "id": "talking-head",
+        "name": "Nói Trực Diện",
+        "en_name": "Talking Head",
+        "icon": "🗣️",
+        "badge_color": "blue"
+      },
+      "industries": [
+        {
+          "id": "kien-truc",
+          "name": "Kiến Trúc & Không Gian Sống",
+          "icon": "🏛️"
+        }
+      ],
+      "x_factors": [],
+      "tags": [],
+      "country": {
+        "id": "us_eu",
+        "name": "Âu Mỹ",
+        "en_name": "US & Europe",
+        "flag": "🇺🇸/🇪🇺",
+        "badge_color": "purple"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @mridupawasharma",
+      "tech_tags": [
+        "Establishing Hook Shot",
+        "Low-key Lighting",
+        "Close-Up / Macro Detail Shot"
+      ],
+      "transition_level": null,
+      "is_ad_bot": false,
+      "fedu_optimization": {},
+      "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+      "creator": {
+        "raw": "@mridupawasharma",
+        "name": "Mridupawasharma",
+        "handle": "@mridupawasharma",
+        "profile_url": "https://www.instagram.com/mridupawasharma/"
+      },
+      "ig_url": "https://www.instagram.com/reel/DQbUum4E5Pu/",
+      "gdrive_folder": "https://drive.google.com/open?id=1Ciip8DbtuVW-O3KN-JYBPKavFLcRwrRS",
+      "media": {
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40mridupawasharma_DQbUum4E5Pu_Don%E2%80%99t_let_storage_limits_stop_your_creativity/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40mridupawasharma_DQbUum4E5Pu_Don%E2%80%99t_let_storage_limits_stop_your_creativity/shot_03_mid.webp",
+        "video_url": "https://media.fedu.vn/videos/DQbUum4E5Pu.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/DQbUum4E5Pu.mp4",
+        "report_url": "reports/IG_@mridupawasharma_DQbUum4E5Pu_Don’t_let_storage_limits_stop_your_creativity.html",
+        "shots_count": 42,
+        "duration": "84s",
+        "youtube_id": "b9U2IV9fDZo",
+        "youtube_embed": "https://www.youtube.com/embed/b9U2IV9fDZo",
+        "youtube_url": "https://youtu.be/b9U2IV9fDZo"
+      },
+      "complexity": {
+        "id": "nang-cao",
+        "label": "🔴 Nâng cao (>18 shots)"
+      },
+      "is_personal": false,
+      "is_excluded": false
+    },
+    {
+      "id": "IG_@by.bennnj_Ddfa3zCu3kj_Making_cinematic_videos_on_my_Sony_a6400_with",
+      "shortcode": "Ddfa3zCu3kj",
+      "title_vi": "Vẻ Đẹp Điện Ảnh Tự Nhiên & Sức Mạnh 'Straight Out Of Camera'",
+      "quick_takeaway": "Vẻ đẹp điện ảnh tự nhiên với máy ảnh Sony a6400, phô diễn ánh sáng Blue Hour và Golden Hour.",
+      "key_tech": "Establishing Hook Shot • Close-Up / Macro Detail Shot • Low-key Lighting • Wide Establishing Shot • Medium Tracking Shot",
+      "shooting_style": {
+        "id": "cinematic",
+        "name": "cinematic",
+        "en_name": "Cinematic",
+        "icon": "🎬",
+        "badge_color": "purple"
+      },
+      "industries": [
+        {
+          "id": "quay-phim",
+          "name": "quay-phim",
+          "icon": "🎯"
+        }
+      ],
+      "x_factors": [],
+      "tags": [],
+      "country": {
+        "id": "us_eu",
+        "name": "Âu Mỹ",
+        "en_name": "US & Europe",
+        "flag": "🇺🇸/🇪🇺",
+        "badge_color": "purple"
+      },
+      "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @by.bennnj",
+      "tech_tags": [
+        "sony a6400",
+        "nature",
+        "blue hour",
+        "b-roll"
+      ],
+      "transition_level": null,
+      "is_ad_bot": false,
+      "fedu_optimization": {},
+      "logic_explanation": "Tự động phân loại cấu trúc Chuyển Cảnh (Transition) ngành Kiến Trúc & Không Gian Sống.",
+      "creator": {
+        "raw": "@by.bennnj",
+        "name": "By Bennnj",
+        "handle": "@by.bennnj",
+        "profile_url": "https://www.instagram.com/by.bennnj/"
+      },
+      "ig_url": "https://www.instagram.com/reel/Ddfa3zCu3kj/",
+      "gdrive_folder": "https://drive.google.com/open?id=1BUZMbHm8ZliOOhauokKC-qEMr2N2xtgy",
+      "media": {
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40by.bennnj_Ddfa3zCu3kj_Making_cinematic_videos_on_my_Sony_a6400_with/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40by.bennnj_Ddfa3zCu3kj_Making_cinematic_videos_on_my_Sony_a6400_with/shot_03_mid.webp",
+        "video_url": "https://media.fedu.vn/videos/Ddfa3zCu3kj.mp4",
+        "video_url_original": "https://media.fedu.vn/videos/Ddfa3zCu3kj.mp4",
+        "report_url": "reports/IG_@by.bennnj_Ddfa3zCu3kj_Making_cinematic_videos_on_my_Sony_a6400_with.html",
+        "shots_count": 9,
+        "duration": "18s",
+        "youtube_id": "Ed7rzh938ow",
+        "youtube_embed": "https://www.youtube.com/embed/Ed7rzh938ow",
+        "youtube_url": "https://youtu.be/Ed7rzh938ow"
+      },
+      "complexity": {
+        "id": "trung-binh",
+        "label": "🟡 Trung bình (9-18 shots)"
+      },
+      "is_personal": false,
+      "is_excluded": false
+    },
     {
       "id": "IG_@mridupawasharma_DBDkvXPyeSN_If_you_videos_are_boring,_try_these_3_sound_d",
       "shortcode": "DBDkvXPyeSN",
@@ -11065,8 +11209,8 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdbCdHFKZsP/",
       "gdrive_folder": "https://drive.google.com/open?id=1TrKEslz5f0-vToucfldVqxVIuHSb19Wp",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40hena_film_vlog_Db-mZWEKECo_4_Cu_May_Sieu_Thi_Ulanzi_MA38_MT85/extracted_shots/shot_01_mid.webp",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DdlmZczPsCE_%ED%98%BC%EC%9E%90_%EB%A7%8C%EB%93%9C%EB%8A%94%EB%8D%B0_%EC%B4%AC%EC%98%81%EC%9D%80_%EB%88%84%EA%B0%80_%ED%95%98%EB%83%90%EA%B3%A0%EC%9A%94%F0%9F%A4%B7%F0%9F%8F%BB%E2%80%8D%E2%99%80%EF%B8%8F_%EC%A0%9C%ED%92%88%EC%A0%9C%EA%B3%B5/shot_03_mid.webp",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DdlmZczPsCE_%ED%98%BC%EC%9E%90_%EB%A7%8C%EB%93%9C%EB%8A%94%EB%8D%B0_%EC%B4%AC%EC%98%81%EC%9D%80_%EB%88%84%EA%B0%80_%ED%95%98%EB%83%90%EA%B3%A0%EC%9A%94%F0%9F%A4%B7%F0%9F%8F%BB%E2%80%8D%E2%99%80%EF%B8%8F_%EC%A0%9C%ED%92%88%EC%A0%9C%EA%B3%B5/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DY_0KNxvNJa_Unboxing_Cinematic_Flow/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdbCdHFKZsP.mp4",
         "video_url_original": "https://media.fedu.vn/videos/DdbCdHFKZsP.mp4",
         "report_url": "reports/IG_@hena_film_vlog_DdbCdHFKZsP_햇빛_없는_집,_음식_촬영_가능함🤔_제품제공.html",
@@ -12180,7 +12324,7 @@ var FEDU_IDEAS_DATABASE = {
       "gdrive_folder": "https://drive.google.com/open?id=1cnS_6mtlO52naIU-DIE-pRJoiEN8nys8",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg/shot_01_mid.webp",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg/shot_02_mid.webp",
         "video_url": "https://drive.google.com/uc?id=1QpXLSybzXgrShstQexi8sX3JS9oYgQR0&export=download",
         "video_url_original": "https://drive.google.com/uc?id=1QpXLSybzXgrShstQexi8sX3JS9oYgQR0&export=download",
         "report_url": "reports/IG_@Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg.html",
