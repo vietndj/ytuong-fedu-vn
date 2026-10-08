@@ -331,12 +331,12 @@ var FEDU_IDEAS_DATABASE = {
       "desc": "Kiểu quay quang-cao."
     },
     {
-      "id": "BTS / Hậu Trường Sáng Tạo",
-      "name": "BTS / Hậu Trường Sáng Tạo",
-      "en_name": "Bts / Hậu Trường Sáng Tạo",
+      "id": "huong-dan-chia-se",
+      "name": "huong-dan-chia-se",
+      "en_name": "Huong Dan Chia Se",
       "icon": "🎬",
       "badge_color": "purple",
-      "desc": "Kiểu quay BTS / Hậu Trường Sáng Tạo."
+      "desc": "Kiểu quay huong-dan-chia-se."
     },
     {
       "id": "Solo Creator Setup",
@@ -531,6 +531,14 @@ var FEDU_IDEAS_DATABASE = {
       "desc": "Kiểu quay POV & Aesthetic B-Roll Montage."
     },
     {
+      "id": "BTS / Hậu Trường Sáng Tạo",
+      "name": "BTS / Hậu Trường Sáng Tạo",
+      "en_name": "Bts / Hậu Trường Sáng Tạo",
+      "icon": "🎬",
+      "badge_color": "purple",
+      "desc": "Kiểu quay BTS / Hậu Trường Sáng Tạo."
+    },
+    {
       "id": "bien-hinh",
       "name": "bien-hinh",
       "en_name": "Bien Hinh",
@@ -569,7 +577,7 @@ var FEDU_IDEAS_DATABASE = {
     "talking-head": 40,
     "storytelling": 24,
     "dien-anh": 98,
-    "chuyen-canh": 53,
+    "chuyen-canh": 54,
     "theo-nhip-nhac": 3,
     "bts": 0,
     "Lookbook": 1,
@@ -582,7 +590,7 @@ var FEDU_IDEAS_DATABASE = {
     "cinematic": 2,
     "Review / Product Showcase": 1,
     "Review / Trải Nghiệm": 1,
-    "Chuyển Cảnh (Transition)": 5,
+    "Chuyển Cảnh (Transition)": 4,
     "Cooking Vlog / B-Roll": 1,
     "Cinematic Commercial / Narrative B-Roll": 1,
     "Talking Head & Hướng Dẫn": 1,
@@ -604,7 +612,7 @@ var FEDU_IDEAS_DATABASE = {
     "review-nhip-nhanh": 1,
     "UGC Thực Chiến": 1,
     "quang-cao": 1,
-    "BTS / Hậu Trường Sáng Tạo": 2,
+    "huong-dan-chia-se": 1,
     "Solo Creator Setup": 1,
     "Cinematic Vlog": 3,
     "Cinematic B-Roll": 3,
@@ -629,6 +637,7 @@ var FEDU_IDEAS_DATABASE = {
     "Walk and Talk Documentary": 1,
     "lifestyle-cinematic": 1,
     "POV & Aesthetic B-Roll Montage": 1,
+    "BTS / Hậu Trường Sáng Tạo": 1,
     "bien-hinh": 1,
     "san-pham": 1,
     "chuyen_canh": 1,
@@ -1551,7 +1560,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Page_Vrn",
       "profile_url": "https://www.instagram.com/page_vrn/",
       "video_count": 1,
-      "top_industry": "Ẩm Thực & F&B",
+      "top_industry": "f-and-b",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40page_vrn_DdT9nr_o_SP_%D0%9A%D0%B0%D0%BA%D0%B8%D0%BC_%D0%B1%D1%8B_%D0%BD%D0%B8_%D0%B1%D1%8B%D0%BB_%D0%B2%D0%B0%D1%88_%D0%B7%D0%B0%D0%B2%D1%82%D1%80%D0%B0%D0%BA%2C_%D0%B2_P%2BAGE_%D0%BE%D0%BD_%D0%B1%D1%83%D0%B4%D0%B5%D1%82/shot_01_mid.webp",
       "video_ids": [
         "IG_@page_vrn_DdT9nr_o_SP_Каким_бы_ни_был_ваш_завтрак,_в_P+AGE_он_будет"
@@ -7213,20 +7222,20 @@ var FEDU_IDEAS_DATABASE = {
     {
       "id": "IG_@page_vrn_DdT9nr_o_SP_Каким_бы_ни_был_ваш_завтрак,_в_P+AGE_он_будет",
       "shortcode": "DdT9nr_o_SP",
-      "title_vi": "Cú Đấm Thị Giác F&B: Kỹ Thuật Spin Match Cut & Macro Đồ Ăn Sáng Đánh Thức Tuyến Nước Bọt (@page_vrn)",
-      "quick_takeaway": "Khai thác đòn bẩy Spin Match Cut xoay đĩa trên bàn gỗ và chuỗi đặc tả Macro cận cảnh (lòng đào trứng chần ùa chảy, thịt bò hun khói mỏng tơi, rosti khoai tây giòn rụm) biến video 7 giây thành cỗ máy kích hoạt cơn thèm ăn đỉnh cao.",
+      "title_vi": "Nghệ Thuật Match Cut: Chuyển Cảnh Mượt Mà Trong Video Ẩm Thực",
+      "quick_takeaway": "Video review đồ ăn sáng với kỹ thuật chuyển cảnh mượt mà, sử dụng Match Cut và Macro để tôn lên chất lượng món ăn (Chuyển cảnh 1).",
       "key_tech": "Chuyển cảnh 1 • Spin Match Cut • Macro Food Porn • Visual Hook • Yolk Ooze Money Shot",
       "shooting_style": {
-        "id": "Chuyển Cảnh (Transition)",
-        "name": "Chuyển Cảnh (Transition)",
-        "en_name": "Chuyển Cảnh (Transition)",
-        "icon": "🎬",
-        "badge_color": "purple"
+        "id": "chuyen-canh",
+        "name": "Chuyển Cảnh",
+        "en_name": "Transitions & Flow",
+        "icon": "⚡",
+        "badge_color": "rose"
       },
       "industries": [
         {
-          "id": "Ẩm Thực & F&B",
-          "name": "Ẩm Thực & F&B",
+          "id": "f-and-b",
+          "name": "f-and-b",
           "icon": "🎯"
         }
       ],
@@ -7241,13 +7250,10 @@ var FEDU_IDEAS_DATABASE = {
       },
       "purpose": "Kích hoạt cơn đói và tuyến nước bọt của khách hàng bằng chuỗi tương tác dao dĩa Macro cực nét, nâng tầm trải nghiệm bữa sáng tại nhà hàng.",
       "tech_tags": [
-        "Chuyển cảnh 1",
-        "Match Cut",
-        "Spin Transition",
-        "Macro Food Porn",
-        "Visual Hook",
-        "Yolk Ooze Money Shot",
-        "Crisp Action"
+        "am-thuc",
+        "review-do-an",
+        "match-cut",
+        "chuyen-canh-1"
       ],
       "transition_level": null,
       "is_ad_bot": false,
@@ -7555,13 +7561,13 @@ var FEDU_IDEAS_DATABASE = {
     {
       "id": "IG_@dwslestari_Ddga9BDzenm_buat_yang_sering_nanyain_font_yang_aku_pakai,",
       "shortcode": "Ddga9BDzenm",
-      "title_vi": "Nghệ Thuật Setup Ánh Sáng Nắng Xiên & Phối Font Chữ Điện Ảnh Cho Video Nấu Ăn",
-      "quick_takeaway": "⚡ Setup đèn spotlight qua nan lưới tạo bóng nắng xiên ➔ Trưng bày món mì Maluku vàng ruộm dưới ánh nắng hổ phách",
+      "title_vi": "Bóc Trần Kỹ Thuật Đánh Sáng Gobo & Setup Góc Máy Quay F&B",
+      "quick_takeaway": "Video hậu trường hướng dẫn cách setup ánh sáng giả nắng bằng Gobo, thiết lập góc máy và chia sẻ 4 cặp font chữ (Advercase, Britti Sans, Strong, Playfair) thường dùng cho video nấu ăn F&B.",
       "key_tech": "F N B • Establishing Hook Shot • Close-Up / Macro Detail Shot • Low-key Lighting",
       "shooting_style": {
-        "id": "BTS / Hậu Trường Sáng Tạo",
-        "name": "BTS / Hậu Trường Sáng Tạo",
-        "en_name": "Bts / Hậu Trường Sáng Tạo",
+        "id": "huong-dan-chia-se",
+        "name": "huong-dan-chia-se",
+        "en_name": "Huong Dan Chia Se",
         "icon": "🎬",
         "badge_color": "purple"
       },
@@ -7583,13 +7589,10 @@ var FEDU_IDEAS_DATABASE = {
       },
       "purpose": "Bóc tách bí quyết setup ánh sáng nắng xiên nhân tạo trong studio bàn bếp và công thức phối font chữ điện ảnh cho video ẩm thực F&B.",
       "tech_tags": [
-        "F n B",
-        "Đồ ăn",
-        "Cách quay setup",
-        "Gobo Lighting",
-        "Font Pairing",
-        "Aesthetic Cooking",
-        "Food ASMR"
+        "f-n-b",
+        "do-an",
+        "cach-quay",
+        "setup"
       ],
       "transition_level": null,
       "is_ad_bot": false,
@@ -9167,7 +9170,7 @@ var FEDU_IDEAS_DATABASE = {
       "gdrive_folder": "https://drive.google.com/open?id=1jpYV1rRzpuPRMXcYkd1oVjIxfm7pBZFo",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40ELENA_%F0%9D%97%94%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%97%B5%F0%9D%97%B2%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%B0_%F0%9D%97%9C%F0%9D%97%BB%F0%9D%98%80%F0%9D%97%BD%F0%9D%97%B6%F0%9D%97%BF%F0%9D%97%AE%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%BC%F0%9D%97%BB_%F0%9D%97%9F%F0%9D%97%B6%F0%9D%97%B3%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%98%86%F0%9D%97%B9%F0%9D%97%B2_Ddb6rA7NwQd_Video_by_elenabuntushak/shot_01_mid.jpg",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40ELENA_%F0%9D%97%94%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%97%B5%F0%9D%97%B2%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%B0_%F0%9D%97%9C%F0%9D%97%BB%F0%9D%98%80%F0%9D%97%BD%F0%9D%97%B6%F0%9D%97%BF%F0%9D%97%AE%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%BC%F0%9D%97%BB_%F0%9D%97%9F%F0%9D%97%B6%F0%9D%97%B3%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%98%86%F0%9D%97%B9%F0%9D%97%B2_Ddb6rA7NwQd_Video_by_elenabuntushak/shot_01_mid.jpg",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40ELENA_%F0%9D%97%94%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%97%B5%F0%9D%97%B2%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%B0_%F0%9D%97%9C%F0%9D%97%BB%F0%9D%98%80%F0%9D%97%BD%F0%9D%97%B6%F0%9D%97%BF%F0%9D%97%AE%F0%9D%98%81%F0%9D%97%B6%F0%9D%97%BC%F0%9D%97%BB_%F0%9D%97%9F%F0%9D%97%B6%F0%9D%97%B3%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81%F0%9D%98%86%F0%9D%97%B9%F0%9D%97%B2_Ddb6rA7NwQd_Video_by_elenabuntushak/shot_02_mid.jpg",
         "video_url": "https://media.fedu.vn/videos/Ddb6rA7NwQd.mp4",
         "video_url_original": "https://media.fedu.vn/videos/Ddb6rA7NwQd.mp4",
         "report_url": "reports/IG_@ELENA_𝗔𝗲𝘀𝘁𝗵𝗲𝘁𝗶𝗰_𝗜𝗻𝘀𝗽𝗶𝗿𝗮𝘁𝗶𝗼𝗻_𝗟𝗶𝗳𝗲𝘀𝘁𝘆𝗹𝗲_Ddb6rA7NwQd_Video_by_elenabuntushak.html",
@@ -10948,7 +10951,7 @@ var FEDU_IDEAS_DATABASE = {
       "gdrive_folder": "https://drive.google.com/open?id=1W18YrkZwvxirTC_zyeVWOHDyvSWfJzKu",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40etaemin_DdoooYmq-cd_Get_ready_for_the_shoot/shot_01_mid.webp",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40etaemin_DdoooYmq-cd_Get_ready_for_the_shoot/shot_02_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40etaemin_DdoooYmq-cd_Get_ready_for_the_shoot/shot_01_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdoooYmq-cd.mp4",
         "video_url_original": "https://media.fedu.vn/videos/DdoooYmq-cd.mp4",
         "report_url": "reports/IG_@etaemin_DdoooYmq-cd_Get_ready_for_the_shoot.html",
@@ -12328,8 +12331,8 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdbCdHFKZsP/",
       "gdrive_folder": "https://drive.google.com/open?id=1TrKEslz5f0-vToucfldVqxVIuHSb19Wp",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DdlmZczPsCE_%ED%98%BC%EC%9E%90_%EB%A7%8C%EB%93%9C%EB%8A%94%EB%8D%B0_%EC%B4%AC%EC%98%81%EC%9D%80_%EB%88%84%EA%B0%80_%ED%95%98%EB%83%90%EA%B3%A0%EC%9A%94%F0%9F%A4%B7%F0%9F%8F%BB%E2%80%8D%E2%99%80%EF%B8%8F_%EC%A0%9C%ED%92%88%EC%A0%9C%EA%B3%B5/shot_01_mid.webp",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40hena_film_vlog_Db-mZWEKECo_4_Cu_May_Sieu_Thi_Ulanzi_MA38_MT85/extracted_shots/shot_03_mid.webp",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DcVzQCSP1MR_Healing_Homecoming_Daily_Vlog/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DdlmZczPsCE_%ED%98%BC%EC%9E%90_%EB%A7%8C%EB%93%9C%EB%8A%94%EB%8D%B0_%EC%B4%AC%EC%98%81%EC%9D%80_%EB%88%84%EA%B0%80_%ED%95%98%EB%83%90%EA%B3%A0%EC%9A%94%F0%9F%A4%B7%F0%9F%8F%BB%E2%80%8D%E2%99%80%EF%B8%8F_%EC%A0%9C%ED%92%88%EC%A0%9C%EA%B3%B5/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdbCdHFKZsP.mp4",
         "video_url_original": "https://media.fedu.vn/videos/DdbCdHFKZsP.mp4",
         "report_url": "reports/IG_@hena_film_vlog_DdbCdHFKZsP_햇빛_없는_집,_음식_촬영_가능함🤔_제품제공.html",
@@ -13443,7 +13446,7 @@ var FEDU_IDEAS_DATABASE = {
       "gdrive_folder": "https://drive.google.com/open?id=1cnS_6mtlO52naIU-DIE-pRJoiEN8nys8",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg/shot_01_mid.webp",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg/shot_02_mid.webp",
         "video_url": "https://drive.google.com/uc?id=1QpXLSybzXgrShstQexi8sX3JS9oYgQR0&export=download",
         "video_url_original": "https://drive.google.com/uc?id=1QpXLSybzXgrShstQexi8sX3JS9oYgQR0&export=download",
         "report_url": "reports/IG_@Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg.html",
