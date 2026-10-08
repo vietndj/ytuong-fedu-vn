@@ -23296,33 +23296,28 @@
     "id": "IG_@ecuator_cafe_Dc0iEdiuYZ-_Există_pauze_de_cafea_și_există_momente_în_ca",
     "creator": "@ecuator_cafe",
     "creator_name": "Ecuator_Cafe",
-    "title": "B-Roll F&B Đỉnh Cao: Kể Chuyện Bằng Hành Động & Chi Tiết Giác Quan",
+    "title": "Nghệ Thuật Khơi Gợi Vị Giác Qua Từng Cú Chạm Góc Máy",
     "shots_count": 12,
     "duration": "17.5s",
     "shooting_style": {
-      "id": "Quay B-Roll Quảng Cáo Điện Ảnh",
-      "name": "Quay B-Roll Quảng Cáo Điện Ảnh",
+      "id": "cinematic",
+      "name": "cinematic",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Ẩm Thực & F&B",
-      "name": "Ẩm Thực & F&B",
+      "id": "fnb",
+      "name": "fnb",
       "icon": "🎯"
     },
     "purpose": "Life",
     "tech_tags": [
-      "Life",
-      "Quảng cáo",
-      "B-Roll F&B",
-      "Matcha Nitro",
-      "ASMR",
-      "Macro Detail",
-      "POV",
-      "Flatlay"
+      "cafe",
+      "matcha",
+      "pastry"
     ],
     "logic_explanation": "Ghi chú người dùng: Life. Phân loại vào Ẩm Thực & F&B • Chuyển Cảnh (Transition).",
     "is_excluded": false,
-    "quick_takeaway": "Chuỗi B-Roll quảng cáo F&B chuẩn nhịp điện ảnh: dẫn dắt từ bước chân dạo phố, tiếng đẩy cửa, tiếng rót Nitro Matcha bọt tuyết đến cú bẻ bánh ngàn lớp giòn rụm và chiếc ly cạn đáy.",
+    "quick_takeaway": "Trải nghiệm không gian cafe tối giản với điểm nhấn là món Nitro Matcha sủi bọt và bánh ngàn lớp.",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
@@ -23534,12 +23529,12 @@
     "id": "IG_@ulanzi_oSaTN_Tripod_&_Gậy_Selfie_Tự_Động_MT86,_Cao_1.52m_4",
     "creator": "@ulanzi",
     "creator_name": "Ulanzi",
-    "title": "Ulanzi MT86 Auto-Deploy Tripod & Selfie Stick (Cao 1.52m, Chân Quadpod Bật Nảy)",
+    "title": "Phô diễn sức mạnh cơ khí 1-Chạm: Kích hoạt chân Quadpod Ulanzi MT86",
     "shots_count": 17,
     "duration": "26.1s",
     "shooting_style": {
-      "id": "chuyen-canh",
-      "name": "chuyen-canh",
+      "id": "review-nhip-nhanh",
+      "name": "review-nhip-nhanh",
       "icon": "🎬"
     },
     "industry": {
@@ -23549,18 +23544,13 @@
     },
     "purpose": "Check out Ulanzi | MT86 Auto-Deploy Tripod & Selfie Stick, 1.52m Height, Quadpod Base. Get it on Lazada now!",
     "tech_tags": [
-      "Ulanzi MT86",
-      "Auto-Deploy Tripod",
-      "Quadpod Base",
-      "Selfie Stick 1.52m",
-      "Chạm Đất Tự Bung",
-      "Cold Shoe Mount",
-      "Bluetooth Remote",
-      "Worm's-Eye View"
+      "phụ kiện",
+      "tripod",
+      "vlog"
     ],
     "logic_explanation": "Ghi chú người dùng: Check out Ulanzi | MT86 Auto-Deploy Tripod & Selfie Stick, 1.52m Height, Quadpod Base. Get it on Lazada now!. Phân loại vào Công Nghệ & Thiết Bị • Chuyển Cảnh (Transition).",
     "is_excluded": false,
-    "quick_takeaway": "Check out Ulanzi | MT86 Auto-Deploy Tripod & Selfie Stick, 1.52m Height, Quadpod Base. Get it on Lazada now!",
+    "quick_takeaway": "Video review Tripod & Gậy Selfie Ulanzi MT86 tự động bung 4 chân Quadpod.",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
@@ -23576,12 +23566,12 @@
     "id": "IG_@ulanzi_oSaTN_Tripod_&_Gậy_Selfie_Tự_Động_MT86,_Cao_1.52m_4",
     "creator": "@ulanzi",
     "creator_name": "Ulanzi",
-    "title": "Ulanzi MT86 Auto-Deploy Tripod & Selfie Stick (Cao 1.52m, Chân Quadpod Bật Nảy)",
+    "title": "Phô diễn sức mạnh cơ khí 1-Chạm: Kích hoạt chân Quadpod Ulanzi MT86",
     "shots_count": 17,
     "duration": "26.1s",
     "shooting_style": {
-      "id": "chuyen-canh",
-      "name": "chuyen-canh",
+      "id": "review-nhip-nhanh",
+      "name": "review-nhip-nhanh",
       "icon": "🎬"
     },
     "industry": {
@@ -23591,18 +23581,13 @@
     },
     "purpose": "Check out Ulanzi | MT86 Auto-Deploy Tripod & Selfie Stick, 1.52m Height, Quadpod Base. Get it on Lazada now!",
     "tech_tags": [
-      "Ulanzi MT86",
-      "Auto-Deploy Tripod",
-      "Quadpod Base",
-      "Selfie Stick 1.52m",
-      "Chạm Đất Tự Bung",
-      "Cold Shoe Mount",
-      "Bluetooth Remote",
-      "Worm's-Eye View"
+      "phụ kiện",
+      "tripod",
+      "vlog"
     ],
     "logic_explanation": "Ghi chú người dùng: Check out Ulanzi | MT86 Auto-Deploy Tripod & Selfie Stick, 1.52m Height, Quadpod Base. Get it on Lazada now!. Phân loại vào Công Nghệ & Thiết Bị • Chuyển Cảnh (Transition).",
     "is_excluded": false,
-    "quick_takeaway": "Check out Ulanzi | MT86 Auto-Deploy Tripod & Selfie Stick, 1.52m Height, Quadpod Base. Get it on Lazada now!",
+    "quick_takeaway": "Video review Tripod & Gậy Selfie Ulanzi MT86 tự động bung 4 chân Quadpod.",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
@@ -25306,31 +25291,29 @@
     "id": "IG_@turkishairlines_Dd8gb9ss84q_A_timeless_destination_where_two_continents_c",
     "creator": "@turkishairlines",
     "creator_name": "Turkishairlines",
-    "title": "Đòn Bẩy Lỗ Khóa & Match Cut Ký Họa: Nghệ Thuật Kể Chuyện Đẳng Cấp Biến Chuyến Bay Nối Chuyến Thành Kỳ Nghỉ Hoàng Gia",
+    "title": "Nghệ thuật quảng bá trải nghiệm Stopover: Khi Layover trở thành một kỳ nghỉ ngàn đô",
     "shots_count": 19,
     "duration": "61.5s",
     "shooting_style": {
-      "id": "Điện Ảnh (Cinematic)",
-      "name": "Điện Ảnh (Cinematic)",
+      "id": "cinematic-vlog",
+      "name": "cinematic-vlog",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Du Lịch & Văn Hóa",
-      "name": "Du Lịch & Văn Hóa",
+      "id": "du-lich",
+      "name": "du-lich",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @turkishairlines",
     "tech_tags": [
-      "Sub-framing Keyhole",
-      "Match Cut Vest",
-      "Stopover Proof",
-      "Architectural Sketch",
-      "Golden Hour Aerial",
-      "Vintage Super 8"
+      "travel",
+      "stopover",
+      "istanbul",
+      "airline"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Chuyển Cảnh (Transition) ngành Kiến Trúc & Không Gian Sống.",
     "is_excluded": false,
-    "quick_takeaway": "Cú lừa thị giác qua lỗ khóa mở ra trải nghiệm Stopover trọn gói: Biến thời gian quá cảnh thành kỳ nghỉ thượng lưu khám phá kỳ quan Istanbul.",
+    "quick_takeaway": "Quảng bá chương trình Stopover của Turkish Airlines với góc nhìn POV cá nhân hóa, kết hợp giữa sự sang trọng của dịch vụ và nét cổ kính của Istanbul.",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
@@ -25346,31 +25329,29 @@
     "id": "IG_@turkishairlines_Dd8gb9ss84q_A_timeless_destination_where_two_continents_c",
     "creator": "@turkishairlines",
     "creator_name": "Turkishairlines",
-    "title": "Đòn Bẩy Lỗ Khóa & Match Cut Ký Họa: Nghệ Thuật Kể Chuyện Đẳng Cấp Biến Chuyến Bay Nối Chuyến Thành Kỳ Nghỉ Hoàng Gia",
+    "title": "Nghệ thuật quảng bá trải nghiệm Stopover: Khi Layover trở thành một kỳ nghỉ ngàn đô",
     "shots_count": 19,
     "duration": "61.5s",
     "shooting_style": {
-      "id": "Điện Ảnh (Cinematic)",
-      "name": "Điện Ảnh (Cinematic)",
+      "id": "cinematic-vlog",
+      "name": "cinematic-vlog",
       "icon": "🎬"
     },
     "industry": {
-      "id": "Du Lịch & Văn Hóa",
-      "name": "Du Lịch & Văn Hóa",
+      "id": "du-lich",
+      "name": "du-lich",
       "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @turkishairlines",
     "tech_tags": [
-      "Sub-framing Keyhole",
-      "Match Cut Vest",
-      "Stopover Proof",
-      "Architectural Sketch",
-      "Golden Hour Aerial",
-      "Vintage Super 8"
+      "travel",
+      "stopover",
+      "istanbul",
+      "airline"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Chuyển Cảnh (Transition) ngành Kiến Trúc & Không Gian Sống.",
     "is_excluded": false,
-    "quick_takeaway": "Cú lừa thị giác qua lỗ khóa mở ra trải nghiệm Stopover trọn gói: Biến thời gian quá cảnh thành kỳ nghỉ thượng lưu khám phá kỳ quan Istanbul.",
+    "quick_takeaway": "Quảng bá chương trình Stopover của Turkish Airlines với góc nhìn POV cá nhân hóa, kết hợp giữa sự sang trọng của dịch vụ và nét cổ kính của Istanbul.",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",

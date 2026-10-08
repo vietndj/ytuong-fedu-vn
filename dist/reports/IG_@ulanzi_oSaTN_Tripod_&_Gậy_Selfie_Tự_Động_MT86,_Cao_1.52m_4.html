@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ulanzi MT86 Auto-Deploy Tripod &amp; Selfie Stick (Cao 1.52m, Chân Quadpod Bật Nảy)</title>
+    <title>Phô diễn sức mạnh cơ khí 1-Chạm: Kích hoạt chân Quadpod Ulanzi MT86</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230B0F19'/%3E%3Crect x='1' y='1' width='62' height='62' rx='15' fill='none' stroke='%23FFFFFF' stroke-opacity='0.12' stroke-width='1.5'/%3E%3Ctext x='32' y='38' text-anchor='middle' font-family='system-ui, sans-serif' font-weight='900' font-size='23' fill='%23FFFFFF'%3EYT%3C/text%3E%3Ccircle cx='48' cy='18' r='4' fill='%23eab308'/%3E%3C/svg%3E">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1008,6 +1008,212 @@
                 margin-top: 8px;
             }
         }
+
+/* === EDIT INLINE FEATURE === */
+.edit-fab {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 50;
+    width: 44px;
+    height: 44px;
+    border-radius: var(--cl-radius-full);
+    background: var(--cl-card);
+    border: 1px solid var(--cl-line-strong);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.2s var(--apple-ease);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.edit-fab:hover {
+    border-color: var(--cl-accent);
+    box-shadow: 0 4px 16px rgba(26, 115, 232, 0.15);
+    transform: scale(1.05);
+}
+
+.edit-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(6px);
+    z-index: 300;
+    display: none;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 16px;
+    overflow-y: auto;
+}
+.edit-modal-backdrop.open {
+    display: flex;
+}
+
+.edit-modal {
+    background: var(--cl-card);
+    border-radius: var(--cl-radius-lg);
+    width: 100%;
+    max-width: 520px;
+    box-shadow: 0 24px 48px rgba(0,0,0,0.15);
+    overflow: hidden;
+    animation: editSlideIn 0.3s var(--apple-spring);
+}
+
+@keyframes editSlideIn {
+    from { opacity: 0; transform: translateY(-20px) scale(0.97); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.edit-modal-head {
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--cl-line);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.edit-modal-head h3 {
+    font-family: var(--font-display);
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--cl-text-base);
+    margin: 0;
+}
+.edit-modal-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--cl-text-muted);
+    line-height: 1;
+}
+
+.edit-modal-body {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.edit-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.edit-field label {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--cl-text-muted);
+}
+.edit-field select,
+.edit-field input,
+.edit-field textarea {
+    font-family: var(--font-ui);
+    font-size: 14px;
+    padding: 10px 14px;
+    border: 1px solid var(--cl-line-strong);
+    border-radius: var(--cl-radius-sm);
+    background: var(--cl-card);
+    color: var(--cl-text-body);
+    transition: border-color 0.2s;
+    width: 100%;
+}
+.edit-field select:focus,
+.edit-field input:focus,
+.edit-field textarea:focus {
+    outline: none;
+    border-color: var(--cl-accent);
+    box-shadow: 0 0 0 3px var(--cl-accent-tint);
+}
+.edit-field textarea {
+    min-height: 72px;
+    resize: vertical;
+}
+
+.edit-modal-footer {
+    padding: 16px 24px;
+    border-top: 1px solid var(--cl-line);
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.edit-save-btn {
+    font-family: var(--font-ui);
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 24px;
+    background: var(--cl-accent);
+    color: white;
+    border: none;
+    border-radius: var(--cl-radius-full);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.edit-save-btn:hover { opacity: 0.9; }
+.edit-save-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.edit-cancel-btn {
+    font-family: var(--font-ui);
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 20px;
+    background: transparent;
+    color: var(--cl-text-muted);
+    border: 1px solid var(--cl-line-strong);
+    border-radius: var(--cl-radius-full);
+    cursor: pointer;
+}
+
+.edit-status {
+    font-family: var(--font-ui);
+    font-size: 13px;
+    padding: 8px 14px;
+    border-radius: var(--cl-radius-sm);
+    display: none;
+}
+.edit-status.success {
+    display: block;
+    background: #f0fdf4;
+    color: #166534;
+    border: 1px solid #bbf7d0;
+}
+.edit-status.error {
+    display: block;
+    background: #fef2f2;
+    color: #dc2626;
+    border: 1px solid #fecaca;
+}
+
+.edit-pw-field {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.edit-pw-field label { min-width: fit-content; }
+.edit-pw-field input {
+    max-width: 120px;
+    text-align: center;
+    letter-spacing: 0.15em;
+    font-family: var(--font-mono);
+}
+
+@media (max-width: 1024px) {
+    .edit-fab {
+        top: auto;
+        bottom: 20px;
+        right: 16px;
+    }
+}
     </style>
 </head>
 <body>
@@ -1036,9 +1242,9 @@
 
     <div class="content-column">
         <header class="report-header">
-            <div class="header-badges"><span class="badge">cong-nghe</span> <span class="badge badge-alt">chuyen-canh</span></div>
+            <div class="header-badges"><span class="badge">cong-nghe</span> <span class="badge badge-alt">review-nhip-nhanh</span></div>
             <h1 class="report-title">
-                <a href="https://s.lazada.vn/s.oSaTN?c=w" target="_blank" rel="noopener">Ulanzi MT86 Auto-Deploy Tripod &amp; Selfie Stick (Cao 1.52m, Chân Quadpod Bật Nảy)</a>
+                <a href="https://s.lazada.vn/s.oSaTN?c=w" target="_blank" rel="noopener">Phô diễn sức mạnh cơ khí 1-Chạm: Kích hoạt chân Quadpod Ulanzi MT86</a>
             </h1>
             <div class="header-meta">
                 <span>Nguồn: <a href="https://www.lazada.vn/shop/ulanzi-flagship-store/" target="_blank" class="creator-link">@ulanzi ↗</a></span>
@@ -1053,11 +1259,11 @@
         
         <section class="script-axis-card">
             <h3 class="script-axis-title">TRỤC KỊCH BẢN 3 NHỊP</h3>
-            <div class="script-axis-content">[Nhịp 1: Rút Túi &amp; Chạm Đất Bật Chân Quadpod] ➔ [Nhịp 2: Trình Diễn Xoay Ngàm, Gài Đèn Cold Shoe &amp; Remote Rời] ➔ [Nhịp 3: Vươn Cao 1.52m Đón Toàn Cảnh &amp; Chốt Uy Tín Hãng Ulanzi]</div>
+            <div class="script-axis-content">Hook Dạo Phố ➔ Cú đấm thị giác bung chân Quadpod ➔ Trải nghiệm thực tế góc rộng &amp; Outro</div>
         </section>
 
         <div class="overview-card">
-            Check out Ulanzi | MT86 Auto-Deploy Tripod &amp; Selfie Stick, 1.52m Height, Quadpod Base. Get it on Lazada now!
+            Video review Tripod &amp; Gậy Selfie Ulanzi MT86 tự động bung 4 chân Quadpod.
         </div>
 
         
@@ -1909,6 +2115,83 @@
     <div id="lightboxCaption"></div>
 </div>
 
+<!-- Edit Inline Feature -->
+<button class="edit-fab" onclick="openEditModal()" title="Sửa phân loại">✎</button>
+
+<div id="editModalBackdrop" class="edit-modal-backdrop" onclick="closeEditModal()">
+    <div class="edit-modal" onclick="event.stopPropagation()">
+        <div class="edit-modal-head">
+            <h3>✎ Sửa Phân Loại</h3>
+            <button class="edit-modal-close" onclick="closeEditModal()">&times;</button>
+        </div>
+        <div class="edit-modal-body">
+            <div id="editStatus" class="edit-status"></div>
+
+            <div class="edit-field">
+                <label>Ngành nghề</label>
+                <select id="editIndustry">
+                    <option value="">— Chọn hoặc gõ bên dưới —</option>
+                    <option value="Phong Cách Sống">Phong Cách Sống</option>
+                    <option value="Tâm Lý & Phát Triển Bản Thân">Tâm Lý & Phát Triển Bản Thân</option>
+                    <option value="Kiến Trúc & Không Gian Sống">Kiến Trúc & Không Gian Sống</option>
+                    <option value="Ẩm Thực & F&B">Ẩm Thực & F&B</option>
+                    <option value="Thời Trang & Làm Đẹp">Thời Trang & Làm Đẹp</option>
+                    <option value="Sức Khỏe & Fitness">Sức Khỏe & Fitness</option>
+                    <option value="Công Nghệ & Startup">Công Nghệ & Startup</option>
+                    <option value="Giáo Dục & Đào Tạo">Giáo Dục & Đào Tạo</option>
+                    <option value="Du Lịch & Trải Nghiệm">Du Lịch & Trải Nghiệm</option>
+                    <option value="E-Commerce & Bán Hàng">E-Commerce & Bán Hàng</option>
+                    <option value="Âm Nhạc & Giải Trí">Âm Nhạc & Giải Trí</option>
+                    <option value="Nghệ Thuật & Sáng Tạo">Nghệ Thuật & Sáng Tạo</option>
+                </select>
+                <input type="text" id="editIndustryCustom" placeholder="Hoặc gõ ngành tùy chỉnh...">
+            </div>
+
+            <div class="edit-field">
+                <label>Kiểu quay / Phong cách</label>
+                <select id="editStyle">
+                    <option value="">— Chọn hoặc gõ bên dưới —</option>
+                    <option value="Vlog Cinematic">Vlog Cinematic</option>
+                    <option value="Talking Head">Talking Head</option>
+                    <option value="Đời Thường & Chữa Lành">Đời Thường & Chữa Lành</option>
+                    <option value="Montage Nhanh">Montage Nhanh</option>
+                    <option value="B-Roll Thuần Hình">B-Roll Thuần Hình</option>
+                    <option value="POV / First Person">POV / First Person</option>
+                    <option value="Review Sản Phẩm">Review Sản Phẩm</option>
+                    <option value="Tutorial / How-to">Tutorial / How-to</option>
+                    <option value="Storytelling">Storytelling</option>
+                    <option value="Interview / Đối Thoại">Interview / Đối Thoại</option>
+                </select>
+                <input type="text" id="editStyleCustom" placeholder="Hoặc gõ kiểu quay tùy chỉnh...">
+            </div>
+
+            <div class="edit-field">
+                <label>Tags kỹ thuật (phân tách bằng dấu phẩy)</label>
+                <textarea id="editTags" placeholder="VD: Daily Routine, Motivation, Cinematic Loop"></textarea>
+            </div>
+
+            <div class="edit-field">
+                <label>Mục đích / Tóm tắt (Purpose)</label>
+                <textarea id="editPurpose"></textarea>
+            </div>
+
+            <div class="edit-field">
+                <label>Bài học rút gọn (Quick Takeaway)</label>
+                <textarea id="editTakeaway"></textarea>
+            </div>
+
+            <div class="edit-field edit-pw-field">
+                <label>Mật khẩu</label>
+                <input type="password" id="editPassword" placeholder="••••" autocomplete="off">
+            </div>
+        </div>
+        <div class="edit-modal-footer">
+            <button class="edit-cancel-btn" onclick="closeEditModal()">Hủy</button>
+            <button class="edit-save-btn" id="editSaveBtn" onclick="saveEdit()">Lưu thay đổi</button>
+        </div>
+    </div>
+</div>
+
 <script>
 // Video source resolution - try multiple paths
 const rawVideoSrc = 'https://media.fedu.vn/videos/oSaTN.mp4';
@@ -2157,6 +2440,151 @@ function copyMegaPrompt(e, btn) {
         alert('Lỗi sao chép, bạn bôi đen văn bản để copy nhé!');
     });
 }
+
+// === EDIT INLINE FEATURE ===
+var ENTRY_KEY = 'IG_@ulanzi_oSaTN_Tripod_&_Gậy_Selfie_Tự_Động_MT86,_Cao_1.52m_4';
+var CLASSIFICATION_DATA = {};
+
+function openEditModal() {
+    var d = CLASSIFICATION_DATA || {};
+    var indSel = document.getElementById('editIndustry');
+    var indCust = document.getElementById('editIndustryCustom');
+    var stySel = document.getElementById('editStyle');
+    var styCust = document.getElementById('editStyleCustom');
+    
+    // Pre-fill industry
+    var indName = (d.industry && d.industry.name) ? d.industry.name : '';
+    indSel.value = '';
+    indCust.value = '';
+    for (var i = 0; i < indSel.options.length; i++) {
+        if (indSel.options[i].value === indName) { indSel.value = indName; break; }
+    }
+    if (!indSel.value && indName) indCust.value = indName;
+
+    // Pre-fill style
+    var styName = (d.shooting_style && d.shooting_style.name) ? d.shooting_style.name : '';
+    stySel.value = '';
+    styCust.value = '';
+    for (var j = 0; j < stySel.options.length; j++) {
+        if (stySel.options[j].value === styName) { stySel.value = styName; break; }
+    }
+    if (!stySel.value && styName) styCust.value = styName;
+
+    // Pre-fill tags
+    document.getElementById('editTags').value = (d.tech_tags || []).join(', ');
+    document.getElementById('editPurpose').value = d.purpose || d.logic_explanation || '';
+    document.getElementById('editTakeaway').value = d.quick_takeaway || '';
+
+    // Reset status
+    var st = document.getElementById('editStatus');
+    st.className = 'edit-status';
+    st.style.display = 'none';
+    document.getElementById('editSaveBtn').disabled = false;
+    document.getElementById('editSaveBtn').textContent = 'Lưu thay đổi';
+
+    document.getElementById('editModalBackdrop').classList.add('open');
+}
+
+function closeEditModal() {
+    document.getElementById('editModalBackdrop').classList.remove('open');
+}
+
+function saveEdit() {
+    var btn = document.getElementById('editSaveBtn');
+    var st = document.getElementById('editStatus');
+    var pw = document.getElementById('editPassword').value;
+
+    if (!pw) {
+        st.className = 'edit-status error';
+        st.textContent = 'Vui lòng nhập mật khẩu.';
+        st.style.display = 'block';
+        return;
+    }
+
+    // Collect values
+    var indSel = document.getElementById('editIndustry').value;
+    var indCust = document.getElementById('editIndustryCustom').value.trim();
+    var industry = indCust || indSel || null;
+
+    var stySel = document.getElementById('editStyle').value;
+    var styCust = document.getElementById('editStyleCustom').value.trim();
+    var style = styCust || stySel || null;
+
+    var tags = document.getElementById('editTags').value;
+    var purpose = document.getElementById('editPurpose').value;
+    var takeaway = document.getElementById('editTakeaway').value;
+
+    var updates = {};
+    if (industry) updates.industry = industry;
+    if (style) updates.shooting_style = style;
+    if (tags) updates.tech_tags = tags;
+    if (purpose) updates.purpose = purpose;
+    if (takeaway) updates.quick_takeaway = takeaway;
+
+    if (Object.keys(updates).length === 0) {
+        st.className = 'edit-status error';
+        st.textContent = 'Chưa có thay đổi nào.';
+        st.style.display = 'block';
+        return;
+    }
+
+    btn.disabled = true;
+    btn.textContent = 'Đang lưu...';
+    st.style.display = 'none';
+
+    fetch('/api/edit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            password: pw,
+            entryKey: ENTRY_KEY,
+            updates: updates
+        })
+    })
+    .then(function(res) { return res.json().then(function(data) { return { ok: res.ok, data: data }; }); })
+    .then(function(result) {
+        if (result.ok && result.data.success) {
+            st.className = 'edit-status success';
+            st.textContent = '✅ Đã lưu! Commit: ' + (result.data.commit || '') + '. Trang sẽ tự cập nhật sau 1-2 phút.';
+            st.style.display = 'block';
+            btn.textContent = '✅ Đã lưu';
+
+            // Update DOM ngay lập tức (instant feedback)
+            var badges = document.querySelector('.header-badges');
+            if (badges && (updates.industry || updates.shooting_style)) {
+                var html = '';
+                var ind = updates.industry || (CLASSIFICATION_DATA.industry && CLASSIFICATION_DATA.industry.name) || '';
+                var sty = updates.shooting_style || (CLASSIFICATION_DATA.shooting_style && CLASSIFICATION_DATA.shooting_style.name) || '';
+                if (ind) html += '<span class="badge">' + ind + '</span> ';
+                if (sty) html += '<span class="badge badge-alt">' + sty + '</span>';
+                badges.innerHTML = html;
+            }
+
+            // Cập nhật CLASSIFICATION_DATA nội bộ
+            if (result.data.updatedEntry) {
+                CLASSIFICATION_DATA = result.data.updatedEntry;
+            }
+        } else {
+            st.className = 'edit-status error';
+            st.textContent = '❌ ' + (result.data.error || 'Lỗi không xác định');
+            st.style.display = 'block';
+            btn.disabled = false;
+            btn.textContent = 'Lưu thay đổi';
+        }
+    })
+    .catch(function(err) {
+        st.className = 'edit-status error';
+        st.textContent = '❌ Lỗi mạng: ' + err.message;
+        st.style.display = 'block';
+        btn.disabled = false;
+        btn.textContent = 'Lưu thay đổi';
+    });
+}
+
+// Đóng modal khi bấm Escape
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeEditModal();
+});
 </script>
 </body>
 </html>

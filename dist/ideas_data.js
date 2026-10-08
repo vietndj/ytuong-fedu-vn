@@ -187,12 +187,12 @@ var FEDU_IDEAS_DATABASE = {
       "desc": "Kiểu quay Talking Head & Hướng Dẫn."
     },
     {
-      "id": "Điện Ảnh (Cinematic)",
-      "name": "Điện Ảnh (Cinematic)",
-      "en_name": "Điện Ảnh (Cinematic)",
+      "id": "cinematic-vlog",
+      "name": "cinematic-vlog",
+      "en_name": "Cinematic Vlog",
       "icon": "🎬",
       "badge_color": "purple",
-      "desc": "Kiểu quay Điện Ảnh (Cinematic)."
+      "desc": "Kiểu quay cinematic-vlog."
     },
     {
       "id": "B-Roll Điện Thoại / Hướng Dẫn",
@@ -307,12 +307,12 @@ var FEDU_IDEAS_DATABASE = {
       "desc": "Kiểu quay Review Sản Phẩm / UGC."
     },
     {
-      "id": "Quay B-Roll Quảng Cáo Điện Ảnh",
-      "name": "Quay B-Roll Quảng Cáo Điện Ảnh",
-      "en_name": "Quay B Roll Quảng Cáo Điện Ảnh",
+      "id": "review-nhip-nhanh",
+      "name": "review-nhip-nhanh",
+      "en_name": "Review Nhip Nhanh",
       "icon": "🎬",
       "badge_color": "purple",
-      "desc": "Kiểu quay Quay B-Roll Quảng Cáo Điện Ảnh."
+      "desc": "Kiểu quay review-nhip-nhanh."
     },
     {
       "id": "UGC Thực Chiến",
@@ -443,6 +443,14 @@ var FEDU_IDEAS_DATABASE = {
       "desc": "Kiểu quay Visual Storytelling."
     },
     {
+      "id": "Điện Ảnh (Cinematic)",
+      "name": "Điện Ảnh (Cinematic)",
+      "en_name": "Điện Ảnh (Cinematic)",
+      "icon": "🎬",
+      "badge_color": "purple",
+      "desc": "Kiểu quay Điện Ảnh (Cinematic)."
+    },
+    {
       "id": "Điện Ảnh & Chữa Lành (Cinematic Mood / ASMR)",
       "name": "Điện Ảnh & Chữa Lành (Cinematic Mood / ASMR)",
       "en_name": "Điện Ảnh & Chữa Lành (Cinematic Mood / Asmr)",
@@ -561,7 +569,7 @@ var FEDU_IDEAS_DATABASE = {
     "talking-head": 40,
     "storytelling": 24,
     "dien-anh": 98,
-    "chuyen-canh": 54,
+    "chuyen-canh": 53,
     "theo-nhip-nhac": 3,
     "bts": 0,
     "Lookbook": 1,
@@ -571,14 +579,14 @@ var FEDU_IDEAS_DATABASE = {
     "Talking Head": 11,
     "lifestyle": 1,
     "Kỹ thuật Quay Dựng": 1,
-    "cinematic": 1,
+    "cinematic": 2,
     "Review / Product Showcase": 1,
     "Review / Trải Nghiệm": 1,
     "Chuyển Cảnh (Transition)": 5,
     "Cooking Vlog / B-Roll": 1,
     "Cinematic Commercial / Narrative B-Roll": 1,
     "Talking Head & Hướng Dẫn": 1,
-    "Điện Ảnh (Cinematic)": 3,
+    "cinematic-vlog": 1,
     "B-Roll Điện Thoại / Hướng Dẫn": 1,
     "Giáo Dục / Tips": 1,
     "Vlog Đời Thường": 1,
@@ -593,7 +601,7 @@ var FEDU_IDEAS_DATABASE = {
     "Chỉn Chu / Bố Cục": 1,
     "A Day In The Life (Vlog Không Lời)": 1,
     "Review Sản Phẩm / UGC": 1,
-    "Quay B-Roll Quảng Cáo Điện Ảnh": 1,
+    "review-nhip-nhanh": 1,
     "UGC Thực Chiến": 1,
     "quang-cao": 1,
     "BTS / Hậu Trường Sáng Tạo": 2,
@@ -610,6 +618,7 @@ var FEDU_IDEAS_DATABASE = {
     "Điện Ảnh Đời Thường (Cinematic)": 1,
     "POV & Fast-Paced Montage": 1,
     "Visual Storytelling": 1,
+    "Điện Ảnh (Cinematic)": 2,
     "Điện Ảnh & Chữa Lành (Cinematic Mood / ASMR)": 1,
     "Bố Cục (Framing)": 1,
     "Split Screen / Behind-The-Scenes": 1,
@@ -712,7 +721,7 @@ var FEDU_IDEAS_DATABASE = {
     "thuong-hieu": 20,
     "thoi-trang": 23,
     "am-thuc": 22,
-    "du-lich": 17,
+    "du-lich": 18,
     "cong-nghe": 41,
     "kien-truc": 36,
     "the-thao": 6,
@@ -1366,7 +1375,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Turkishairlines",
       "profile_url": "https://www.instagram.com/turkishairlines/",
       "video_count": 1,
-      "top_industry": "Du Lịch & Văn Hóa",
+      "top_industry": "du-lich",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40turkishairlines_Dd8gb9ss84q_A_timeless_destination_where_two_continents_c/shot_01_mid.webp",
       "video_ids": [
         "IG_@turkishairlines_Dd8gb9ss84q_A_timeless_destination_where_two_continents_c"
@@ -1564,7 +1573,7 @@ var FEDU_IDEAS_DATABASE = {
       "name": "Ecuator_Cafe",
       "profile_url": "https://www.instagram.com/ecuator_cafe/",
       "video_count": 1,
-      "top_industry": "Ẩm Thực & F&B",
+      "top_industry": "fnb",
       "sample_thumb": "https://media.fedu.vn/images/IG_%40ecuator_cafe_Dc0iEdiuYZ-_Exist%C4%83_pauze_de_cafea_%C8%99i_exist%C4%83_momente_%C3%AEn_ca/shot_01_mid.webp",
       "video_ids": [
         "IG_@ecuator_cafe_Dc0iEdiuYZ-_Există_pauze_de_cafea_și_există_momente_în_ca"
@@ -5334,20 +5343,20 @@ var FEDU_IDEAS_DATABASE = {
     {
       "id": "IG_@turkishairlines_Dd8gb9ss84q_A_timeless_destination_where_two_continents_c",
       "shortcode": "Dd8gb9ss84q",
-      "title_vi": "Đòn Bẩy Lỗ Khóa & Match Cut Ký Họa: Nghệ Thuật Kể Chuyện Đẳng Cấp Biến Chuyến Bay Nối Chuyến Thành Kỳ Nghỉ Hoàng Gia",
-      "quick_takeaway": "Cú lừa thị giác qua lỗ khóa mở ra trải nghiệm Stopover trọn gói: Biến thời gian quá cảnh thành kỳ nghỉ thượng lưu khám phá kỳ quan Istanbul.",
+      "title_vi": "Nghệ thuật quảng bá trải nghiệm Stopover: Khi Layover trở thành một kỳ nghỉ ngàn đô",
+      "quick_takeaway": "Quảng bá chương trình Stopover của Turkish Airlines với góc nhìn POV cá nhân hóa, kết hợp giữa sự sang trọng của dịch vụ và nét cổ kính của Istanbul.",
       "key_tech": "Cinematic Lighting • Composition Mastery • Visual Rhythm",
       "shooting_style": {
-        "id": "Điện Ảnh (Cinematic)",
-        "name": "Điện Ảnh (Cinematic)",
-        "en_name": "Điện Ảnh (Cinematic)",
+        "id": "cinematic-vlog",
+        "name": "cinematic-vlog",
+        "en_name": "Cinematic Vlog",
         "icon": "🎬",
         "badge_color": "purple"
       },
       "industries": [
         {
-          "id": "Du Lịch & Văn Hóa",
-          "name": "Du Lịch & Văn Hóa",
+          "id": "du-lich",
+          "name": "du-lich",
           "icon": "🎯"
         }
       ],
@@ -5362,12 +5371,10 @@ var FEDU_IDEAS_DATABASE = {
       },
       "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @turkishairlines",
       "tech_tags": [
-        "Sub-framing Keyhole",
-        "Match Cut Vest",
-        "Stopover Proof",
-        "Architectural Sketch",
-        "Golden Hour Aerial",
-        "Vintage Super 8"
+        "travel",
+        "stopover",
+        "istanbul",
+        "airline"
       ],
       "transition_level": null,
       "is_ad_bot": false,
@@ -7140,15 +7147,15 @@ var FEDU_IDEAS_DATABASE = {
     {
       "id": "IG_@ulanzi_oSaTN_Tripod_&_Gậy_Selfie_Tự_Động_MT86,_Cao_1.52m_4",
       "shortcode": "IG_@ulanzi_oSaTN_Tripod_&_Gậy_Selfie_Tự_Động_MT86,_Cao_1.52m_4",
-      "title_vi": "Ulanzi MT86 Auto-Deploy Tripod & Selfie Stick (Cao 1.52m, Chân Quadpod Bật Nảy)",
-      "quick_takeaway": "Check out Ulanzi | MT86 Auto-Deploy Tripod & Selfie Stick, 1.52m Height, Quadpod Base. Get it on Lazada now!",
+      "title_vi": "Phô diễn sức mạnh cơ khí 1-Chạm: Kích hoạt chân Quadpod Ulanzi MT86",
+      "quick_takeaway": "Video review Tripod & Gậy Selfie Ulanzi MT86 tự động bung 4 chân Quadpod.",
       "key_tech": "1.52m Height • Quadpod Base. Get it on Lazada now! • Establishing Hook Shot • Close-Up / Macro Detail Shot • Medium Tracking Shot • High-key Lighting",
       "shooting_style": {
-        "id": "chuyen-canh",
-        "name": "Chuyển Cảnh",
-        "en_name": "Transitions & Flow",
-        "icon": "⚡",
-        "badge_color": "rose"
+        "id": "review-nhip-nhanh",
+        "name": "review-nhip-nhanh",
+        "en_name": "Review Nhip Nhanh",
+        "icon": "🎬",
+        "badge_color": "purple"
       },
       "industries": [
         {
@@ -7168,14 +7175,9 @@ var FEDU_IDEAS_DATABASE = {
       },
       "purpose": "Check out Ulanzi | MT86 Auto-Deploy Tripod & Selfie Stick, 1.52m Height, Quadpod Base. Get it on Lazada now!",
       "tech_tags": [
-        "Ulanzi MT86",
-        "Auto-Deploy Tripod",
-        "Quadpod Base",
-        "Selfie Stick 1.52m",
-        "Chạm Đất Tự Bung",
-        "Cold Shoe Mount",
-        "Bluetooth Remote",
-        "Worm's-Eye View"
+        "phụ kiện",
+        "tripod",
+        "vlog"
       ],
       "transition_level": null,
       "is_ad_bot": false,
@@ -7350,20 +7352,20 @@ var FEDU_IDEAS_DATABASE = {
     {
       "id": "IG_@ecuator_cafe_Dc0iEdiuYZ-_Există_pauze_de_cafea_și_există_momente_în_ca",
       "shortcode": "Dc0iEdiuYZ-",
-      "title_vi": "B-Roll F&B Đỉnh Cao: Kể Chuyện Bằng Hành Động & Chi Tiết Giác Quan",
-      "quick_takeaway": "Chuỗi B-Roll quảng cáo F&B chuẩn nhịp điện ảnh: dẫn dắt từ bước chân dạo phố, tiếng đẩy cửa, tiếng rót Nitro Matcha bọt tuyết đến cú bẻ bánh ngàn lớp giòn rụm và chiếc ly cạn đáy.",
+      "title_vi": "Nghệ Thuật Khơi Gợi Vị Giác Qua Từng Cú Chạm Góc Máy",
+      "quick_takeaway": "Trải nghiệm không gian cafe tối giản với điểm nhấn là món Nitro Matcha sủi bọt và bánh ngàn lớp.",
       "key_tech": "Establishing Hook Shot • Close-Up / Macro Detail Shot • Low-key Lighting",
       "shooting_style": {
-        "id": "Quay B-Roll Quảng Cáo Điện Ảnh",
-        "name": "Quay B-Roll Quảng Cáo Điện Ảnh",
-        "en_name": "Quay B Roll Quảng Cáo Điện Ảnh",
+        "id": "cinematic",
+        "name": "cinematic",
+        "en_name": "Cinematic",
         "icon": "🎬",
         "badge_color": "purple"
       },
       "industries": [
         {
-          "id": "Ẩm Thực & F&B",
-          "name": "Ẩm Thực & F&B",
+          "id": "fnb",
+          "name": "fnb",
           "icon": "🎯"
         }
       ],
@@ -7378,14 +7380,9 @@ var FEDU_IDEAS_DATABASE = {
       },
       "purpose": "Life",
       "tech_tags": [
-        "Life",
-        "Quảng cáo",
-        "B-Roll F&B",
-        "Matcha Nitro",
-        "ASMR",
-        "Macro Detail",
-        "POV",
-        "Flatlay"
+        "cafe",
+        "matcha",
+        "pastry"
       ],
       "transition_level": null,
       "is_ad_bot": false,
@@ -10951,7 +10948,7 @@ var FEDU_IDEAS_DATABASE = {
       "gdrive_folder": "https://drive.google.com/open?id=1W18YrkZwvxirTC_zyeVWOHDyvSWfJzKu",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40etaemin_DdoooYmq-cd_Get_ready_for_the_shoot/shot_01_mid.webp",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40etaemin_DdoooYmq-cd_Get_ready_for_the_shoot/shot_01_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40etaemin_DdoooYmq-cd_Get_ready_for_the_shoot/shot_02_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdoooYmq-cd.mp4",
         "video_url_original": "https://media.fedu.vn/videos/DdoooYmq-cd.mp4",
         "report_url": "reports/IG_@etaemin_DdoooYmq-cd_Get_ready_for_the_shoot.html",
@@ -12331,7 +12328,7 @@ var FEDU_IDEAS_DATABASE = {
       "ig_url": "https://www.instagram.com/reel/DdbCdHFKZsP/",
       "gdrive_folder": "https://drive.google.com/open?id=1TrKEslz5f0-vToucfldVqxVIuHSb19Wp",
       "media": {
-        "thumb_hook": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DcVzQCSP1MR_Healing_Homecoming_Daily_Vlog/shot_01_mid.webp",
+        "thumb_hook": "https://media.fedu.vn/images/IG_%40hena_film_vlog_DdlmZczPsCE_%ED%98%BC%EC%9E%90_%EB%A7%8C%EB%93%9C%EB%8A%94%EB%8D%B0_%EC%B4%AC%EC%98%81%EC%9D%80_%EB%88%84%EA%B0%80_%ED%95%98%EB%83%90%EA%B3%A0%EC%9A%94%F0%9F%A4%B7%F0%9F%8F%BB%E2%80%8D%E2%99%80%EF%B8%8F_%EC%A0%9C%ED%92%88%EC%A0%9C%EA%B3%B5/shot_01_mid.webp",
         "thumb_key": "https://media.fedu.vn/images/IG_%40hena_film_vlog_Db-mZWEKECo_4_Cu_May_Sieu_Thi_Ulanzi_MA38_MT85/extracted_shots/shot_03_mid.webp",
         "video_url": "https://media.fedu.vn/videos/DdbCdHFKZsP.mp4",
         "video_url_original": "https://media.fedu.vn/videos/DdbCdHFKZsP.mp4",
@@ -13446,7 +13443,7 @@ var FEDU_IDEAS_DATABASE = {
       "gdrive_folder": "https://drive.google.com/open?id=1cnS_6mtlO52naIU-DIE-pRJoiEN8nys8",
       "media": {
         "thumb_hook": "https://media.fedu.vn/images/IG_%40Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg/shot_01_mid.webp",
-        "thumb_key": "https://media.fedu.vn/images/IG_%40Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg/shot_02_mid.webp",
+        "thumb_key": "https://media.fedu.vn/images/IG_%40Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg/shot_01_mid.webp",
         "video_url": "https://drive.google.com/uc?id=1QpXLSybzXgrShstQexi8sX3JS9oYgQR0&export=download",
         "video_url_original": "https://drive.google.com/uc?id=1QpXLSybzXgrShstQexi8sX3JS9oYgQR0&export=download",
         "report_url": "reports/IG_@Five_Oars_Coffee_Roasters_DcxcVGtxjNl_Video_by_focr.sg.html",
