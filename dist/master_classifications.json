@@ -13780,52 +13780,41 @@
     }
   },
   "DcGbEVFznin": {
-    "id": "IG_@Mridupawan_Sharma_DcGbEVFznin_Video_by_mridupawasharma",
-    "index": 113,
+    "id": "IG_@mridupawasharma_DcGbEVFznin_Everything_looks_better_in_closeup._Am_I_righ",
     "creator": "@mridupawasharma",
-    "creator_name": "Mridupawan Sharma",
-    "title": "A Typical Saturday Routine - Sức Mạnh Của Cận Cảnh",
+    "creator_name": "Mridupawasharma",
+    "title": "@mridupawasharma - Everything looks better in closeup. Am I righ",
     "shots_count": 27,
-    "duration": "24.0s",
+    "duration": "54.0s",
     "shooting_style": {
-      "id": "macro-cinematic",
-      "name": "macro-cinematic",
-      "icon": "🎬"
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
     },
     "industry": {
-      "id": "quay-dung",
-      "name": "quay-dung",
-      "icon": "🎯"
+      "id": "kien-truc",
+      "name": "Kiến Trúc & Không Gian Sống",
+      "icon": "🏛️"
     },
-    "purpose": "Khắc họa sự tĩnh lặng kỳ vĩ của dãy núi Himalaya",
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @mridupawasharma",
     "tech_tags": [
-      "cận cảnh",
-      "macro",
-      "b-roll",
-      "weekend"
+      "Establishing Hook Shot",
+      "Low-key Lighting",
+      "Close-Up / Macro Detail Shot"
     ],
-    "logic_explanation": "Thước phim hùng vĩ về mây ngàn và lá cờ cầu nguyện phấp phới trên dãy Himalaya, đối lập giữa góc cực rộng và chi tiết nhỏ tĩnh lặng.",
-    "is_excluded": true,
-    "quick_takeaway": "Biến một thói quen cuối tuần nhàm chán thành thước phim điện ảnh bằng kỹ thuật Extreme Closeup (Macro).",
+    "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
     "country": {
-      "id": "india",
-      "name": "Ấn Độ",
-      "en_name": "India",
-      "flag": "🇮🇳",
-      "badge_color": "amber"
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
     },
-    "transition_level": null,
-    "is_ad_bot": false,
-    "fedu_optimization": {
-      "key_optimization_point": "Tối ưu cho Du Lịch & Văn Hóa • Kỹ Thuật Quay Dựng Điện Ảnh Masterclass: Phân loại theo cấu trúc Điện Ảnh (Cinematic) kết hợp kỹ thuật Grand Vista Scale, Prayer Flag Flutter, Misty Cloud Layers, Static Telephoto",
-      "practice_focus": "Bài tập bóc tách ngôn ngữ điện ảnh: Phân tích tỷ lệ khung hình, hướng sáng chính (Key Light), chiều sâu trường ảnh và tiết tấu nhịp cắt.",
-      "ig_seeding_hook": "Follow @mridupawasharma để mở rộng tầm nhìn thẩm mỹ thị giác và nâng cao kỹ năng quay dựng chuyên nghiệp mỗi ngày.",
-      "course_industry_mapping": "Du Lịch & Văn Hóa • Kỹ Thuật Quay Dựng Điện Ảnh Masterclass",
-      "transition_level": null
-    },
-    "youtube_id": "dPsURUsrqJQ",
-    "youtube_url": "https://youtu.be/dPsURUsrqJQ",
-    "youtube_embed": "https://www.youtube.com/embed/dPsURUsrqJQ"
+    "youtube_id": "OwXUkepRWyA",
+    "youtube_url": "https://youtu.be/OwXUkepRWyA",
+    "youtube_embed": "https://www.youtube.com/embed/OwXUkepRWyA"
   },
   "DZN-FfdyPgH": {
     "id": "IG_@Brian_Tooker_DZN-FfdyPgH_Video_by_briantooker",
@@ -26856,5 +26845,194 @@
     "youtube_id": "8gI-a_g4sBc",
     "youtube_url": "https://youtu.be/8gI-a_g4sBc",
     "youtube_embed": "https://www.youtube.com/embed/8gI-a_g4sBc"
+  },
+  "IG_@mridupawasharma_DcGbEVFznin_Everything_looks_better_in_closeup._Am_I_righ": {
+    "id": "IG_@mridupawasharma_DcGbEVFznin_Everything_looks_better_in_closeup._Am_I_righ",
+    "creator": "@mridupawasharma",
+    "creator_name": "Mridupawasharma",
+    "title": "@mridupawasharma - Everything looks better in closeup. Am I righ",
+    "shots_count": 27,
+    "duration": "54.0s",
+    "shooting_style": {
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
+    },
+    "industry": {
+      "id": "kien-truc",
+      "name": "Kiến Trúc & Không Gian Sống",
+      "icon": "🏛️"
+    },
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @mridupawasharma",
+    "tech_tags": [
+      "Establishing Hook Shot",
+      "Low-key Lighting",
+      "Close-Up / Macro Detail Shot"
+    ],
+    "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    },
+    "youtube_id": "OwXUkepRWyA",
+    "youtube_url": "https://youtu.be/OwXUkepRWyA",
+    "youtube_embed": "https://www.youtube.com/embed/OwXUkepRWyA"
+  },
+  "IG_@mridupawasharma_DRKmvtRE2nb_Healthy_is_now_just_a_switch_away.😤": {
+    "id": "IG_@mridupawasharma_DRKmvtRE2nb_Healthy_is_now_just_a_switch_away.😤",
+    "creator": "@mridupawasharma",
+    "creator_name": "Mridupawasharma",
+    "title": "Healthy is now just a switch away",
+    "shots_count": 21,
+    "duration": "19.6s",
+    "shooting_style": {
+      "id": "Commercial",
+      "name": "Commercial",
+      "icon": "🎬"
+    },
+    "industry": {
+      "id": "Gia Dụng",
+      "name": "Gia Dụng",
+      "icon": "🎯"
+    },
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @mridupawasharma",
+    "tech_tags": [
+      "private",
+      "unlisted",
+      "healthy",
+      "appliances"
+    ],
+    "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+    "is_excluded": false,
+    "quick_takeaway": "Quảng cáo thiết bị thông minh giúp sống khỏe dễ dàng.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    },
+    "youtube_id": "6O5Qn39WEBw",
+    "youtube_url": "https://youtu.be/6O5Qn39WEBw",
+    "youtube_embed": "https://www.youtube.com/embed/6O5Qn39WEBw"
+  },
+  "DRKmvtRE2nb": {
+    "id": "IG_@mridupawasharma_DRKmvtRE2nb_Healthy_is_now_just_a_switch_away.😤",
+    "creator": "@mridupawasharma",
+    "creator_name": "Mridupawasharma",
+    "title": "Healthy is now just a switch away",
+    "shots_count": 21,
+    "duration": "19.6s",
+    "shooting_style": {
+      "id": "Commercial",
+      "name": "Commercial",
+      "icon": "🎬"
+    },
+    "industry": {
+      "id": "Gia Dụng",
+      "name": "Gia Dụng",
+      "icon": "🎯"
+    },
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @mridupawasharma",
+    "tech_tags": [
+      "private",
+      "unlisted",
+      "healthy",
+      "appliances"
+    ],
+    "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+    "is_excluded": false,
+    "quick_takeaway": "Quảng cáo thiết bị thông minh giúp sống khỏe dễ dàng.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    },
+    "youtube_id": "6O5Qn39WEBw",
+    "youtube_url": "https://youtu.be/6O5Qn39WEBw",
+    "youtube_embed": "https://www.youtube.com/embed/6O5Qn39WEBw"
+  },
+  "IG_@mridupawasharma_DV73FCHk1Ej_Some_days_feel_lighter": {
+    "id": "IG_@mridupawasharma_DV73FCHk1Ej_Some_days_feel_lighter",
+    "creator": "@mridupawasharma",
+    "creator_name": "Mridupawasharma",
+    "title": "@mridupawasharma - Some days feel lighter",
+    "shots_count": 33,
+    "duration": "66.0s",
+    "shooting_style": {
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
+    },
+    "industry": {
+      "id": "kien-truc",
+      "name": "Kiến Trúc & Không Gian Sống",
+      "icon": "🏛️"
+    },
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @mridupawasharma",
+    "tech_tags": [
+      "Establishing Hook Shot",
+      "Low-key Lighting",
+      "Close-Up / Macro Detail Shot",
+      "High-key Lighting"
+    ],
+    "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    },
+    "youtube_id": "-GVbbAHSGMA",
+    "youtube_url": "https://youtu.be/-GVbbAHSGMA",
+    "youtube_embed": "https://www.youtube.com/embed/-GVbbAHSGMA"
+  },
+  "DV73FCHk1Ej": {
+    "id": "IG_@mridupawasharma_DV73FCHk1Ej_Some_days_feel_lighter",
+    "creator": "@mridupawasharma",
+    "creator_name": "Mridupawasharma",
+    "title": "@mridupawasharma - Some days feel lighter",
+    "shots_count": 33,
+    "duration": "66.0s",
+    "shooting_style": {
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
+    },
+    "industry": {
+      "id": "kien-truc",
+      "name": "Kiến Trúc & Không Gian Sống",
+      "icon": "🏛️"
+    },
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @mridupawasharma",
+    "tech_tags": [
+      "Establishing Hook Shot",
+      "Low-key Lighting",
+      "Close-Up / Macro Detail Shot",
+      "High-key Lighting"
+    ],
+    "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    },
+    "youtube_id": "-GVbbAHSGMA",
+    "youtube_url": "https://youtu.be/-GVbbAHSGMA",
+    "youtube_embed": "https://www.youtube.com/embed/-GVbbAHSGMA"
   }
 }
