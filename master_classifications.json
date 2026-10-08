@@ -13645,49 +13645,44 @@
     }
   },
   "DaH_rTUTe14": {
-    "id": "IG_@Mridupawan_Sharma_DaH_rTUTe14_Video_by_mridupawasharma",
-    "index": 110,
+    "id": "IG_@mridupawasharma_DaH_rTUTe14_I’ve_always_been_someone_who_ends_up_taking_w",
     "creator": "@mridupawasharma",
-    "creator_name": "Mridupawan Sharma",
-    "title": "OPPO Find X9s - 3 Picture Collage & Nghệ Thuật Kể Chuyện Đa Góc Nhìn",
-    "shots_count": 37,
-    "duration": "9s",
+    "creator_name": "Mridupawasharma",
+    "title": "@mridupawasharma - I’ve always been someone who ends up taking w",
+    "shots_count": 52,
+    "duration": "104.0s",
     "shooting_style": {
-      "id": "storytelling",
-      "name": "Storytelling",
-      "icon": "📖"
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
     },
     "industry": {
-      "id": "cong-nghe",
-      "name": "Công Nghệ & Thiết Bị",
-      "icon": "📱"
+      "id": "kien-truc",
+      "name": "Kiến Trúc & Không Gian Sống",
+      "icon": "🏛️"
     },
-    "purpose": "Đánh giá camera điện thoại OPPO Find X9s đa góc",
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @mridupawasharma",
     "tech_tags": [
-      "3-Picture Collage",
-      "Self-Deprecation Hook",
-      "Multi-lens Comparison",
-      "Street Testing"
+      "Establishing Hook Shot",
+      "Close-Up / Macro Detail Shot",
+      "Low-key Lighting",
+      "Medium Tracking Shot",
+      "Wide Establishing Shot",
+      "High-key Lighting"
     ],
-    "logic_explanation": "Đánh giá camera điện thoại OPPO bằng cách chia màn hình 3 ô ảnh tương phản giữa đời thực và ảnh chụp, kèm lời dẫn hài hước về thói quen của creator.",
-    "is_excluded": true,
-    "quick_takeaway": "Phân tích video thương mại điện ảnh xuất sắc quảng bá dòng máy OPPO Find X9s. Mở đầu bằng tâm sự tự trào 'Creators are annoying', video phô diễn năng lực của cụm 3 camera 50MP: 0.6x lấy bối cảnh (Scene), 1x bắt không khí (Vibe), 3x thu c...",
+    "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
     "country": {
-      "id": "india",
-      "name": "Ấn Độ",
-      "en_name": "India",
-      "flag": "🇮🇳",
-      "badge_color": "amber"
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
     },
-    "transition_level": null,
-    "is_ad_bot": false,
-    "fedu_optimization": {
-      "key_optimization_point": "Tối ưu cho Review Thiết Bị, Mở Hộp Unboxing Đồ Công Nghệ & Gear: Phân loại theo cấu trúc Storytelling kết hợp kỹ thuật 3-Picture Collage, Self-Deprecation Hook, Multi-lens Comparison, Street Testing",
-      "practice_focus": "Bài tập unboxing 5 nhịp: Cắt xé hộp dứt khoát, quay trượt mượt mà trên bề mặt kim loại, zoom macro chi tiết nút bấm và thử nghiệm tính năng tức thì.",
-      "ig_seeding_hook": "Follow @mridupawasharma để học cách trình bày thông số công nghệ hấp dẫn, bố cục bàn làm việc hiện đại và phong cách unboxing cuốn hút.",
-      "course_industry_mapping": "Review Thiết Bị, Mở Hộp Unboxing Đồ Công Nghệ & Gear",
-      "transition_level": null
-    }
+    "youtube_id": "Ta2ir3OBhCI",
+    "youtube_url": "https://youtu.be/Ta2ir3OBhCI",
+    "youtube_embed": "https://www.youtube.com/embed/Ta2ir3OBhCI"
   },
   "DaXdrAVzGcc": {
     "id": "IG_@Mridupawan_Sharma_DaXdrAVzGcc_Video_by_mridupawasharma",
@@ -27267,5 +27262,45 @@
     "youtube_id": "ed5Htxw4Ttc",
     "youtube_url": "https://youtu.be/ed5Htxw4Ttc",
     "youtube_embed": "https://www.youtube.com/embed/ed5Htxw4Ttc"
+  },
+  "IG_@mridupawasharma_DaH_rTUTe14_I’ve_always_been_someone_who_ends_up_taking_w": {
+    "id": "IG_@mridupawasharma_DaH_rTUTe14_I’ve_always_been_someone_who_ends_up_taking_w",
+    "creator": "@mridupawasharma",
+    "creator_name": "Mridupawasharma",
+    "title": "@mridupawasharma - I’ve always been someone who ends up taking w",
+    "shots_count": 52,
+    "duration": "104.0s",
+    "shooting_style": {
+      "id": "talking-head",
+      "name": "Talking Head",
+      "icon": "🗣️"
+    },
+    "industry": {
+      "id": "kien-truc",
+      "name": "Kiến Trúc & Không Gian Sống",
+      "icon": "🏛️"
+    },
+    "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @mridupawasharma",
+    "tech_tags": [
+      "Establishing Hook Shot",
+      "Close-Up / Macro Detail Shot",
+      "Low-key Lighting",
+      "Medium Tracking Shot",
+      "Wide Establishing Shot",
+      "High-key Lighting"
+    ],
+    "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
+    "is_excluded": false,
+    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "country": {
+      "id": "us_eu",
+      "name": "Âu Mỹ",
+      "en_name": "US & Europe",
+      "flag": "🇺🇸/🇪🇺",
+      "badge_color": "purple"
+    },
+    "youtube_id": "Ta2ir3OBhCI",
+    "youtube_url": "https://youtu.be/Ta2ir3OBhCI",
+    "youtube_embed": "https://www.youtube.com/embed/Ta2ir3OBhCI"
   }
 }
