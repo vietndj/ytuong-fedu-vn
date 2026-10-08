@@ -13784,29 +13784,29 @@
     "index": 113,
     "creator": "@mridupawasharma",
     "creator_name": "Mridupawan Sharma",
-    "title": "Himalayan Serenity - Khắc Họa Sự Tĩnh Lặng Dãy Himalaya & Chiều Sâu Mây Núi",
-    "shots_count": 20,
-    "duration": "0.15s",
+    "title": "A Typical Saturday Routine - Sức Mạnh Của Cận Cảnh",
+    "shots_count": 27,
+    "duration": "24.0s",
     "shooting_style": {
-      "id": "dien-anh",
-      "name": "Điện Ảnh (Cinematic)",
+      "id": "macro-cinematic",
+      "name": "macro-cinematic",
       "icon": "🎬"
     },
     "industry": {
-      "id": "du-lich",
-      "name": "Du Lịch & Văn Hóa",
-      "icon": "✈️"
+      "id": "quay-dung",
+      "name": "quay-dung",
+      "icon": "🎯"
     },
     "purpose": "Khắc họa sự tĩnh lặng kỳ vĩ của dãy núi Himalaya",
     "tech_tags": [
-      "Grand Vista Scale",
-      "Prayer Flag Flutter",
-      "Misty Cloud Layers",
-      "Static Telephoto"
+      "cận cảnh",
+      "macro",
+      "b-roll",
+      "weekend"
     ],
     "logic_explanation": "Thước phim hùng vĩ về mây ngàn và lá cờ cầu nguyện phấp phới trên dãy Himalaya, đối lập giữa góc cực rộng và chi tiết nhỏ tĩnh lặng.",
     "is_excluded": true,
-    "quick_takeaway": "20 phân cảnh hùng vĩ khắc họa sự tĩnh lặng của dãy Himalaya trong sương sớm. Tác giả kết hợp góc toàn bao la với cận cảnh lá cờ cầu nguyện bay phấp phới trong gió lạnh, sử dụng dải tương phản cao (High Dynamic Range) để giữ trọn chi tiết...",
+    "quick_takeaway": "Biến một thói quen cuối tuần nhàm chán thành thước phim điện ảnh bằng kỹ thuật Extreme Closeup (Macro).",
     "country": {
       "id": "india",
       "name": "Ấn Độ",
@@ -13822,7 +13822,10 @@
       "ig_seeding_hook": "Follow @mridupawasharma để mở rộng tầm nhìn thẩm mỹ thị giác và nâng cao kỹ năng quay dựng chuyên nghiệp mỗi ngày.",
       "course_industry_mapping": "Du Lịch & Văn Hóa • Kỹ Thuật Quay Dựng Điện Ảnh Masterclass",
       "transition_level": null
-    }
+    },
+    "youtube_id": "dPsURUsrqJQ",
+    "youtube_url": "https://youtu.be/dPsURUsrqJQ",
+    "youtube_embed": "https://www.youtube.com/embed/dPsURUsrqJQ"
   },
   "DZN-FfdyPgH": {
     "id": "IG_@Brian_Tooker_DZN-FfdyPgH_Video_by_briantooker",
@@ -26845,7 +26848,5 @@
     "youtube_id": "8gI-a_g4sBc",
     "youtube_url": "https://youtu.be/8gI-a_g4sBc",
     "youtube_embed": "https://www.youtube.com/embed/8gI-a_g4sBc"
-  }
-}/www.youtube.com/embed/pJja3jsCJdw"
   }
 }
