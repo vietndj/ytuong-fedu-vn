@@ -27267,31 +27267,27 @@
     "id": "IG_@mridupawasharma_DaH_rTUTe14_I’ve_always_been_someone_who_ends_up_taking_w",
     "creator": "@mridupawasharma",
     "creator_name": "Mridupawasharma",
-    "title": "@mridupawasharma - I’ve always been someone who ends up taking w",
+    "title": "Mỏ Neo Tâm Lý Bằng Sự Tương Phản Góc Nhìn (POV)",
     "shots_count": 52,
-    "duration": "104.0s",
+    "duration": "45.2s",
     "shooting_style": {
-      "id": "talking-head",
-      "name": "Talking Head",
-      "icon": "🗣️"
+      "id": "dien-anh",
+      "name": "dien-anh",
+      "icon": "🎬"
     },
     "industry": {
-      "id": "kien-truc",
-      "name": "Kiến Trúc & Không Gian Sống",
-      "icon": "🏛️"
+      "id": "storytelling",
+      "name": "storytelling",
+      "icon": "🎯"
     },
     "purpose": "Phân tích chuyên sâu ngôn ngữ điện ảnh và nghệ thuật thị giác cho @mridupawasharma",
     "tech_tags": [
-      "Establishing Hook Shot",
-      "Close-Up / Macro Detail Shot",
-      "Low-key Lighting",
-      "Medium Tracking Shot",
-      "Wide Establishing Shot",
-      "High-key Lighting"
+      "storytelling",
+      "private"
     ],
     "logic_explanation": "Tự động phân loại cấu trúc Talking Head ngành Kiến Trúc & Không Gian Sống.",
     "is_excluded": false,
-    "quick_takeaway": "⚡ Sử dụng quy tắc 2s đầu (Visual Hook) để định hình nhịp điệu và không gian trước khi đi vào chi tiết. ➔ Dùng góc cận xen kẽ góc toàn để tạo nhịp co giãn thị giác (Breathe In - Breathe Out) cho người xem.",
+    "quick_takeaway": "Phân tích sự khác biệt giữa góc nhìn người thường và Creator bằng kỹ thuật quay Dutch Angle và Frame in Frame.",
     "country": {
       "id": "us_eu",
       "name": "Âu Mỹ",
